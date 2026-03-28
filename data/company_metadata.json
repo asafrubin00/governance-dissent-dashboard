@@ -1,0 +1,342 @@
+[
+  {
+    "canonicalName": "3I GROUP PLC",
+    "sector": "Private equity and investment",
+    "aliases": ["3I GROUP PLC", "3I GROUP", "3I"]
+  },
+  {
+    "canonicalName": "ADMIRAL GROUP PLC",
+    "sector": "Insurance",
+    "aliases": ["ADMIRAL GROUP PLC", "ADMIRAL GROUP", "ADMIRAL"]
+  },
+  {
+    "canonicalName": "ANGLO AMERICAN PLC",
+    "sector": "Mining",
+    "aliases": ["ANGLO AMERICAN PLC", "ANGLO AMERICAN"]
+  },
+  {
+    "canonicalName": "ANTOFAGASTA PLC",
+    "sector": "Mining",
+    "aliases": ["ANTOFAGASTA PLC", "ANTOFAGASTA"]
+  },
+  {
+    "canonicalName": "ASTRAZENECA PLC",
+    "sector": "Pharmaceuticals",
+    "aliases": ["ASTRAZENECA PLC", "ASTRAZENECA"]
+  },
+  {
+    "canonicalName": "AUTO TRADER GROUP PLC",
+    "sector": "Digital marketplace",
+    "aliases": ["AUTO TRADER GROUP PLC", "AUTO TRADER GROUP", "AUTO TRADER"]
+  },
+  {
+    "canonicalName": "AVIVA PLC",
+    "sector": "Insurance",
+    "aliases": ["AVIVA PLC", "AVIVA"]
+  },
+  {
+    "canonicalName": "BARCLAYS PLC",
+    "sector": "Banking",
+    "aliases": ["BARCLAYS PLC", "BARCLAYS"]
+  },
+  {
+    "canonicalName": "B&M EUROPEAN VALUE RETAIL SA",
+    "sector": "Retail",
+    "aliases": ["B&M EUROPEAN VALUE RETAIL SA", "B&M", "B AND M"]
+  },
+  {
+    "canonicalName": "BP P.L.C.",
+    "sector": "Energy",
+    "aliases": ["BP P.L.C.", "BP PLC", "BP"]
+  },
+  {
+    "canonicalName": "BUNZL PLC",
+    "sector": "Distribution",
+    "aliases": ["BUNZL PLC", "BUNZL"]
+  },
+  {
+    "canonicalName": "BURBERRY GROUP PLC",
+    "sector": "Luxury retail",
+    "aliases": ["BURBERRY GROUP PLC", "BURBERRY GROUP", "BURBERRY"]
+  },
+  {
+    "canonicalName": "COMPASS GROUP PLC",
+    "sector": "Support services",
+    "aliases": ["COMPASS GROUP PLC", "COMPASS GROUP", "COMPASS"]
+  },
+  {
+    "canonicalName": "CENTRICA PLC",
+    "sector": "Utilities",
+    "aliases": ["CENTRICA PLC", "CENTRICA"]
+  },
+  {
+    "canonicalName": "COMPUTACENTER PLC",
+    "sector": "Technology services",
+    "aliases": ["COMPUTACENTER PLC", "COMPUTACENTER"]
+  },
+  {
+    "canonicalName": "CONVATEC GROUP PLC",
+    "sector": "Medical technology",
+    "aliases": ["CONVATEC GROUP PLC", "CONVATEC GROUP", "CONVATEC"]
+  },
+  {
+    "canonicalName": "CRODA INTERNATIONAL PLC",
+    "sector": "Specialty chemicals",
+    "aliases": ["CRODA INTERNATIONAL PLC", "CRODA INTERNATIONAL", "CRODA"]
+  },
+  {
+    "canonicalName": "COCA-COLA EUROPACIFIC PARTNERS PLC",
+    "sector": "Beverages",
+    "aliases": [
+      "COCA-COLA EUROPACIFIC PARTNERS PLC",
+      "COCA COLA EUROPACIFIC PARTNERS PLC",
+      "COCA-COLA EUROPACIFIC PARTNERS",
+      "CCEP"
+    ]
+  },
+  {
+    "canonicalName": "DIAGEO PLC",
+    "sector": "Beverages",
+    "aliases": ["DIAGEO PLC", "DIAGEO"]
+  },
+  {
+    "canonicalName": "ENTAIN PLC",
+    "sector": "Leisure and gaming",
+    "aliases": ["ENTAIN PLC", "ENTAIN"]
+  },
+  {
+    "canonicalName": "EXPERIAN PLC",
+    "sector": "Information services",
+    "aliases": ["EXPERIAN PLC", "EXPERIAN"]
+  },
+  {
+    "canonicalName": "FRESNILLO PLC",
+    "sector": "Mining",
+    "aliases": ["FRESNILLO PLC", "FRESNILLO"]
+  },
+  {
+    "canonicalName": "GLENCORE PLC",
+    "sector": "Mining and trading",
+    "aliases": ["GLENCORE PLC", "GLENCORE"]
+  },
+  {
+    "canonicalName": "GSK PLC",
+    "sector": "Pharmaceuticals",
+    "aliases": ["GSK PLC", "GSK"]
+  },
+  {
+    "canonicalName": "HALEON PLC",
+    "sector": "Consumer health",
+    "aliases": ["HALEON PLC", "HALEON"]
+  },
+  {
+    "canonicalName": "HSBC HOLDINGS PLC",
+    "sector": "Banking",
+    "aliases": ["HSBC HOLDINGS PLC", "HSBC HOLDINGS", "HSBC"]
+  },
+  {
+    "canonicalName": "IMI PLC",
+    "sector": "Industrial engineering",
+    "aliases": ["IMI PLC", "IMI"]
+  },
+  {
+    "canonicalName": "IMPERIAL BRANDS PLC",
+    "sector": "Consumer staples",
+    "aliases": ["IMPERIAL BRANDS PLC", "IMPERIAL BRANDS"]
+  },
+  {
+    "canonicalName": "INFORMA PLC",
+    "sector": "Business information",
+    "aliases": ["INFORMA PLC", "INFORMA"]
+  },
+  {
+    "canonicalName": "INTERCONTINENTAL HOTELS GROUP PLC",
+    "sector": "Hotels",
+    "aliases": ["INTERCONTINENTAL HOTELS GROUP PLC", "INTERCONTINENTAL HOTELS GROUP", "IHG"]
+  },
+  {
+    "canonicalName": "INTERTEK GROUP PLC",
+    "sector": "Testing and inspection",
+    "aliases": ["INTERTEK GROUP PLC", "INTERTEK GROUP", "INTERTEK"]
+  },
+  {
+    "canonicalName": "JD SPORTS FASHION PLC",
+    "sector": "Retail",
+    "aliases": ["JD SPORTS FASHION PLC", "JD SPORTS FASHION", "JD SPORTS"]
+  },
+  {
+    "canonicalName": "KINGFISHER PLC",
+    "sector": "Retail",
+    "aliases": ["KINGFISHER PLC", "KINGFISHER"]
+  },
+  {
+    "canonicalName": "LEGAL & GENERAL GROUP PLC",
+    "sector": "Insurance and asset management",
+    "aliases": ["LEGAL & GENERAL GROUP PLC", "LEGAL & GENERAL GROUP", "LEGAL & GENERAL"]
+  },
+  {
+    "canonicalName": "LLOYDS BANKING GROUP PLC",
+    "sector": "Banking",
+    "aliases": ["LLOYDS BANKING GROUP PLC", "LLOYDS BANKING GROUP", "LLOYDS"]
+  },
+  {
+    "canonicalName": "MARKS & SPENCER GROUP PLC",
+    "sector": "Retail",
+    "aliases": ["MARKS & SPENCER GROUP PLC", "MARKS & SPENCER GROUP", "M&S", "MARKS AND SPENCER GROUP PLC"]
+  },
+  {
+    "canonicalName": "MELROSE INDUSTRIES PLC",
+    "sector": "Industrial engineering",
+    "aliases": ["MELROSE INDUSTRIES PLC", "MELROSE INDUSTRIES", "MELROSE"]
+  },
+  {
+    "canonicalName": "MONDI PLC",
+    "sector": "Packaging",
+    "aliases": ["MONDI PLC", "MONDI"]
+  },
+  {
+    "canonicalName": "NATIONAL GRID PLC",
+    "sector": "Utilities",
+    "aliases": ["NATIONAL GRID PLC", "NATIONAL GRID"]
+  },
+  {
+    "canonicalName": "LONDON STOCK EXCHANGE GROUP PLC",
+    "sector": "Financial market infrastructure",
+    "aliases": ["LONDON STOCK EXCHANGE GROUP PLC", "LONDON STOCK EXCHANGE GROUP", "LSEG"]
+  },
+  {
+    "canonicalName": "NATWEST GROUP PLC",
+    "sector": "Banking",
+    "aliases": ["NATWEST GROUP PLC", "NATWEST GROUP", "NATWEST"]
+  },
+  {
+    "canonicalName": "NEXT PLC",
+    "sector": "Retail",
+    "aliases": ["NEXT PLC", "NEXT"]
+  },
+  {
+    "canonicalName": "PEARSON PLC",
+    "sector": "Education and publishing",
+    "aliases": ["PEARSON PLC", "PEARSON"]
+  },
+  {
+    "canonicalName": "PERSIMMON PLC",
+    "sector": "Housebuilding",
+    "aliases": ["PERSIMMON PLC", "PERSIMMON"]
+  },
+  {
+    "canonicalName": "PRUDENTIAL PLC",
+    "sector": "Insurance",
+    "aliases": ["PRUDENTIAL PLC", "PRUDENTIAL"]
+  },
+  {
+    "canonicalName": "RECKITT BENCKISER GROUP PLC",
+    "sector": "Consumer health and household",
+    "aliases": ["RECKITT BENCKISER GROUP PLC", "RECKITT BENCKISER GROUP", "RECKITT"]
+  },
+  {
+    "canonicalName": "RELX PLC",
+    "sector": "Information services",
+    "aliases": ["RELX PLC", "RELX"]
+  },
+  {
+    "canonicalName": "RENTOKIL INITIAL PLC",
+    "sector": "Business services",
+    "aliases": ["RENTOKIL INITIAL PLC", "RENTOKIL INITIAL", "RENTOKIL"]
+  },
+  {
+    "canonicalName": "RIGHTMOVE PLC",
+    "sector": "Digital property portal",
+    "aliases": ["RIGHTMOVE PLC", "RIGHTMOVE"]
+  },
+  {
+    "canonicalName": "ROLLS-ROYCE HOLDINGS PLC",
+    "sector": "Aerospace",
+    "aliases": ["ROLLS-ROYCE HOLDINGS PLC", "ROLLS ROYCE HOLDINGS PLC", "ROLLS-ROYCE"]
+  },
+  {
+    "canonicalName": "RIO TINTO PLC",
+    "sector": "Mining",
+    "aliases": ["RIO TINTO PLC", "RIO TINTO"]
+  },
+  {
+    "canonicalName": "RS GROUP PLC",
+    "sector": "Distribution",
+    "aliases": ["RS GROUP PLC", "RS GROUP"]
+  },
+  {
+    "canonicalName": "SAGE GROUP PLC",
+    "sector": "Software",
+    "aliases": ["SAGE GROUP PLC", "THE SAGE GROUP PLC", "SAGE GROUP", "SAGE"]
+  },
+  {
+    "canonicalName": "SCHRODERS PLC",
+    "sector": "Asset management",
+    "aliases": ["SCHRODERS PLC", "SCHRODERS"]
+  },
+  {
+    "canonicalName": "SEGRO PLC",
+    "sector": "Real estate",
+    "aliases": ["SEGRO PLC", "SEGRO"]
+  },
+  {
+    "canonicalName": "SHELL PLC",
+    "sector": "Energy",
+    "aliases": ["SHELL PLC", "SHELL"]
+  },
+  {
+    "canonicalName": "SMITH & NEPHEW PLC",
+    "sector": "Medical technology",
+    "aliases": ["SMITH & NEPHEW PLC", "SMITH & NEPHEW"]
+  },
+  {
+    "canonicalName": "SMITHS GROUP PLC",
+    "sector": "Industrial technology",
+    "aliases": ["SMITHS GROUP PLC", "SMITHS GROUP", "SMITHS"]
+  },
+  {
+    "canonicalName": "SPIRAX GROUP PLC",
+    "sector": "Industrial engineering",
+    "aliases": ["SPIRAX GROUP PLC", "SPIRAX-SARCO ENGINEERING PLC", "SPIRAX GROUP"]
+  },
+  {
+    "canonicalName": "SSE PLC",
+    "sector": "Utilities",
+    "aliases": ["SSE PLC", "SSE"]
+  },
+  {
+    "canonicalName": "STANDARD CHARTERED PLC",
+    "sector": "Banking",
+    "aliases": ["STANDARD CHARTERED PLC", "STANDARD CHARTERED"]
+  },
+  {
+    "canonicalName": "TAYLOR WIMPEY PLC",
+    "sector": "Housebuilding",
+    "aliases": ["TAYLOR WIMPEY PLC", "TAYLOR WIMPEY"]
+  },
+  {
+    "canonicalName": "TESCO PLC",
+    "sector": "Retail",
+    "aliases": ["TESCO PLC", "TESCO"]
+  },
+  {
+    "canonicalName": "UNILEVER PLC",
+    "sector": "Consumer staples",
+    "aliases": ["UNILEVER PLC", "UNILEVER"]
+  },
+  {
+    "canonicalName": "VODAFONE GROUP PLC",
+    "sector": "Telecommunications",
+    "aliases": ["VODAFONE GROUP PLC", "VODAFONE GROUP", "VODAFONE"]
+  },
+  {
+    "canonicalName": "WPP PLC",
+    "sector": "Media and advertising",
+    "aliases": ["WPP PLC", "WPP"]
+  },
+  {
+    "canonicalName": "WHITBREAD PLC",
+    "sector": "Hospitality",
+    "aliases": ["WHITBREAD PLC", "WHITBREAD"]
+  }
+]
