@@ -15,8 +15,8 @@ export function HomePage({ data }: HomePageProps) {
 
   return (
     <div className="page-stack">
-      <section className="hero-panel">
-        <div>
+      <section className="hero-panel hero-panel--home">
+        <div className="hero-panel__main">
           <p className="eyebrow">UK governance and stewardship</p>
           <h1>Tracking significant shareholder dissent across the FTSE 100</h1>
           <p className="lede">
@@ -25,21 +25,27 @@ export function HomePage({ data }: HomePageProps) {
             against management. In UK governance practice, that level of opposition is a
             serious prompt for board engagement and explanation.
           </p>
+          <div className="hero-panel__actions">
+            <Link className="primary-button" to="/dashboard">
+              Open dashboard
+            </Link>
+          </div>
         </div>
-        <div className="hero-panel__aside">
-          <p className="callout-title">What this tracker is</p>
+        <div className="hero-panel__aside hero-panel__aside--note">
+          <p className="callout-title">Analytical scope</p>
           <p className="callout-copy">
             A significant-dissent tracker, not a general AGM voting database. It only
             includes real high-salience dissent cases from the Investment Association
             Public Register that could be matched confidently to FTSE 100 issuers.
           </p>
-          <Link className="primary-button" to="/dashboard">
-            Open dashboard
-          </Link>
+          <p className="callout-caption">
+            The intent is to surface governance signalling, not to recreate full meeting
+            registers.
+          </p>
         </div>
       </section>
 
-      <section className="stats-grid">
+      <section className="stats-grid stats-grid--summary">
         <StatCard
           label="FTSE 100 companies in v1"
           value={String(summary.companyCount)}
@@ -62,7 +68,7 @@ export function HomePage({ data }: HomePageProps) {
         />
       </section>
 
-      <section className="panel">
+      <section className="panel panel--coverage">
         <div className="panel__header">
           <p className="eyebrow">Coverage summary</p>
           <h2>Exactly what is in scope</h2>
@@ -90,8 +96,8 @@ export function HomePage({ data }: HomePageProps) {
         </div>
       </section>
 
-      <section className="content-grid">
-        <article className="panel">
+      <section className="content-grid content-grid--editorial">
+        <article className="panel panel--essay">
           <div className="panel__header">
             <p className="eyebrow">Governance framing</p>
             <h2>Why the 20% threshold matters</h2>
@@ -110,7 +116,7 @@ export function HomePage({ data }: HomePageProps) {
           </p>
         </article>
 
-        <article className="panel">
+        <article className="panel panel--highlights">
           <div className="panel__header">
             <p className="eyebrow">Recent highlights</p>
             <h2>Latest notable cases in scope</h2>
@@ -131,8 +137,8 @@ export function HomePage({ data }: HomePageProps) {
         </article>
       </section>
 
-      <section className="content-grid">
-        <article className="panel">
+      <section className="content-grid content-grid--editorial-lower">
+        <article className="panel panel--rankings">
           <div className="panel__header">
             <p className="eyebrow">Top dissent</p>
             <h2>Strongest opposition in the current dataset</h2>
@@ -150,7 +156,7 @@ export function HomePage({ data }: HomePageProps) {
           </div>
         </article>
 
-        <article className="panel">
+        <article className="panel panel--method">
           <div className="panel__header">
             <p className="eyebrow">Method and coverage</p>
             <h2>Included and excluded on purpose</h2>

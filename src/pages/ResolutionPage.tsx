@@ -29,7 +29,7 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
         </Link>
       </div>
 
-      <section className="detail-hero panel">
+      <section className="detail-hero panel panel--detail-hero">
         <p className="eyebrow">Resolution detail</p>
         <h1>{resolution.companyName}</h1>
         <p className="detail-hero__meta">
@@ -40,7 +40,7 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
       </section>
 
       <section className="detail-grid">
-        <article className="panel">
+        <article className="panel panel--metrics">
           <div className="panel__header">
             <p className="eyebrow">Voting outcome</p>
             <h2>Resolution metrics</h2>
@@ -65,7 +65,7 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
           </div>
         </article>
 
-        <article className="panel">
+        <article className="panel panel--interpretation">
           <div className="panel__header">
             <p className="eyebrow">Governance interpretation</p>
             <h2>Why this may matter</h2>
@@ -79,8 +79,8 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
         </article>
       </section>
 
-      <section className="content-grid">
-        <article className="panel">
+      <section className="content-grid content-grid--detail-lower">
+        <article className="panel panel--sources">
           <div className="panel__header">
             <p className="eyebrow">Source disclosure</p>
             <h2>Public evidence trail</h2>
@@ -108,7 +108,7 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
           </ul>
         </article>
 
-        <article className="panel">
+        <article className="panel panel--related">
           <div className="panel__header">
             <p className="eyebrow">Related company votes</p>
             <h2>Other dissent at this issuer</h2>

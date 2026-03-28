@@ -60,7 +60,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
 
   return (
     <div className="page-stack">
-      <section className="page-heading">
+      <section className="page-heading page-heading--dashboard">
         <p className="eyebrow">Dashboard</p>
         <h1>Resolution-level view of significant votes against management</h1>
         <p className="lede">
@@ -70,7 +70,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
         </p>
       </section>
 
-      <section className="panel">
+      <section className="panel panel--methodology">
         <div className="panel__header">
           <p className="eyebrow">Methodology and coverage</p>
           <h2>What this dashboard includes</h2>
@@ -106,7 +106,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
         onReset={() => setFilters(defaultFilters)}
       />
 
-      <section className="stats-grid">
+      <section className="stats-grid stats-grid--summary">
         <StatCard
           label="Filtered resolutions"
           value={String(metrics.resolutions)}
@@ -129,8 +129,8 @@ export function DashboardPage({ data }: DashboardPageProps) {
         />
       </section>
 
-      <section className="chart-grid">
-        <article className="panel chart-panel">
+      <section className="chart-grid chart-grid--dashboard">
+        <article className="panel chart-panel chart-panel--primary">
           <div className="panel__header">
             <p className="eyebrow">Top dissenting votes</p>
             <h2>Highest votes against management</h2>
@@ -153,7 +153,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
           </div>
         </article>
 
-        <article className="panel chart-panel">
+        <article className="panel chart-panel chart-panel--secondary">
           <div className="panel__header">
             <p className="eyebrow">Trend over time</p>
             <h2>AGM season timeline</h2>
@@ -185,7 +185,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
           </div>
         </article>
 
-        <article className="panel chart-panel">
+        <article className="panel chart-panel chart-panel--secondary">
           <div className="panel__header">
             <p className="eyebrow">Dissent by category</p>
             <h2>Most frequent governance themes</h2>
@@ -225,7 +225,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
           </div>
         </article>
 
-        <article className="panel chart-panel">
+        <article className="panel chart-panel chart-panel--secondary">
           <div className="panel__header">
             <p className="eyebrow">Company patterns</p>
             <h2>Where dissent recurs</h2>
@@ -257,7 +257,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
         </article>
       </section>
 
-      <section className="panel">
+      <section className="panel panel--table">
         <div className="panel__header">
           <p className="eyebrow">Resolution table</p>
           <h2>Detailed dissent records</h2>
