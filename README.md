@@ -1,4 +1,4 @@
-# FTSE 100 Shareholder Dissent Tracker
+# PROXY WARS: A FTSE 100 Shareholder Dissent Tracker
 
 A tightly scoped governance portfolio project that tracks significant votes against management at UK AGMs, with a deliberate focus on the kinds of resolutions that matter most in stewardship and corporate governance work: remuneration, director elections, capital authorities, and other notable governance signals.
 
