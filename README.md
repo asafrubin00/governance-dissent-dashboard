@@ -1,192 +1,44 @@
-# PROXY WARS: A FTSE 100 Shareholder Dissent Tracker
+# Proxy Wars
 
-A tightly scoped governance portfolio project that tracks significant votes against management at UK AGMs, with a deliberate focus on the kinds of resolutions that matter most in stewardship and corporate governance work: remuneration, director elections, capital authorities, and other notable governance signals.
+**Shareholder dissent tracker. FTSE 100 AGM votes, live.**
 
-This is an MVP by design. It aims to be credible, clear, and locally runnable rather than broad, fragile, or over-engineered.
+📊 [View dashboard →](https://proxy-wars-dissent-tracker.vercel.app/dashboard)
 
-## Preview
+AGMs are where shareholder democracy plays out in public. When institutional investors push back - voting against executive pay, board appointments, or audit reports - it signals something: a governance concern, a breakdown in engagement, or the beginning of a more serious confrontation. Proxy Wars tracks those moments.
 
-The current build uses a two-stage experience:
+---
 
-- a cinematic landing screen first
-- one scroll into a fixed-height analytics workspace
+## What It Does
 
-Run locally with `npm run dev` to view both the overview and dashboard surfaces as intended.
+An interactive dashboard monitoring shareholder dissent across FTSE 100 Annual General Meetings. Built to surface significant votes against management recommendations and identify emerging corporate governance trends before they become headlines.
 
-## What it does
+**Explore:**
+- Votes against management by company, resolution type, and dissent level
+- AGM voting trends across the FTSE 100
+- Flagged resolutions where institutional opposition exceeded key thresholds
+- Governance patterns across sectors and time
 
-- Ingests real AGM voting outcomes from a free public source.
-- Standardises results at resolution level.
-- Filters the dataset to matched FTSE 100 companies in scope for v1.
-- Highlights significant dissent, especially votes with 20% or more against management.
-- Presents a professional public-facing dashboard with charts, filters, and resolution detail pages.
-- Adds short governance-oriented commentary so the output reads more like stewardship analysis than generic BI.
+---
 
-## Current v1 scope
+## Background
 
-- Source: Investment Association Public Register.
-- Coverage: matched FTSE 100 companies captured by that source in the current v1 dataset.
-- Time horizon: the current build is effectively a 2025 AGM-season tracker because that is what the accessible public register page currently exposes.
-- Data shape: 28 real significant dissent resolutions across 24 matched FTSE 100 companies.
+Shareholder dissent data is publicly available but rarely presented in a way that makes patterns visible at a glance. This dashboard is an attempt to fix that, to make the governance signal legible without having to wade through individual proxy statements.
 
-## Why the scope is narrow
+The name comes from the tension at the heart of the proxy advisory industry: between management recommendations, institutional voting policies, and the proxy advisers (ISS, Glass Lewis) who sit in between. That tension is what this dashboard is designed to illuminate.
 
-This project deliberately starts from the cleanest free source for UK significant dissent rather than pretending to offer complete FTSE 100 coverage from day one.
+---
 
-That matters because:
+## Tech Stack
 
-- The IA register captures significant votes against management cleanly and at resolution level.
-- Free issuer-by-issuer AGM result collection is feasible, but much more fragmented.
-- For a recruiter-facing MVP, a narrower real dataset is more credible than fake breadth.
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## Data source and governance context
+Built with vanilla JS, HTML, and CSS. Deployed on Vercel.
 
-Primary source:
+---
 
-- [Investment Association Public Register](https://www.theia.org/public-register)
+## Status
 
-Methodology note:
-
-- The IA methodology page explains that the register includes companies where a resolution received 20% or more votes against, or a resolution was withdrawn.
-- The IA also states that the Public Register stopped adding new companies or resolutions after the October 2025 policy change, which makes it a strong historical source but not a complete long-run current feed on its own.
-
-## Stack
-
-- Front end: React + TypeScript + Vite
-- Routing: React Router
-- Charts: Recharts
-- Data pipeline: Python with `requests` and `beautifulsoup4`
-- Storage: in-repo JSON and CSV
-- Deployment recommendation: Vercel or Netlify static deployment
-
-## Project structure
-
-```text
-.
-├── data/
-│   ├── company_metadata.json      # curated FTSE 100 company aliases and sectors
-│   └── processed/                 # generated cleaned outputs
-├── docs/
-│   └── project-log.md             # assumptions, blockers, tradeoffs
-├── public/
-│   └── data/
-│       └── tracker-data.json      # app-facing generated dataset
-├── scripts/
-│   └── build_dataset.py           # scraper and normaliser
-├── src/
-│   ├── components/
-│   ├── lib/
-│   ├── pages/
-│   └── types.ts
-└── README.md
-```
-
-## Local setup
-
-### 1. Install dependencies
-
-```bash
-npm install
-python3 -m pip install -r requirements.txt
-```
-
-### 2. Build the local dataset
-
-```bash
-npm run data
-```
-
-This fetches the IA Public Register, parses the HTML tables, matches companies against the curated FTSE 100 alias file, and writes:
-
-- `public/data/tracker-data.json`
-- `data/processed/ftse100_resolutions.json`
-- `data/processed/ftse100_resolutions.csv`
-- `data/processed/unmatched_companies.json`
-
-### 3. Start the app locally
-
-```bash
-npm run dev
-```
-
-### 4. Create a production build
-
-```bash
-npm run build
-```
-
-## How the scraper works
-
-The scraper is intentionally simple:
-
-1. Fetch the IA Public Register HTML.
-2. Parse each server-rendered table and use the table caption as a source group.
-3. Read each row into a structured resolution record.
-4. Convert percentage fields into numeric values.
-5. Match issuer names to a curated FTSE 100 metadata file using aliases.
-6. Classify each resolution into a governance category using lightweight text rules.
-7. Generate a short governance note for the resolution detail view.
-8. Export JSON and CSV for local use by the app.
-
-This approach is not meant to be perfect. It is meant to be dependable and transparent.
-
-## Key governance categories in v1
-
-- Remuneration
-- Director election
-- Capital authority
-- Audit
-- Climate and transition
-- Shareholder proposal
-- Other governance
-
-## What the UI includes
-
-- Homepage with governance framing and headline metrics
-- Dashboard page with filters for company, year, sector, and category
-- Top dissent chart
-- AGM season timeline
-- Category breakdown
-- Company pattern table
-- Resolution detail view with voting outcomes, tags, and governance interpretation
-
-## Data limitations
-
-- The IA register captures significant dissent, not the full universe of AGM resolutions.
-- V1 depends on a curated FTSE 100 alias file rather than a live constituent feed.
-- Resolution categories are heuristic and suitable for MVP analysis, not a final research taxonomy.
-- The accessible dataset in this build is concentrated in the 2025 AGM season.
-- Some issuers outside the alias file remain in `data/processed/unmatched_companies.json`.
-- The build includes validation checks for duplicate records, missing company names, missing dates, and out-of-range percentage fields.
-
-## Future improvements
-
-- Add direct scraping of issuer AGM poll result announcements and RNS links for broader coverage.
-- Expand from significant dissent only to fuller meeting-level coverage.
-- Add issuer pages with multi-resolution histories.
-- Add a cleaner FTSE 100 constituent snapshot workflow by year.
-- Add PDF parsing for company follow-up statements where updates are not HTML pages.
-- Add simple tests around parsing and classification rules.
-
-## Deployment recommendation
-
-For a portfolio piece, deploy this as a static site:
-
-- Vercel if you want the simplest React deployment flow.
-- Netlify if you prefer a very straightforward static-hosting setup.
-
-Because the dataset is generated into `public/data`, the app does not need a runtime backend for v1.
-
-## Notes
-
-- `docs/project-log.md` records assumptions, tradeoffs, and source limitations.
-- No placeholder voting data is used.
-- No auth, admin, or irrelevant product features are included.
-
-## Verification
-
-The project has been verified locally with:
-
-- `npm run data`
-- `npm run lint`
-- `npm run build`
+✅ Live: FTSE 100 AGM dissent tracking, filterable by company and resolution type  
+🔜 In development: expanding coverage to additional indices and AGM seasons
