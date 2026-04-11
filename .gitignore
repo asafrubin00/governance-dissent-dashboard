@@ -7,14 +7,62 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components
+
+# Build outputs
 dist
 dist-ssr
+build/Release
+.next
+out
+.nuxt
+.svelte-kit/
+web_modules/
+coverage
+.nyc_output
+
+# Bundler and tool caches
+.cache
+.parcel-cache
+.grunt
+.fusebox/
+.dynamodb/
+.firebase/
+**/.vitepress/dist
+**/.vitepress/cache
+.vuepress/dist
+.temp
+.eslintcache
+.stylelintcache
+.npm
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment and local config
 *.local
+.env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+.vscode-test
 .idea
 .DS_Store
 *.suo
@@ -22,4 +70,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Package manager artifacts
+.lock-wscript
+*.tgz
+.yarn-integrity
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Miscellaneous
+lib-cov
+.node_repl_history
+.tern-port
+docusaurus
+.serverless/
 .vercel
