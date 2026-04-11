@@ -4,6 +4,15 @@ A tightly scoped governance portfolio project that tracks significant votes agai
 
 This is an MVP by design. It aims to be credible, clear, and locally runnable rather than broad, fragile, or over-engineered.
 
+## Preview
+
+The current build uses a two-stage experience:
+
+- a cinematic landing screen first
+- one scroll into a fixed-height analytics workspace
+
+Run locally with `npm run dev` to view both the overview and dashboard surfaces as intended.
+
 ## What it does
 
 - Ingests real AGM voting outcomes from a free public source.

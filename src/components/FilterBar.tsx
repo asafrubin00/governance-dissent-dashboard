@@ -10,6 +10,7 @@ type FilterBarProps = {
   }
   onChange: (name: keyof Filters, value: string) => void
   onReset: () => void
+  showReset?: boolean
 }
 
 function SelectField({
@@ -44,9 +45,10 @@ export function FilterBar({
   options,
   onChange,
   onReset,
+  showReset = true,
 }: FilterBarProps) {
   return (
-    <section className="filter-bar">
+    <section className="filter-bar filter-bar--dashboard">
       <div className="filter-grid">
         <SelectField
           id="company"
@@ -77,9 +79,11 @@ export function FilterBar({
           onChange={onChange}
         />
       </div>
-      <button className="ghost-button" onClick={onReset} type="button">
-        Reset filters
-      </button>
+      {showReset ? (
+        <button className="ghost-button" onClick={onReset} type="button">
+          Reset filters
+        </button>
+      ) : null}
     </section>
   )
 }
