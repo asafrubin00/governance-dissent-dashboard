@@ -68,7 +68,7 @@ Methodology note:
 - Front end: React + TypeScript + Vite
 - Routing: React Router
 - Charts: Recharts
-- Data pipeline: Python with `requests` and `beautifulsoup4`
+- Data pipeline: Python with `requests`, `beautifulsoup4`, and `pypdf`
 - Storage: in-repo JSON and CSV
 - Deployment recommendation: Vercel or Netlify static deployment
 
@@ -77,15 +77,16 @@ Methodology note:
 ```text
 .
 ├── data/
-│   ├── company_metadata.json      # curated FTSE 100 company aliases and sectors
-│   └── processed/                 # generated cleaned outputs
+│   ├── company_metadata.json         # curated FTSE 100 company aliases and sectors
+│   ├── issuer_source_config.json     # manual issuer source seeds for future expansion
+│   └── processed/                    # generated cleaned outputs and source audits
 ├── docs/
-│   └── project-log.md             # assumptions, blockers, tradeoffs
+│   └── project-log.md                # assumptions, blockers, tradeoffs
 ├── public/
 │   └── data/
-│       └── tracker-data.json      # app-facing generated dataset
+│       └── tracker-data.json         # app-facing generated dataset
 ├── scripts/
-│   └── build_dataset.py           # scraper and normaliser
+│   └── build_dataset.py              # scraper, verifier, and enrichment pipeline
 ├── src/
 │   ├── components/
 │   ├── lib/
@@ -109,13 +110,14 @@ python3 -m pip install -r requirements.txt
 npm run data
 ```
 
-This fetches the IA Public Register, parses the HTML tables, matches companies against the curated FTSE 100 alias file, and writes:
+This fetches the IA Public Register, parses linked issuer documents where possible, and writes:
 
 - `public/data/tracker-data.json`
 - `data/processed/ftse100_resolutions.json`
 - `data/processed/ftse100_resolutions.csv`
 - `data/processed/unmatched_companies.json`
 - `data/processed/issuer_announcement_audit.json`
+- `data/processed/issuer_document_audit.json`
 
 ### 3. Start the app locally
 
@@ -184,7 +186,7 @@ Important limitation:
 - AGM season timeline
 - Category breakdown
 - Company pattern table
-- Resolution detail view with voting outcomes, tags, and governance interpretation
+- Resolution detail view with voting outcomes, tags, governance interpretation, and follow-up disclosure summaries where parsed
 
 ## Data limitations
 
@@ -194,7 +196,7 @@ Important limitation:
 - The accessible dataset in this build is concentrated in the 2025 AGM season.
 - Some issuers outside the alias file remain in `data/processed/unmatched_companies.json`.
 - The build includes validation checks for duplicate records, missing company names, missing dates, and out-of-range percentage fields.
-- Issuer-announcement enrichment currently focuses on HTML result pages and does not yet parse PDF-only AGM result documents.
+- Issuer-announcement enrichment currently focuses on HTML result pages and only a narrow set of linked PDF follow-up statements.
 
 ## Future improvements
 
@@ -224,5 +226,4 @@ Because the dataset is generated into `public/data`, the app does not need a run
 The project has been verified locally with:
 
 - `npm run data`
-- `npm run lint`
 - `npm run build`
