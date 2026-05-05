@@ -42,6 +42,16 @@ class AnnouncementPage:
     source_group: str
 
 
+@dataclass
+class ResultDocument:
+    url: str
+    company_name: str
+    meeting_date: str
+    source: str
+    source_group: str
+    parser_hint: str
+
+
 def ensure_dirs() -> None:
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     PUBLIC_DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -66,9 +76,9 @@ def load_company_metadata() -> tuple[dict[str, CompanyRecord], list[CompanyRecor
     return lookup, records
 
 
-def load_source_config() -> list[AnnouncementPage]:
+def load_source_config() -> tuple[list[AnnouncementPage], list[ResultDocument]]:
     if not SOURCE_CONFIG_PATH.exists():
-        return []
+        return [], []
 
     raw = json.loads(SOURCE_CONFIG_PATH.read_text())
     pages: list[AnnouncementPage] = []
@@ -82,7 +92,21 @@ def load_source_config() -> list[AnnouncementPage]:
                 source_group=item.get("sourceGroup", "Issuer announcement seed"),
             )
         )
-    return pages
+
+    documents: list[ResultDocument] = []
+    for item in raw.get("resultDocumentSeeds", []):
+        documents.append(
+            ResultDocument(
+                url=item["url"],
+                company_name=item["companyName"],
+                meeting_date=item["meetingDate"],
+                source=item.get("source", "manual-result-document"),
+                source_group=item.get("sourceGroup", "Issuer result document seed"),
+                parser_hint=item["parserHint"],
+            )
+        )
+
+    return pages, documents
 
 
 def normalise_name(value: str) -> str:
@@ -406,6 +430,11 @@ def parse_resolution_title_and_number(cells: list[str]) -> tuple[int | None, str
         title = cells[1].strip() if len(cells) > 1 else None
         return int(first), title, cells[2:]
 
+    match = re.match(r"^resolution\s+(\d+)[\.\): -]*(.*)$", first, flags=re.IGNORECASE)
+    if match:
+        title = match.group(2).strip() or (cells[1].strip() if len(cells) > 1 else None)
+        return int(match.group(1)), title, cells[1:]
+
     match = re.match(r"^(\d+)[\.\)]?\s+(.*)$", first)
     if match:
         return int(match.group(1)), match.group(2).strip(), cells[1:]
@@ -484,6 +513,81 @@ def clean_pdf_text(text: str) -> str:
     cleaned = re.sub(r"Page \d+ of \d+", " ", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\s+", " ", cleaned)
     return cleaned.strip()
+
+
+def parse_pdf_result_rows(text: str, parser_hint: str) -> list[dict[str, Any]]:
+    cleaned = clean_pdf_text(text)
+    if not cleaned:
+        return []
+
+    if parser_hint == "hsbc-agm-results":
+        start = cleaned.find("1. To receive")
+        working = cleaned[start:] if start != -1 else cleaned
+        working = re.sub(r"(\d)\.To\b", r"\1. To", working)
+        pattern = re.compile(
+            r"(?P<num>\d+)\.\s*(?P<title>.+?)\s+"
+            r"(?P<for_count>\d[\d,]*)\s+"
+            r"(?P<for_pct>\d+\.\d+)\s+"
+            r"(?P<against_count>\d[\d,]*)\s+"
+            r"(?P<against_pct>\d+\.\d+)\s+"
+            r"(?P<total>\d[\d,]*)\s+"
+            r"(?P<isc>\d+\.\d+%)\s+"
+            r"(?P<withheld>\d[\d,]*)"
+            r"(?=\s+\d+\.\s|\s+\*\s+based on|\s+2\.\s+Other|$)",
+            flags=re.IGNORECASE,
+        )
+        return [
+            {
+                "resolutionNumber": int(match.group("num")),
+                "resolutionTitle": match.group("title").strip(),
+                "resolutionTitleNormalised": normalise_resolution_title(match.group("title")),
+                "votesForCount": parse_count(match.group("for_count")),
+                "votesForPct": parse_percent(match.group("for_pct")),
+                "votesAgainstCount": parse_count(match.group("against_count")),
+                "votesAgainstPct": parse_percent(match.group("against_pct")),
+                "votesWithheldCount": parse_count(match.group("withheld")),
+                "totalVotesCastCount": parse_count(match.group("total")),
+                "issuedShareCapitalVotedPct": parse_percent(match.group("isc")),
+            }
+            for match in pattern.finditer(working)
+        ]
+
+    if parser_hint == "rio-agm-results":
+        start = cleaned.find("Table 1")
+        working = cleaned[start:] if start != -1 else cleaned
+        pattern = re.compile(
+            r"(?P<num>\d+)\.?\s+(?P<title>.+?)\s+"
+            r"(?P<total>\d[\d,]*)\s+"
+            r"(?P<for_count>\d[\d,]*)\s+"
+            r"(?P<for_pct>\d+\.\d+)\s+"
+            r"(?P<against_count>\d[\d,]*)\s+"
+            r"(?P<against_pct>\d+\.\d+)\s+"
+            r"(?P<withheld>\d[\d,]*)"
+            r"(?=\s+\d+\.\s|\s+Resolution\s+\d+\b|\s+The results of the Rio Tinto plc polls|$)",
+            flags=re.IGNORECASE,
+        )
+        rows: list[dict[str, Any]] = []
+        for match in pattern.finditer(working):
+            title = match.group("title").strip()
+            if "was passed with less than" in title.lower() or "table 3" in title.lower():
+                continue
+            rows.append(
+                {
+                    "resolutionNumber": int(match.group("num")),
+                    "resolutionTitle": title,
+                    "resolutionTitleNormalised": normalise_resolution_title(title),
+                    "votesForCount": parse_count(match.group("for_count")),
+                    "votesForPct": parse_percent(match.group("for_pct")),
+                    "votesAgainstCount": parse_count(match.group("against_count")),
+                    "votesAgainstPct": parse_percent(match.group("against_pct")),
+                    "votesWithheldCount": parse_count(match.group("withheld")),
+                    "totalVotesCastCount": parse_count(match.group("total")),
+                    "issuedShareCapitalVotedPct": None,
+                }
+            )
+        return rows
+
+    return []
 
 
 def extract_update_statement_summary(text: str) -> str | None:
@@ -595,6 +699,172 @@ def enrich_with_update_statement_documents(
         "pdfUpdateStatementsEnriched": enriched,
     }
     return resolutions, stats, audit_rows
+
+
+def enrich_with_result_documents(
+    resolutions: list[dict[str, Any]],
+    lookup: dict[str, CompanyRecord],
+    result_documents: list[ResultDocument],
+) -> tuple[list[dict[str, Any]], dict[str, Any], list[dict[str, Any]]]:
+    title_lookup, number_lookup = build_record_lookups(resolutions)
+    audit_rows: list[dict[str, Any]] = []
+    issuer_only_records: list[dict[str, Any]] = []
+    fetched = 0
+    parsed = 0
+    extracted_rows = 0
+    verified_rows = 0
+
+    for document in result_documents:
+        try:
+            response = requests.get(document.url, headers=REQUEST_HEADERS, timeout=60)
+            response.raise_for_status()
+        except requests.RequestException as error:
+            audit_rows.append(
+                {
+                    "url": document.url,
+                    "companyName": document.company_name,
+                    "meetingDate": document.meeting_date,
+                    "status": "fetch-failed",
+                    "documentType": "pdf-results",
+                    "error": str(error),
+                }
+            )
+            continue
+
+        fetched += 1
+        raw_path = write_raw_document(document.url, response.content, ".pdf")
+
+        try:
+            reader = PdfReader(str(raw_path))
+            text = "\n".join(page.extract_text() or "" for page in reader.pages)
+        except Exception as error:  # noqa: BLE001
+            audit_rows.append(
+                {
+                    "url": document.url,
+                    "companyName": document.company_name,
+                    "meetingDate": document.meeting_date,
+                    "status": "parse-failed",
+                    "documentType": "pdf-results",
+                    "rawPdfPath": str(raw_path.relative_to(ROOT)),
+                    "error": str(error),
+                }
+            )
+            continue
+
+        official_rows = parse_pdf_result_rows(text, document.parser_hint)
+        parsed += 1
+        extracted_rows += len(official_rows)
+        page_matches = 0
+        page_new_records = 0
+
+        for official in official_rows:
+            title_key = (
+                document.company_name,
+                document.meeting_date,
+                official["resolutionTitleNormalised"],
+            )
+            number_key = (
+                document.company_name,
+                document.meeting_date,
+                official["resolutionNumber"],
+            )
+            existing = title_lookup.get(title_key) or number_lookup.get(number_key)
+            if existing is not None:
+                existing["votesForCount"] = official["votesForCount"] or existing["votesForCount"]
+                existing["votesAgainstCount"] = official["votesAgainstCount"] or existing["votesAgainstCount"]
+                existing["votesWithheldCount"] = official["votesWithheldCount"] or existing["votesWithheldCount"]
+                existing["totalVotesCastCount"] = official["totalVotesCastCount"] or existing["totalVotesCastCount"]
+                existing["votesForPct"] = official["votesForPct"] or existing["votesForPct"]
+                existing["votesAgainstPct"] = official["votesAgainstPct"] or existing["votesAgainstPct"]
+                existing["issuedShareCapitalVotedPct"] = (
+                    official["issuedShareCapitalVotedPct"] or existing["issuedShareCapitalVotedPct"]
+                )
+                existing["officialAnnouncementUrl"] = document.url
+                existing["officialAnnouncementSource"] = document.source
+                existing["officialAnnouncementVerified"] = True
+                existing["officialAnnouncementStatus"] = "verified"
+                page_matches += 1
+                verified_rows += 1
+                continue
+
+            if (official["votesAgainstPct"] or 0) < 20:
+                continue
+
+            company_match = lookup.get(normalise_name(document.company_name))
+            if company_match is None:
+                continue
+
+            title = official["resolutionTitle"]
+            category_key, category_label = classify_resolution(document.source_group, title)
+            company_slug = slugify(company_match.canonical_name)
+            record = {
+                "id": build_row_id(company_slug, document.meeting_date, title),
+                "companyName": company_match.canonical_name,
+                "companySlug": company_slug,
+                "sourceCompanyName": document.company_name,
+                "sector": company_match.sector,
+                "meetingDate": document.meeting_date,
+                "meetingYear": datetime.fromisoformat(document.meeting_date).year,
+                "meetingType": "AGM",
+                "sourceGroup": document.source_group,
+                "resolutionTitle": title,
+                "votesForPct": official["votesForPct"],
+                "votesAgainstPct": official["votesAgainstPct"],
+                "votesWithheldPct": None,
+                "issuedShareCapitalVotedPct": official["issuedShareCapitalVotedPct"],
+                "votesForCount": official["votesForCount"],
+                "votesAgainstCount": official["votesAgainstCount"],
+                "votesWithheldCount": official["votesWithheldCount"],
+                "totalVotesCastCount": official["totalVotesCastCount"],
+                "statementInResults": True,
+                "statementInResultsUrl": document.url,
+                "updateStatement": None,
+                "updateStatementUrl": None,
+                "resolutionCategory": category_key,
+                "resolutionCategoryLabel": category_label,
+                "governanceNote": governance_note(category_key, official["votesAgainstPct"], title),
+                "sourceUrl": document.url,
+                "recordOrigin": "issuer-announcement",
+                "recordOriginLabel": "Issuer announcement",
+                "officialAnnouncementUrl": document.url,
+                "officialAnnouncementSource": document.source,
+                "officialAnnouncementVerified": True,
+                "officialAnnouncementStatus": "issuer-only",
+                "updateStatementParsed": False,
+                "updateStatementSummary": None,
+                "updateStatementDocumentType": None,
+            }
+            issuer_only_records.append(record)
+            title_lookup[title_key] = record
+            number_lookup[number_key] = record
+            page_new_records += 1
+
+        audit_rows.append(
+            {
+                "url": document.url,
+                "companyName": document.company_name,
+                "meetingDate": document.meeting_date,
+                "status": "parsed",
+                "documentType": "pdf-results",
+                "rawPdfPath": str(raw_path.relative_to(ROOT)),
+                "rowsExtracted": len(official_rows),
+                "rowsMatched": page_matches,
+                "rowsAdded": page_new_records,
+                "parserHint": document.parser_hint,
+            }
+        )
+
+    combined = resolutions + issuer_only_records
+    combined.sort(key=lambda item: (item["meetingDate"], item["companyName"], item["resolutionTitle"]), reverse=True)
+    stats = {
+        "pdfResultDocumentsFetched": fetched,
+        "pdfResultDocumentsParsed": parsed,
+        "pdfResultRowsExtracted": extracted_rows,
+        "pdfResultVerifiedResolutions": verified_rows,
+        "pdfResultIssuerOnlyAdded": len(issuer_only_records),
+        "officialVoteCountCoverage": sum(1 for item in combined if item["votesForCount"] is not None),
+    }
+    return combined, stats, audit_rows
 
 
 def build_record_lookups(
@@ -895,7 +1165,7 @@ def write_outputs(
             "focusStatement": "This app tracks significant shareholder dissent, not general AGM voting coverage.",
             "coverageStatement": (
                 "Phase 2 combines the Investment Association Public Register with parsed issuer announcement pages "
-                "where official HTML results are available, while keeping the tracker focused on significant votes against management."
+                "and selected official result PDFs where machine-readable vote outcomes can be extracted cleanly."
             ),
             "coveragePeriod": {
                 "startDate": start_date,
@@ -908,14 +1178,15 @@ def write_outputs(
                 },
                 {
                     "name": "Official issuer announcements",
-                    "role": "Issuer-level verification and vote-count enrichment from company-linked HTML results pages",
+                    "role": "Issuer-level verification and vote-count enrichment from company-linked HTML results pages and selected result PDFs",
                 },
             ],
             "methodology": {
                 "included": [
                     "Resolutions listed on the IA Public Register for significant votes against management or withdrawn resolutions.",
                     "Records matched with high confidence to the curated FTSE 100 issuer alias file.",
-                    "Official HTML issuer announcement pages linked from the register or added as manual issuer seeds where parsable.",
+                    "Official issuer announcement pages linked from the register or added as manual issuer seeds where parsable.",
+                    "Selected official AGM result PDFs where vote tables can be extracted with high confidence.",
                 ],
                 "excluded": [
                     "Routine AGM resolutions that did not reach the tracker’s significance threshold.",
@@ -924,13 +1195,13 @@ def write_outputs(
                 ],
                 "sourceCredibilityNote": (
                     "The Investment Association Public Register sits inside the UK governance and stewardship ecosystem, "
-                    "while the issuer-announcement layer pulls directly from company-linked official meeting result pages."
+                    "while the issuer-announcement layer pulls directly from company-linked official meeting result pages and issuer-published AGM result documents."
                 ),
             },
             "limitations": [
                 "The IA Public Register records significant votes against management or withdrawn resolutions rather than every AGM resolution.",
                 "The Investment Association stated in October 2025 that no new companies or resolutions would be added to the register.",
-                "Issuer-announcement enrichment currently covers HTML result pages and does not yet parse PDF-only AGM result documents.",
+                "Issuer-announcement enrichment currently covers HTML result pages plus a small set of company-specific AGM result PDFs rather than a universal PDF parser.",
                 "FTSE 100 inclusion relies on a maintained alias file rather than a live constituent feed.",
                 "Resolution categories are assigned using rules based on source table captions and resolution text.",
             ],
@@ -956,7 +1227,7 @@ def write_outputs(
 def main() -> None:
     ensure_dirs()
     lookup, _ = load_company_metadata()
-    source_config = load_source_config()
+    source_config, result_documents = load_source_config()
     html = fetch_public_register()
     resolutions, unmatched, ia_stats = parse_tables(html, lookup)
     announcement_pages = collect_announcement_pages(resolutions, source_config)
@@ -964,6 +1235,11 @@ def main() -> None:
         resolutions,
         lookup,
         announcement_pages,
+    )
+    resolutions, pdf_result_stats, pdf_result_audit = enrich_with_result_documents(
+        resolutions,
+        lookup,
+        result_documents,
     )
     resolutions, document_stats, document_audit = enrich_with_update_statement_documents(resolutions)
     validation = validate_records(resolutions)
@@ -973,9 +1249,17 @@ def main() -> None:
     stats = {
         **ia_stats,
         **issuer_stats,
+        **pdf_result_stats,
         **document_stats,
     }
-    write_outputs(resolutions, unmatched, stats, validation, announcement_audit, document_audit)
+    write_outputs(
+        resolutions,
+        unmatched,
+        stats,
+        validation,
+        announcement_audit,
+        pdf_result_audit + document_audit,
+    )
     print(
         json.dumps(
             {

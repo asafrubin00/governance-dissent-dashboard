@@ -75,7 +75,7 @@
     "meetingDate": "2025-05-15",
     "status": "parsed",
     "rawHtmlPath": "data/raw/issuer-announcements/30b87e318ee6.html",
-    "rowsExtracted": 26,
+    "rowsExtracted": 27,
     "rowsMatched": 1,
     "rowsAdded": 0
   },
@@ -115,7 +115,7 @@
     "meetingDate": "2025-05-08",
     "status": "parsed",
     "rawHtmlPath": "data/raw/issuer-announcements/9d7b62177b91.html",
-    "rowsExtracted": 0,
+    "rowsExtracted": 16,
     "rowsMatched": 0,
     "rowsAdded": 0
   },
@@ -195,8 +195,18 @@
     "meetingDate": "2025-04-17",
     "status": "parsed",
     "rawHtmlPath": "data/raw/issuer-announcements/cee9d264b1c0.html",
-    "rowsExtracted": 0,
-    "rowsMatched": 0,
+    "rowsExtracted": 24,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://otp.tools.investis.com/clients/uk/rbs3/rns/regulatory-story.aspx?cid=365&newsid=1932512&culture=en-GB&val=638810172105163220",
+    "companyName": "NATWEST GROUP PLC",
+    "meetingDate": "2025-04-23",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/c54f8eae58e6.html",
+    "rowsExtracted": 27,
+    "rowsMatched": 1,
     "rowsAdded": 0
   }
 ]

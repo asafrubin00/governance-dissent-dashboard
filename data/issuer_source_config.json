@@ -1,3 +1,29 @@
 {
-  "announcementSeeds": []
+  "announcementSeeds": [
+    {
+      "companyName": "NATWEST GROUP PLC",
+      "meetingDate": "2025-04-23",
+      "url": "https://otp.tools.investis.com/clients/uk/rbs3/rns/regulatory-story.aspx?cid=365&newsid=1932512&culture=en-GB&val=638810172105163220",
+      "source": "manual-html-seed",
+      "sourceGroup": "Director election"
+    }
+  ],
+  "resultDocumentSeeds": [
+    {
+      "companyName": "HSBC HOLDINGS PLC",
+      "meetingDate": "2025-05-02",
+      "url": "https://www.hsbc.com/-/files/hsbc/investors/results-and-announcements/stock-exchange-announcements/2025/may/sea-250502-hsbc-holdings-plc-agm-poll-results-announcement.pdf?download=1",
+      "source": "manual-pdf-seed",
+      "sourceGroup": "Shareholder proposal",
+      "parserHint": "hsbc-agm-results"
+    },
+    {
+      "companyName": "RIO TINTO PLC",
+      "meetingDate": "2025-04-03",
+      "url": "https://cdn-rio.dataweavers.io/-/media/content/documents/invest/shareholder-information/agms/2025/2025-agm-results.pdf?rev=7927721fd0c943c4bc91e317108d0ec4",
+      "source": "manual-pdf-seed",
+      "sourceGroup": "Capital authority",
+      "parserHint": "rio-agm-results"
+    }
+  ]
 }

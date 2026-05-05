@@ -34,11 +34,12 @@ Run locally with `npm run dev` to view both the overview and dashboard surfaces 
 The tracker now includes a second source layer:
 
 - `IA Public Register` as the historical significant-dissent base.
-- `Official issuer announcement HTML pages` where those result pages can be parsed reliably.
+- `Official issuer announcement pages and selected issuer-published result PDFs` where vote outcomes can be parsed reliably.
 
 This does two useful things:
 
 - enriches resolution records with full vote counts where issuers disclose them in HTML tables
+- adds company-specific PDF result parsing for issuers where official AGM outcomes are published as documents rather than HTML tables
 - creates a path to refresh beyond the discontinued IA register by adding issuer announcement seeds over time
 - begins a PDF-capable layer for linked company follow-up statements where text extraction is reliable
 
@@ -139,13 +140,14 @@ The pipeline is intentionally simple:
 2. Parse each server-rendered table and use the table caption as a source group.
 3. Read each row into a structured resolution record.
 4. Match issuer names to a curated FTSE 100 metadata file using aliases.
-5. Collect linked official issuer announcement pages that are available in HTML.
-6. Parse vote tables from those issuer announcement pages to recover full vote counts and official percentages where available.
-7. Parse linked PDF follow-up statements where text extraction is reliable enough to generate a board-response summary.
-8. Use issuer pages to verify existing IA-linked records and add any additional `20%+` dissent resolutions if found in the same official source layer.
-9. Classify each resolution into a governance category using lightweight text rules.
-10. Generate a short governance note for the resolution detail view.
-11. Export JSON and CSV for local use by the app.
+5. Collect linked official issuer announcement pages and manual issuer seeds.
+6. Parse vote tables from issuer HTML pages to recover full vote counts and official percentages where available.
+7. Parse selected official AGM result PDFs with narrow issuer-specific rules where HTML tables are unavailable but text extraction is clean enough to trust.
+8. Parse linked PDF follow-up statements where text extraction is reliable enough to generate a board-response summary.
+9. Use issuer sources to verify existing IA-linked records and add any additional `20%+` dissent resolutions if found in the same official source layer.
+10. Classify each resolution into a governance category using lightweight text rules.
+11. Generate a short governance note for the resolution detail view.
+12. Export JSON and CSV for local use by the app.
 
 This approach is not meant to be perfect. It is meant to be dependable and transparent.
 
@@ -161,7 +163,7 @@ What that means in practice:
 - The app does not refresh itself at runtime.
 - The generated JSON changes only when the scraper is run.
 - The GitHub Action can be triggered manually, and it is also scheduled weekly.
-- PDF follow-up parsing is currently narrow and should be treated as targeted enrichment rather than full PDF coverage.
+- PDF parsing is still narrow and issuer-specific. It should be treated as targeted enrichment rather than full market-wide PDF coverage.
 
 Important limitation:
 
@@ -196,11 +198,11 @@ Important limitation:
 - The accessible dataset in this build is concentrated in the 2025 AGM season.
 - Some issuers outside the alias file remain in `data/processed/unmatched_companies.json`.
 - The build includes validation checks for duplicate records, missing company names, missing dates, and out-of-range percentage fields.
-- Issuer-announcement enrichment currently focuses on HTML result pages and only a narrow set of linked PDF follow-up statements.
+- Issuer-announcement enrichment currently covers HTML result pages, a small set of issuer-specific AGM result PDFs, and a narrow set of linked PDF follow-up statements.
 
 ## Future improvements
 
-- Add broader PDF parsing for issuer result announcements that are only published as downloadable AGM result PDFs.
+- Extend the issuer-specific PDF result parser layer to more FTSE 100 companies that publish AGM outcomes only as downloadable PDFs.
 - Extend `data/issuer_source_config.json` with direct issuer seeds for companies not already linked through the IA register.
 - Add issuer pages with multi-resolution histories.
 - Add a cleaner FTSE 100 constituent snapshot workflow by year.

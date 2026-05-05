@@ -57,7 +57,7 @@ export function HomePage({ data }: HomePageProps) {
                 <h3>Coverage summary</h3>
                 <InfoHint
                   label="Coverage summary note"
-                  content="Coverage reflects the matched FTSE 100 subset of the IA Public Register, with official issuer-announcement enrichment layered in where HTML result pages can be parsed reliably."
+                  content="Coverage reflects the matched FTSE 100 subset of the IA Public Register, with official issuer-announcement enrichment layered in where HTML pages or selected issuer result PDFs can be parsed reliably."
                 />
               </div>
               <div className="workspace-summary__grid">
