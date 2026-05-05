@@ -5,9 +5,19 @@
     "meetingDate": "2025-08-22",
     "status": "parsed",
     "rawHtmlPath": "data/raw/issuer-announcements/d7e94c055937.html",
-    "rowsExtracted": 18,
+    "rowsExtracted": 20,
     "rowsMatched": 1,
-    "rowsAdded": 1
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://otp.tools.investis.com/clients/uk/bandm1/rns/regulatory-story.aspx?cid=904&newsid=1968819",
+    "companyName": "B&M EUROPEAN VALUE RETAIL SA",
+    "meetingDate": "2025-07-22",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/d7e94c055937.html",
+    "rowsExtracted": 20,
+    "rowsMatched": 1,
+    "rowsAdded": 0
   },
   {
     "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5742945.html",
@@ -115,8 +125,8 @@
     "meetingDate": "2025-05-08",
     "status": "parsed",
     "rawHtmlPath": "data/raw/issuer-announcements/9d7b62177b91.html",
-    "rowsExtracted": 16,
-    "rowsMatched": 0,
+    "rowsExtracted": 20,
+    "rowsMatched": 1,
     "rowsAdded": 0
   },
   {
@@ -145,8 +155,8 @@
     "meetingDate": "2025-05-01",
     "status": "parsed",
     "rawHtmlPath": "data/raw/issuer-announcements/1a88c1a1159c.html",
-    "rowsExtracted": 0,
-    "rowsMatched": 0,
+    "rowsExtracted": 23,
+    "rowsMatched": 1,
     "rowsAdded": 0
   },
   {
@@ -155,8 +165,8 @@
     "meetingDate": "2025-04-30",
     "status": "parsed",
     "rawHtmlPath": "data/raw/issuer-announcements/ef92670a426b.html",
-    "rowsExtracted": 0,
-    "rowsMatched": 0,
+    "rowsExtracted": 19,
+    "rowsMatched": 1,
     "rowsAdded": 0
   },
   {

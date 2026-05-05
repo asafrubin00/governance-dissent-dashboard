@@ -27,7 +27,7 @@ Run locally with `npm run dev` to view both the overview and dashboard surfaces 
 - Source: Investment Association Public Register.
 - Coverage: matched FTSE 100 companies captured by that source in the current v1 dataset.
 - Time horizon: the current build is effectively a 2025 AGM-season tracker because that is what the accessible public register page currently exposes.
-- Data shape: 29 real significant dissent resolutions across 24 matched FTSE 100 companies.
+- Data shape: 28 real significant dissent resolutions across 24 matched FTSE 100 companies.
 
 ## Phase 2 upgrade
 

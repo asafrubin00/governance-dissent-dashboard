@@ -40,6 +40,7 @@ class AnnouncementPage:
     meeting_date: str
     source: str
     source_group: str
+    allow_issuer_only: bool = True
 
 
 @dataclass
@@ -90,6 +91,7 @@ def load_source_config() -> tuple[list[AnnouncementPage], list[ResultDocument]]:
                 meeting_date=item["meetingDate"],
                 source=item.get("source", "manual-seed"),
                 source_group=item.get("sourceGroup", "Issuer announcement seed"),
+                allow_issuer_only=item.get("allowIssuerOnly", True),
             )
         )
 
@@ -122,6 +124,7 @@ def normalise_resolution_title(value: str) -> str:
     cleaned = value.strip().upper()
     cleaned = cleaned.replace("’", "'")
     cleaned = re.sub(r"^RESOLUTION\s+\d+\s*:\s*", "", cleaned)
+    cleaned = re.sub(r"^RESOLUTION\s+[A-Z]\s*:\s*", "", cleaned)
     cleaned = re.sub(r"^\d+[\.\): -]+\s*", "", cleaned)
     cleaned = re.sub(r"\s+", " ", cleaned)
     cleaned = re.sub(r"[^A-Z0-9&' ]", "", cleaned)
@@ -379,16 +382,19 @@ def collect_announcement_pages(
     resolutions: list[dict[str, Any]],
     manual_pages: list[AnnouncementPage],
 ) -> list[AnnouncementPage]:
-    pages_by_url: dict[str, AnnouncementPage] = {}
+    pages_by_key: dict[tuple[str, str], AnnouncementPage] = {}
+    url_dates: dict[str, set[str]] = {}
 
     for item in resolutions:
         for key in ["statementInResultsUrl", "updateStatementUrl"]:
             url = item.get(key)
             if not is_html_announcement_url(url):
                 continue
-            if url in pages_by_url:
+            url_dates.setdefault(url, set()).add(item["meetingDate"])
+            pair = (url, item["meetingDate"])
+            if pair in pages_by_key:
                 continue
-            pages_by_url[url] = AnnouncementPage(
+            pages_by_key[pair] = AnnouncementPage(
                 url=url,
                 company_name=item["companyName"],
                 meeting_date=item["meetingDate"],
@@ -397,9 +403,15 @@ def collect_announcement_pages(
             )
 
     for page in manual_pages:
-        pages_by_url.setdefault(page.url, page)
+        url_dates.setdefault(page.url, set()).add(page.meeting_date)
+        pages_by_key.setdefault((page.url, page.meeting_date), page)
 
-    return list(pages_by_url.values())
+    pages = list(pages_by_key.values())
+    for page in pages:
+        if page.source == "ia-linked-announcement" and len(url_dates.get(page.url, set())) > 1:
+            page.allow_issuer_only = False
+
+    return pages
 
 
 def write_raw_announcement_html(url: str, html: str) -> Path:
@@ -418,7 +430,11 @@ def write_raw_document(url: str, content: bytes, suffix: str) -> Path:
 
 def looks_like_vote_table(table: Tag) -> bool:
     text = table.get_text(" ", strip=True).lower()
-    return "resolution" in text and "against" in text and "for" in text
+    has_for_against = ("votes for" in text or "total votes for" in text or re.search(r"\bfor\b", text)) and (
+        "votes against" in text or "total votes against" in text or re.search(r"\bagainst\b", text)
+    )
+    has_vote_structure = "total votes cast" in text or "withheld" in text or "resolution" in text
+    return bool(has_for_against and has_vote_structure)
 
 
 def parse_resolution_title_and_number(cells: list[str]) -> tuple[int | None, str | None, list[str]]:
@@ -430,10 +446,19 @@ def parse_resolution_title_and_number(cells: list[str]) -> tuple[int | None, str
         title = cells[1].strip() if len(cells) > 1 else None
         return int(first), title, cells[2:]
 
+    if re.fullmatch(r"\d+[\.\)]", first):
+        title = cells[1].strip() if len(cells) > 1 else None
+        return int(re.sub(r"[^0-9]", "", first)), title, cells[2:]
+
     match = re.match(r"^resolution\s+(\d+)[\.\): -]*(.*)$", first, flags=re.IGNORECASE)
     if match:
         title = match.group(2).strip() or (cells[1].strip() if len(cells) > 1 else None)
         return int(match.group(1)), title, cells[1:]
+
+    match = re.match(r"^resolution\s+[A-Z][\.\): -]+(.*)$", first, flags=re.IGNORECASE)
+    if match:
+        title = match.group(1).strip() or (cells[1].strip() if len(cells) > 1 else None)
+        return None, title, cells[1:]
 
     match = re.match(r"^(\d+)[\.\)]?\s+(.*)$", first)
     if match:
@@ -444,7 +469,7 @@ def parse_resolution_title_and_number(cells: list[str]) -> tuple[int | None, str
 
 def parse_official_vote_row(cells: list[str]) -> dict[str, Any] | None:
     resolution_number, title, body = parse_resolution_title_and_number(cells)
-    if resolution_number is None or not title:
+    if not title:
         return None
 
     if body and body[0].strip().lower() in {"ordinary", "special"}:
@@ -582,6 +607,25 @@ def parse_pdf_result_rows(text: str, parser_hint: str) -> list[dict[str, Any]]:
                     "votesAgainstPct": parse_percent(match.group("against_pct")),
                     "votesWithheldCount": parse_count(match.group("withheld")),
                     "totalVotesCastCount": parse_count(match.group("total")),
+                    "issuedShareCapitalVotedPct": None,
+                }
+            )
+        return rows
+
+    if parser_hint == "anto-agm-results":
+        rows: list[dict[str, Any]] = []
+        for match in re.finditer(r"\((?P<num>\d+)\)\s+Resolution withdrawn\d*", cleaned, flags=re.IGNORECASE):
+            rows.append(
+                {
+                    "resolutionNumber": int(match.group("num")),
+                    "resolutionTitle": "Resolution withdrawn",
+                    "resolutionTitleNormalised": normalise_resolution_title("Resolution withdrawn"),
+                    "votesForCount": None,
+                    "votesForPct": None,
+                    "votesAgainstCount": None,
+                    "votesAgainstPct": None,
+                    "votesWithheldCount": None,
+                    "totalVotesCastCount": None,
                     "issuedShareCapitalVotedPct": None,
                 }
             )
@@ -763,12 +807,20 @@ def enrich_with_result_documents(
                 document.meeting_date,
                 official["resolutionTitleNormalised"],
             )
-            number_key = (
-                document.company_name,
-                document.meeting_date,
-                official["resolutionNumber"],
-            )
-            existing = title_lookup.get(title_key) or number_lookup.get(number_key)
+            existing = title_lookup.get(title_key)
+            if existing is None and official["resolutionNumber"] is not None:
+                official_category_key, _ = classify_resolution("", official["resolutionTitle"])
+                number_key = (
+                    document.company_name,
+                    document.meeting_date,
+                    official["resolutionNumber"],
+                )
+                candidate = number_lookup.get(number_key)
+                if candidate is not None and (
+                    candidate["resolutionCategory"] == official_category_key
+                    or "withdrawn" in document.source_group.lower()
+                ):
+                    existing = candidate
             if existing is not None:
                 existing["votesForCount"] = official["votesForCount"] or existing["votesForCount"]
                 existing["votesAgainstCount"] = official["votesAgainstCount"] or existing["votesAgainstCount"]
@@ -836,7 +888,8 @@ def enrich_with_result_documents(
             }
             issuer_only_records.append(record)
             title_lookup[title_key] = record
-            number_lookup[number_key] = record
+            if official["resolutionNumber"] is not None:
+                number_lookup[(document.company_name, document.meeting_date, official["resolutionNumber"])] = record
             page_new_records += 1
 
         audit_rows.append(
@@ -904,6 +957,32 @@ def enrich_with_official_announcements(
     extracted_rows = 0
     verified_rows = 0
 
+    def fallback_existing(page_company: str, page_date: str, official: dict[str, Any], source_group: str) -> dict[str, Any] | None:
+        category_key, _ = classify_resolution(source_group, official["resolutionTitle"])
+        official_against = official.get("votesAgainstPct")
+        same_date_candidates: list[dict[str, Any]] = []
+        for candidate in resolutions:
+            if candidate["companyName"] != page_company or candidate["meetingDate"] != page_date:
+                continue
+            if candidate.get("officialAnnouncementVerified"):
+                continue
+            same_date_candidates.append(candidate)
+            if candidate["resolutionCategory"] != category_key:
+                continue
+            candidate_against = candidate.get("votesAgainstPct")
+            if official_against is None or candidate_against is None:
+                continue
+            if abs(candidate_against - official_against) <= 0.2:
+                return candidate
+
+        for candidate in same_date_candidates:
+            candidate_against = candidate.get("votesAgainstPct")
+            if official_against is None or candidate_against is None:
+                continue
+            if abs(candidate_against - official_against) <= 0.2:
+                return candidate
+        return None
+
     for page in announcement_pages:
         try:
             html = fetch_url(page.url)
@@ -932,12 +1011,22 @@ def enrich_with_official_announcements(
                 page.meeting_date,
                 official["resolutionTitleNormalised"],
             )
-            number_key = (
-                page.company_name,
-                page.meeting_date,
-                official["resolutionNumber"],
-            )
-            existing = title_lookup.get(title_key) or number_lookup.get(number_key)
+            existing = title_lookup.get(title_key)
+            if existing is None:
+                existing = fallback_existing(page.company_name, page.meeting_date, official, page.source_group)
+            if existing is None and official["resolutionNumber"] is not None:
+                official_category_key, _ = classify_resolution("", official["resolutionTitle"])
+                number_key = (
+                    page.company_name,
+                    page.meeting_date,
+                    official["resolutionNumber"],
+                )
+                candidate = number_lookup.get(number_key)
+                if candidate is not None and (
+                    candidate["resolutionCategory"] == official_category_key
+                    or "withdrawn" in page.source_group.lower()
+                ):
+                    existing = candidate
             if existing is not None:
                 existing["votesForCount"] = official["votesForCount"] or existing["votesForCount"]
                 existing["votesAgainstCount"] = official["votesAgainstCount"] or existing["votesAgainstCount"]
@@ -954,6 +1043,9 @@ def enrich_with_official_announcements(
                 existing["officialAnnouncementStatus"] = "verified"
                 page_matches += 1
                 verified_rows += 1
+                continue
+
+            if not page.allow_issuer_only:
                 continue
 
             if (official["votesAgainstPct"] or 0) < 20:
@@ -1002,7 +1094,8 @@ def enrich_with_official_announcements(
             }
             issuer_only_records.append(record)
             title_lookup[title_key] = record
-            number_lookup[number_key] = record
+            if official["resolutionNumber"] is not None:
+                number_lookup[(page.company_name, page.meeting_date, official["resolutionNumber"])] = record
             page_new_records += 1
 
         audit_rows.append(

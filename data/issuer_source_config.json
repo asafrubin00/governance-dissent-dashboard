@@ -24,6 +24,14 @@
       "source": "manual-pdf-seed",
       "sourceGroup": "Capital authority",
       "parserHint": "rio-agm-results"
+    },
+    {
+      "companyName": "ANTOFAGASTA PLC",
+      "meetingDate": "2025-05-08",
+      "url": "https://www.antofagasta.co.uk/media/4817/20250508_anto-agm-2025-agm-poll-voting-results-may25-vf.pdf",
+      "source": "manual-pdf-seed",
+      "sourceGroup": "Withdrawn resolution",
+      "parserHint": "anto-agm-results"
     }
   ]
 }
