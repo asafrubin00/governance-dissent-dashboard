@@ -1,0 +1,13 @@
+[
+  {
+    "url": "https://www.centrica.com/media/dempwpcp/shareholder-update-statement-2025-agm-final-website.pdf",
+    "status": "parsed",
+    "rawPdfPath": "data/raw/issuer-documents/f966ee813283.pdf",
+    "matchedRecords": 1
+  },
+  {
+    "url": "https://www.shell.com/investors/shareholder-meetings/_jcr_content/root/main/section/simple/text.multi.stream/1761733044388/ca7f44d44d84a5dbd12804d6c1dddba4ac258a7d/annual-general-meeting-voting-results-thirtyone-october-2025.pdf",
+    "status": "fetch-failed",
+    "error": "404 Client Error: Not Found for url: https://www.shell.com/investors/shareholder-meetings/_jcr_content/root/main/section/simple/text.multi.stream/1761733044388/ca7f44d44d84a5dbd12804d6c1dddba4ac258a7d/annual-general-meeting-voting-results-thirtyone-october-2025.pdf"
+  }
+]

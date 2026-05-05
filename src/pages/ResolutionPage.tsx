@@ -1,5 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
-import { formatDate, formatPercent, formatShortPercent } from '../lib/format'
+import { formatCount, formatDate, formatPercent, formatShortPercent } from '../lib/format'
 import type { TrackerData } from '../types'
 
 type ResolutionPageProps = {
@@ -49,18 +49,26 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
             <div>
               <span>Votes for</span>
               <strong>{formatPercent(resolution.votesForPct)}</strong>
+              <small>{formatCount(resolution.votesForCount)} shares</small>
             </div>
             <div>
               <span>Votes against</span>
               <strong>{formatPercent(resolution.votesAgainstPct)}</strong>
+              <small>{formatCount(resolution.votesAgainstCount)} shares</small>
             </div>
             <div>
               <span>Withheld</span>
               <strong>{formatPercent(resolution.votesWithheldPct)}</strong>
+              <small>{formatCount(resolution.votesWithheldCount)} shares</small>
             </div>
             <div>
               <span>Issued share capital voted</span>
               <strong>{formatPercent(resolution.issuedShareCapitalVotedPct)}</strong>
+              <small>
+                {resolution.totalVotesCastCount !== null
+                  ? `${formatCount(resolution.totalVotesCastCount)} votes cast`
+                  : 'Total votes not disclosed'}
+              </small>
             </div>
           </div>
         </article>
@@ -74,6 +82,8 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
           <div className="detail-tags">
             <span>{resolution.sector}</span>
             <span>{resolution.sourceGroup}</span>
+            <span>{resolution.recordOriginLabel}</span>
+            {resolution.officialAnnouncementVerified ? <span>Officially verified</span> : null}
             <span>{formatShortPercent(resolution.votesAgainstPct)} against</span>
           </div>
         </article>
@@ -88,10 +98,22 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
           <ul className="plain-list">
             <li>
               <a href={resolution.sourceUrl} target="_blank" rel="noreferrer">
-                Investment Association Public Register entry
+                {resolution.recordOrigin === 'issuer-announcement'
+                  ? 'Primary issuer announcement source'
+                  : 'Investment Association Public Register entry'}
               </a>
             </li>
-            {resolution.statementInResultsUrl ? (
+            {resolution.officialAnnouncementUrl &&
+            resolution.officialAnnouncementUrl !== resolution.sourceUrl ? (
+              <li>
+                <a href={resolution.officialAnnouncementUrl} target="_blank" rel="noreferrer">
+                  Official issuer announcement
+                </a>
+              </li>
+            ) : null}
+            {resolution.statementInResultsUrl &&
+            resolution.statementInResultsUrl !== resolution.officialAnnouncementUrl &&
+            resolution.statementInResultsUrl !== resolution.sourceUrl ? (
               <li>
                 <a href={resolution.statementInResultsUrl} target="_blank" rel="noreferrer">
                   AGM or meeting result announcement
@@ -108,6 +130,34 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
           </ul>
         </article>
 
+        <article className="panel panel--related">
+          <div className="panel__header">
+            <p className="eyebrow">Follow-up disclosure</p>
+            <h2>Post-meeting board response</h2>
+          </div>
+          {resolution.updateStatementParsed && resolution.updateStatementSummary ? (
+            <p>{resolution.updateStatementSummary}</p>
+          ) : resolution.updateStatementUrl ? (
+            <p>
+              A linked company follow-up statement exists, but it has not yet been parsed into
+              structured summary text.
+            </p>
+          ) : (
+            <p>No linked follow-up statement is available for this record in the current dataset.</p>
+          )}
+          {resolution.updateStatementUrl ? (
+            <div className="detail-tags">
+              <span>
+                {resolution.updateStatementDocumentType === 'pdf-update-statement'
+                  ? 'PDF follow-up parsed'
+                  : 'Follow-up linked'}
+              </span>
+            </div>
+          ) : null}
+        </article>
+      </section>
+
+      <section className="content-grid content-grid--detail-lower">
         <article className="panel panel--related">
           <div className="panel__header">
             <p className="eyebrow">Related company votes</p>

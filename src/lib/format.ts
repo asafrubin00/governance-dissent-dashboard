@@ -26,3 +26,10 @@ export function formatMonth(value: string) {
     year: 'numeric',
   })
 }
+
+export function formatCount(value: number | null | undefined) {
+  if (value === null || value === undefined) {
+    return 'Not disclosed'
+  }
+  return value.toLocaleString('en-GB')
+}

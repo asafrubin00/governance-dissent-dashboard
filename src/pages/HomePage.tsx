@@ -57,7 +57,7 @@ export function HomePage({ data }: HomePageProps) {
                 <h3>Coverage summary</h3>
                 <InfoHint
                   label="Coverage summary note"
-                  content="Coverage reflects the matched FTSE 100 subset of the IA Public Register visible in the generated local dataset."
+                  content="Coverage reflects the matched FTSE 100 subset of the IA Public Register, with official issuer-announcement enrichment layered in where HTML result pages can be parsed reliably."
                 />
               </div>
               <div className="workspace-summary__grid">
@@ -88,8 +88,8 @@ export function HomePage({ data }: HomePageProps) {
                 <StatCard
                   compact
                   label="Primary source"
-                  value="Investment Association Public Register"
-                  note="A UK governance source focused on votes against management."
+                  value={data.metadata.sourceName}
+                  note={`${summary.issuerVerifiedCount} records now tie back to parsed official issuer announcement pages.`}
                 />
               </div>
             </section>

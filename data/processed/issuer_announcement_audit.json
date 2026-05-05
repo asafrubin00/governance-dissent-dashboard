@@ -1,0 +1,202 @@
+[
+  {
+    "url": "https://otp.tools.investis.com/clients/uk/bandm1/rns/regulatory-story.aspx?cid=904&newsid=1968819",
+    "companyName": "B&M EUROPEAN VALUE RETAIL SA",
+    "meetingDate": "2025-08-22",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/d7e94c055937.html",
+    "rowsExtracted": 18,
+    "rowsMatched": 1,
+    "rowsAdded": 1
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5742945.html",
+    "companyName": "RS GROUP PLC",
+    "meetingDate": "2025-07-17",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/5ef92bf480e4.html",
+    "rowsExtracted": 23,
+    "rowsMatched": 2,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5720047.html",
+    "companyName": "MARKS & SPENCER GROUP PLC",
+    "meetingDate": "2025-07-01",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/73299ba1bccd.html",
+    "rowsExtracted": 27,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5707689.html",
+    "companyName": "KINGFISHER PLC",
+    "meetingDate": "2025-06-23",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/1876434d8666.html",
+    "rowsExtracted": 20,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5666022.html",
+    "companyName": "CONVATEC GROUP PLC",
+    "meetingDate": "2025-05-22",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/9363f0748fce.html",
+    "rowsExtracted": 22,
+    "rowsMatched": 2,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5666046.html",
+    "companyName": "COCA-COLA EUROPACIFIC PARTNERS PLC",
+    "meetingDate": "2025-05-22",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/059e66214355.html",
+    "rowsExtracted": 29,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/GNW/1001097814-en.html",
+    "companyName": "SHELL PLC",
+    "meetingDate": "2025-05-20",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/0d836182e777.html",
+    "rowsExtracted": 22,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5656427.html",
+    "companyName": "NEXT PLC",
+    "meetingDate": "2025-05-15",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/30b87e318ee6.html",
+    "rowsExtracted": 26,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5656496.html",
+    "companyName": "COMPUTACENTER PLC",
+    "meetingDate": "2025-05-15",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/59bd953d1216.html",
+    "rowsExtracted": 12,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/PRN/202505081050PR_NEWS_UKDISCLO_0086.html",
+    "companyName": "MONDI PLC",
+    "meetingDate": "2025-05-08",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/fa0033953718.html",
+    "rowsExtracted": 21,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5646815.html",
+    "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+    "meetingDate": "2025-05-08",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/86fe2bb5b809.html",
+    "rowsExtracted": 12,
+    "rowsMatched": 2,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5646710.html",
+    "companyName": "IMI PLC",
+    "meetingDate": "2025-05-08",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/9d7b62177b91.html",
+    "rowsExtracted": 0,
+    "rowsMatched": 0,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5646723.html",
+    "companyName": "CENTRICA PLC",
+    "meetingDate": "2025-05-08",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/3f37a36ad7c7.html",
+    "rowsExtracted": 26,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5644997.html",
+    "companyName": "RENTOKIL INITIAL PLC",
+    "meetingDate": "2025-05-07",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/af50fd16824a.html",
+    "rowsExtracted": 21,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5638478.html",
+    "companyName": "LONDON STOCK EXCHANGE GROUP PLC",
+    "meetingDate": "2025-05-01",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/1a88c1a1159c.html",
+    "rowsExtracted": 0,
+    "rowsMatched": 0,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5636415.html",
+    "companyName": "UNILEVER PLC",
+    "meetingDate": "2025-04-30",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/ef92670a426b.html",
+    "rowsExtracted": 0,
+    "rowsMatched": 0,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5636351.html",
+    "companyName": "TAYLOR WIMPEY PLC",
+    "meetingDate": "2025-04-30",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/0fde66613bf9.html",
+    "rowsExtracted": 20,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5636365.html",
+    "companyName": "MELROSE INDUSTRIES PLC",
+    "meetingDate": "2025-04-30",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/7780eb785b66.html",
+    "rowsExtracted": 14,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5636289.html",
+    "companyName": "ANGLO AMERICAN PLC",
+    "meetingDate": "2025-04-30",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/91d484caf62b.html",
+    "rowsExtracted": 20,
+    "rowsMatched": 1,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://data.fca.org.uk/artefacts/NSM/RNS/5622742.html",
+    "companyName": "BP P.L.C.",
+    "meetingDate": "2025-04-17",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/cee9d264b1c0.html",
+    "rowsExtracted": 0,
+    "rowsMatched": 0,
+    "rowsAdded": 0
+  }
+]

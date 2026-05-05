@@ -90,3 +90,4 @@ lib-cov
 docusaurus
 .serverless/
 .vercel
+data/raw/
