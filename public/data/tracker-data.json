@@ -3,7 +3,7 @@
     "title": "FTSE 100 Shareholder Dissent Tracker",
     "sourceName": "IA Public Register + official issuer announcements",
     "sourceUrl": "https://www.theia.org/public-register",
-    "generatedAt": "2026-05-05T12:53:15.606592+00:00",
+    "generatedAt": "2026-05-11T10:40:43.639335+00:00",
     "refreshMode": "manual-script",
     "focusStatement": "This app tracks significant shareholder dissent, not general AGM voting coverage.",
     "coverageStatement": "Phase 2 combines the Investment Association Public Register with parsed issuer announcement pages and selected official result PDFs where machine-readable vote outcomes can be extracted cleanly.",
