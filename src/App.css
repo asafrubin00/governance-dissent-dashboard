@@ -1347,8 +1347,27 @@
 }
 
 .heat-map--pilot {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, 1fr);
+}
+
+.heat-map--pilot .heat-tile {
+  padding: 8px 9px;
+  gap: 3px;
+}
+
+.heat-map--pilot .heat-tile span {
+  font-size: 0.74rem;
+}
+
+.heat-map--pilot .heat-tile small {
+  font-size: 0.56rem;
+}
+
+.heat-map--pilot .heat-tile strong {
+  right: 8px;
+  bottom: 5px;
+  font-size: 0.88rem;
 }
 
 .heat-map--full {

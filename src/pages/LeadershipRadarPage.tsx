@@ -91,7 +91,7 @@ export function LeadershipRadarPage({ data }: LeadershipRadarPageProps) {
             </fieldset>
             <fieldset className="segmented-control">
               <legend>Universe</legend>
-              <button className={universe === 'rated' ? 'is-active' : ''} onClick={() => setUniverse('rated')} type="button">Rated pilot</button>
+              <button className={universe === 'rated' ? 'is-active' : ''} onClick={() => setUniverse('rated')} type="button">Verified cohort</button>
               <button className={universe === 'full' ? 'is-active' : ''} onClick={() => setUniverse('full')} type="button">Full FTSE 100</button>
             </fieldset>
             <label className="radar-select"><span>Sector</span><select value={sector} onChange={(event) => setSector(event.target.value)}>{sectors.map((item) => <option key={item}>{item}</option>)}</select></label>
@@ -114,7 +114,7 @@ export function LeadershipRadarPage({ data }: LeadershipRadarPageProps) {
           <div className="radar-main-row">
             <section className="radar-map-panel">
               <div className="radar-map-panel__heading">
-                <div><p>FTSE 100 leadership map</p><h2>{universe === 'rated' ? 'Source-verified pilot' : 'Full constituent research queue'}</h2></div>
+                <div><p>FTSE 100 leadership map</p><h2>{universe === 'rated' ? 'Source-verified cohort' : 'Full constituent research queue'}</h2></div>
                 <span>{visibleCompanies.length} companies shown</span>
               </div>
               <div className={`heat-map ${universe === 'full' ? 'heat-map--full' : 'heat-map--pilot'}`}>

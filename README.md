@@ -18,7 +18,7 @@ The product is intentionally transparent about incomplete coverage. Unresearched
 ### Leadership Pressure Radar
 
 - Universe: a 100-company FTSE 100 public constituent snapshot.
-- Rated pilot: 8 companies with official issuer sources for both CEO and Chair appointments.
+- Verified cohort: 25 companies with official issuer sources for both CEO and Chair appointments.
 - Signals in methodology `v0.1`: role tenure and qualifying registered dissent on management-sponsored resolutions.
 - Excluded for now: profit warnings, market-price stress, activism, controversies, and broader news.
 - Output: `public/data/leadership-radar.json`.
@@ -97,7 +97,7 @@ src/
 
 ## Analytical limitations
 
-- Only eight companies are rated in the first leadership pilot.
+- Twenty-five companies are rated; the other 75 remain visibly unrated until both leadership roles are verified.
 - CEO tenure has no formal UK governance limit; the ten-year horizon is an analytical reference only.
 - Chair tenure is interpreted in the context of the Code's nine-year independence and succession guidance.
 - The dissent uplift is based on a narrow 2025 source window, not complete historical voting coverage.
@@ -106,7 +106,7 @@ src/
 
 ## Recommended next research phase
 
-Expand the rated leadership cohort issuer by issuer, then add profit-warning history as the first non-tenure signal. Share-price and news-event measures should follow only after event definitions, time windows, and source licensing are documented clearly.
+Add a source-backed profit-warning history as the first non-tenure signal. Share-price and news-event measures should follow only after event definitions, time windows, and source licensing are documented clearly.
 
 ## Verification
 

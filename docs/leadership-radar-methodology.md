@@ -15,7 +15,8 @@ Profit warnings, share-price stress, activism, controversies, and broader news a
 
 - The public FTSE 100 constituent table on Wikipedia is used as a reproducible 100-company roster snapshot.
 - FTSE Russell remains the index authority; the public table is not presented as an official licensed index feed.
-- Eight companies have source-verified CEO and Chair appointment records in `data/leadership_sources.json`.
+- Twenty-five companies have source-verified CEO and Chair appointment records in `data/leadership_sources.json`.
+- The evidence cutoff for the current cohort is 6 August 2026.
 - The other constituents are retained in the interface as visibly `Unrated` research candidates.
 - No leadership names, dates, or scores are inferred for unresearched companies.
 

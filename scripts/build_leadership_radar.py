@@ -235,7 +235,7 @@ def main() -> None:
             },
             "limitations": [
                 "This is a research prioritisation score, not a prediction that an individual will leave office.",
-                "Only eight companies have source-verified leadership records in methodology v0.1; all others remain visibly unrated.",
+                f"{len(source['companies'])} companies have source-verified leadership records in methodology v0.1; all others remain visibly unrated.",
                 "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
                 "Profit warnings, share-price stress, activism, and broader news signals are not yet included.",
             ],

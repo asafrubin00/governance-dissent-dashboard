@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-06T08:22:26.657441+00:00",
+    "generatedAt": "2026-08-06T10:22:17.356541+00:00",
     "asOfDate": "2026-08-06",
     "methodologyVersion": "0.1",
     "rosterSource": {
@@ -10,7 +10,7 @@
       "mode": "live-public-snapshot",
       "note": "Used only as a reproducible public constituent snapshot; FTSE Russell remains the index authority."
     },
-    "ratedCompanyCount": 8,
+    "ratedCompanyCount": 25,
     "constituentCount": 100,
     "scoreDefinition": {
       "label": "Leadership transition pressure",
@@ -27,7 +27,7 @@
     },
     "limitations": [
       "This is a research prioritisation score, not a prediction that an individual will leave office.",
-      "Only eight companies have source-verified leadership records in methodology v0.1; all others remain visibly unrated.",
+      "25 companies have source-verified leadership records in methodology v0.1; all others remain visibly unrated.",
       "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
       "Profit warnings, share-price stress, activism, and broader news signals are not yet included."
     ],
@@ -138,16 +138,60 @@
       "sector": "Mining",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Duncan Wanblad",
+          "roleStartDate": "2022-04-19",
+          "sourceUrl": "https://www.angloamerican.com/media/press-releases/2021/03-11-2021",
+          "sourceLabel": "Anglo American CEO succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.3,
+          "score": 38.4,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 34.4,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 24.28,
+            "records": [
+              {
+                "id": "c3f19c826da7",
+                "title": "Resolution 16: To approve the directors' remuneration report",
+                "votesAgainstPct": 24.28,
+                "meetingDate": "2025-04-30"
+              }
+            ]
+          },
+          "reason": "4.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Stuart Chambers",
+          "roleStartDate": "2017-11-01",
+          "sourceUrl": "https://www.angloamerican.com/about-us/leadership-team",
+          "sourceLabel": "Anglo American leadership profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 8.8,
+          "score": 82.2,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 78.2,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 24.28,
+            "records": [
+              {
+                "id": "c3f19c826da7",
+                "title": "Resolution 16: To approve the directors' remuneration report",
+                "votesAgainstPct": 24.28,
+                "meetingDate": "2025-04-30"
+              }
+            ]
+          },
+          "reason": "8.8 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
       }
     },
@@ -157,16 +201,46 @@
       "sector": "Mining",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Iv\u00e1n Arriagada",
+          "roleStartDate": "2016-04-08",
+          "sourceUrl": "https://www.antofagasta.co.uk/investors/news/2016/iv%C3%A1n-arriagada-succeeds-diego-hern%C3%A1ndez-as-ceo-of-antofagasta-plc/",
+          "sourceLabel": "Antofagasta CEO succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 10.3,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "10.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Jean-Paul Luksic",
+          "roleStartDate": "2004-01-01",
+          "sourceUrl": "https://www.antofagasta.co.uk/about-us/leadership-team/board/",
+          "sourceLabel": "Antofagasta Board profile",
+          "datePrecision": "year",
+          "rated": true,
+          "tenureYears": 22.6,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "22.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       }
     },
@@ -195,16 +269,46 @@
       "sector": "Pharmaceuticals & biotechnology",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Pascal Soriot",
+          "roleStartDate": "2012-10-01",
+          "sourceUrl": "https://www.astrazeneca.com/content/dam/az/Investor_Relations/Annual-report-2015/AZ_Corporate_Governance_2015.pdf",
+          "sourceLabel": "AstraZeneca Corporate Governance report",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 13.8,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "13.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Michel Demar\u00e9",
+          "roleStartDate": "2023-04-27",
+          "sourceUrl": "https://www.astrazeneca.com/content/dam/az/PDF/2025/Notice-of-Meeting-2025.pdf",
+          "sourceLabel": "AstraZeneca AGM notice and Board profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.3,
+          "score": 29.3,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 29.3,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       }
     },
@@ -271,16 +375,46 @@
       "sector": "Aerospace & defence",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Charles Woodburn",
+          "roleStartDate": "2017-07-01",
+          "sourceUrl": "https://www.baesystems.com/en/article/notice-of-directorate-change",
+          "sourceLabel": "BAE Systems CEO succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 9.1,
+          "score": 72.8,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 72.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "9.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Cressida Hogg",
+          "roleStartDate": "2023-05-04",
+          "sourceUrl": "https://www.baesystems.com/en-us/article/chair-designate",
+          "sourceLabel": "BAE Systems Chair succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.3,
+          "score": 29.3,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 29.3,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       }
     },
@@ -290,16 +424,46 @@
       "sector": "Banks",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "C.S. Venkatakrishnan",
+          "roleStartDate": "2021-11-01",
+          "sourceUrl": "https://home.barclays/who-we-are/structure-and-leadership/leadership/c-s-venkatakrishnan/",
+          "sourceLabel": "Barclays Group Chief Executive profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.8,
+          "score": 38.4,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 38.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Nigel Higgins",
+          "roleStartDate": "2019-05-02",
+          "sourceUrl": "https://home.barclays/who-we-are/structure-and-leadership/leadership/nigel-higgins/",
+          "sourceLabel": "Barclays Group Chair profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 7.3,
+          "score": 64.9,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 64.9,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "7.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       }
     },
@@ -347,16 +511,60 @@
       "sector": "Oil & gas producers",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Murray Auchincloss",
+          "roleStartDate": "2024-01-17",
+          "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/news-and-insights/press-releases/murray-auchincloss-appointed-bp-chief-executive-officer.pdf",
+          "sourceLabel": "BP Chief Executive appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.6,
+          "score": 24.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 20.8,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 24.28,
+            "records": [
+              {
+                "id": "bec652798370",
+                "title": "Resolution 3: to re-elect Helge Lund as a director of the company",
+                "votesAgainstPct": 24.28,
+                "meetingDate": "2025-04-17"
+              }
+            ]
+          },
+          "reason": "2.6 years in role plus 1 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Albert Manifold",
+          "roleStartDate": "2025-10-01",
+          "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/news-and-insights/press-releases/albert-manifold-appointed-bp-plc-chair.pdf",
+          "sourceLabel": "BP Chair appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.8,
+          "score": 11.1,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 7.1,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 24.28,
+            "records": [
+              {
+                "id": "bec652798370",
+                "title": "Resolution 3: to re-elect Helge Lund as a director of the company",
+                "votesAgainstPct": 24.28,
+                "meetingDate": "2025-04-17"
+              }
+            ]
+          },
+          "reason": "0.8 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
       }
     },
@@ -524,16 +732,60 @@
       "sector": "Beverages",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Damian Gammell",
+          "roleStartDate": "2016-12-28",
+          "sourceUrl": "https://ir.cocacolaep.com/news-releases/news-release-details/damian-gammell-succeed-john-f-brock-chief-executive-officer-coca",
+          "sourceLabel": "CCEP CEO succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 9.6,
+          "score": 80.8,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 76.8,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 25.04,
+            "records": [
+              {
+                "id": "9ae08d2ef75c",
+                "title": "Resolution 24: To approve the Rule 9 Waiver",
+                "votesAgainstPct": 25.04,
+                "meetingDate": "2025-05-22"
+              }
+            ]
+          },
+          "reason": "9.6 years in role plus 1 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Sol Daurella",
+          "roleStartDate": "2016-05-01",
+          "sourceUrl": "https://www.cocacolaep.com/who-we-are/governance/board-of-directors/",
+          "sourceLabel": "CCEP Board of Directors profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 10.3,
+          "score": 84.0,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 25.04,
+            "records": [
+              {
+                "id": "9ae08d2ef75c",
+                "title": "Resolution 24: To approve the Rule 9 Waiver",
+                "votesAgainstPct": 25.04,
+                "meetingDate": "2025-05-22"
+              }
+            ]
+          },
+          "reason": "10.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
       }
     },
@@ -581,16 +833,60 @@
       "sector": "Software & Computer Services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Mike Norris",
+          "roleStartDate": "1994-12-01",
+          "sourceUrl": "https://investors.computacenter.com/static-files/59e43309-7544-4c44-9b85-9f9cef8b83d2",
+          "sourceLabel": "Computacenter AGM director profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 31.7,
+          "score": 84.0,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 22.29,
+            "records": [
+              {
+                "id": "82c8d2b23707",
+                "title": "Resolution 3: To approve the Directors' Remuneration Policy",
+                "votesAgainstPct": 22.29,
+                "meetingDate": "2025-05-15"
+              }
+            ]
+          },
+          "reason": "31.7 years in role plus 1 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Peter Ryan",
+          "roleStartDate": "2019-05-16",
+          "sourceUrl": "https://investors.computacenter.com/news-releases/news-release-details/computacenter-appointment-chairman",
+          "sourceLabel": "Computacenter Chair appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 7.2,
+          "score": 68.0,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 64.0,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 22.29,
+            "records": [
+              {
+                "id": "82c8d2b23707",
+                "title": "Resolution 3: To approve the Directors' Remuneration Policy",
+                "votesAgainstPct": 22.29,
+                "meetingDate": "2025-05-15"
+              }
+            ]
+          },
+          "reason": "7.2 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
       }
     },
@@ -600,16 +896,72 @@
       "sector": "Health care equipment & supplies",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Jonny Mason",
+          "roleStartDate": "2025-11-06",
+          "sourceUrl": "https://www.convatecgroup.com/media/press-releases/2025/chief-executive-officer-and-chief-financial-officer-appointments/",
+          "sourceLabel": "Convatec CEO appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.7,
+          "score": 16.6,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 5.6,
+            "registeredDissentUplift": 11.0
+          },
+          "dissentEvidence": {
+            "count": 2,
+            "maxVotesAgainstPct": 32.96,
+            "records": [
+              {
+                "id": "af6363b64375",
+                "title": "Resolution 3: To approve the Directors' Remuneration Policy",
+                "votesAgainstPct": 32.96,
+                "meetingDate": "2025-05-22"
+              },
+              {
+                "id": "81872a6d23d2",
+                "title": "Resolution 16: To approve the Convatec Group Omnibus Incentive Plan",
+                "votesAgainstPct": 24.36,
+                "meetingDate": "2025-05-22"
+              }
+            ]
+          },
+          "reason": "0.7 years in role plus 2 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Dr John McAdam CBE",
+          "roleStartDate": "2019-09-30",
+          "sourceUrl": "https://www.convatecgroup.com/media-articles/press-releases/2019/john-mcadam-appointed-chairman-of-convatec/",
+          "sourceLabel": "Convatec Chair appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.9,
+          "score": 72.3,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 61.3,
+            "registeredDissentUplift": 11.0
+          },
+          "dissentEvidence": {
+            "count": 2,
+            "maxVotesAgainstPct": 32.96,
+            "records": [
+              {
+                "id": "af6363b64375",
+                "title": "Resolution 3: To approve the Directors' Remuneration Policy",
+                "votesAgainstPct": 32.96,
+                "meetingDate": "2025-05-22"
+              },
+              {
+                "id": "81872a6d23d2",
+                "title": "Resolution 16: To approve the Convatec Group Omnibus Incentive Plan",
+                "votesAgainstPct": 24.36,
+                "meetingDate": "2025-05-22"
+              }
+            ]
+          },
+          "reason": "6.9 years in role plus 2 qualifying management-resolution dissent signal(s)."
         }
       }
     },
@@ -923,16 +1275,46 @@
       "sector": "Banks",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Georges Elhedery",
+          "roleStartDate": "2024-09-02",
+          "sourceUrl": "https://www.hsbc.com/who-we-are/our-people/board-of-directors/georges-elhedery",
+          "sourceLabel": "HSBC Group Chief Executive profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.9,
+          "score": 15.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 15.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Brendan Nelson",
+          "roleStartDate": "2025-10-01",
+          "sourceUrl": "https://www.hsbc.com/news-and-views/news/hsbc-news-archive/brendan-nelson-appointed-as-group-chair",
+          "sourceLabel": "HSBC Group Chair appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.8,
+          "score": 7.1,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 7.1,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       }
     },
@@ -1055,16 +1437,60 @@
       "sector": "Industrial engineering",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Roy Twite",
+          "roleStartDate": "2019-05-09",
+          "sourceUrl": "https://www.imiplc.com/en/news-insights/ceo-succession/",
+          "sourceLabel": "IMI CEO succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 7.2,
+          "score": 61.6,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 57.6,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 21.75,
+            "records": [
+              {
+                "id": "8407392c3450",
+                "title": "Resolution B: Authority to allot securities for cash for specific financing",
+                "votesAgainstPct": 21.75,
+                "meetingDate": "2025-05-08"
+              }
+            ]
+          },
+          "reason": "7.2 years in role plus 1 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Jamie Pike",
+          "roleStartDate": "2025-01-01",
+          "sourceUrl": "https://www.imiplc.com/en/news-insights/jamie-pike-to-succeed-lord-smith-of-kelvin-as-chair/",
+          "sourceLabel": "IMI Chair succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.6,
+          "score": 18.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 14.2,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 21.75,
+            "records": [
+              {
+                "id": "8407392c3450",
+                "title": "Resolution B: Authority to allot securities for cash for specific financing",
+                "votesAgainstPct": 21.75,
+                "meetingDate": "2025-05-08"
+              }
+            ]
+          },
+          "reason": "1.6 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
       }
     },
@@ -1207,16 +1633,60 @@
       "sector": "Retailers",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Thierry Garnier",
+          "roleStartDate": "2019-09-01",
+          "sourceUrl": "https://www.kingfisher.com/media/news/2026/directorate-change",
+          "sourceLabel": "Kingfisher CEO transition announcement",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 6.9,
+          "score": 59.2,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 55.2,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 20.5,
+            "records": [
+              {
+                "id": "e54314c2017f",
+                "title": "Resolution 16: Directors' authority to allot shares",
+                "votesAgainstPct": 20.5,
+                "meetingDate": "2025-06-23"
+              }
+            ]
+          },
+          "reason": "6.9 years in role plus 1 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Claudia Arney",
+          "roleStartDate": "2024-06-20",
+          "sourceUrl": "https://www.kingfisher.com/media/news/2024/directorate-changes",
+          "sourceLabel": "Kingfisher Chair succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.1,
+          "score": 22.7,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 18.7,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 20.5,
+            "records": [
+              {
+                "id": "e54314c2017f",
+                "title": "Resolution 16: Directors' authority to allot shares",
+                "votesAgainstPct": 20.5,
+                "meetingDate": "2025-06-23"
+              }
+            ]
+          },
+          "reason": "2.1 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
       }
     },
@@ -1433,16 +1903,60 @@
       "sector": "Aerospace & defence",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Peter Dilnot",
+          "roleStartDate": "2024-03-06",
+          "sourceUrl": "https://www.melroseplc.net/media/qc0eu5o1/melrose-annual-report25.pdf",
+          "sourceLabel": "Melrose 2025 Annual Report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.4,
+          "score": 34.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 19.2,
+            "registeredDissentUplift": 15.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 65.63,
+            "records": [
+              {
+                "id": "b35f24ead8b7",
+                "title": "Resolution 2: To approve the directors' remuneration report",
+                "votesAgainstPct": 65.63,
+                "meetingDate": "2025-04-30"
+              }
+            ]
+          },
+          "reason": "2.4 years in role plus 1 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Chris Grigg",
+          "roleStartDate": "2025-03-30",
+          "sourceUrl": "https://www.melroseplc.net/governance/board-committees/",
+          "sourceLabel": "Melrose Board and Committees profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.4,
+          "score": 27.4,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 12.4,
+            "registeredDissentUplift": 15.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 65.63,
+            "records": [
+              {
+                "id": "b35f24ead8b7",
+                "title": "Resolution 2: To approve the directors' remuneration report",
+                "votesAgainstPct": 65.63,
+                "meetingDate": "2025-04-30"
+              }
+            ]
+          },
+          "reason": "1.4 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
       }
     },
@@ -1471,16 +1985,46 @@
       "sector": "Multiline utilities",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Zo\u00eb Yujnovich",
+          "roleStartDate": "2025-11-17",
+          "sourceUrl": "https://www.nationalgrid.com/media-centre/press-releases/john-pettigrew-announces-chief-executive-succession-plan",
+          "sourceLabel": "National Grid CEO succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.7,
+          "score": 5.6,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 5.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Paula Rosput Reynolds",
+          "roleStartDate": "2021-05-31",
+          "sourceUrl": "https://www.nationalgrid.com/about-us/our-leadership-team/the-board/paula-rosput-reynolds",
+          "sourceLabel": "National Grid Chair profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 5.2,
+          "score": 46.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 46.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       }
     },
@@ -1490,16 +2034,46 @@
       "sector": "Banks",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Paul Thwaite",
+          "roleStartDate": "2023-07-25",
+          "sourceUrl": "https://www.natwestgroup.com/news-and-insights/news-room/press-releases/our-updates/2024/feb/natwest-group-ceo-appointment.html",
+          "sourceLabel": "NatWest Group CEO appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.0,
+          "score": 24.0,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 24.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Rick Haythornthwaite",
+          "roleStartDate": "2024-04-15",
+          "sourceUrl": "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/documents/agm-display-documents/2026/2026-agm-letter-to-shareholders.pdf",
+          "sourceLabel": "NatWest Group 2026 AGM circular",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.3,
+          "score": 20.4,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 20.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       }
     },
@@ -1691,16 +2265,60 @@
       "sector": "Support services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Mike Duffy",
+          "roleStartDate": "2026-03-16",
+          "sourceUrl": "https://www.rentokil-initial.com/media/news-releases/2026/13-01-2026.aspx",
+          "sourceLabel": "Rentokil Initial CEO appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.4,
+          "score": 7.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 3.2,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 21.15,
+            "records": [
+              {
+                "id": "c0937b47d8ed",
+                "title": "Resolution 4: to re-elect Richard Solomons as a director of the company",
+                "votesAgainstPct": 21.15,
+                "meetingDate": "2025-05-07"
+              }
+            ]
+          },
+          "reason": "0.4 years in role plus 1 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Richard Solomons",
+          "roleStartDate": "2019-05-01",
+          "sourceUrl": "https://www.rentokil-initial.com/about-us/leadership/board-of-directors.aspx",
+          "sourceLabel": "Rentokil Initial Board profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 7.3,
+          "score": 68.9,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 64.9,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 21.15,
+            "records": [
+              {
+                "id": "c0937b47d8ed",
+                "title": "Resolution 4: to re-elect Richard Solomons as a director of the company",
+                "votesAgainstPct": 21.15,
+                "meetingDate": "2025-05-07"
+              }
+            ]
+          },
+          "reason": "7.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
       }
     },
@@ -2102,16 +2720,46 @@
       "sector": "Food & drug retailing",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Ken Murphy",
+          "roleStartDate": "2020-10-01",
+          "sourceUrl": "https://www.tescoplc.com/about/board-board-committees-and-executive-committee/executive-committee/",
+          "sourceLabel": "Tesco Executive Committee profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 5.8,
+          "score": 46.4,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 46.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Dr Gerry Murphy",
+          "roleStartDate": "2023-09-01",
+          "sourceUrl": "https://www.tescoplc.com/AGM2025",
+          "sourceLabel": "Tesco 2025 AGM notice",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 2.9,
+          "score": 25.8,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 25.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       }
     },

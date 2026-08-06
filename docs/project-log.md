@@ -58,3 +58,21 @@
 ### Deferred signals
 
 - Profit warnings, share-price stress, activism, controversies, and general news are deferred until each signal has a stable definition, primary source, lookback window, and validation rule.
+
+## Leadership Pressure Radar cohort expansion
+
+### Coverage decision
+
+- Expanded the source-verified cohort from 8 to 25 current FTSE 100 constituents.
+- Selected companies against the current public constituent snapshot rather than retaining former constituents simply because they appear in the Proxy Voting dataset.
+- Retained 75 companies as explicitly `Unrated`; no leadership identities or dates were inferred.
+
+### Evidence decision
+
+- Verified both CEO and Chair incumbents and role-start dates from official issuer announcements, board profiles, AGM materials, or annual reports.
+- Used 6 August 2026 as a fixed evidence cutoff and incorporated recent successions at HSBC, BP, Convatec, Rentokil Initial, Melrose Industries, and National Grid.
+- Kept Kingfisher's announced CEO transition tied to the incumbent who remained in office at the evidence cutoff.
+
+### Methodology decision
+
+- Left methodology `v0.1` and all score weights unchanged so the expanded cohort is comparable with the first release.

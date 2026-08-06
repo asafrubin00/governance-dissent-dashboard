@@ -40,7 +40,7 @@ export function HomePage({ data, radarData }: HomePageProps) {
                 <p className="module-card__eyebrow">Leadership pressure radar</p>
                 <h3>Where succession planning may warrant attention</h3>
                 <p className="module-card__copy">
-                  Compare CEO and Chair tenure pressure across a source-verified pilot,
+                  Compare CEO and Chair tenure pressure across a source-verified cohort,
                   with every score linked back to its evidence.
                 </p>
                 <div className="module-card__signal-list">

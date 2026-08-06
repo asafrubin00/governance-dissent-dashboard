@@ -169,6 +169,363 @@
           "datePrecision": "day"
         }
       }
+    },
+    {
+      "companyName": "HSBC",
+      "ticker": "HSBA",
+      "trackerAliases": ["HSBC HOLDINGS PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Georges Elhedery",
+          "roleStartDate": "2024-09-02",
+          "sourceUrl": "https://www.hsbc.com/who-we-are/our-people/board-of-directors/georges-elhedery",
+          "sourceLabel": "HSBC Group Chief Executive profile",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Brendan Nelson",
+          "roleStartDate": "2025-10-01",
+          "sourceUrl": "https://www.hsbc.com/news-and-views/news/hsbc-news-archive/brendan-nelson-appointed-as-group-chair",
+          "sourceLabel": "HSBC Group Chair appointment announcement",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Melrose Industries",
+      "ticker": "MRO",
+      "trackerAliases": ["MELROSE INDUSTRIES PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Peter Dilnot",
+          "roleStartDate": "2024-03-06",
+          "sourceUrl": "https://www.melroseplc.net/media/qc0eu5o1/melrose-annual-report25.pdf",
+          "sourceLabel": "Melrose 2025 Annual Report",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Chris Grigg",
+          "roleStartDate": "2025-03-30",
+          "sourceUrl": "https://www.melroseplc.net/governance/board-committees/",
+          "sourceLabel": "Melrose Board and Committees profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Convatec",
+      "ticker": "CTEC",
+      "trackerAliases": ["CONVATEC GROUP PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Jonny Mason",
+          "roleStartDate": "2025-11-06",
+          "sourceUrl": "https://www.convatecgroup.com/media/press-releases/2025/chief-executive-officer-and-chief-financial-officer-appointments/",
+          "sourceLabel": "Convatec CEO appointment announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Dr John McAdam CBE",
+          "roleStartDate": "2019-09-30",
+          "sourceUrl": "https://www.convatecgroup.com/media-articles/press-releases/2019/john-mcadam-appointed-chairman-of-convatec/",
+          "sourceLabel": "Convatec Chair appointment announcement",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Coca-Cola Europacific Partners",
+      "ticker": "CCEP",
+      "trackerAliases": ["COCA-COLA EUROPACIFIC PARTNERS PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Damian Gammell",
+          "roleStartDate": "2016-12-28",
+          "sourceUrl": "https://ir.cocacolaep.com/news-releases/news-release-details/damian-gammell-succeed-john-f-brock-chief-executive-officer-coca",
+          "sourceLabel": "CCEP CEO succession announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Sol Daurella",
+          "roleStartDate": "2016-05-01",
+          "sourceUrl": "https://www.cocacolaep.com/who-we-are/governance/board-of-directors/",
+          "sourceLabel": "CCEP Board of Directors profile",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "Anglo American plc",
+      "ticker": "AAL",
+      "trackerAliases": ["ANGLO AMERICAN PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Duncan Wanblad",
+          "roleStartDate": "2022-04-19",
+          "sourceUrl": "https://www.angloamerican.com/media/press-releases/2021/03-11-2021",
+          "sourceLabel": "Anglo American CEO succession announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Stuart Chambers",
+          "roleStartDate": "2017-11-01",
+          "sourceUrl": "https://www.angloamerican.com/about-us/leadership-team",
+          "sourceLabel": "Anglo American leadership profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "BP",
+      "ticker": "BP",
+      "trackerAliases": ["BP P.L.C."],
+      "roles": {
+        "ceo": {
+          "name": "Murray Auchincloss",
+          "roleStartDate": "2024-01-17",
+          "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/news-and-insights/press-releases/murray-auchincloss-appointed-bp-chief-executive-officer.pdf",
+          "sourceLabel": "BP Chief Executive appointment announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Albert Manifold",
+          "roleStartDate": "2025-10-01",
+          "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/news-and-insights/press-releases/albert-manifold-appointed-bp-plc-chair.pdf",
+          "sourceLabel": "BP Chair appointment announcement",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Computacenter",
+      "ticker": "CCC",
+      "trackerAliases": ["COMPUTACENTER PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Mike Norris",
+          "roleStartDate": "1994-12-01",
+          "sourceUrl": "https://investors.computacenter.com/static-files/59e43309-7544-4c44-9b85-9f9cef8b83d2",
+          "sourceLabel": "Computacenter AGM director profile",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "Peter Ryan",
+          "roleStartDate": "2019-05-16",
+          "sourceUrl": "https://investors.computacenter.com/news-releases/news-release-details/computacenter-appointment-chairman",
+          "sourceLabel": "Computacenter Chair appointment announcement",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "IMI",
+      "ticker": "IMI",
+      "trackerAliases": ["IMI PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Roy Twite",
+          "roleStartDate": "2019-05-09",
+          "sourceUrl": "https://www.imiplc.com/en/news-insights/ceo-succession/",
+          "sourceLabel": "IMI CEO succession announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Jamie Pike",
+          "roleStartDate": "2025-01-01",
+          "sourceUrl": "https://www.imiplc.com/en/news-insights/jamie-pike-to-succeed-lord-smith-of-kelvin-as-chair/",
+          "sourceLabel": "IMI Chair succession announcement",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Rentokil Initial",
+      "ticker": "RTO",
+      "trackerAliases": ["RENTOKIL INITIAL PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Mike Duffy",
+          "roleStartDate": "2026-03-16",
+          "sourceUrl": "https://www.rentokil-initial.com/media/news-releases/2026/13-01-2026.aspx",
+          "sourceLabel": "Rentokil Initial CEO appointment announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Richard Solomons",
+          "roleStartDate": "2019-05-01",
+          "sourceUrl": "https://www.rentokil-initial.com/about-us/leadership/board-of-directors.aspx",
+          "sourceLabel": "Rentokil Initial Board profile",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "Kingfisher plc",
+      "ticker": "KGF",
+      "trackerAliases": ["KINGFISHER PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Thierry Garnier",
+          "roleStartDate": "2019-09-01",
+          "sourceUrl": "https://www.kingfisher.com/media/news/2026/directorate-change",
+          "sourceLabel": "Kingfisher CEO transition announcement",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "Claudia Arney",
+          "roleStartDate": "2024-06-20",
+          "sourceUrl": "https://www.kingfisher.com/media/news/2024/directorate-changes",
+          "sourceLabel": "Kingfisher Chair succession announcement",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Antofagasta plc",
+      "ticker": "ANTO",
+      "trackerAliases": ["ANTOFAGASTA PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Iván Arriagada",
+          "roleStartDate": "2016-04-08",
+          "sourceUrl": "https://www.antofagasta.co.uk/investors/news/2016/iv%C3%A1n-arriagada-succeeds-diego-hern%C3%A1ndez-as-ceo-of-antofagasta-plc/",
+          "sourceLabel": "Antofagasta CEO succession announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Jean-Paul Luksic",
+          "roleStartDate": "2004-01-01",
+          "sourceUrl": "https://www.antofagasta.co.uk/about-us/leadership-team/board/",
+          "sourceLabel": "Antofagasta Board profile",
+          "datePrecision": "year"
+        }
+      }
+    },
+    {
+      "companyName": "NatWest Group",
+      "ticker": "NWG",
+      "trackerAliases": ["NATWEST GROUP PLC"],
+      "roles": {
+        "ceo": {
+          "name": "Paul Thwaite",
+          "roleStartDate": "2023-07-25",
+          "sourceUrl": "https://www.natwestgroup.com/news-and-insights/news-room/press-releases/our-updates/2024/feb/natwest-group-ceo-appointment.html",
+          "sourceLabel": "NatWest Group CEO appointment announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Rick Haythornthwaite",
+          "roleStartDate": "2024-04-15",
+          "sourceUrl": "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/documents/agm-display-documents/2026/2026-agm-letter-to-shareholders.pdf",
+          "sourceLabel": "NatWest Group 2026 AGM circular",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "AstraZeneca",
+      "ticker": "AZN",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Pascal Soriot",
+          "roleStartDate": "2012-10-01",
+          "sourceUrl": "https://www.astrazeneca.com/content/dam/az/Investor_Relations/Annual-report-2015/AZ_Corporate_Governance_2015.pdf",
+          "sourceLabel": "AstraZeneca Corporate Governance report",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "Michel Demaré",
+          "roleStartDate": "2023-04-27",
+          "sourceUrl": "https://www.astrazeneca.com/content/dam/az/PDF/2025/Notice-of-Meeting-2025.pdf",
+          "sourceLabel": "AstraZeneca AGM notice and Board profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Barclays",
+      "ticker": "BARC",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "C.S. Venkatakrishnan",
+          "roleStartDate": "2021-11-01",
+          "sourceUrl": "https://home.barclays/who-we-are/structure-and-leadership/leadership/c-s-venkatakrishnan/",
+          "sourceLabel": "Barclays Group Chief Executive profile",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Nigel Higgins",
+          "roleStartDate": "2019-05-02",
+          "sourceUrl": "https://home.barclays/who-we-are/structure-and-leadership/leadership/nigel-higgins/",
+          "sourceLabel": "Barclays Group Chair profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Tesco",
+      "ticker": "TSCO",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Ken Murphy",
+          "roleStartDate": "2020-10-01",
+          "sourceUrl": "https://www.tescoplc.com/about/board-board-committees-and-executive-committee/executive-committee/",
+          "sourceLabel": "Tesco Executive Committee profile",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "Dr Gerry Murphy",
+          "roleStartDate": "2023-09-01",
+          "sourceUrl": "https://www.tescoplc.com/AGM2025",
+          "sourceLabel": "Tesco 2025 AGM notice",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "BAE Systems",
+      "ticker": "BA",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Charles Woodburn",
+          "roleStartDate": "2017-07-01",
+          "sourceUrl": "https://www.baesystems.com/en/article/notice-of-directorate-change",
+          "sourceLabel": "BAE Systems CEO succession announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Cressida Hogg",
+          "roleStartDate": "2023-05-04",
+          "sourceUrl": "https://www.baesystems.com/en-us/article/chair-designate",
+          "sourceLabel": "BAE Systems Chair succession announcement",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "National Grid plc",
+      "ticker": "NG",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Zoë Yujnovich",
+          "roleStartDate": "2025-11-17",
+          "sourceUrl": "https://www.nationalgrid.com/media-centre/press-releases/john-pettigrew-announces-chief-executive-succession-plan",
+          "sourceLabel": "National Grid CEO succession announcement",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Paula Rosput Reynolds",
+          "roleStartDate": "2021-05-31",
+          "sourceUrl": "https://www.nationalgrid.com/about-us/our-leadership-team/the-board/paula-rosput-reynolds",
+          "sourceLabel": "National Grid Chair profile",
+          "datePrecision": "day"
+        }
+      }
     }
   ]
 }
