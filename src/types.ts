@@ -103,3 +103,71 @@ export type Filters = {
   sector: string
   category: string
 }
+
+export type LeadershipRole = {
+  rated: boolean
+  name?: string
+  roleStartDate?: string
+  sourceUrl?: string
+  sourceLabel?: string
+  datePrecision?: 'day' | 'month' | 'year'
+  tenureYears?: number
+  score: number | null
+  band: 'Lower' | 'Watch' | 'Elevated' | 'Acute' | 'Unrated'
+  reason: string
+  components?: {
+    tenurePressure: number
+    registeredDissentUplift: number
+  }
+  dissentEvidence?: {
+    count: number
+    maxVotesAgainstPct: number | null
+    records: Array<{
+      id: string
+      title: string
+      votesAgainstPct: number
+      meetingDate: string
+    }>
+  }
+}
+
+export type LeadershipCompany = {
+  companyName: string
+  ticker: string
+  sector: string
+  roles: {
+    ceo: LeadershipRole
+    chair: LeadershipRole
+  }
+}
+
+export type LeadershipRadarData = {
+  metadata: {
+    title: string
+    generatedAt: string
+    asOfDate: string
+    methodologyVersion: string
+    ratedCompanyCount: number
+    constituentCount: number
+    rosterSource: {
+      name: string
+      url: string
+      mode: string
+      note: string
+    }
+    scoreDefinition: {
+      label: string
+      notAProbability: boolean
+      ceo: string
+      chair: string
+      dissent: string
+      bands: Record<string, string>
+    }
+    limitations: string[]
+    validation: {
+      status: string
+      errors: string[]
+    }
+  }
+  companies: LeadershipCompany[]
+}

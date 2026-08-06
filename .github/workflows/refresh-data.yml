@@ -1,4 +1,4 @@
-name: Refresh dissent dataset
+name: Refresh governance datasets
 
 on:
   workflow_dispatch:
@@ -47,6 +47,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/tracker-data.json data/processed data/issuer_source_config.json
-          git commit -m "Refresh dissent dataset"
+          git add public/data/tracker-data.json public/data/leadership-radar.json data/processed data/ftse100_constituents.json data/issuer_source_config.json
+          git commit -m "Refresh governance datasets"
           git push

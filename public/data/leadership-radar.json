@@ -1,0 +1,2277 @@
+{
+  "metadata": {
+    "title": "FTSE 100 Leadership Pressure Radar",
+    "generatedAt": "2026-08-06T08:22:26.657441+00:00",
+    "asOfDate": "2026-08-06",
+    "methodologyVersion": "0.1",
+    "rosterSource": {
+      "name": "Wikipedia FTSE 100 constituent table",
+      "url": "https://en.wikipedia.org/wiki/FTSE_100_Index",
+      "mode": "live-public-snapshot",
+      "note": "Used only as a reproducible public constituent snapshot; FTSE Russell remains the index authority."
+    },
+    "ratedCompanyCount": 8,
+    "constituentCount": 100,
+    "scoreDefinition": {
+      "label": "Leadership transition pressure",
+      "notAProbability": true,
+      "ceo": "Tenure pressure rises over a ten-year reference horizon, capped at 80 points.",
+      "chair": "Tenure pressure rises toward the UK Code's nine-year chair independence and succession reference point, capped at 80 points.",
+      "dissent": "Up to 20 additional points reflect verified 20%+ dissent on management-sponsored resolutions in the existing tracker window. Shareholder proposals are excluded.",
+      "bands": {
+        "Lower": "0-24",
+        "Watch": "25-49",
+        "Elevated": "50-69",
+        "Acute": "70-100"
+      }
+    },
+    "limitations": [
+      "This is a research prioritisation score, not a prediction that an individual will leave office.",
+      "Only eight companies have source-verified leadership records in methodology v0.1; all others remain visibly unrated.",
+      "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
+      "Profit warnings, share-price stress, activism, and broader news signals are not yet included."
+    ],
+    "validation": {
+      "status": "pass",
+      "errors": []
+    }
+  },
+  "companies": [
+    {
+      "companyName": "3i",
+      "ticker": "III",
+      "sector": "Financial services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Aberdeen Group",
+      "ticker": "ABDN",
+      "sector": "Financial Services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Admiral Group",
+      "ticker": "ADM",
+      "sector": "Insurance",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Airtel Africa",
+      "ticker": "AAF",
+      "sector": "Telecommunications services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Alliance Witan",
+      "ticker": "ALW",
+      "sector": "Investment Trusts",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Anglo American plc",
+      "ticker": "AAL",
+      "sector": "Mining",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Antofagasta plc",
+      "ticker": "ANTO",
+      "sector": "Mining",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Associated British Foods",
+      "ticker": "ABF",
+      "sector": "Food & tobacco",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "AstraZeneca",
+      "ticker": "AZN",
+      "sector": "Pharmaceuticals & biotechnology",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Autotrader Group",
+      "ticker": "AUTO",
+      "sector": "Media",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Aviva",
+      "ticker": "AV",
+      "sector": "Life insurance",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Babcock International",
+      "ticker": "BAB",
+      "sector": "Aerospace & defence",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "BAE Systems",
+      "ticker": "BA",
+      "sector": "Aerospace & defence",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Barclays",
+      "ticker": "BARC",
+      "sector": "Banks",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Barratt Redrow",
+      "ticker": "BTRW",
+      "sector": "Household goods & home construction",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Beazley",
+      "ticker": "BEZ",
+      "sector": "Insurance",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "BP",
+      "ticker": "BP",
+      "sector": "Oil & gas producers",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "British American Tobacco",
+      "ticker": "BATS",
+      "sector": "Tobacco",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "British Land",
+      "ticker": "BLND",
+      "sector": "Real estate",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "BT Group",
+      "ticker": "BT.A",
+      "sector": "Telecommunications services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Bunzl",
+      "ticker": "BNZL",
+      "sector": "Support services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Burberry Group",
+      "ticker": "BRBY",
+      "sector": "Personal goods",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Centrica",
+      "ticker": "CNA",
+      "sector": "Multiline utilities",
+      "roles": {
+        "ceo": {
+          "name": "Chris O'Shea",
+          "roleStartDate": "2020-04-14",
+          "sourceUrl": "https://www.centrica.com/media-centre/news/2020/group-chief-executive-appointment/",
+          "sourceLabel": "Centrica CEO appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.3,
+          "score": 58.4,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 50.4,
+            "registeredDissentUplift": 8.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 39.98,
+            "records": [
+              {
+                "id": "aecdf065f4a2",
+                "title": "Resolution 2: To approve the directors' remuneration report",
+                "votesAgainstPct": 39.98,
+                "meetingDate": "2025-05-08"
+              }
+            ]
+          },
+          "reason": "6.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        },
+        "chair": {
+          "name": "Scott Wheway",
+          "roleStartDate": "2020-03-17",
+          "sourceUrl": "https://www.centrica.com/media-centre/news/2020/board-changes/",
+          "sourceLabel": "Centrica board changes announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.4,
+          "score": 64.9,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 56.9,
+            "registeredDissentUplift": 8.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 39.98,
+            "records": [
+              {
+                "id": "aecdf065f4a2",
+                "title": "Resolution 2: To approve the directors' remuneration report",
+                "votesAgainstPct": 39.98,
+                "meetingDate": "2025-05-08"
+              }
+            ]
+          },
+          "reason": "6.4 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        }
+      }
+    },
+    {
+      "companyName": "Coca-Cola Europacific Partners",
+      "ticker": "CCEP",
+      "sector": "Beverages",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Coca-Cola HBC",
+      "ticker": "CCH",
+      "sector": "Beverages",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Compass Group",
+      "ticker": "CPG",
+      "sector": "Support services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Computacenter",
+      "ticker": "CCC",
+      "sector": "Software & Computer Services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Convatec",
+      "ticker": "CTEC",
+      "sector": "Health care equipment & supplies",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Croda International",
+      "ticker": "CRDA",
+      "sector": "Chemicals",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "DCC Energy",
+      "ticker": "DCC",
+      "sector": "Support services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Diageo",
+      "ticker": "DGE",
+      "sector": "Beverages",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Diploma",
+      "ticker": "DPLM",
+      "sector": "Industrial Support services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Endeavour Mining",
+      "ticker": "EDV",
+      "sector": "Mining",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Entain",
+      "ticker": "ENT",
+      "sector": "Travel & leisure",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Experian",
+      "ticker": "EXPN",
+      "sector": "Support services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "F & C Investment Trust",
+      "ticker": "FCIT",
+      "sector": "Collective investments",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Fresnillo plc",
+      "ticker": "FRES",
+      "sector": "Mining",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Games Workshop",
+      "ticker": "GAW",
+      "sector": "Leisure Goods",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Glencore",
+      "ticker": "GLEN",
+      "sector": "Mining",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "GSK plc",
+      "ticker": "GSK",
+      "sector": "Pharmaceuticals & biotechnology",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Haleon",
+      "ticker": "HLN",
+      "sector": "Pharmaceuticals & biotechnology",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Halma plc",
+      "ticker": "HLMA",
+      "sector": "Electronic equipment & parts",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Hiscox",
+      "ticker": "HSX",
+      "sector": "Non-life Insurance",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Howdens Joinery",
+      "ticker": "HWDN",
+      "sector": "Homebuilding & construction supplies",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "HSBC",
+      "ticker": "HSBA",
+      "sector": "Banks",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "ICG",
+      "ticker": "ICG",
+      "sector": "Financial services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "IG Group",
+      "ticker": "IGG",
+      "sector": "Financial services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "IHG Hotels & Resorts",
+      "ticker": "IHG",
+      "sector": "Travel & leisure",
+      "roles": {
+        "ceo": {
+          "name": "Elie Maalouf",
+          "roleStartDate": "2023-07-01",
+          "sourceUrl": "https://www.ihgplc.com/about-us/our-leadership/executive-committee/elie-maalouf",
+          "sourceLabel": "IHG executive profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 3.1,
+          "score": 35.8,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 24.8,
+            "registeredDissentUplift": 11.0
+          },
+          "dissentEvidence": {
+            "count": 2,
+            "maxVotesAgainstPct": 30.49,
+            "records": [
+              {
+                "id": "f384011acceb",
+                "title": "Resolution 3: To approve the directors' remuneration report",
+                "votesAgainstPct": 21.0,
+                "meetingDate": "2025-05-08"
+              },
+              {
+                "id": "4a6c3a4216bc",
+                "title": "Resolution 2: To approve the Directors' Remuneration Policy",
+                "votesAgainstPct": 30.49,
+                "meetingDate": "2025-05-08"
+              }
+            ]
+          },
+          "reason": "3.1 years in role plus 2 qualifying management-resolution dissent signal(s)."
+        },
+        "chair": {
+          "name": "Deanna Oppenheimer",
+          "roleStartDate": "2022-09-01",
+          "sourceUrl": "https://www.ihgplc.com/en/news-and-media/news-releases/2022/retirement-of-patrick-cescau-as-chair-to-be-succeeded-by-deanna-oppenheimer",
+          "sourceLabel": "IHG chair succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.9,
+          "score": 45.7,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 34.7,
+            "registeredDissentUplift": 11.0
+          },
+          "dissentEvidence": {
+            "count": 2,
+            "maxVotesAgainstPct": 30.49,
+            "records": [
+              {
+                "id": "f384011acceb",
+                "title": "Resolution 3: To approve the directors' remuneration report",
+                "votesAgainstPct": 21.0,
+                "meetingDate": "2025-05-08"
+              },
+              {
+                "id": "4a6c3a4216bc",
+                "title": "Resolution 2: To approve the Directors' Remuneration Policy",
+                "votesAgainstPct": 30.49,
+                "meetingDate": "2025-05-08"
+              }
+            ]
+          },
+          "reason": "3.9 years in role plus 2 qualifying management-resolution dissent signal(s)."
+        }
+      }
+    },
+    {
+      "companyName": "IMI",
+      "ticker": "IMI",
+      "sector": "Industrial engineering",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Imperial Brands",
+      "ticker": "IMB",
+      "sector": "Tobacco",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Informa",
+      "ticker": "INF",
+      "sector": "Media",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "International Airlines Group",
+      "ticker": "IAG",
+      "sector": "Travel & leisure",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Intertek",
+      "ticker": "ITRK",
+      "sector": "Support services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Investec",
+      "ticker": "INVP",
+      "sector": "Financial Services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "JD Sports",
+      "ticker": "JD",
+      "sector": "General retailers",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Lion Finance Group",
+      "ticker": "BGEO",
+      "sector": "Banking Services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Kingfisher plc",
+      "ticker": "KGF",
+      "sector": "Retailers",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Land Securities",
+      "ticker": "LAND",
+      "sector": "Real estate investment trusts",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Legal & General",
+      "ticker": "LGEN",
+      "sector": "Life insurance",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Lloyds Banking Group",
+      "ticker": "LLOY",
+      "sector": "Banks",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "LondonMetric Property",
+      "ticker": "LMP",
+      "sector": "Real Estate Investment Trusts",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "London Stock Exchange Group",
+      "ticker": "LSEG",
+      "sector": "Financial services",
+      "roles": {
+        "ceo": {
+          "name": "David Schwimmer",
+          "roleStartDate": "2018-08-01",
+          "sourceUrl": "https://www.lseg.com/en/about-us/board-of-directors",
+          "sourceLabel": "LSEG board profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 8.0,
+          "score": 72.0,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 64.0,
+            "registeredDissentUplift": 8.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 30.39,
+            "records": [
+              {
+                "id": "b3397dad4891",
+                "title": "Resolution 2: To approve the directors' remuneration report",
+                "votesAgainstPct": 30.39,
+                "meetingDate": "2025-05-01"
+              }
+            ]
+          },
+          "reason": "8.0 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        },
+        "chair": {
+          "name": "Don Robert CBE",
+          "roleStartDate": "2019-05-01",
+          "sourceUrl": "https://www.lseg.com/en/about-us/board-of-directors",
+          "sourceLabel": "LSEG board profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 7.3,
+          "score": 72.9,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 64.9,
+            "registeredDissentUplift": 8.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 30.39,
+            "records": [
+              {
+                "id": "b3397dad4891",
+                "title": "Resolution 2: To approve the directors' remuneration report",
+                "votesAgainstPct": 30.39,
+                "meetingDate": "2025-05-01"
+              }
+            ]
+          },
+          "reason": "7.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        }
+      }
+    },
+    {
+      "companyName": "M&G",
+      "ticker": "MNG",
+      "sector": "Financial services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Marks & Spencer",
+      "ticker": "MKS",
+      "sector": "Food & drug retailing",
+      "roles": {
+        "ceo": {
+          "name": "Stuart Machin",
+          "roleStartDate": "2022-05-25",
+          "sourceUrl": "https://corporate.marksandspencer.com/newsroom/press-releases/ms-appoints-strong-new-leadership-team-accelerate-progress-transformation",
+          "sourceLabel": "M&S leadership announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.2,
+          "score": 33.6,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 33.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        },
+        "chair": {
+          "name": "Archie Norman",
+          "roleStartDate": "2017-09-01",
+          "sourceUrl": "https://corporate.marksandspencer.com/newsroom/press-releases/marks-and-spencer-chairmanship",
+          "sourceLabel": "M&S chair tenure announcement",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 8.9,
+          "score": 79.1,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 79.1,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "8.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        }
+      }
+    },
+    {
+      "companyName": "Melrose Industries",
+      "ticker": "MRO",
+      "sector": "Aerospace & defence",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Metlen Energy & Metals",
+      "ticker": "MTLN",
+      "sector": "Multiline utilities",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "National Grid plc",
+      "ticker": "NG",
+      "sector": "Multiline utilities",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "NatWest Group",
+      "ticker": "NWG",
+      "sector": "Banks",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Next plc",
+      "ticker": "NXT",
+      "sector": "General retailers",
+      "roles": {
+        "ceo": {
+          "name": "Lord Wolfson of Aspley Guise",
+          "roleStartDate": "2001-01-01",
+          "sourceUrl": "https://www.nextplc.co.uk/about-next/our-board",
+          "sourceLabel": "Next board profile",
+          "datePrecision": "year",
+          "rated": true,
+          "tenureYears": 25.6,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "25.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        },
+        "chair": {
+          "name": "Michael Roney",
+          "roleStartDate": "2017-08-01",
+          "sourceUrl": "https://www.nextplc.co.uk/about-next/our-board",
+          "sourceLabel": "Next board profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 9.0,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "9.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        }
+      }
+    },
+    {
+      "companyName": "Pearson plc",
+      "ticker": "PSON",
+      "sector": "Media",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Pershing Square Holdings",
+      "ticker": "PSH",
+      "sector": "Financial services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Persimmon",
+      "ticker": "PSN",
+      "sector": "Household goods & home construction",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Polar Capital Technology Trust",
+      "ticker": "PCT",
+      "sector": "Investment trusts",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Prudential plc",
+      "ticker": "PRU",
+      "sector": "Life insurance",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Reckitt",
+      "ticker": "RKT",
+      "sector": "Household goods & home construction",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "RELX",
+      "ticker": "REL",
+      "sector": "Media",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Rentokil Initial",
+      "ticker": "RTO",
+      "sector": "Support services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Rio Tinto",
+      "ticker": "RIO",
+      "sector": "Mining",
+      "roles": {
+        "ceo": {
+          "name": "Simon Trott",
+          "roleStartDate": "2025-08-25",
+          "sourceUrl": "https://www.riotinto.com/news/releases/2025/rio-tinto-appoints-simon-trott-as-chief-executive",
+          "sourceLabel": "Rio Tinto CEO appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.9,
+          "score": 11.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 7.2,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 20.92,
+            "records": [
+              {
+                "id": "5df9ff037283",
+                "title": "Resolution 22: Authority to purchase Rio Tinto plc shares",
+                "votesAgainstPct": 20.92,
+                "meetingDate": "2025-04-03"
+              }
+            ]
+          },
+          "reason": "0.9 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        },
+        "chair": {
+          "name": "Dominic Barton",
+          "roleStartDate": "2022-05-05",
+          "sourceUrl": "https://www.riotinto.com/news/releases/2021/dominic-barton-to-succeed-simon-thompson-as-chair",
+          "sourceLabel": "Rio Tinto chair appointment announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.3,
+          "score": 42.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 38.2,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 20.92,
+            "records": [
+              {
+                "id": "5df9ff037283",
+                "title": "Resolution 22: Authority to purchase Rio Tinto plc shares",
+                "votesAgainstPct": 20.92,
+                "meetingDate": "2025-04-03"
+              }
+            ]
+          },
+          "reason": "4.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        }
+      }
+    },
+    {
+      "companyName": "Rolls-Royce Holdings",
+      "ticker": "RR",
+      "sector": "Aerospace & defence",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Sage Group",
+      "ticker": "SGE",
+      "sector": "Software & computer services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Sainsbury's",
+      "ticker": "SBRY",
+      "sector": "Food & drug retailing",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Schroders",
+      "ticker": "SDR",
+      "sector": "Financial services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Scottish Mortgage Investment Trust",
+      "ticker": "SMT",
+      "sector": "Collective investments",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Segro",
+      "ticker": "SGRO",
+      "sector": "Real estate investment trusts",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Severn Trent",
+      "ticker": "SVT",
+      "sector": "Multiline utilities",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Shell plc",
+      "ticker": "SHEL",
+      "sector": "Oil & gas producers",
+      "roles": {
+        "ceo": {
+          "name": "Wael Sawan",
+          "roleStartDate": "2023-01-01",
+          "sourceUrl": "https://www.shell.com/who-we-are/leadership/board-of-directors/wael-sawan.html",
+          "sourceLabel": "Shell leadership profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.6,
+          "score": 43.8,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 28.8,
+            "registeredDissentUplift": 15.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 79.44,
+            "records": [
+              {
+                "id": "21843d7fc11c",
+                "title": "Resolution 22:  To disclose how the Company's LNG plans align with its net zero emissions target by 2050",
+                "votesAgainstPct": 79.44,
+                "meetingDate": "2025-05-20"
+              }
+            ]
+          },
+          "reason": "3.6 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        },
+        "chair": {
+          "name": "Sir Andrew Mackenzie",
+          "roleStartDate": "2021-05-18",
+          "sourceUrl": "https://www.shell.com/who-we-are/leadership/board-of-directors/andrew-mackenzie.html",
+          "sourceLabel": "Shell leadership profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 5.2,
+          "score": 61.2,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 46.2,
+            "registeredDissentUplift": 15.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 79.44,
+            "records": [
+              {
+                "id": "21843d7fc11c",
+                "title": "Resolution 22:  To disclose how the Company's LNG plans align with its net zero emissions target by 2050",
+                "votesAgainstPct": 79.44,
+                "meetingDate": "2025-05-20"
+              }
+            ]
+          },
+          "reason": "5.2 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        }
+      }
+    },
+    {
+      "companyName": "Smiths Group",
+      "ticker": "SMIN",
+      "sector": "General industrials",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Smith & Nephew",
+      "ticker": "SN",
+      "sector": "Health care equipment & supplies",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Spirax Group",
+      "ticker": "SPX",
+      "sector": "Industrial engineering",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "SSE plc",
+      "ticker": "SSE",
+      "sector": "Electrical utilities & independent power producers",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Standard Chartered",
+      "ticker": "STAN",
+      "sector": "Banks",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Standard Life",
+      "ticker": "SDLF",
+      "sector": "Life insurance",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "St. James's Place",
+      "ticker": "STJ",
+      "sector": "Financial services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Tesco",
+      "ticker": "TSCO",
+      "sector": "Food & drug retailing",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Tritax Big Box REIT",
+      "ticker": "BBOX",
+      "sector": "Real Estate Investment Trusts",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Unilever",
+      "ticker": "ULVR",
+      "sector": "Personal goods",
+      "roles": {
+        "ceo": {
+          "name": "Fernando Fernandez",
+          "roleStartDate": "2025-03-01",
+          "sourceUrl": "https://www.unilever.com/files/unilever-annual-report-on-form-20-f-2025.pdf",
+          "sourceLabel": "Unilever 2025 Annual Report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.4,
+          "score": 15.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 11.2,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 27.71,
+            "records": [
+              {
+                "id": "58dd7e1b01d7",
+                "title": "Resolution 2: To approve the directors' remuneration report",
+                "votesAgainstPct": 27.71,
+                "meetingDate": "2025-04-30"
+              }
+            ]
+          },
+          "reason": "1.4 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        },
+        "chair": {
+          "name": "Ian Meakins",
+          "roleStartDate": "2023-12-01",
+          "sourceUrl": "https://www.unilever.com/files/unilever-annual-report-on-form-20-f-2025.pdf",
+          "sourceLabel": "Unilever 2025 Annual Report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.7,
+          "score": 28.0,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 24.0,
+            "registeredDissentUplift": 4.0
+          },
+          "dissentEvidence": {
+            "count": 1,
+            "maxVotesAgainstPct": 27.71,
+            "records": [
+              {
+                "id": "58dd7e1b01d7",
+                "title": "Resolution 2: To approve the directors' remuneration report",
+                "votesAgainstPct": 27.71,
+                "meetingDate": "2025-04-30"
+              }
+            ]
+          },
+          "reason": "2.7 years in role plus 1 qualifying management-resolution dissent signal(s)."
+        }
+      }
+    },
+    {
+      "companyName": "United Utilities",
+      "ticker": "UU",
+      "sector": "Multiline utilities",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Vodafone Group",
+      "ticker": "VOD",
+      "sector": "Mobile telecommunications",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Weir Group",
+      "ticker": "WEIR",
+      "sector": "Industrial goods and services",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    },
+    {
+      "companyName": "Whitbread",
+      "ticker": "WTB",
+      "sector": "Retail hospitality",
+      "roles": {
+        "ceo": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        },
+        "chair": {
+          "rated": false,
+          "score": null,
+          "band": "Unrated",
+          "reason": "Leadership evidence not yet researched for this release."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,502 @@
+[
+  {
+    "companyName": "3i",
+    "ticker": "III",
+    "sector": "Financial services"
+  },
+  {
+    "companyName": "Aberdeen Group",
+    "ticker": "ABDN",
+    "sector": "Financial Services"
+  },
+  {
+    "companyName": "Admiral Group",
+    "ticker": "ADM",
+    "sector": "Insurance"
+  },
+  {
+    "companyName": "Airtel Africa",
+    "ticker": "AAF",
+    "sector": "Telecommunications services"
+  },
+  {
+    "companyName": "Alliance Witan",
+    "ticker": "ALW",
+    "sector": "Investment Trusts"
+  },
+  {
+    "companyName": "Anglo American plc",
+    "ticker": "AAL",
+    "sector": "Mining"
+  },
+  {
+    "companyName": "Antofagasta plc",
+    "ticker": "ANTO",
+    "sector": "Mining"
+  },
+  {
+    "companyName": "Associated British Foods",
+    "ticker": "ABF",
+    "sector": "Food & tobacco"
+  },
+  {
+    "companyName": "AstraZeneca",
+    "ticker": "AZN",
+    "sector": "Pharmaceuticals & biotechnology"
+  },
+  {
+    "companyName": "Autotrader Group",
+    "ticker": "AUTO",
+    "sector": "Media"
+  },
+  {
+    "companyName": "Aviva",
+    "ticker": "AV",
+    "sector": "Life insurance"
+  },
+  {
+    "companyName": "Babcock International",
+    "ticker": "BAB",
+    "sector": "Aerospace & defence"
+  },
+  {
+    "companyName": "BAE Systems",
+    "ticker": "BA",
+    "sector": "Aerospace & defence"
+  },
+  {
+    "companyName": "Barclays",
+    "ticker": "BARC",
+    "sector": "Banks"
+  },
+  {
+    "companyName": "Barratt Redrow",
+    "ticker": "BTRW",
+    "sector": "Household goods & home construction"
+  },
+  {
+    "companyName": "Beazley",
+    "ticker": "BEZ",
+    "sector": "Insurance"
+  },
+  {
+    "companyName": "BP",
+    "ticker": "BP",
+    "sector": "Oil & gas producers"
+  },
+  {
+    "companyName": "British American Tobacco",
+    "ticker": "BATS",
+    "sector": "Tobacco"
+  },
+  {
+    "companyName": "British Land",
+    "ticker": "BLND",
+    "sector": "Real estate"
+  },
+  {
+    "companyName": "BT Group",
+    "ticker": "BT.A",
+    "sector": "Telecommunications services"
+  },
+  {
+    "companyName": "Bunzl",
+    "ticker": "BNZL",
+    "sector": "Support services"
+  },
+  {
+    "companyName": "Burberry Group",
+    "ticker": "BRBY",
+    "sector": "Personal goods"
+  },
+  {
+    "companyName": "Centrica",
+    "ticker": "CNA",
+    "sector": "Multiline utilities"
+  },
+  {
+    "companyName": "Coca-Cola Europacific Partners",
+    "ticker": "CCEP",
+    "sector": "Beverages"
+  },
+  {
+    "companyName": "Coca-Cola HBC",
+    "ticker": "CCH",
+    "sector": "Beverages"
+  },
+  {
+    "companyName": "Compass Group",
+    "ticker": "CPG",
+    "sector": "Support services"
+  },
+  {
+    "companyName": "Computacenter",
+    "ticker": "CCC",
+    "sector": "Software & Computer Services"
+  },
+  {
+    "companyName": "Convatec",
+    "ticker": "CTEC",
+    "sector": "Health care equipment & supplies"
+  },
+  {
+    "companyName": "Croda International",
+    "ticker": "CRDA",
+    "sector": "Chemicals"
+  },
+  {
+    "companyName": "DCC Energy",
+    "ticker": "DCC",
+    "sector": "Support services"
+  },
+  {
+    "companyName": "Diageo",
+    "ticker": "DGE",
+    "sector": "Beverages"
+  },
+  {
+    "companyName": "Diploma",
+    "ticker": "DPLM",
+    "sector": "Industrial Support services"
+  },
+  {
+    "companyName": "Endeavour Mining",
+    "ticker": "EDV",
+    "sector": "Mining"
+  },
+  {
+    "companyName": "Entain",
+    "ticker": "ENT",
+    "sector": "Travel & leisure"
+  },
+  {
+    "companyName": "Experian",
+    "ticker": "EXPN",
+    "sector": "Support services"
+  },
+  {
+    "companyName": "F & C Investment Trust",
+    "ticker": "FCIT",
+    "sector": "Collective investments"
+  },
+  {
+    "companyName": "Fresnillo plc",
+    "ticker": "FRES",
+    "sector": "Mining"
+  },
+  {
+    "companyName": "Games Workshop",
+    "ticker": "GAW",
+    "sector": "Leisure Goods"
+  },
+  {
+    "companyName": "Glencore",
+    "ticker": "GLEN",
+    "sector": "Mining"
+  },
+  {
+    "companyName": "GSK plc",
+    "ticker": "GSK",
+    "sector": "Pharmaceuticals & biotechnology"
+  },
+  {
+    "companyName": "Haleon",
+    "ticker": "HLN",
+    "sector": "Pharmaceuticals & biotechnology"
+  },
+  {
+    "companyName": "Halma plc",
+    "ticker": "HLMA",
+    "sector": "Electronic equipment & parts"
+  },
+  {
+    "companyName": "Hiscox",
+    "ticker": "HSX",
+    "sector": "Non-life Insurance"
+  },
+  {
+    "companyName": "Howdens Joinery",
+    "ticker": "HWDN",
+    "sector": "Homebuilding & construction supplies"
+  },
+  {
+    "companyName": "HSBC",
+    "ticker": "HSBA",
+    "sector": "Banks"
+  },
+  {
+    "companyName": "ICG",
+    "ticker": "ICG",
+    "sector": "Financial services"
+  },
+  {
+    "companyName": "IG Group",
+    "ticker": "IGG",
+    "sector": "Financial services"
+  },
+  {
+    "companyName": "IHG Hotels & Resorts",
+    "ticker": "IHG",
+    "sector": "Travel & leisure"
+  },
+  {
+    "companyName": "IMI",
+    "ticker": "IMI",
+    "sector": "Industrial engineering"
+  },
+  {
+    "companyName": "Imperial Brands",
+    "ticker": "IMB",
+    "sector": "Tobacco"
+  },
+  {
+    "companyName": "Informa",
+    "ticker": "INF",
+    "sector": "Media"
+  },
+  {
+    "companyName": "International Airlines Group",
+    "ticker": "IAG",
+    "sector": "Travel & leisure"
+  },
+  {
+    "companyName": "Intertek",
+    "ticker": "ITRK",
+    "sector": "Support services"
+  },
+  {
+    "companyName": "Investec",
+    "ticker": "INVP",
+    "sector": "Financial Services"
+  },
+  {
+    "companyName": "JD Sports",
+    "ticker": "JD",
+    "sector": "General retailers"
+  },
+  {
+    "companyName": "Lion Finance Group",
+    "ticker": "BGEO",
+    "sector": "Banking Services"
+  },
+  {
+    "companyName": "Kingfisher plc",
+    "ticker": "KGF",
+    "sector": "Retailers"
+  },
+  {
+    "companyName": "Land Securities",
+    "ticker": "LAND",
+    "sector": "Real estate investment trusts"
+  },
+  {
+    "companyName": "Legal & General",
+    "ticker": "LGEN",
+    "sector": "Life insurance"
+  },
+  {
+    "companyName": "Lloyds Banking Group",
+    "ticker": "LLOY",
+    "sector": "Banks"
+  },
+  {
+    "companyName": "LondonMetric Property",
+    "ticker": "LMP",
+    "sector": "Real Estate Investment Trusts"
+  },
+  {
+    "companyName": "London Stock Exchange Group",
+    "ticker": "LSEG",
+    "sector": "Financial services"
+  },
+  {
+    "companyName": "M&G",
+    "ticker": "MNG",
+    "sector": "Financial services"
+  },
+  {
+    "companyName": "Marks & Spencer",
+    "ticker": "MKS",
+    "sector": "Food & drug retailing"
+  },
+  {
+    "companyName": "Melrose Industries",
+    "ticker": "MRO",
+    "sector": "Aerospace & defence"
+  },
+  {
+    "companyName": "Metlen Energy & Metals",
+    "ticker": "MTLN",
+    "sector": "Multiline utilities"
+  },
+  {
+    "companyName": "National Grid plc",
+    "ticker": "NG",
+    "sector": "Multiline utilities"
+  },
+  {
+    "companyName": "NatWest Group",
+    "ticker": "NWG",
+    "sector": "Banks"
+  },
+  {
+    "companyName": "Next plc",
+    "ticker": "NXT",
+    "sector": "General retailers"
+  },
+  {
+    "companyName": "Pearson plc",
+    "ticker": "PSON",
+    "sector": "Media"
+  },
+  {
+    "companyName": "Pershing Square Holdings",
+    "ticker": "PSH",
+    "sector": "Financial services"
+  },
+  {
+    "companyName": "Persimmon",
+    "ticker": "PSN",
+    "sector": "Household goods & home construction"
+  },
+  {
+    "companyName": "Polar Capital Technology Trust",
+    "ticker": "PCT",
+    "sector": "Investment trusts"
+  },
+  {
+    "companyName": "Prudential plc",
+    "ticker": "PRU",
+    "sector": "Life insurance"
+  },
+  {
+    "companyName": "Reckitt",
+    "ticker": "RKT",
+    "sector": "Household goods & home construction"
+  },
+  {
+    "companyName": "RELX",
+    "ticker": "REL",
+    "sector": "Media"
+  },
+  {
+    "companyName": "Rentokil Initial",
+    "ticker": "RTO",
+    "sector": "Support services"
+  },
+  {
+    "companyName": "Rio Tinto",
+    "ticker": "RIO",
+    "sector": "Mining"
+  },
+  {
+    "companyName": "Rolls-Royce Holdings",
+    "ticker": "RR",
+    "sector": "Aerospace & defence"
+  },
+  {
+    "companyName": "Sage Group",
+    "ticker": "SGE",
+    "sector": "Software & computer services"
+  },
+  {
+    "companyName": "Sainsbury's",
+    "ticker": "SBRY",
+    "sector": "Food & drug retailing"
+  },
+  {
+    "companyName": "Schroders",
+    "ticker": "SDR",
+    "sector": "Financial services"
+  },
+  {
+    "companyName": "Scottish Mortgage Investment Trust",
+    "ticker": "SMT",
+    "sector": "Collective investments"
+  },
+  {
+    "companyName": "Segro",
+    "ticker": "SGRO",
+    "sector": "Real estate investment trusts"
+  },
+  {
+    "companyName": "Severn Trent",
+    "ticker": "SVT",
+    "sector": "Multiline utilities"
+  },
+  {
+    "companyName": "Shell plc",
+    "ticker": "SHEL",
+    "sector": "Oil & gas producers"
+  },
+  {
+    "companyName": "Smiths Group",
+    "ticker": "SMIN",
+    "sector": "General industrials"
+  },
+  {
+    "companyName": "Smith & Nephew",
+    "ticker": "SN",
+    "sector": "Health care equipment & supplies"
+  },
+  {
+    "companyName": "Spirax Group",
+    "ticker": "SPX",
+    "sector": "Industrial engineering"
+  },
+  {
+    "companyName": "SSE plc",
+    "ticker": "SSE",
+    "sector": "Electrical utilities & independent power producers"
+  },
+  {
+    "companyName": "Standard Chartered",
+    "ticker": "STAN",
+    "sector": "Banks"
+  },
+  {
+    "companyName": "Standard Life",
+    "ticker": "SDLF",
+    "sector": "Life insurance"
+  },
+  {
+    "companyName": "St. James's Place",
+    "ticker": "STJ",
+    "sector": "Financial services"
+  },
+  {
+    "companyName": "Tesco",
+    "ticker": "TSCO",
+    "sector": "Food & drug retailing"
+  },
+  {
+    "companyName": "Tritax Big Box REIT",
+    "ticker": "BBOX",
+    "sector": "Real Estate Investment Trusts"
+  },
+  {
+    "companyName": "Unilever",
+    "ticker": "ULVR",
+    "sector": "Personal goods"
+  },
+  {
+    "companyName": "United Utilities",
+    "ticker": "UU",
+    "sector": "Multiline utilities"
+  },
+  {
+    "companyName": "Vodafone Group",
+    "ticker": "VOD",
+    "sector": "Mobile telecommunications"
+  },
+  {
+    "companyName": "Weir Group",
+    "ticker": "WEIR",
+    "sector": "Industrial goods and services"
+  },
+  {
+    "companyName": "Whitbread",
+    "ticker": "WTB",
+    "sector": "Retail hospitality"
+  }
+]

@@ -1,19 +1,13 @@
 import { Link, useOutletContext } from 'react-router-dom'
-import { InfoHint } from '../components/InfoHint'
-import { StatCard } from '../components/StatCard'
-import { getRecentHighlights, getTopDissent } from '../lib/analytics'
-import { formatDate, formatShortPercent } from '../lib/format'
-import type { TrackerData } from '../types'
+import type { LeadershipRadarData, TrackerData } from '../types'
 
 type HomePageProps = {
   data: TrackerData
+  radarData: LeadershipRadarData
 }
 
-export function HomePage({ data }: HomePageProps) {
+export function HomePage({ data, radarData }: HomePageProps) {
   const { generatedAt } = useOutletContext<{ generatedAt: string }>()
-  const highlights = getRecentHighlights(data.resolutions, 4)
-  const topDissent = getTopDissent(data.resolutions, 3)
-  const { summary, coveragePeriod, methodology } = data.metadata
 
   return (
     <div className="page-flow">
@@ -25,147 +19,81 @@ export function HomePage({ data }: HomePageProps) {
         </div>
       </section>
 
-      <section className="workspace-screen workspace-screen--overview">
-        <div className="workspace-overview">
-          <div className="workspace-overview__left">
-            <section className="workspace-copy">
-              <h2 className="workspace-copy__title">
-                Significant shareholder dissent, not general AGM voting coverage
-              </h2>
-              <p className="workspace-copy__body">
-                A narrow governance tracker focused on resolutions where opposition to
-                management reached a level that matters in UK stewardship practice.
-              </p>
-            </section>
+      <section className="workspace-screen workspace-screen--overview" id="workspace">
+        <div className="module-overview">
+          <header className="module-overview__intro">
+            <p className="workspace-panel__eyebrow">FTSE 100 governance intelligence</p>
+            <h2>Signals that merit closer board and stewardship attention</h2>
+            <p>
+              Proxy Wars brings leadership transition pressure and significant shareholder
+              dissent into one deliberately transparent research workspace.
+            </p>
+          </header>
 
-            <section className="workspace-scope">
-              <div className="section-heading">
-                <h3>Analytical scope</h3>
-                <InfoHint
-                  label="Analytical scope note"
-                  content="This tracker follows significant shareholder dissent only. It excludes routine AGM resolutions and does not attempt to reproduce full meeting voting books."
-                />
+          <div className="module-overview__grid">
+            <Link className="module-card module-card--primary" to="/radar">
+              <div className="module-card__topline">
+                <span>01 / Leadership</span>
+                <strong>Research preview</strong>
               </div>
-              <p className="workspace-scope__text">{data.metadata.coverageStatement}</p>
-              <p className="workspace-scope__text workspace-scope__text--strong">
-                {methodology.sourceCredibilityNote}
-              </p>
-            </section>
+              <div>
+                <p className="module-card__eyebrow">Leadership pressure radar</p>
+                <h3>Where succession planning may warrant attention</h3>
+                <p className="module-card__copy">
+                  Compare CEO and Chair tenure pressure across a source-verified pilot,
+                  with every score linked back to its evidence.
+                </p>
+                <div className="module-card__signal-list">
+                  <span><i>01</i> CEO tenure reference horizon</span>
+                  <span><i>02</i> Chair nine-year Code reference</span>
+                  <span><i>03</i> Registered management-resolution dissent</span>
+                </div>
+              </div>
+              <div className="module-card__metrics">
+                <span><strong>{radarData.metadata.ratedCompanyCount}</strong> rated</span>
+                <span><strong>{radarData.metadata.constituentCount}</strong> in universe</span>
+                <span><strong>2</strong> role views</span>
+              </div>
+              <span className="module-card__action">Open governance radar</span>
+            </Link>
 
-            <section className="workspace-summary">
-              <div className="section-heading">
-                <h3>Coverage summary</h3>
-                <InfoHint
-                  label="Coverage summary note"
-                  content="Coverage reflects the matched FTSE 100 subset of the IA Public Register, with official issuer-announcement enrichment layered in where HTML pages or selected issuer result PDFs can be parsed reliably."
-                />
+            <Link className="module-card" to="/proxy-voting">
+              <div className="module-card__topline">
+                <span>02 / Stewardship</span>
+                <strong>Live module</strong>
               </div>
-              <div className="workspace-summary__grid">
-                <StatCard
-                  compact
-                  label="Companies represented"
-                  value={String(summary.companyCount)}
-                  note="Matched FTSE 100 issuers in the current build."
-                />
-                <StatCard
-                  compact
-                  label="Dissent resolutions captured"
-                  value={String(summary.resolutionCount)}
-                  note="Significant dissent records only."
-                />
-                <StatCard
-                  compact
-                  label="Period covered"
-                  value={
-                    coveragePeriod.startDate && coveragePeriod.endDate
-                      ? `${formatDate(coveragePeriod.startDate)} - ${formatDate(
-                          coveragePeriod.endDate,
-                        )}`
-                      : 'n/a'
-                  }
-                  note="Current visible date span from the source-backed dataset."
-                />
-                <StatCard
-                  compact
-                  label="Primary source"
-                  value={data.metadata.sourceName}
-                  note={`${summary.issuerVerifiedCount} records now tie back to parsed official issuer announcement pages.`}
-                />
+              <div>
+                <p className="module-card__eyebrow">Proxy voting</p>
+                <h3>Significant shareholder dissent against management</h3>
+                <p className="module-card__copy">
+                  Explore verified 20%+ votes on remuneration, elections, capital
+                  authorities, and other board-accountability resolutions.
+                </p>
+                <div className="module-card__signal-list">
+                  <span><i>01</i> Significant 20%+ opposition</span>
+                  <span><i>02</i> Resolution-level governance taxonomy</span>
+                  <span><i>03</i> Official issuer verification layer</span>
+                </div>
               </div>
-            </section>
+              <div className="module-card__metrics">
+                <span><strong>{data.metadata.summary.companyCount}</strong> companies</span>
+                <span><strong>{data.metadata.summary.resolutionCount}</strong> resolutions</span>
+                <span><strong>20%+</strong> threshold</span>
+              </div>
+              <span className="module-card__action">Open proxy voting</span>
+            </Link>
           </div>
 
-          <div className="workspace-overview__right">
-            <article className="workspace-panel">
-              <p className="workspace-panel__eyebrow">Governance framing</p>
-              <h3>Why the 20% threshold matters</h3>
-              <ul className="workspace-panel__list">
-                <li>
-                  In the UK market, 20% or more against management is widely treated as a
-                  significant dissent signal.
-                </li>
-                <li>
-                  It matters most on remuneration, director elections, and other
-                  board-accountability items.
-                </li>
-              </ul>
-            </article>
-
-            <article className="workspace-panel">
-              <p className="workspace-panel__eyebrow">Recent highlights</p>
-              <h3>Latest notable cases in scope</h3>
-              <div className="workspace-mini-list">
-                {highlights.slice(0, 2).map((item) => (
-                  <Link
-                    className="workspace-mini-list__item"
-                    key={item.id}
-                    to={`/resolution/${item.id}`}
-                  >
-                    <span>{item.companyName}</span>
-                    <strong>{formatShortPercent(item.votesAgainstPct)}</strong>
-                  </Link>
-                ))}
-              </div>
-            </article>
-
-            <article className="workspace-panel">
-              <p className="workspace-panel__eyebrow">Top dissent</p>
-              <h3>Strongest opposition in the dataset</h3>
-              <div className="workspace-mini-list">
-                {topDissent.slice(0, 2).map((item) => (
-                  <Link
-                    className="workspace-mini-list__item workspace-mini-list__item--stacked"
-                    key={item.id}
-                    to={`/resolution/${item.id}`}
-                  >
-                    <span>{item.companyName}</span>
-                    <small>{item.resolutionTitle}</small>
-                  </Link>
-                ))}
-              </div>
-            </article>
-
-            <article className="workspace-panel">
-              <p className="workspace-panel__eyebrow">Method & coverage</p>
-              <h3>Included and excluded on purpose</h3>
-              <ul className="workspace-panel__list workspace-panel__list--dense">
-                {methodology.included.slice(0, 2).map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <p className="workspace-panel__subhead">Excluded</p>
-              <ul className="workspace-panel__list workspace-panel__list--dense">
-                {methodology.excluded.slice(0, 2).map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
+          <div className="module-overview__principles">
+            <div><span>Evidence first</span><p>Official issuer sources underpin every rated leadership record.</p></div>
+            <div><span>Analytically honest</span><p>Unresearched companies remain unrated rather than receiving inferred scores.</p></div>
+            <div><span>Decision useful</span><p>Scores prioritise research; they do not predict individual departures.</p></div>
           </div>
         </div>
 
         <div className="workspace-micro-note">
           <span>Generated {new Date(generatedAt).toLocaleDateString('en-GB')}</span>
-          <span>Significant shareholder dissent only</span>
+          <span>FTSE 100 governance research</span>
         </div>
       </section>
     </div>

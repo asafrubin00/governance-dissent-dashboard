@@ -34,3 +34,27 @@
   1. maintain a small issuer source-config file
   2. expand HTML parsing coverage
   3. add PDF parsing only for high-value issuers where HTML is unavailable
+
+## Leadership Pressure Radar v0.1
+
+### Assumptions
+
+- The first leadership release should prioritise transparent evidence over nominal FTSE 100 score coverage.
+- A leadership pressure score is useful as a research queue, but must not be described as a probability of departure.
+- CEO and Chair tenure require different governance framing because the CEO role has no formal UK tenure limit while the Code gives a nine-year reference point for Chair independence and succession.
+
+### Coverage decision
+
+- The interface carries a 100-company public constituent snapshot.
+- Eight companies are rated from official issuer leadership sources.
+- The remaining 92 companies are explicitly marked `Unrated` rather than receiving inferred leaders, dates, or scores.
+
+### Data-quality decision
+
+- Shareholder proposals and shareholder-requisitioned resolutions are excluded from the leadership radar's dissent uplift.
+- This avoids misclassifying votes against a shareholder proposal as opposition to management when the board recommended voting against it.
+- Missing dissent in the narrow tracker window is not presented as evidence of zero dissent.
+
+### Deferred signals
+
+- Profit warnings, share-price stress, activism, controversies, and general news are deferred until each signal has a stable definition, primary source, lookback window, and validation rule.

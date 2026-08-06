@@ -13,7 +13,8 @@ export function Layout({ generatedAt }: LayoutProps) {
             <span className="brand__title">Proxy Wars</span>
           </Link>
           <nav className="site-nav" aria-label="Primary">
-            <NavLink to="/dashboard">Dashboard</NavLink>
+            <NavLink to="/radar">Radar</NavLink>
+            <NavLink to="/proxy-voting">Proxy voting</NavLink>
             <NavLink to="/">Overview</NavLink>
           </nav>
         </div>

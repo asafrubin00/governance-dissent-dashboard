@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
-import type { TrackerData } from './types'
+import type { LeadershipRadarData, TrackerData } from './types'
 import './App.css'
 
 const HomePage = lazy(async () => {
@@ -17,6 +17,11 @@ const DashboardPage = lazy(async () => {
 const ResolutionPage = lazy(async () => {
   const module = await import('./pages/ResolutionPage')
   return { default: module.ResolutionPage }
+})
+
+const LeadershipRadarPage = lazy(async () => {
+  const module = await import('./pages/LeadershipRadarPage')
+  return { default: module.LeadershipRadarPage }
 })
 
 function LoadingState() {
@@ -46,6 +51,7 @@ function ErrorState({ message }: { message: string }) {
 
 function App() {
   const [data, setData] = useState<TrackerData | null>(null)
+  const [radarData, setRadarData] = useState<LeadershipRadarData | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -53,14 +59,21 @@ function App() {
 
     async function loadData() {
       try {
-        const response = await fetch('/data/tracker-data.json')
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}.`)
+        const [trackerResponse, radarResponse] = await Promise.all([
+          fetch('/data/tracker-data.json'),
+          fetch('/data/leadership-radar.json'),
+        ])
+        if (!trackerResponse.ok || !radarResponse.ok) {
+          throw new Error(
+            `Dataset request failed (${trackerResponse.status}/${radarResponse.status}).`,
+          )
         }
 
-        const payload = (await response.json()) as TrackerData
+        const payload = (await trackerResponse.json()) as TrackerData
+        const radarPayload = (await radarResponse.json()) as LeadershipRadarData
         if (active) {
           setData(payload)
+          setRadarData(radarPayload)
         }
       } catch (loadError) {
         if (active) {
@@ -82,7 +95,7 @@ function App() {
     return <ErrorState message={error} />
   }
 
-  if (!data) {
+  if (!data || !radarData) {
     return <LoadingState />
   }
 
@@ -90,9 +103,11 @@ function App() {
     <BrowserRouter>
       <Suspense fallback={<LoadingState />}>
         <Routes>
-          <Route element={<Layout generatedAt={data.metadata.generatedAt} />}>
-            <Route index element={<HomePage data={data} />} />
-            <Route path="/dashboard" element={<DashboardPage data={data} />} />
+          <Route element={<Layout generatedAt={radarData.metadata.generatedAt} />}>
+            <Route index element={<HomePage data={data} radarData={radarData} />} />
+            <Route path="/radar" element={<LeadershipRadarPage data={radarData} />} />
+            <Route path="/proxy-voting" element={<DashboardPage data={data} />} />
+            <Route path="/dashboard" element={<Navigate replace to="/radar" />} />
             <Route path="/resolution/:id" element={<ResolutionPage data={data} />} />
           </Route>
         </Routes>
