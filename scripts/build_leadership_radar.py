@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_PATH = ROOT / "data" / "leadership_sources.json"
+PROFIT_WARNING_PATH = ROOT / "data" / "profit_warning_sources.json"
 ROSTER_PATH = ROOT / "data" / "ftse100_constituents.json"
 TRACKER_PATH = ROOT / "public" / "data" / "tracker-data.json"
 OUTPUT_PATH = ROOT / "public" / "data" / "leadership-radar.json"
@@ -128,12 +129,63 @@ def management_dissent_by_company() -> dict[str, dict[str, Any]]:
     return grouped
 
 
+def profit_warnings_by_company(
+    warning_source: dict[str, Any],
+    roster_tickers: set[str],
+) -> tuple[dict[str, dict[str, Any]], list[str]]:
+    errors: list[str] = []
+    seen_ids: set[str] = set()
+    allowed_types = {"guidance-cut", "material-profit-impact"}
+    allowed_severities = {"material", "severe"}
+    as_of = date.fromisoformat(warning_source["asOfDate"])
+    lookback_months = warning_source["lookbackMonths"]
+    lookback_days = round(lookback_months * 365.2425 / 12)
+    grouped: dict[str, dict[str, Any]] = {}
+
+    for event in warning_source["events"]:
+        event_id = event.get("id", "")
+        ticker = event.get("ticker", "")
+        if not event_id or event_id in seen_ids:
+            errors.append(f"Missing or duplicate profit-warning event ID: {event_id or '[blank]' }.")
+        seen_ids.add(event_id)
+        if ticker not in roster_tickers:
+            errors.append(f"Profit-warning ticker is outside the current roster: {ticker}.")
+        if event.get("eventType") not in allowed_types:
+            errors.append(f"Unsupported profit-warning event type for {event_id}.")
+        if event.get("severity") not in allowed_severities:
+            errors.append(f"Unsupported profit-warning severity for {event_id}.")
+        if not event.get("companyName") or not event.get("sourceUrl") or not event.get("summary"):
+            errors.append(f"Missing required profit-warning evidence for {event_id}.")
+        try:
+            event_date = date.fromisoformat(event["announcementDate"])
+        except (KeyError, ValueError):
+            errors.append(f"Invalid profit-warning date for {event_id}.")
+            continue
+        if event_date > as_of:
+            errors.append(f"Future-dated profit-warning event: {event_id}.")
+        if (as_of - event_date).days > lookback_days:
+            errors.append(f"Profit-warning event falls outside the {lookback_months}-month window: {event_id}.")
+        change_pct = event.get("changePct")
+        if change_pct is not None and not -100 <= change_pct <= 0:
+            errors.append(f"Impossible profit-warning percentage change for {event_id}.")
+        grouped.setdefault(ticker, {"count": 0, "latestDate": None, "events": []})
+        grouped[ticker]["count"] += 1
+        grouped[ticker]["events"].append(event)
+        if grouped[ticker]["latestDate"] is None or event["announcementDate"] > grouped[ticker]["latestDate"]:
+            grouped[ticker]["latestDate"] = event["announcementDate"]
+
+    for evidence in grouped.values():
+        evidence["events"].sort(key=lambda item: item["announcementDate"], reverse=True)
+    return grouped, errors
+
+
 def validate(
     roster: list[dict[str, str]],
     curated: list[dict[str, Any]],
     companies: list[dict[str, Any]],
+    warning_errors: list[str],
 ) -> dict[str, Any]:
-    errors: list[str] = []
+    errors: list[str] = [*warning_errors]
     tickers = [row["ticker"] for row in roster]
     if len(roster) != 100:
         errors.append(f"Expected 100 constituents, found {len(roster)}.")
@@ -152,8 +204,13 @@ def validate(
 
 def main() -> None:
     source = json.loads(SOURCE_PATH.read_text(encoding="utf-8"))
+    warning_source = json.loads(PROFIT_WARNING_PATH.read_text(encoding="utf-8"))
     roster, roster_mode = load_roster()
     dissent = management_dissent_by_company()
+    warnings, warning_errors = profit_warnings_by_company(
+        warning_source,
+        {row["ticker"] for row in roster},
+    )
     curated_by_ticker = {row["ticker"]: row for row in source["companies"]}
     as_of = source["asOfDate"]
     companies = []
@@ -165,6 +222,10 @@ def main() -> None:
         dissent_record = next(
             (dissent[normalise(alias)] for alias in aliases if normalise(alias) in dissent),
             None,
+        )
+        warning_record = warnings.get(
+            constituent["ticker"],
+            {"count": 0, "latestDate": None, "events": []},
         )
 
         for role_name in ("ceo", "chair"):
@@ -205,9 +266,13 @@ def main() -> None:
                 ),
             }
 
-        companies.append({**constituent, "roles": role_output})
+        companies.append({
+            **constituent,
+            "roles": role_output,
+            "profitWarningEvidence": warning_record,
+        })
 
-    validation = validate(roster, source["companies"], companies)
+    validation = validate(roster, source["companies"], companies, warning_errors)
     if validation["status"] != "pass":
         raise RuntimeError("; ".join(validation["errors"]))
 
@@ -216,7 +281,7 @@ def main() -> None:
             "title": "FTSE 100 Leadership Pressure Radar",
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "asOfDate": as_of,
-            "methodologyVersion": source["methodologyVersion"],
+            "methodologyVersion": warning_source["methodologyVersion"],
             "rosterSource": {
                 "name": "Wikipedia FTSE 100 constituent table",
                 "url": ROSTER_URL,
@@ -225,19 +290,29 @@ def main() -> None:
             },
             "ratedCompanyCount": len(source["companies"]),
             "constituentCount": len(roster),
+            "profitWarningCoverage": {
+                "eventCount": len(warning_source["events"]),
+                "companyCount": len(warnings),
+                "asOfDate": warning_source["asOfDate"],
+                "lookbackMonths": warning_source["lookbackMonths"],
+                "definition": warning_source["definition"],
+                "scoreTreatment": "Displayed as a source-verified overlay and excluded from the pressure score until cohort-wide research coverage is complete.",
+            },
             "scoreDefinition": {
                 "label": "Leadership transition pressure",
                 "notAProbability": True,
                 "ceo": "Tenure pressure rises over a ten-year reference horizon, capped at 80 points.",
                 "chair": "Tenure pressure rises toward the UK Code's nine-year chair independence and succession reference point, capped at 80 points.",
                 "dissent": "Up to 20 additional points reflect verified 20%+ dissent on management-sponsored resolutions in the existing tracker window. Shareholder proposals are excluded.",
+                "profitWarnings": "Qualifying official issuer events are shown as an evidence overlay but do not yet alter the score.",
                 "bands": {"Lower": "0-24", "Watch": "25-49", "Elevated": "50-69", "Acute": "70-100"},
             },
             "limitations": [
                 "This is a research prioritisation score, not a prediction that an individual will leave office.",
-                f"{len(source['companies'])} companies have source-verified leadership records in methodology v0.1; all others remain visibly unrated.",
+                f"{len(source['companies'])} companies have source-verified leadership records in methodology {warning_source['methodologyVersion']}; all others remain visibly unrated.",
                 "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-                "Profit warnings, share-price stress, activism, and broader news signals are not yet included.",
+                "Profit-warning evidence is deliberately narrow and event absence means only that no qualifying event is captured in the current curated file.",
+                "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded.",
             ],
             "validation": validation,
         },

@@ -19,8 +19,9 @@ The product is intentionally transparent about incomplete coverage. Unresearched
 
 - Universe: a 100-company FTSE 100 public constituent snapshot.
 - Verified cohort: 25 companies with official issuer sources for both CEO and Chair appointments.
-- Signals in methodology `v0.1`: role tenure and qualifying registered dissent on management-sponsored resolutions.
-- Excluded for now: profit warnings, market-price stress, activism, controversies, and broader news.
+- Signals in methodology `v0.2`: role tenure, qualifying registered dissent, and a source-verified profit-warning overlay.
+- Three official issuer events are captured in the initial 36-month warning window. Warning evidence is displayed but does not alter the pressure score until cohort-wide research coverage is complete.
+- Excluded for now: market-price stress, activism, controversies, and broader news.
 - Output: `public/data/leadership-radar.json`.
 
 The score is a research-prioritisation device, not a prediction that an individual will leave office. Full details are in [the radar methodology](docs/leadership-radar-methodology.md).
@@ -68,16 +69,18 @@ npm run build
 1. Refreshes and verifies the significant-dissent dataset.
 2. Fetches the public FTSE 100 roster snapshot, falling back to the cached snapshot if unavailable.
 3. Joins the manually verified leadership source file.
-4. Recalculates role-specific pressure scores.
-5. Runs validation before writing the public JSON files.
+4. Validates and joins the curated official profit-warning evidence file.
+5. Recalculates role-specific pressure scores.
+6. Runs validation before writing the public JSON files.
 
-The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculated data and the constituent roster, but it cannot safely discover leadership changes automatically. CEO and Chair appointments must be added to `data/leadership_sources.json` from an official issuer source.
+The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations and the constituent roster, but it cannot yet safely discover leadership changes or new warning events automatically. Verified appointments and warning events must be added to their source files before the weekly build publishes them.
 
 ## Project structure
 
 ```text
 data/
   leadership_sources.json          # manually verified leadership evidence
+  profit_warning_sources.json      # curated official warning evidence
   ftse100_constituents.json        # generated public roster snapshot
   company_metadata.json            # Proxy Voting issuer aliases
   issuer_source_config.json        # direct voting-source seeds
@@ -101,12 +104,17 @@ src/
 - CEO tenure has no formal UK governance limit; the ten-year horizon is an analytical reference only.
 - Chair tenure is interpreted in the context of the Code's nine-year independence and succession guidance.
 - The dissent uplift is based on a narrow 2025 source window, not complete historical voting coverage.
+- The profit-warning overlay is an initial curated event set, not proof that uncaptured companies issued no warning.
+- Warning evidence is excluded from the score until the verified cohort has comparable research coverage.
 - A public constituent table is used for reproducibility and is not an official FTSE Russell feed.
 - Classification and parsing rules remain suitable for a portfolio MVP, not a commercial proxy-research service.
 
-## Recommended next research phase
+## Product roadmap
 
-Add a source-backed profit-warning history as the first non-tenure signal. Share-price and news-event measures should follow only after event definitions, time windows, and source licensing are documented clearly.
+- Complete 36-month warning research across the verified cohort, then evaluate a bounded score contribution.
+- Add issuer-page monitoring that creates a review queue rather than publishing unverified event matches.
+- Add compact company logos to heatmap tiles and the evidence rail using issuer-approved assets, with a text fallback and no analytical effect.
+- Add announced succession status, concise leader profiles, and tenure-aligned share-price/TSR analysis in staged releases.
 
 ## Verification
 

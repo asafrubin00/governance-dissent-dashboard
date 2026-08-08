@@ -1,9 +1,9 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-06T10:22:17.356541+00:00",
+    "generatedAt": "2026-08-08T06:24:07.696663+00:00",
     "asOfDate": "2026-08-06",
-    "methodologyVersion": "0.1",
+    "methodologyVersion": "0.2",
     "rosterSource": {
       "name": "Wikipedia FTSE 100 constituent table",
       "url": "https://en.wikipedia.org/wiki/FTSE_100_Index",
@@ -12,12 +12,21 @@
     },
     "ratedCompanyCount": 25,
     "constituentCount": 100,
+    "profitWarningCoverage": {
+      "eventCount": 3,
+      "companyCount": 3,
+      "asOfDate": "2026-08-08",
+      "lookbackMonths": 36,
+      "definition": "A qualifying event is an official issuer announcement that either cuts full-year earnings guidance or quantifies a material prospective adverse impact on profit. Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded.",
+      "scoreTreatment": "Displayed as a source-verified overlay and excluded from the pressure score until cohort-wide research coverage is complete."
+    },
     "scoreDefinition": {
       "label": "Leadership transition pressure",
       "notAProbability": true,
       "ceo": "Tenure pressure rises over a ten-year reference horizon, capped at 80 points.",
       "chair": "Tenure pressure rises toward the UK Code's nine-year chair independence and succession reference point, capped at 80 points.",
       "dissent": "Up to 20 additional points reflect verified 20%+ dissent on management-sponsored resolutions in the existing tracker window. Shareholder proposals are excluded.",
+      "profitWarnings": "Qualifying official issuer events are shown as an evidence overlay but do not yet alter the score.",
       "bands": {
         "Lower": "0-24",
         "Watch": "25-49",
@@ -29,7 +38,8 @@
       "This is a research prioritisation score, not a prediction that an individual will leave office.",
       "25 companies have source-verified leadership records in methodology v0.1; all others remain visibly unrated.",
       "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-      "Profit warnings, share-price stress, activism, and broader news signals are not yet included."
+      "Profit-warning evidence is deliberately narrow and event absence means only that no qualifying event is captured in the current curated file.",
+      "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded."
     ],
     "validation": {
       "status": "pass",
@@ -54,6 +64,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -73,6 +88,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -92,6 +112,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -111,6 +136,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -130,6 +160,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -193,6 +228,11 @@
           },
           "reason": "8.8 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -242,6 +282,11 @@
           },
           "reason": "22.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -261,6 +306,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -310,6 +360,11 @@
           },
           "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -329,6 +384,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -348,6 +408,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -367,6 +432,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -416,6 +486,11 @@
           },
           "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -465,6 +540,11 @@
           },
           "reason": "7.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -484,6 +564,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -503,6 +588,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -566,6 +656,11 @@
           },
           "reason": "0.8 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -585,6 +680,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -604,6 +704,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -623,6 +728,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -642,6 +752,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -661,6 +776,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -724,6 +844,11 @@
           },
           "reason": "6.4 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -787,6 +912,11 @@
           },
           "reason": "10.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -806,6 +936,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -825,6 +960,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -888,6 +1028,11 @@
           },
           "reason": "7.2 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -963,6 +1108,11 @@
           },
           "reason": "6.9 years in role plus 2 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -982,6 +1132,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1001,6 +1156,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1020,6 +1180,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1039,6 +1204,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1058,6 +1228,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1077,6 +1252,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1096,6 +1276,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1115,6 +1300,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1134,6 +1324,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1153,6 +1348,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1172,6 +1372,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1191,6 +1396,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1210,6 +1420,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1229,6 +1444,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1248,6 +1468,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1267,6 +1492,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1316,6 +1546,11 @@
           },
           "reason": "0.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1335,6 +1570,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1354,6 +1594,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1429,6 +1674,11 @@
           },
           "reason": "3.9 years in role plus 2 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1492,6 +1742,11 @@
           },
           "reason": "1.6 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1511,6 +1766,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1530,6 +1790,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1549,6 +1814,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1568,6 +1838,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1587,6 +1862,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1606,6 +1886,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1625,6 +1910,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1688,6 +1978,33 @@
           },
           "reason": "2.1 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 1,
+        "latestDate": "2023-09-19",
+        "events": [
+          {
+            "id": "kgf-2023-09-19-guidance-cut",
+            "ticker": "KGF",
+            "companyName": "Kingfisher",
+            "announcementDate": "2023-09-19",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2023/24",
+            "metric": "Adjusted profit before tax",
+            "previousGuidance": "Approximately \u00a3634m analyst consensus",
+            "revisedGuidance": "Approximately \u00a3590m",
+            "changePct": -6.9,
+            "summary": "Kingfisher reduced FY23/24 adjusted profit guidance after a difficult first half, with particular weakness in Poland and volatile weather.",
+            "drivers": [
+              "Difficult trading environment in Poland",
+              "Volatile and unseasonal weather",
+              "Broader macroeconomic pressure"
+            ],
+            "sourceUrl": "https://www.kingfisher.com/~/media/Files/K/Kingfisher-Plc/Universal/documents/media/news-and-insights/2023/20230919-2023-24-half-year-results-rns-part-1.pdf",
+            "sourceLabel": "Kingfisher FY 2023/24 half-year results"
+          }
+        ]
       }
     },
     {
@@ -1707,6 +2024,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1726,6 +2048,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1745,6 +2072,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1764,6 +2096,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1827,6 +2164,11 @@
           },
           "reason": "7.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1846,6 +2188,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1895,6 +2242,33 @@
           },
           "reason": "8.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 1,
+        "latestDate": "2025-05-21",
+        "events": [
+          {
+            "id": "mks-2025-05-21-material-profit-impact",
+            "ticker": "MKS",
+            "companyName": "Marks & Spencer Group",
+            "announcementDate": "2025-05-21",
+            "eventType": "material-profit-impact",
+            "severity": "severe",
+            "affectedPeriod": "FY 2025/26",
+            "metric": "Operating profit before mitigation, insurance and trading actions",
+            "previousGuidance": null,
+            "revisedGuidance": "Approximately \u00a3300m adverse impact",
+            "changePct": null,
+            "summary": "Marks & Spencer quantified an expected \u00a3300m operating-profit impact from its cyber incident before mitigation, insurance and trading actions.",
+            "drivers": [
+              "Cyber incident",
+              "Online trading disruption",
+              "Operational recovery costs"
+            ],
+            "sourceUrl": "https://corporate.marksandspencer.com/newsroom/press-releases/full-year-results-52-weeks-ended-29-march-2025",
+            "sourceLabel": "Marks & Spencer FY 2024/25 results"
+          }
+        ]
       }
     },
     {
@@ -1958,6 +2332,11 @@
           },
           "reason": "1.4 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -1977,6 +2356,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2026,6 +2410,11 @@
           },
           "reason": "5.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2075,6 +2464,11 @@
           },
           "reason": "2.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2124,6 +2518,11 @@
           },
           "reason": "9.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2143,6 +2542,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2162,6 +2566,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2181,6 +2590,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2200,6 +2614,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2219,6 +2638,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2238,6 +2662,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2257,6 +2686,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2320,6 +2754,33 @@
           },
           "reason": "7.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 1,
+        "latestDate": "2024-09-11",
+        "events": [
+          {
+            "id": "rto-2024-09-11-guidance-cut",
+            "ticker": "RTO",
+            "companyName": "Rentokil Initial",
+            "announcementDate": "2024-09-11",
+            "eventType": "guidance-cut",
+            "severity": "severe",
+            "affectedPeriod": "FY 2024",
+            "metric": "Group adjusted profit before tax and amortisation",
+            "previousGuidance": null,
+            "revisedGuidance": "Approximately \u00a3700m",
+            "changePct": null,
+            "summary": "Rentokil revised its FY24 profit outlook after weaker North American trading and integration disruption, with additional cost and currency headwinds.",
+            "drivers": [
+              "Lower-than-anticipated July and August trading in North America",
+              "Branch integration disruption and associated operating costs",
+              "Adverse foreign-exchange movement"
+            ],
+            "sourceUrl": "https://www.rentokil-initial.com/~/media/Files/R/Rentokil/documents/rns-11-september-2024.pdf",
+            "sourceLabel": "Rentokil Initial trading update"
+          }
+        ]
       }
     },
     {
@@ -2383,6 +2844,11 @@
           },
           "reason": "4.3 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2402,6 +2868,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2421,6 +2892,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2440,6 +2916,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2459,6 +2940,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2478,6 +2964,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2497,6 +2988,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2516,6 +3012,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2579,6 +3080,11 @@
           },
           "reason": "5.2 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2598,6 +3104,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2617,6 +3128,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2636,6 +3152,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2655,6 +3176,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2674,6 +3200,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2693,6 +3224,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2712,6 +3248,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2761,6 +3302,11 @@
           },
           "reason": "2.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2780,6 +3326,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2843,6 +3394,11 @@
           },
           "reason": "2.7 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2862,6 +3418,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2881,6 +3442,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2900,6 +3466,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     },
     {
@@ -2919,6 +3490,11 @@
           "band": "Unrated",
           "reason": "Leadership evidence not yet researched for this release."
         }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": []
       }
     }
   ]

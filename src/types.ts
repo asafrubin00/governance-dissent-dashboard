@@ -135,6 +135,27 @@ export type LeadershipCompany = {
   companyName: string
   ticker: string
   sector: string
+  profitWarningEvidence: {
+    count: number
+    latestDate: string | null
+    events: Array<{
+      id: string
+      ticker: string
+      companyName: string
+      announcementDate: string
+      eventType: 'guidance-cut' | 'material-profit-impact'
+      severity: 'material' | 'severe'
+      affectedPeriod: string
+      metric: string
+      previousGuidance: string | null
+      revisedGuidance: string
+      changePct: number | null
+      summary: string
+      drivers: string[]
+      sourceUrl: string
+      sourceLabel: string
+    }>
+  }
   roles: {
     ceo: LeadershipRole
     chair: LeadershipRole
@@ -149,6 +170,14 @@ export type LeadershipRadarData = {
     methodologyVersion: string
     ratedCompanyCount: number
     constituentCount: number
+    profitWarningCoverage: {
+      eventCount: number
+      companyCount: number
+      asOfDate: string
+      lookbackMonths: number
+      definition: string
+      scoreTreatment: string
+    }
     rosterSource: {
       name: string
       url: string
@@ -161,6 +190,7 @@ export type LeadershipRadarData = {
       ceo: string
       chair: string
       dissent: string
+      profitWarnings: string
       bands: Record<string, string>
     }
     limitations: string[]

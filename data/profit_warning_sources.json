@@ -1,0 +1,71 @@
+{
+  "asOfDate": "2026-08-08",
+  "lookbackMonths": 36,
+  "methodologyVersion": "0.2",
+  "definition": "A qualifying event is an official issuer announcement that either cuts full-year earnings guidance or quantifies a material prospective adverse impact on profit. Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded.",
+  "events": [
+    {
+      "id": "rto-2024-09-11-guidance-cut",
+      "ticker": "RTO",
+      "companyName": "Rentokil Initial",
+      "announcementDate": "2024-09-11",
+      "eventType": "guidance-cut",
+      "severity": "severe",
+      "affectedPeriod": "FY 2024",
+      "metric": "Group adjusted profit before tax and amortisation",
+      "previousGuidance": null,
+      "revisedGuidance": "Approximately £700m",
+      "changePct": null,
+      "summary": "Rentokil revised its FY24 profit outlook after weaker North American trading and integration disruption, with additional cost and currency headwinds.",
+      "drivers": [
+        "Lower-than-anticipated July and August trading in North America",
+        "Branch integration disruption and associated operating costs",
+        "Adverse foreign-exchange movement"
+      ],
+      "sourceUrl": "https://www.rentokil-initial.com/~/media/Files/R/Rentokil/documents/rns-11-september-2024.pdf",
+      "sourceLabel": "Rentokil Initial trading update"
+    },
+    {
+      "id": "mks-2025-05-21-material-profit-impact",
+      "ticker": "MKS",
+      "companyName": "Marks & Spencer Group",
+      "announcementDate": "2025-05-21",
+      "eventType": "material-profit-impact",
+      "severity": "severe",
+      "affectedPeriod": "FY 2025/26",
+      "metric": "Operating profit before mitigation, insurance and trading actions",
+      "previousGuidance": null,
+      "revisedGuidance": "Approximately £300m adverse impact",
+      "changePct": null,
+      "summary": "Marks & Spencer quantified an expected £300m operating-profit impact from its cyber incident before mitigation, insurance and trading actions.",
+      "drivers": [
+        "Cyber incident",
+        "Online trading disruption",
+        "Operational recovery costs"
+      ],
+      "sourceUrl": "https://corporate.marksandspencer.com/newsroom/press-releases/full-year-results-52-weeks-ended-29-march-2025",
+      "sourceLabel": "Marks & Spencer FY 2024/25 results"
+    },
+    {
+      "id": "kgf-2023-09-19-guidance-cut",
+      "ticker": "KGF",
+      "companyName": "Kingfisher",
+      "announcementDate": "2023-09-19",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2023/24",
+      "metric": "Adjusted profit before tax",
+      "previousGuidance": "Approximately £634m analyst consensus",
+      "revisedGuidance": "Approximately £590m",
+      "changePct": -6.9,
+      "summary": "Kingfisher reduced FY23/24 adjusted profit guidance after a difficult first half, with particular weakness in Poland and volatile weather.",
+      "drivers": [
+        "Difficult trading environment in Poland",
+        "Volatile and unseasonal weather",
+        "Broader macroeconomic pressure"
+      ],
+      "sourceUrl": "https://www.kingfisher.com/~/media/Files/K/Kingfisher-Plc/Universal/documents/media/news-and-insights/2023/20230919-2023-24-half-year-results-rns-part-1.pdf",
+      "sourceLabel": "Kingfisher FY 2023/24 half-year results"
+    }
+  ]
+}

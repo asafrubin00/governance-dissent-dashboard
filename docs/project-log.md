@@ -46,8 +46,8 @@
 ### Coverage decision
 
 - The interface carries a 100-company public constituent snapshot.
-- Eight companies are rated from official issuer leadership sources.
-- The remaining 92 companies are explicitly marked `Unrated` rather than receiving inferred leaders, dates, or scores.
+- Twenty-five companies are rated from official issuer leadership sources.
+- The remaining 75 companies are explicitly marked `Unrated` rather than receiving inferred leaders, dates, or scores.
 
 ### Data-quality decision
 
@@ -76,3 +76,26 @@
 ### Methodology decision
 
 - Left methodology `v0.1` and all score weights unchanged so the expanded cohort is comparable with the first release.
+
+## Profit-warning evidence overlay v0.2
+
+### Scope decision
+
+- Added a 36-month source-backed overlay for explicit full-year guidance cuts and quantified material prospective profit impacts.
+- Included three high-confidence official issuer events: Rentokil Initial, Marks & Spencer, and Kingfisher.
+- Excluded ambiguous trading commentary, routine earnings misses, and operating-metric revisions without a clear profit implication.
+
+### Score decision
+
+- Kept the pressure-score weights unchanged until the same warning research protocol covers the full verified cohort.
+- Added visible warning markers and source-linked evidence without treating uncaptured events as evidence of absence.
+
+### Refresh decision
+
+- The weekly build now validates and republishes the curated warning file automatically.
+- New-event discovery remains editorially verified; automated issuer monitoring should create a review queue rather than publishing matches directly.
+
+### Presentation roadmap
+
+- Add small issuer-approved company logos to heatmap tiles and the selected-company rail after the analytical layers stabilise.
+- Logos will use a text fallback and will never affect scoring.
