@@ -11,14 +11,6 @@ export function HomePage({ data, radarData }: HomePageProps) {
 
   return (
     <div className="page-flow">
-      <section className="hero-screen hero-screen--cover">
-        <div className="hero-screen__overlay" />
-        <div className="hero-screen__hint" aria-hidden="true">
-          <span />
-          <span />
-        </div>
-      </section>
-
       <section className="workspace-screen workspace-screen--overview" id="workspace">
         <div className="module-overview">
           <header className="module-overview__intro">

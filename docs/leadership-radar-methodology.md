@@ -100,6 +100,6 @@ The generated file records validation status, methodology version, source mode, 
 
 ## Refresh model
 
-`npm run data` refreshes the public constituent snapshot, rebuilds Proxy Voting, recalculates radar scores, refreshes the ten-company market-performance pilot, and runs as part of the weekly GitHub Actions workflow.
+`npm run data` refreshes the public constituent snapshot, rebuilds Proxy Voting, recalculates radar scores, refreshes market-performance series for all 100 companies, and runs as part of the weekly GitHub Actions workflow.
 
 Leadership appointments, profit-warning events, and succession cases remain editorially approved because issuer disclosures vary and a false automated match would be more damaging than a visible evidence gap. The weekly monitor discovers candidate issuer links, but never publishes them as analytical evidence automatically.

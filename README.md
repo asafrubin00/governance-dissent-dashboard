@@ -19,11 +19,11 @@ The product is intentionally transparent about scope. Leadership evidence now co
 
 - Universe: a 100-company FTSE 100 public constituent snapshot.
 - Leadership coverage: all 100 companies have official issuer sources for current CEO and Chair appointments or a sourced structural `not applicable` designation.
-- Signals in methodology `v0.5`: role tenure, qualifying registered dissent, source-verified profit-warning evidence, and officially announced live CEO or Chair succession processes.
-- Profit-warning audit: 50 companies reviewed over 36 months, with 11 qualifying official events across nine issuers.
+- Signals in methodology `v0.6`: role tenure, qualifying registered dissent, source-verified profit-warning evidence, and officially announced live CEO or Chair succession processes.
+- Profit-warning audit: all 100 companies reviewed over 36 months, with 15 qualifying official events across 11 issuers.
 - Succession review: all 100 companies reviewed, with seven live processes captured in the current evidence window.
-- Market-performance pilot: ten companies with monthly share-price and dividend-adjusted returns against the FTSE 100 price index.
-- Profile pilot: the same ten companies have concise sourced CEO/Chair biographies, official links, and local portraits where stable.
+- Market-performance coverage: all 100 companies with monthly share-price and dividend-adjusted returns against the FTSE 100 price index.
+- Profile pilot: ten companies have concise sourced CEO/Chair biographies, official links, and local portraits where stable.
 - Excluded for now: activism, controversies, broader news, and any unlicensed claim to institutional-grade TSR.
 - Output: `public/data/leadership-radar.json`.
 
@@ -72,13 +72,13 @@ npm run build
 1. Refreshes and verifies the significant-dissent dataset.
 2. Fetches the public FTSE 100 roster snapshot, falling back to the cached snapshot if unavailable.
 3. Joins both manually verified leadership source files and validates exact 100-company roster coverage.
-4. Validates the 50-company profit-warning review and joins approved official warning evidence.
+4. Validates the 100-company profit-warning review and joins approved official warning evidence.
 5. Validates exact 100-company coverage for official active-succession review.
 6. Recalculates role-specific pressure scores without allowing either overlay to change the score.
-7. Refreshes and validates the ten-company monthly market-performance pilot.
+7. Refreshes and validates monthly market-performance series for all 100 companies.
 8. Runs validation before writing the public JSON files.
 
-The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations, the constituent roster, and the market pilot, then checks 100 official issuer pages for new earnings- and succession-related links. Matches enter a typed review queue and never alter the radar automatically. Verified appointments, qualifying warning events, and active succession cases must still be approved in their source files before publication.
+The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations, the constituent roster, and all market series, then checks 100 official issuer pages for new earnings- and succession-related links. Matches enter a typed review queue and never alter the radar automatically. Verified appointments, qualifying warning events, and active succession cases must still be approved in their source files before publication.
 
 Run the monitor independently with `npm run data:monitor`. Its source health and editorial safeguards are explained in [the monitor methodology](docs/announcement-monitor-methodology.md).
 
@@ -121,7 +121,7 @@ src/
 - CEO tenure has no formal UK governance limit; the ten-year horizon is an analytical reference only.
 - Chair tenure is interpreted in the context of the Code's nine-year independence and succession guidance.
 - The dissent uplift is based on a narrow 2025 source window, not complete historical voting coverage.
-- The profit-warning audit covers 50 companies; no-warning interpretation remains limited to that reviewed subset.
+- The profit-warning audit covers all 100 source-verified companies. A no-event outcome means no qualifying issuer announcement was identified under the stated definition and 36-month window, not that the company experienced no adverse trading developments.
 - Warning and succession evidence are excluded from the score pending calibration and outcome testing.
 - A public constituent table is used for reproducibility and is not an official FTSE Russell feed.
 - Classification and parsing rules remain suitable for a portfolio MVP, not a commercial proxy-research service.
@@ -129,9 +129,9 @@ src/
 
 ## Product roadmap
 
-- Extend the profit-warning audit from 50 to all 100 constituents.
+- Add benchmark-relative price and total shareholder return analysis with clearly licensed, reproducible market data.
 - Improve monitor reliability where official sites block automated access or render no usable links.
-- Extend the source-backed profile and market-performance pilots beyond ten companies.
+- Extend the source-backed leadership profile pilot beyond ten companies.
 - Evaluate warning and succession score contributions only after back-testing, sensitivity analysis, and a documented governance rationale.
 
 ## Verification

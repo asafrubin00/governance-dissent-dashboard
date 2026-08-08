@@ -1,9 +1,9 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-08T08:26:24.911334+00:00",
+    "generatedAt": "2026-08-08T11:09:29.388573+00:00",
     "asOfDate": "2026-08-08",
-    "methodologyVersion": "0.5",
+    "methodologyVersion": "0.6",
     "rosterSource": {
       "name": "Wikipedia FTSE 100 constituent table",
       "url": "https://en.wikipedia.org/wiki/FTSE_100_Index",
@@ -14,9 +14,9 @@
     "ratedCompanyCount": 94,
     "constituentCount": 100,
     "profitWarningCoverage": {
-      "eventCount": 11,
-      "companyCount": 9,
-      "reviewedCompanyCount": 50,
+      "eventCount": 15,
+      "companyCount": 11,
+      "reviewedCompanyCount": 100,
       "asOfDate": "2026-08-08",
       "lookbackMonths": 36,
       "definition": "A qualifying event is an official issuer announcement that either cuts full-year earnings guidance or quantifies a material prospective adverse impact on profit. Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded.",
@@ -46,9 +46,9 @@
     },
     "limitations": [
       "This is a research prioritisation score, not a prediction that an individual will leave office.",
-      "All 100 companies have source-verified leadership records in methodology 0.5; externally managed issuers without a chief executive are marked not applicable rather than scored.",
+      "All 100 companies have source-verified leadership records in methodology 0.6; externally managed issuers without a chief executive are marked not applicable rather than scored.",
       "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-      "The profit-warning review currently covers 50 of 100 rated companies; event absence outside that reviewed subset must not be interpreted as evidence of no warning.",
+      "The profit-warning review covers 100 of 100 source-verified companies; a no-event outcome means no qualifying issuer announcement was identified under the stated definition and review window.",
       "Succession status reflects official announcements found by the evidence date and may change between refreshes.",
       "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded."
     ],
@@ -174,7 +174,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "ABDN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.aberdeenplc.com/en-gb/news/all-news",
+          "reviewNote": "Results and issuer announcements reviewed; no explicit Group earnings guidance cut captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -233,7 +238,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "ADM",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://admiralgroup.co.uk/news-releases",
+          "reviewNote": "Results and trading updates reviewed; insurance operating metrics were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -292,7 +302,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "AAF",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.airtel.africa/investors/financial-results",
+          "reviewNote": "Results reviewed; currency and operating-metric movements were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -340,7 +355,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "ALW",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.alliancewitan.com/news-insights-hub",
+          "reviewNote": "Investment-company reports reviewed; NAV and portfolio-performance movements are outside the profit-warning definition."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -669,7 +689,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "AUTO",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://plc.autotrader.co.uk/news-views/company-news/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2231,7 +2256,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "DCC",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.dcc.ie/news",
+          "reviewNote": "Results and trading updates reviewed; full-year Group profit guidance was maintained in the evidence window."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2376,7 +2406,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "DPLM",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.diplomaplc.com/investors/results-reports-and-presentations/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2435,7 +2470,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "EDV",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.endeavourmining.com/news-and-media/news/",
+          "reviewNote": "Production and all-in sustaining cost revisions were reviewed but excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2632,7 +2672,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "FCIT",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.fandc.com/news-and-insights/",
+          "reviewNote": "Investment-company reports reviewed; NAV and portfolio-performance movements are outside the profit-warning definition."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2691,7 +2736,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "FRES",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.fresnilloplc.com/media/press-releases/",
+          "reviewNote": "Production and cost guidance changes were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2750,7 +2800,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "GAW",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://investor.games-workshop.com/news-posts",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3001,7 +3056,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "HLMA",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.halma.com/news",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3060,7 +3120,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "HSX",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.hiscoxgroup.com/news",
+          "reviewNote": "Results and trading updates reviewed; insurance loss and premium metrics were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3119,7 +3184,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "HWDN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.howdenjoinerygroupplc.com/media-centre/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying full-year profit warning captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3242,7 +3312,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "ICG",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.icgam.com/news-insights/",
+          "reviewNote": "Results and fund updates reviewed; no explicit Group earnings guidance cut captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3301,7 +3376,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "IGG",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.iggroup.com/investor-relations/press-releases",
+          "reviewNote": "Results and trading updates reviewed; softer market conditions and cost actions did not include a qualifying Group earnings cut."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3528,7 +3608,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "IMB",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.imperialbrandsplc.com/news",
+          "reviewNote": "Results and pre-close updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3587,7 +3672,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "INF",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.informa.com/investors/results-reports-and-events/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3710,7 +3800,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "ITRK",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.intertek.com/news/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3769,7 +3864,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "INVP",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.investec.com/en_gb/welcome-to-investec/investor-relations/financial-information.html",
+          "reviewNote": "Results reviewed; banking operating metrics were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3825,10 +3925,79 @@
         }
       },
       "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": null
+        "count": 3,
+        "latestDate": "2025-01-14",
+        "events": [
+          {
+            "id": "jd-2025-01-14-guidance-cut",
+            "ticker": "JD",
+            "companyName": "JD Sports",
+            "announcementDate": "2025-01-14",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2024/25",
+            "metric": "Profit before tax and adjusting items",
+            "previousGuidance": "Lower end of \u00a3955m-\u00a31,035m",
+            "revisedGuidance": "\u00a3915m-\u00a3935m",
+            "changePct": -4.2,
+            "summary": "JD Sports cut FY25 adjusted profit before tax guidance following a more promotional market and softer trading than anticipated.",
+            "drivers": [
+              "More promotional market conditions",
+              "Lower-than-anticipated like-for-like revenue",
+              "Acquisition accounting and foreign-exchange effects"
+            ],
+            "sourceUrl": "https://www.jdplc.com/robust-trading-performance-in-a-challenging-market/",
+            "sourceLabel": "JD Sports January 2025 trading update"
+          },
+          {
+            "id": "jd-2024-11-21-guidance-cut",
+            "ticker": "JD",
+            "companyName": "JD Sports",
+            "announcementDate": "2024-11-21",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2024/25",
+            "metric": "Profit before tax and adjusting items",
+            "previousGuidance": "\u00a3955m-\u00a31,035m",
+            "revisedGuidance": "Lower end of the existing guidance range",
+            "changePct": null,
+            "summary": "JD Sports moved its FY25 adjusted profit expectation to the lower end of guidance after a volatile trading environment and weaker October performance.",
+            "drivers": [
+              "Volatile consumer demand",
+              "Weaker October trading",
+              "Foreign-exchange headwinds"
+            ],
+            "sourceUrl": "https://www.jdplc.com/jd-sports-fashion-plc-q325-trading-update/",
+            "sourceLabel": "JD Sports November 2024 third-quarter trading update"
+          },
+          {
+            "id": "jd-2024-01-04-guidance-cut",
+            "ticker": "JD",
+            "companyName": "JD Sports",
+            "announcementDate": "2024-01-04",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2023/24",
+            "metric": "Profit before tax and adjusted items",
+            "previousGuidance": "Approximately \u00a31.04bn",
+            "revisedGuidance": "\u00a3915m-\u00a3935m",
+            "changePct": -11.1,
+            "summary": "JD Sports reduced FY24 adjusted profit before tax guidance after weaker-than-expected peak trading and increased promotional activity.",
+            "drivers": [
+              "Weaker peak-period trading",
+              "More promotional market conditions",
+              "Cautious consumer spending"
+            ],
+            "sourceUrl": "https://www.jdplc.com/trading-update-2/",
+            "sourceLabel": "JD Sports January 2024 trading update"
+          }
+        ],
+        "review": {
+          "ticker": "JD",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.jdplc.com/media/regulatory-news/",
+          "reviewNote": "Three official downward revisions to FY24 and FY25 adjusted profit expectations are captured."
+        }
       },
       "successionEvidence": {
         "count": 1,
@@ -3902,7 +4071,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "BGEO",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://lionfinancegroup.uk/news/",
+          "reviewNote": "Results reviewed; banking operating metrics were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4076,7 +4250,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "LAND",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://landsec.com/investors/results-reports-and-presentations",
+          "reviewNote": "Results reviewed; valuation and occupancy movements were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4135,7 +4314,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "LGEN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://group.legalandgeneral.com/newsroom/press-releases/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying Group earnings event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4258,7 +4442,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "LMP",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.londonmetric.com/investors/results-reports-and-presentations",
+          "reviewNote": "Results reviewed; property valuation and occupancy movements were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4395,7 +4584,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "MNG",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.mandg.com/news-and-media/press-releases",
+          "reviewNote": "Results and capital-generation updates reviewed; no explicit Group earnings guidance cut captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4618,7 +4812,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "MTLN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.metlengroup.com/news/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying Group earnings event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4869,7 +5068,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "PSON",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://plc.pearson.com/en-GB/news-and-insights",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4917,7 +5121,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "PSH",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://pershingsquareholdings.com/company-reports/letters-to-shareholders/",
+          "reviewNote": "Investment-company reports reviewed; NAV and portfolio-performance movements are outside the profit-warning definition."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4976,7 +5185,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "PSN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.persimmonhomes.com/corporate/media/news/",
+          "reviewNote": "Results and trading updates reviewed; completion guidance changes were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5024,7 +5238,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "PCT",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.polarcapitaltechnologytrust.co.uk/News-Views/Stock-Exchange-Announcements/",
+          "reviewNote": "Investment-company announcements reviewed; NAV and portfolio-performance movements are outside the profit-warning definition."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5083,7 +5302,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "PRU",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.prudentialplc.com/en/news-and-insights/all-news/",
+          "reviewNote": "Results and trading updates reviewed; insurance operating metrics were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5142,7 +5366,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "RKT",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.reckitt.com/newsroom/",
+          "reviewNote": "Results and trading updates reviewed; operational incidents did not produce a qualifying downward Group profit revision."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5507,7 +5736,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SGE",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.sage.com/en-gb/company/digital-newsroom/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5566,7 +5800,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SBRY",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://corporate.sainsburys.co.uk/news/",
+          "reviewNote": "Results and trading updates reviewed; profit guidance was maintained or raised in the evidence window."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5625,7 +5864,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SDR",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.schroders.com/en/global/individual/media-relations/",
+          "reviewNote": "Results and asset-flow updates reviewed; no explicit Group earnings guidance cut captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5673,7 +5917,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SMT",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.scottishmortgage.com/en/uk/individual-investors/insights",
+          "reviewNote": "Investment-company reports reviewed; NAV and portfolio-performance movements are outside the profit-warning definition."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5732,7 +5981,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SGRO",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.segro.com/media/news",
+          "reviewNote": "Results reviewed; valuation and occupancy movements were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5791,7 +6045,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SVT",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.severntrent.com/media/news-releases/",
+          "reviewNote": "Results and regulatory updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5928,7 +6187,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SMIN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.smiths.com/news-and-insights/news",
+          "reviewNote": "Results and cyber-incident updates reviewed; full-year guidance was maintained or upgraded."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -5984,10 +6248,37 @@
         }
       },
       "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": null
+        "count": 1,
+        "latestDate": "2024-10-31",
+        "events": [
+          {
+            "id": "sn-2024-10-31-guidance-cut",
+            "ticker": "SN",
+            "companyName": "Smith & Nephew",
+            "announcementDate": "2024-10-31",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2024",
+            "metric": "Trading profit margin",
+            "previousGuidance": "At least 18.0%",
+            "revisedGuidance": "Growth of up to 50 basis points from 17.5%",
+            "changePct": null,
+            "summary": "Smith & Nephew reduced its FY24 trading-margin outlook after slower revenue growth and surgical-market headwinds in China.",
+            "drivers": [
+              "Reduced operating leverage from slower revenue growth",
+              "China volume-based procurement headwinds",
+              "Weaker surgical-market conditions"
+            ],
+            "sourceUrl": "https://www.smith-nephew.com/en/news/2024/10/31/20241031-smithnephew-third-quarter-2024-trading-report",
+            "sourceLabel": "Smith & Nephew October 2024 third-quarter trading report"
+          }
+        ],
+        "review": {
+          "ticker": "SN",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.smith-nephew.com/en/news",
+          "reviewNote": "The October 2024 reduction to full-year trading-profit margin guidance is captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -6046,7 +6337,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SPX",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.spiraxgroup.com/en/investors/results-reports-and-presentations",
+          "reviewNote": "Results and trading updates reviewed; lower-end market commentary was excluded because it did not explicitly revise issuer earnings guidance."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -6105,7 +6401,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SSE",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.sse.com/news-and-views/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -6164,7 +6465,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "STAN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.sc.com/en/media/press-releases/",
+          "reviewNote": "Results reviewed; banking operating metrics were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -6223,7 +6529,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "SDLF",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.standardlifeplc.com/news-and-views/press-releases",
+          "reviewNote": "Results and capital-generation updates reviewed; no qualifying Group earnings event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -6282,7 +6593,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "STJ",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.sjp.co.uk/shareholders/corporate-news",
+          "reviewNote": "The 2023 servicing provision was recognised in reported results and excluded because it was not a prospective earnings-guidance revision."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -6394,7 +6710,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "BBOX",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.tritaxbigbox.co.uk/news-insights/",
+          "reviewNote": "Results reviewed; valuation and occupancy movements were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -6531,7 +6852,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "UU",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.unitedutilities.com/corporate/investors/financial-news/",
+          "reviewNote": "Results and regulatory updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -6654,7 +6980,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "WEIR",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.global.weir/newsroom/global-news/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -6713,7 +7044,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "WTB",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.whitbread.co.uk/investors/results-reports-and-presentations/",
+          "reviewNote": "Results and trading updates reviewed; reported profit movements did not include a qualifying downward guidance revision."
+        }
       },
       "successionEvidence": {
         "count": 0,

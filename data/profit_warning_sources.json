@@ -233,6 +233,90 @@
       ],
       "sourceUrl": "https://www.bunzl.com/newsroom/bunzl-q1-trading-statement-2025/",
       "sourceLabel": "Bunzl April 2025 first-quarter trading statement"
+    },
+    {
+      "id": "jd-2024-01-04-guidance-cut",
+      "ticker": "JD",
+      "companyName": "JD Sports",
+      "announcementDate": "2024-01-04",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2023/24",
+      "metric": "Profit before tax and adjusted items",
+      "previousGuidance": "Approximately £1.04bn",
+      "revisedGuidance": "£915m-£935m",
+      "changePct": -11.1,
+      "summary": "JD Sports reduced FY24 adjusted profit before tax guidance after weaker-than-expected peak trading and increased promotional activity.",
+      "drivers": [
+        "Weaker peak-period trading",
+        "More promotional market conditions",
+        "Cautious consumer spending"
+      ],
+      "sourceUrl": "https://www.jdplc.com/trading-update-2/",
+      "sourceLabel": "JD Sports January 2024 trading update"
+    },
+    {
+      "id": "jd-2024-11-21-guidance-cut",
+      "ticker": "JD",
+      "companyName": "JD Sports",
+      "announcementDate": "2024-11-21",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2024/25",
+      "metric": "Profit before tax and adjusting items",
+      "previousGuidance": "£955m-£1,035m",
+      "revisedGuidance": "Lower end of the existing guidance range",
+      "changePct": null,
+      "summary": "JD Sports moved its FY25 adjusted profit expectation to the lower end of guidance after a volatile trading environment and weaker October performance.",
+      "drivers": [
+        "Volatile consumer demand",
+        "Weaker October trading",
+        "Foreign-exchange headwinds"
+      ],
+      "sourceUrl": "https://www.jdplc.com/jd-sports-fashion-plc-q325-trading-update/",
+      "sourceLabel": "JD Sports November 2024 third-quarter trading update"
+    },
+    {
+      "id": "jd-2025-01-14-guidance-cut",
+      "ticker": "JD",
+      "companyName": "JD Sports",
+      "announcementDate": "2025-01-14",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2024/25",
+      "metric": "Profit before tax and adjusting items",
+      "previousGuidance": "Lower end of £955m-£1,035m",
+      "revisedGuidance": "£915m-£935m",
+      "changePct": -4.2,
+      "summary": "JD Sports cut FY25 adjusted profit before tax guidance following a more promotional market and softer trading than anticipated.",
+      "drivers": [
+        "More promotional market conditions",
+        "Lower-than-anticipated like-for-like revenue",
+        "Acquisition accounting and foreign-exchange effects"
+      ],
+      "sourceUrl": "https://www.jdplc.com/robust-trading-performance-in-a-challenging-market/",
+      "sourceLabel": "JD Sports January 2025 trading update"
+    },
+    {
+      "id": "sn-2024-10-31-guidance-cut",
+      "ticker": "SN",
+      "companyName": "Smith & Nephew",
+      "announcementDate": "2024-10-31",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2024",
+      "metric": "Trading profit margin",
+      "previousGuidance": "At least 18.0%",
+      "revisedGuidance": "Growth of up to 50 basis points from 17.5%",
+      "changePct": null,
+      "summary": "Smith & Nephew reduced its FY24 trading-margin outlook after slower revenue growth and surgical-market headwinds in China.",
+      "drivers": [
+        "Reduced operating leverage from slower revenue growth",
+        "China volume-based procurement headwinds",
+        "Weaker surgical-market conditions"
+      ],
+      "sourceUrl": "https://www.smith-nephew.com/en/news/2024/10/31/20241031-smithnephew-third-quarter-2024-trading-report",
+      "sourceLabel": "Smith & Nephew October 2024 third-quarter trading report"
     }
   ]
 }

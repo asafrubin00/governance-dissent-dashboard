@@ -176,6 +176,12 @@
 
 - Expanded the weekly announcement monitor to 100 official issuer sources; the new baseline reached 75 pages and found monitorable matches on 48 without creating retrospective queue noise.
 - Added exact roster alignment, future-date, HTTPS-source, structural-not-applicable, market-series, duplicate-date, and cross-pilot reconciliation checks.
+
+## Single-screen workspace and full warning/performance coverage
+
+- Removed the cinematic cover route from Radar, Proxy Voting, and Overview so each module opens directly into its fixed-height workspace.
+- Expanded the official-source profit-warning review from 50 to all 100 companies and captured four additional qualifying guidance revisions.
+- Expanded monthly share-price and dividend-adjusted market series from ten companies to all 100, with exact coverage and observation validation before publication.
 - Kept warning, succession, profile, and market evidence outside the leadership pressure score pending calibration and outcome testing.
 
 ### Logo presentation rollback

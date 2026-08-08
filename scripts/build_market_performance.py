@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a validated 10-company market-performance pilot from public Yahoo chart data."""
+"""Build validated FTSE 100 market-performance series from public Yahoo chart data."""
 
 from __future__ import annotations
 
@@ -13,11 +13,7 @@ from urllib.parse import urlencode
 ROOT = Path(__file__).resolve().parents[1]
 LEADERSHIP_PATH = ROOT / "public" / "data" / "leadership-radar.json"
 OUTPUT_PATH = ROOT / "public" / "data" / "market-performance.json"
-PILOT = {
-    "SHEL": "SHEL.L", "MKS": "MKS.L", "CNA": "CNA.L", "LSEG": "LSEG.L",
-    "ULVR": "ULVR.L", "IHG": "IHG.L", "RIO": "RIO.L", "HSBA": "HSBA.L",
-    "BP": "BP.L", "AUTO": "AUTO.L",
-}
+MARKET_SYMBOL_OVERRIDES = {"BT.A": "BT-A.L"}
 BENCHMARK = "^FTSE"
 
 
@@ -69,23 +65,38 @@ def normalise(points: list[dict[str, float | str]]) -> list[dict[str, float | st
     ]
 
 
+def market_symbol(ticker: str) -> str:
+    return MARKET_SYMBOL_OVERRIDES.get(ticker, f"{ticker}.L")
+
+
 def main() -> None:
     leadership = json.loads(LEADERSHIP_PATH.read_text(encoding="utf-8"))
     companies = {company["ticker"]: company for company in leadership["companies"]}
     errors = []
     series = []
     earliest_start = min(
-        companies[ticker]["roles"][role]["roleStartDate"]
-        for ticker in PILOT
+        company["roles"][role].get("roleStartDate")
+        for company in companies.values()
         for role in ("ceo", "chair")
+        if company["roles"][role].get("roleStartDate")
     )
     period1 = int(datetime.fromisoformat(earliest_start).replace(tzinfo=timezone.utc).timestamp())
     benchmark_points = fetch_chart(BENCHMARK, period1)
 
-    for ticker, market_symbol in PILOT.items():
-        company = companies[ticker]
-        points = fetch_chart(market_symbol, period1)
-        if len(points) < 12:
+    for ticker, company in companies.items():
+        symbol = market_symbol(ticker)
+        role_dates = [
+            company["roles"][role].get("roleStartDate")
+            for role in ("ceo", "chair")
+            if company["roles"][role].get("roleStartDate")
+        ]
+        company_period1 = int(datetime.fromisoformat(min(role_dates)).replace(tzinfo=timezone.utc).timestamp())
+        try:
+            points = fetch_chart(symbol, company_period1)
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired, KeyError, TypeError, json.JSONDecodeError) as exc:
+            errors.append(f"Unable to fetch market data for {ticker} ({symbol}): {type(exc).__name__}.")
+            continue
+        if len(points) < 2:
             errors.append(f"Insufficient observations for {ticker}.")
             continue
         if len({point["date"] for point in points}) != len(points):
@@ -95,19 +106,19 @@ def main() -> None:
         series.append({
             "ticker": ticker,
             "companyName": company["companyName"],
-            "marketSymbol": market_symbol,
+            "marketSymbol": symbol,
             "roles": {
                 role: {
-                    "name": company["roles"][role]["name"],
-                    "roleStartDate": company["roles"][role]["roleStartDate"],
+                    "name": company["roles"][role].get("name", "Not applicable"),
+                    "roleStartDate": company["roles"][role].get("roleStartDate"),
                 }
                 for role in ("ceo", "chair")
             },
             "points": normalise(points),
         })
 
-    if errors or len(series) != len(PILOT) or len(benchmark_points) < 12:
-        raise RuntimeError("; ".join(errors or ["Market-performance pilot is incomplete."]))
+    if errors or len(series) != len(companies) or len(benchmark_points) < 12:
+        raise RuntimeError("; ".join(errors or ["Market-performance coverage is incomplete."]))
 
     payload = {
         "metadata": {
@@ -117,7 +128,7 @@ def main() -> None:
             "sourceUrl": "https://finance.yahoo.com/",
             "frequency": "Monthly",
             "methodology": "Share-price return uses unadjusted close. Dividend-adjusted return uses Yahoo adjusted close, rebased from the first observation on or after the selected leader's role start date.",
-            "limitations": "A research pilot, not a licensed total-return index. Adjusted-close methodology and historical corrections are controlled by the data provider; currency, tax and transaction costs are excluded.",
+            "limitations": "A public-data research series, not a licensed total-return index. Adjusted-close methodology and historical corrections are controlled by the data provider; currency, tax and transaction costs are excluded.",
             "validation": {"status": "pass", "errors": []},
         },
         "benchmark": {"symbol": BENCHMARK, "name": "FTSE 100 price index", "points": normalise(benchmark_points)},

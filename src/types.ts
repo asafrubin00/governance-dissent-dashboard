@@ -257,7 +257,7 @@ export type MarketPerformanceData = {
     ticker: string
     companyName: string
     marketSymbol: string
-    roles: Record<'ceo' | 'chair', { name: string; roleStartDate: string }>
+    roles: Record<'ceo' | 'chair', { name: string; roleStartDate: string | null }>
     points: MarketPerformancePoint[]
   }>
 }

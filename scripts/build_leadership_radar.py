@@ -191,8 +191,8 @@ def validate_profit_warning_reviews(
     reviews = review_source.get("reviews", [])
     review_tickers = [review.get("ticker") for review in reviews]
     allowed_outcomes = {"qualifying-event-captured", "reviewed-no-qualifying-event"}
-    if not set(review_tickers).issubset(curated_tickers):
-        errors.append("Profit-warning reviews include a ticker outside the verified leadership cohort.")
+    if set(review_tickers) != curated_tickers or len(review_tickers) != len(curated_tickers):
+        errors.append("Profit-warning reviews do not exactly cover the verified leadership cohort.")
     if len(review_tickers) != len(set(review_tickers)):
         errors.append("Duplicate profit-warning review ticker found.")
     captured_tickers = set()
@@ -443,7 +443,7 @@ def main() -> None:
                 "This is a research prioritisation score, not a prediction that an individual will leave office.",
                 f"All {len(source['companies'])} companies have source-verified leadership records in methodology {source['methodologyVersion']}; externally managed issuers without a chief executive are marked not applicable rather than scored.",
                 "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-                f"The profit-warning review currently covers {len(warning_review_source['reviews'])} of {len(source['companies'])} rated companies; event absence outside that reviewed subset must not be interpreted as evidence of no warning.",
+                f"The profit-warning review covers {len(warning_review_source['reviews'])} of {len(source['companies'])} source-verified companies; a no-event outcome means no qualifying issuer announcement was identified under the stated definition and review window.",
                 "Succession status reflects official announcements found by the evidence date and may change between refreshes.",
                 "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded.",
             ],

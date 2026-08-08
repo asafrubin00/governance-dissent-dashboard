@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import type { LeadershipProfilesData, LeadershipRadarData, MarketPerformanceData } from '../types'
 
@@ -31,17 +31,6 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
   const [marketMetric, setMarketMetric] = useState<'price' | 'adjusted'>('adjusted')
   const [profileOpen, setProfileOpen] = useState(false)
 
-  useEffect(() => {
-    if (window.location.hash === '#workspace') {
-      const previousBehavior = document.documentElement.style.scrollBehavior
-      document.documentElement.style.scrollBehavior = 'auto'
-      document.getElementById('workspace')?.scrollIntoView()
-      requestAnimationFrame(() => {
-        document.documentElement.style.scrollBehavior = previousBehavior
-      })
-    }
-  }, [])
-
   const sectors = useMemo(
     () => ['All sectors', ...Array.from(new Set(data.companies.map((item) => item.sector))).sort()],
     [data.companies],
@@ -73,12 +62,14 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
     data.companies.find((company) => company.ticker === selectedTicker) ?? visibleCompanies[0]
   const selectedRole = selected?.roles[role]
   const selectedSuccession = selected?.successionEvidence.cases.find((item) => item.role === role)
-  const selectedMarket = marketData.companies.find((company) => company.ticker === selected?.ticker)
+  const selectedMarketRecord = marketData.companies.find((company) => company.ticker === selected?.ticker)
+  const selectedMarket = selectedMarketRecord?.roles[role].roleStartDate ? selectedMarketRecord : undefined
   const selectedProfileCompany = profilesData.companies.find((company) => company.ticker === selected?.ticker)
   const selectedProfile = selectedProfileCompany?.roles[role]
   const marketSeries = useMemo(() => {
     if (!selectedMarket) return []
     const startDate = selectedMarket.roles[role].roleStartDate
+    if (!startDate) return []
     const points = selectedMarket.points.filter((point) => point.date >= startDate)
     if (!points.length) return []
     const firstValue = marketMetric === 'price' ? points[0].close : points[0].adjustedClose
@@ -112,11 +103,6 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
 
   return (
     <div className="page-flow">
-      <section className="hero-screen hero-screen--cover">
-        <div className="hero-screen__overlay" />
-        <div className="hero-screen__hint" aria-hidden="true"><span /><span /></div>
-      </section>
-
       <section className="workspace-screen workspace-screen--radar" id="workspace">
         <div className="radar-workspace">
           <div className="radar-controls">
@@ -198,7 +184,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
                       </dl>
                       <p className="evidence-rail__readout">{selectedRole.reason}</p>
                       <a className="evidence-rail__source" href={selectedRole.sourceUrl} target="_blank" rel="noreferrer">View primary leadership source ↗</a>
-                      {selectedMarket ? <button className="evidence-rail__market" onClick={() => setMarketOpen(true)} type="button">Open tenure performance pilot</button> : null}
+                      {selectedMarket ? <button className="evidence-rail__market" onClick={() => setMarketOpen(true)} type="button">Open tenure performance</button> : null}
                       {selectedSuccession ? (
                         <div className="evidence-rail__succession">
                           <div><span>Live succession process</span><time>{new Date(selectedSuccession.announcedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</time></div>
@@ -245,7 +231,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
           <div className="market-modal__panel">
             <button className="market-modal__close" onClick={() => setMarketOpen(false)} type="button" aria-label="Close">×</button>
             <div className="market-modal__header">
-              <div><p>Tenure performance pilot / {selectedMarket.ticker}</p><h2>{selectedMarket.companyName}</h2><span>{selectedMarket.roles[role].name} · {formatRole(role)} since {new Date(selectedMarket.roles[role].roleStartDate).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</span></div>
+              <div><p>Tenure performance / {selectedMarket.ticker}</p><h2>{selectedMarket.companyName}</h2><span>{selectedMarket.roles[role].name} · {formatRole(role)} since {new Date(selectedMarket.roles[role].roleStartDate!).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</span></div>
               <div className="market-modal__toggle"><button className={marketMetric === 'adjusted' ? 'is-active' : ''} onClick={() => setMarketMetric('adjusted')} type="button">Dividend-adjusted</button><button className={marketMetric === 'price' ? 'is-active' : ''} onClick={() => setMarketMetric('price')} type="button">Share price</button></div>
             </div>
             <div className="market-modal__chart">
