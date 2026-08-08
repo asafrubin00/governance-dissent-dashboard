@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-08T08:26:34.989181+00:00",
+    "generatedAt": "2026-08-08T11:33:06.429974+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 48,
-    "reachableSourceCount": 76,
-    "unavailableSourceCount": 24,
+    "activeSourceCount": 52,
+    "reachableSourceCount": 86,
+    "unavailableSourceCount": 14,
     "newCandidateCount": 0,
     "pendingCandidateCount": 0,
     "pendingCandidateCountBySignal": {
@@ -109,7 +109,7 @@
     {
       "ticker": "CCEP",
       "status": "unavailable",
-      "error": "HTTPSConnectionPool(host='ir.cocacolaep.com', port=443): Read timed out. (read timeout=4)"
+      "error": "HTTPSConnectionPool(host='ir.cocacolaep.com', port=443): Read timed out. (read timeout=12)"
     },
     {
       "ticker": "AAL",
@@ -123,12 +123,12 @@
     {
       "ticker": "BP",
       "status": "unavailable",
-      "error": "HTTPSConnectionPool(host='www.bp.com', port=443): Max retries exceeded with url: /en/global/corporate/news-and-insights/press-releases.html (Caused by NewConnec"
+      "error": "403 Client Error: Forbidden for url: https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html"
     },
     {
       "ticker": "CCC",
       "status": "unavailable",
-      "error": "HTTPSConnectionPool(host='investors.computacenter.com', port=443): Read timed out. (read timeout=4)"
+      "error": "HTTPSConnectionPool(host='investors.computacenter.com', port=443): Read timed out. (read timeout=12)"
     },
     {
       "ticker": "IMI",
@@ -441,12 +441,16 @@
     {
       "ticker": "ADM",
       "status": "unavailable",
-      "error": "HTTPSConnectionPool(host='admiralgroup.co.uk', port=443): Read timed out. (read timeout=4)"
+      "error": "HTTPSConnectionPool(host='admiralgroup.co.uk', port=443): Read timed out. (read timeout=12)"
     },
     {
       "ticker": "AAF",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://www.airtel.africa/investors/financial-results"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "ALW",
@@ -468,8 +472,12 @@
     },
     {
       "ticker": "DCC",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://www.dccenergy.com/news"
+      "status": "active",
+      "matchedLinkCount": 5,
+      "matchedLinkCountBySignal": {
+        "earnings": 5,
+        "succession": 0
+      }
     },
     {
       "ticker": "DPLM",
@@ -483,22 +491,34 @@
     {
       "ticker": "EDV",
       "status": "unavailable",
-      "error": "HTTPSConnectionPool(host='www.endeavourmining.com', port=443): Max retries exceeded with url: /news-and-media/news/ (Caused by SSLError(SSLError(1, '[SSL: TLSV1"
+      "error": "HTTPSConnectionPool(host='www.endeavourmining.com', port=443): Max retries exceeded with url: /investors/results-and-reporting/ (Caused by SSLError(SSLError(1, "
     },
     {
       "ticker": "FCIT",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://www.fandc.com/news-and-insights/"
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "FRES",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://www.fresnilloplc.com/media/press-releases/"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "GAW",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://investor.games-workshop.com/news-posts"
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "HLMA",
@@ -556,8 +576,12 @@
     },
     {
       "ticker": "INF",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://www.informa.com/investors/results-reports-and-events/"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "ITRK",
@@ -611,8 +635,12 @@
     },
     {
       "ticker": "LMP",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://www.londonmetric.com/investors/results-reports-and-presentations"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "MNG",
@@ -643,8 +671,12 @@
     },
     {
       "ticker": "PSH",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://pershingsquareholdings.com/company-reports/letters-to-shareholders/"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "PSN",
@@ -698,8 +730,12 @@
     },
     {
       "ticker": "SDR",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://www.schroders.com/en/global/individual/media-relations/"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "SMT",
@@ -793,8 +829,12 @@
     },
     {
       "ticker": "BBOX",
-      "status": "unavailable",
-      "error": "404 Client Error: Not Found for url: https://www.tritaxbigbox.co.uk/news-insights/"
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 0
+      }
     },
     {
       "ticker": "UU",

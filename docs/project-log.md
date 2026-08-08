@@ -188,3 +188,18 @@
 
 - Removed company logos from the heatmap and evidence rail after visual review found inconsistent issuer icon treatments distracting.
 - Retained sourced leadership portraits and initials fallbacks inside the optional profile modal.
+
+## Monitor hardening and profile expansion
+
+### Source-reliability decision
+
+- Replaced ten dead or stale monitor routes with verified official investor or results pages and corrected the LondonMetric route separately.
+- Increased the request timeout conservatively while retaining same-host link checks and the review-only publication safeguard.
+- Improved the current baseline from 76 to 86 reachable sources and from 48 to 52 active sources; the remaining 14 blocked or incompatible sites stay explicitly unavailable.
+- Did not bypass issuer access controls or fill unavailable sources with third-party feeds, preserving the official-source boundary.
+
+### Usability and profile decision
+
+- Added a compact radar-footer abbreviation key for PW, SC, CEO, AGM, and N/A without increasing workspace height.
+- Expanded the source-backed profile pilot from ten to 15 companies, prioritising five issuers near the top of the current pressure ranking.
+- Added profile validation for duplicate tickers, radar-name mismatches, short summaries, non-HTTPS sources, and missing local portraits.

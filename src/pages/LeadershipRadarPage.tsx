@@ -155,8 +155,8 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
                       <strong>{roleData.score?.toFixed(0) ?? '—'}</strong>
                       {company.profitWarningEvidence.count || company.successionEvidence.cases.some((item) => item.role === role) ? (
                         <span className="heat-tile__signals">
-                          {company.profitWarningEvidence.count ? <i className="heat-tile__warning" title={`${company.profitWarningEvidence.count} qualifying warning event${company.profitWarningEvidence.count === 1 ? '' : 's'} captured`}>PW</i> : null}
-                          {company.successionEvidence.cases.some((item) => item.role === role) ? <i className="heat-tile__succession" title={`Official ${formatRole(role)} succession process captured`}>SC</i> : null}
+                          {company.profitWarningEvidence.count ? <abbr className="heat-tile__warning" title={`${company.profitWarningEvidence.count} qualifying profit warning event${company.profitWarningEvidence.count === 1 ? '' : 's'} captured`}>PW</abbr> : null}
+                          {company.successionEvidence.cases.some((item) => item.role === role) ? <abbr className="heat-tile__succession" title={`Official ${formatRole(role)} succession process captured`}>SC</abbr> : null}
                         </span>
                       ) : null}
                     </button>
@@ -221,6 +221,16 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
 
           <div className="radar-footer">
             <span>{data.metadata.rosterSource.name} / {data.metadata.constituentCount} constituents</span>
+            <div className="radar-key">
+              <button type="button">Abbreviations</button>
+              <div className="radar-key__popover" role="tooltip">
+                <span><strong>PW</strong> Profit warning</span>
+                <span><strong>SC</strong> Succession process</span>
+                <span><strong>CEO</strong> Chief Executive Officer</span>
+                <span><strong>AGM</strong> Annual General Meeting</span>
+                <span><strong>N/A</strong> Not applicable</span>
+              </div>
+            </div>
             <button onClick={resetFilters} type="button">Reset filters</button>
             <span className={data.metadata.validation.status === 'pass' ? 'is-pass' : ''}>{data.metadata.validation.status} validation</span>
           </div>

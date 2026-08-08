@@ -85,7 +85,7 @@ def fetch_candidates(
     response = requests.get(
         source["url"],
         headers={"User-Agent": USER_AGENT},
-        timeout=(3, 4),
+        timeout=(5, 12),
     )
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")

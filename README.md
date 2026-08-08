@@ -23,7 +23,7 @@ The product is intentionally transparent about scope. Leadership evidence now co
 - Profit-warning audit: all 100 companies reviewed over 36 months, with 15 qualifying official events across 11 issuers.
 - Succession review: all 100 companies reviewed, with seven live processes captured in the current evidence window.
 - Market-performance coverage: all 100 companies with monthly share-price and dividend-adjusted returns against the FTSE 100 price index.
-- Profile pilot: ten companies have concise sourced CEO/Chair biographies, official links, and local portraits where stable.
+- Profile pilot: 15 companies have concise sourced CEO/Chair biographies, official links, and local portraits where stable; the expansion prioritises elevated radar pressure.
 - Excluded for now: activism, controversies, broader news, and any unlicensed claim to institutional-grade TSR.
 - Output: `public/data/leadership-radar.json`.
 
@@ -76,7 +76,8 @@ npm run build
 5. Validates exact 100-company coverage for official active-succession review.
 6. Recalculates role-specific pressure scores without allowing either overlay to change the score.
 7. Refreshes and validates monthly market-performance series for all 100 companies.
-8. Runs validation before writing the public JSON files.
+8. Validates profile uniqueness, role-name alignment, source URLs, summaries, and local portrait references.
+9. Runs validation before writing the public JSON files.
 
 The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations, the constituent roster, and all market series, then checks 100 official issuer pages for new earnings- and succession-related links. Matches enter a typed review queue and never alter the radar automatically. Verified appointments, qualifying warning events, and active succession cases must still be approved in their source files before publication.
 
@@ -131,7 +132,7 @@ src/
 
 - Add benchmark-relative price and total shareholder return analysis with clearly licensed, reproducible market data.
 - Improve monitor reliability where official sites block automated access or render no usable links.
-- Extend the source-backed leadership profile pilot beyond ten companies.
+- Extend the source-backed leadership profile pilot beyond the current 15 companies.
 - Evaluate warning and succession score contributions only after back-testing, sensitivity analysis, and a documented governance rationale.
 
 ## Verification
