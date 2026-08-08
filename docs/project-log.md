@@ -238,3 +238,19 @@
 - Baseline top-quartile outcome capture is 26.7%; warning sensitivity increases capture to 30.0%, while the combined warning and performance sensitivity remains at 30.0%.
 - Retained methodology v0.6 production weights because the marginal lift is small and historical warning and voting windows are not aligned across the cohort.
 - Set the next evidence requirement to complete 36-month histories for at least 30 outcomes and a held-out transition test before any weighting change.
+
+## Leadership calibration audit v0.3
+
+### Historical evidence alignment
+
+- Added an explicit 36-month review ledger for all 24 completed transition outcomes and linked every included warning and dissent event to an official issuer source.
+- Captured nine qualifying historical warning events under the same strict definition used by the current radar review.
+- Captured six significant management-sponsored dissent resolutions, while marking every historical AGM window partial because complete resolution-level meeting coverage could not be established.
+- Excluded a Pearson remuneration vote that fell two days before its strict 36-month window rather than rounding the cutoff.
+
+### Holdout decision
+
+- Removed dissent from the aligned calibration score because incomplete AGM history cannot safely be interpreted as zero opposition.
+- Derived top-quartile thresholds only from 188 current comparison observations and reserved the six most recent completed transitions as an out-of-time holdout.
+- Warning sensitivity improved development-cohort capture from 27.8% to 38.9%, but tenure-only, warning, and combined models each captured only 16.7% of the holdout.
+- Retained production weights. The next threshold is at least 50 completed outcomes, an untouched holdout, and complete AGM histories before dissent enters predictive testing.

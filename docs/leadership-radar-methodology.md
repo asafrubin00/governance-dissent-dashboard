@@ -61,18 +61,22 @@ For companies inside the reviewed subset, no warning badge means no qualifying e
 
 ## Calibration audit
 
-Calibration methodology `v0.2` compares 30 source-backed transition outcomes with 188 current, right-censored role observations. The outcome cohort contains 24 completed CEO transitions announced from 2019 to 2025 and six eligible active CEO or Chair processes from the current succession evidence. One interim-Chair case is excluded because the recorded incumbent began the role after the succession search was announced.
+Calibration methodology `v0.3` compares 30 source-backed transition outcomes with 188 current, right-censored role observations. The outcome cohort contains 24 completed CEO transitions announced from 2019 to 2025 and six eligible active CEO or Chair processes from the current succession evidence. One interim-Chair case is excluded because the recorded incumbent began the role after the succession search was announced.
 
 Completed cases are included only where an official issuer announcement or annual report identifies the incumbent, transition outcome and announcement timing. This is a purposive high-confidence cohort, not a complete census of FTSE 100 CEO changes. Where an issuer gives only a month for a role start, the first day is stored for calculation and the record is explicitly marked with month-level precision.
 
-For each outcome, tenure, warning and dissent signals are measured only up to the official announcement date. Market sensitivity uses the trailing two-year dividend-adjusted company return less the FTSE 100 price-index return. Current comparisons use the evidence date.
+For each completed outcome, profit-warning evidence now uses a fixed 36-month window ending on the official transition announcement. All 24 completed cases have an explicit review record; nine qualifying events were identified from official issuer sources. Market sensitivity uses the trailing two-year dividend-adjusted company return less the FTSE 100 price-index return and also ends on the announcement date. Current comparisons use the evidence date.
+
+Six source-backed historical dissent resolutions were captured, but complete resolution-level coverage could not be established for every AGM in any outcome window. Dissent is therefore disclosed as partial contextual evidence and excluded from the aligned calibration score. Missing AGM history is never treated as zero dissent. The review ledger, event inclusion decisions and source links are stored in `data/calibration_historical_evidence.json`.
 
 The audit tests two exploratory additions without changing production scores:
 
 - a warning uplift of 6 points for a material event or 12 for any severe event, plus 3 for repeats and capped at 18
 - a performance uplift of 8 points for relative underperformance of at least 20 percentage points or 15 points at 40 percentage points
 
-The baseline score places 26.7% of outcomes in the pooled top quartile. The warning sensitivity raises this to 30.0%; adding market underperformance does not improve capture further. This is directionally useful but not enough to promote either exploratory uplift because warning and voting histories remain temporally uneven. Production weights therefore remain unchanged. The next threshold is 30 or more outcomes with complete aligned 36-month evidence, followed by testing on a held-out transition sample. Full records and summary statistics are published in `public/data/leadership-calibration.json`.
+Risk thresholds are derived only from the current-comparison cohort's 75th percentiles, so outcome observations do not influence the cutoffs used to assess them. The six most recent completed transitions form an out-of-time holdout; the preceding 18 form the development cohort. In development, warning sensitivity improves capture from 27.8% to 38.9%. In the holdout, tenure-only, warning and combined models all capture 16.7%. Market underperformance adds no holdout lift.
+
+The result does not support changing production weights. It suggests warnings may add retrospective separation in the development data, but that effect does not generalise in the small holdout. The next evidential threshold is at least 50 completed outcomes, an untouched out-of-time holdout, and complete AGM coverage before dissent is tested as a predictive input. Full records and summary statistics are published in `public/data/leadership-calibration.json`.
 
 ## Market-series quality
 
@@ -115,6 +119,9 @@ The build fails if it finds:
 - succession reviews that do not exactly cover the verified cohort
 - an invalid succession status, date, source, role, or incumbent mismatch
 - duplicate, future-dated, unsourced, or chronologically impossible calibration outcomes
+- missing or duplicate historical evidence reviews and review windows not aligned to exactly 36 months
+- historical warning or dissent events outside their outcome window, attached to the wrong issuer, or lacking an HTTPS primary source
+- unsupported warning classifications, non-management dissent, or impossible vote-against percentages
 - duplicate or unsorted market observations and unresolved extreme scale discontinuities
 
 The generated file records validation status, methodology version, source mode, generation time, evidence date, and limitations.

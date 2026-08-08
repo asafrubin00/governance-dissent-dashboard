@@ -96,6 +96,7 @@ data/
   profit_warning_reviews.json      # warning-audit outcomes and official sources
   succession_sources.json          # official active-succession evidence
   leadership_transition_outcomes.json # official completed transition outcomes
+  calibration_historical_evidence.json # aligned warning/dissent reviews for completed outcomes
   announcement_monitor_sources.json # official issuer monitoring configuration
   announcement_monitor_snapshot.json # previously seen announcement links
   announcement_review_queue.json  # candidates awaiting editorial review
@@ -126,13 +127,13 @@ src/
 - All 100 companies are source verified; six externally managed issuers have no issuer CEO and are not scored for that role.
 - CEO tenure has no formal UK governance limit; the ten-year horizon is an analytical reference only.
 - Chair tenure is interpreted in the context of the Code's nine-year independence and succession guidance.
-- The dissent uplift is based on a narrow 2025 source window, not complete historical voting coverage.
+- Historical dissent events are source backed, but complete meeting coverage is not established; missing AGM history is not treated as zero and dissent is excluded from aligned calibration.
 - The profit-warning audit covers all 100 source-verified companies. A no-event outcome means no qualifying issuer announcement was identified under the stated definition and 36-month window, not that the company experienced no adverse trading developments.
 - Warning and succession evidence are excluded from the score pending calibration and outcome testing.
 - A public constituent table is used for reproducibility and is not an official FTSE Russell feed.
 - Classification and parsing rules remain suitable for a portfolio MVP, not a commercial proxy-research service.
 - Yahoo adjusted close is used only as a transparent dividend-adjusted research proxy; it is not a licensed total-return index and excludes tax, costs, and currency effects.
-- The calibration cohort comprises 24 completed transitions and six live processes. It remains a purposive high-confidence sample compared with current right-censored roles, so it supports sensitivity analysis rather than transition probabilities.
+- The calibration cohort comprises 24 completed transitions and six live processes. Its six-case out-of-time holdout shows no capture improvement from warning or performance uplifts, so it supports sensitivity analysis rather than transition probabilities.
 
 ## Product roadmap
 

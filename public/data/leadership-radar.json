@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-08T17:19:32.534667+00:00",
+    "generatedAt": "2026-08-08T17:48:17.365279+00:00",
     "asOfDate": "2026-08-08",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -57,11 +57,11 @@
       "errors": []
     },
     "calibration": {
-      "methodologyVersion": "0.2",
+      "methodologyVersion": "0.3",
       "outcomeCount": 30,
       "comparisonObservationCount": 188,
       "decision": "retain-current-weights",
-      "note": "The expanded cohort is large enough for a more credible directional audit, but its warning and voting histories remain temporally uneven. Warning and market-performance sensitivities therefore remain research-only rather than becoming production weights."
+      "note": "Warning and market-performance signals now use announcement-aligned windows and have been tested on a small out-of-time holdout. The sample remains too small and current comparisons are right-censored, so exploratory uplifts do not become production weights."
     }
   },
   "companies": [
