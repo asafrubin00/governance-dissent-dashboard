@@ -23,7 +23,7 @@ The product is intentionally transparent about scope. Leadership evidence now co
 - Profit-warning audit: all 100 companies reviewed over 36 months, with 15 qualifying official events across 11 issuers.
 - Succession review: all 100 companies reviewed, with seven live processes captured in the current evidence window.
 - Market-performance coverage: all 100 companies with monthly share-price and dividend-adjusted returns against the FTSE 100 price index.
-- Calibration audit: 12 source-backed transition outcomes compared with 188 current role observations; warning and performance sensitivities are published, but live weights remain unchanged.
+- Calibration audit: 30 source-backed transition outcomes compared with 188 current role observations; warning and performance sensitivities are published, but live weights remain unchanged.
 - Profile pilot: 15 companies have concise sourced CEO/Chair biographies, official links, and local portraits where stable; the expansion prioritises elevated radar pressure.
 - Excluded for now: activism, controversies, broader news, and any unlicensed claim to institutional-grade TSR.
 - Output: `public/data/leadership-radar.json`.
@@ -132,13 +132,13 @@ src/
 - A public constituent table is used for reproducibility and is not an official FTSE Russell feed.
 - Classification and parsing rules remain suitable for a portfolio MVP, not a commercial proxy-research service.
 - Yahoo adjusted close is used only as a transparent dividend-adjusted research proxy; it is not a licensed total-return index and excludes tax, costs, and currency effects.
-- The calibration cohort is small and compares historical outcomes with current right-censored roles; it supports sensitivity analysis, not transition probabilities.
+- The calibration cohort comprises 24 completed transitions and six live processes. It remains a purposive high-confidence sample compared with current right-censored roles, so it supports sensitivity analysis rather than transition probabilities.
 
 ## Product roadmap
 
 - Improve monitor reliability where official sites block automated access or render no usable links.
 - Extend the source-backed leadership profile pilot beyond the current 15 companies.
-- Expand calibration to at least 30 transitions with aligned warning, voting, and performance histories before considering production weight changes.
+- Align at least 30 transitions to complete 36-month warning, voting, and performance histories, then test candidate weights on a held-out sample.
 - Replace the public adjusted-close proxy with licensed total-return data if the project moves beyond portfolio research use.
 
 ## Verification

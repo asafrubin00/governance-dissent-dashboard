@@ -223,3 +223,18 @@
 - Identified isolated Yahoo observations alternating between pounds and pence, creating false approximately 100x moves.
 - Added conservative unit-continuity repair, correction counts, and fail-fast validation for unresolved extreme discontinuities.
 - Rebuilt all 100 issuer series and extended historical windows for the completed transition cohort.
+
+## Leadership calibration audit v0.2
+
+### Cohort expansion
+
+- Expanded the official-source completed-transition cohort from six to 24 CEO cases announced between 2019 and 2025, spanning financials, energy, consumer, retail, travel, industrials, and asset management.
+- Combined those cases with six eligible live succession processes for exactly 30 outcome observations; retained the existing exclusion of one interim-Chair case with an incompatible role-start chronology.
+- Added controlled outcome-type validation, mandatory source labels, departure chronology checks, and explicit month-level role-start precision where an issuer did not provide a day.
+
+### Calibration decision
+
+- Rebuilt all 100 market series to the earliest required incumbent start and retained 100% market coverage across the outcome cohort.
+- Baseline top-quartile outcome capture is 26.7%; warning sensitivity increases capture to 30.0%, while the combined warning and performance sensitivity remains at 30.0%.
+- Retained methodology v0.6 production weights because the marginal lift is small and historical warning and voting windows are not aligned across the cohort.
+- Set the next evidence requirement to complete 36-month histories for at least 30 outcomes and a held-out transition test before any weighting change.

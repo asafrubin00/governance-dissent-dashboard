@@ -21,6 +21,14 @@ TRACKER_PATH = ROOT / "public" / "data" / "tracker-data.json"
 RADAR_PATH = ROOT / "public" / "data" / "leadership-radar.json"
 MARKET_PATH = ROOT / "public" / "data" / "market-performance.json"
 OUTPUT_PATH = ROOT / "public" / "data" / "leadership-calibration.json"
+ALLOWED_OUTCOME_TYPES = {
+    "active-process",
+    "board-led-change",
+    "planned-retirement",
+    "planned-succession",
+    "unplanned-departure",
+}
+ALLOWED_DATE_PRECISIONS = {"day", "month", "year"}
 
 
 def normalise(value: str) -> str:
@@ -136,12 +144,20 @@ def main() -> None:
             errors.append(f"Outcome ticker is outside the leadership cohort: {case['ticker']}.")
         if case["role"] not in {"ceo", "chair"}:
             errors.append(f"Unsupported outcome role for {case['id']}.")
+        if case["outcomeType"] not in ALLOWED_OUTCOME_TYPES:
+            errors.append(f"Unsupported outcome type for {case['id']}.")
+        if case.get("roleStartDatePrecision", "day") not in ALLOWED_DATE_PRECISIONS:
+            errors.append(f"Unsupported role-start precision for {case['id']}.")
         if not case["sourceUrl"].startswith("https://"):
             errors.append(f"Outcome source must use HTTPS for {case['id']}.")
+        if not case.get("sourceLabel", "").strip():
+            errors.append(f"Outcome source label is missing for {case['id']}.")
         if date.fromisoformat(case["roleStartDate"]) >= date.fromisoformat(case["announcementDate"]):
             errors.append(f"Outcome role start must precede announcement for {case['id']}.")
         if date.fromisoformat(case["announcementDate"]) > date.fromisoformat(as_of):
             errors.append(f"Future-dated calibration outcome: {case['id']}.")
+        if case.get("departureDate") and date.fromisoformat(case["departureDate"]) < date.fromisoformat(case["announcementDate"]):
+            errors.append(f"Outcome departure predates announcement for {case['id']}.")
 
     dissent_by_ticker: dict[str, list[dict[str, Any]]] = {}
     alias_to_ticker = {
@@ -252,14 +268,14 @@ def main() -> None:
 
     recommendation = {
         "decision": "retain-current-weights",
-        "rationale": "The cohort is directionally useful but too small and temporally uneven to justify production score changes. Warning and market-performance sensitivities remain research-only, and the combined model does not improve top-quartile capture beyond warnings alone.",
-        "minimumNextEvidence": "Expand to at least 30 source-backed transition outcomes with aligned 36-month warning, voting and market-performance histories before estimating or promoting new weights.",
+        "rationale": "The expanded cohort is large enough for a more credible directional audit, but its warning and voting histories remain temporally uneven. Warning and market-performance sensitivities therefore remain research-only rather than becoming production weights.",
+        "minimumNextEvidence": "Align at least 30 outcomes to complete 36-month warning, voting and market-performance histories, then test any candidate weights on a held-out transition sample.",
     }
     payload = {
         "metadata": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "asOfDate": as_of,
-            "methodologyVersion": "0.1",
+            "methodologyVersion": "0.2",
             "outcomeCount": len(enriched_outcomes),
             "completedOutcomeCount": sum(record["cohort"] == "completed" for record in enriched_outcomes),
             "activeOutcomeCount": sum(record["cohort"] == "active" for record in enriched_outcomes),
@@ -269,12 +285,14 @@ def main() -> None:
         },
         "method": {
             "outcomeDefinition": "An official issuer announcement of a CEO or Chair departure, retirement, board-led replacement or active succession process.",
+            "caseSelectionRule": "Completed cases are included only where an official issuer source identifies the incumbent, transition outcome and announcement timing. The cohort is high-confidence and purposive, not a complete census of FTSE 100 transitions.",
             "cutoffRule": "Outcome signals are counted only when dated on or before the transition announcement. Current comparison observations use the evidence date.",
+            "datePrecisionRule": "Where an issuer source gives only a month for a role start, the first day is stored for calculation and roleStartDatePrecision is set to month; this can shift calculated tenure by less than one month.",
             "longTenureRule": "Eight years for a CEO and seven years for a Chair, used as an exploratory discriminator rather than a governance breach threshold.",
             "marketPerformanceTreatment": "Exploratory two-year dividend-adjusted company return less FTSE 100 price-index return. Isolated GBP/GBp scale switches are corrected and validated before use.",
             "limitations": [
                 "This is a retrospective discrimination audit, not a prospective probability model.",
-                "The outcome cohort is small and deliberately high-confidence rather than comprehensive.",
+                "The outcome cohort is deliberately high-confidence and purposive rather than comprehensive.",
                 "Current-role comparisons are right-censored observations, not proven non-events.",
                 "The voting dataset is concentrated in 2025 and cannot provide an aligned history for every outcome.",
                 "Profit-warning coverage is limited to the curated 36-month evidence window.",

@@ -61,7 +61,9 @@ For companies inside the reviewed subset, no warning badge means no qualifying e
 
 ## Calibration audit
 
-Calibration methodology `v0.1` compares 12 source-backed transition outcomes with 188 current, right-censored role observations. The outcome cohort contains six completed CEO transitions announced from 2023 to 2025 and six eligible active CEO or Chair processes from the current succession evidence. One interim-Chair case is excluded because the recorded incumbent began the role after the succession search was announced.
+Calibration methodology `v0.2` compares 30 source-backed transition outcomes with 188 current, right-censored role observations. The outcome cohort contains 24 completed CEO transitions announced from 2019 to 2025 and six eligible active CEO or Chair processes from the current succession evidence. One interim-Chair case is excluded because the recorded incumbent began the role after the succession search was announced.
+
+Completed cases are included only where an official issuer announcement or annual report identifies the incumbent, transition outcome and announcement timing. This is a purposive high-confidence cohort, not a complete census of FTSE 100 CEO changes. Where an issuer gives only a month for a role start, the first day is stored for calculation and the record is explicitly marked with month-level precision.
 
 For each outcome, tenure, warning and dissent signals are measured only up to the official announcement date. Market sensitivity uses the trailing two-year dividend-adjusted company return less the FTSE 100 price-index return. Current comparisons use the evidence date.
 
@@ -70,7 +72,7 @@ The audit tests two exploratory additions without changing production scores:
 - a warning uplift of 6 points for a material event or 12 for any severe event, plus 3 for repeats and capped at 18
 - a performance uplift of 8 points for relative underperformance of at least 20 percentage points or 15 points at 40 percentage points
 
-The outcome sample is directionally informative but too small and temporally uneven for stable weighting. Production weights therefore remain unchanged. The next evidence threshold is at least 30 source-backed outcomes with aligned warning, voting and market histories. Full records and summary statistics are published in `public/data/leadership-calibration.json`.
+The baseline score places 26.7% of outcomes in the pooled top quartile. The warning sensitivity raises this to 30.0%; adding market underperformance does not improve capture further. This is directionally useful but not enough to promote either exploratory uplift because warning and voting histories remain temporally uneven. Production weights therefore remain unchanged. The next threshold is 30 or more outcomes with complete aligned 36-month evidence, followed by testing on a held-out transition sample. Full records and summary statistics are published in `public/data/leadership-calibration.json`.
 
 ## Market-series quality
 
