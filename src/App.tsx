@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect, useState } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
-import type { LeadershipRadarData, TrackerData } from './types'
+import type { LeadershipProfilesData, LeadershipRadarData, MarketPerformanceData, TrackerData } from './types'
 import './App.css'
 
 const HomePage = lazy(async () => {
@@ -52,6 +52,8 @@ function ErrorState({ message }: { message: string }) {
 function App() {
   const [data, setData] = useState<TrackerData | null>(null)
   const [radarData, setRadarData] = useState<LeadershipRadarData | null>(null)
+  const [marketData, setMarketData] = useState<MarketPerformanceData | null>(null)
+  const [profilesData, setProfilesData] = useState<LeadershipProfilesData | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -59,21 +61,27 @@ function App() {
 
     async function loadData() {
       try {
-        const [trackerResponse, radarResponse] = await Promise.all([
+        const [trackerResponse, radarResponse, marketResponse, profilesResponse] = await Promise.all([
           fetch('/data/tracker-data.json'),
           fetch('/data/leadership-radar.json'),
+          fetch('/data/market-performance.json'),
+          fetch('/data/leadership-profiles.json'),
         ])
-        if (!trackerResponse.ok || !radarResponse.ok) {
+        if (!trackerResponse.ok || !radarResponse.ok || !marketResponse.ok || !profilesResponse.ok) {
           throw new Error(
-            `Dataset request failed (${trackerResponse.status}/${radarResponse.status}).`,
+            `Dataset request failed (${trackerResponse.status}/${radarResponse.status}/${marketResponse.status}/${profilesResponse.status}).`,
           )
         }
 
         const payload = (await trackerResponse.json()) as TrackerData
         const radarPayload = (await radarResponse.json()) as LeadershipRadarData
+        const marketPayload = (await marketResponse.json()) as MarketPerformanceData
+        const profilesPayload = (await profilesResponse.json()) as LeadershipProfilesData
         if (active) {
           setData(payload)
           setRadarData(radarPayload)
+          setMarketData(marketPayload)
+          setProfilesData(profilesPayload)
         }
       } catch (loadError) {
         if (active) {
@@ -95,7 +103,7 @@ function App() {
     return <ErrorState message={error} />
   }
 
-  if (!data || !radarData) {
+  if (!data || !radarData || !marketData || !profilesData) {
     return <LoadingState />
   }
 
@@ -105,7 +113,7 @@ function App() {
         <Routes>
           <Route element={<Layout generatedAt={radarData.metadata.generatedAt} />}>
             <Route index element={<HomePage data={data} radarData={radarData} />} />
-            <Route path="/radar" element={<LeadershipRadarPage data={radarData} />} />
+            <Route path="/radar" element={<LeadershipRadarPage data={radarData} marketData={marketData} profilesData={profilesData} />} />
             <Route path="/proxy-voting" element={<DashboardPage data={data} />} />
             <Route path="/dashboard" element={<Navigate replace to="/radar" />} />
             <Route path="/resolution/:id" element={<ResolutionPage data={data} />} />

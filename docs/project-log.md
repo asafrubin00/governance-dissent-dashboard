@@ -156,3 +156,24 @@
 - Expanded the weekly monitor from 25 to 50 official issuer sources and removed the hard-coded cohort size.
 - Split monitor terms into `earnings` and `succession` groups so candidates carry their review purpose.
 - Baselined existing links before monitoring; the first normal run reached 39 sources, found monitorable links on 22, and created no retrospective candidates.
+
+## Full leadership universe and performance pilot
+
+### Coverage decision
+
+- Completed source verification for all 100 current roster constituents; 94 have scoreable CEO and Chair pairs.
+- Marked six externally managed issuers as CEO `Not applicable` rather than treating a structural absence as missing research.
+- Expanded the profit-warning audit to 50 companies, capturing 11 qualifying official events across nine issuers.
+- Reviewed all 100 companies for active official succession evidence and added JD Sports' interim-Chair search as the seventh live case.
+
+### Performance and profile decision
+
+- Added a ten-company monthly performance pilot using public Yahoo chart data: unadjusted close for share-price return and adjusted close for a clearly qualified dividend-adjusted return proxy.
+- Added the FTSE 100 price index as context and kept the feature in an on-demand modal so the fixed-height research workspace remains intact.
+- Added concise official-source CEO and Chair profiles for the same ten companies, with cached issuer assets only where stable and initials fallbacks elsewhere.
+
+### Automation and validation
+
+- Expanded the weekly announcement monitor to 100 official issuer sources; the new baseline reached 75 pages and found monitorable matches on 48 without creating retrospective queue noise.
+- Added exact roster alignment, future-date, HTTPS-source, structural-not-applicable, market-series, duplicate-date, and cross-pilot reconciliation checks.
+- Kept warning, succession, profile, and market evidence outside the leadership pressure score pending calibration and outcome testing.

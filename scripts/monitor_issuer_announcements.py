@@ -20,6 +20,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "announcement_monitor_sources.json"
 LEADERSHIP_PATH = ROOT / "data" / "leadership_sources.json"
+LEADERSHIP_EXPANSION_PATH = ROOT / "data" / "leadership_sources_expansion.json"
 SNAPSHOT_PATH = ROOT / "data" / "announcement_monitor_snapshot.json"
 QUEUE_PATH = ROOT / "data" / "announcement_review_queue.json"
 STATUS_PATH = ROOT / "public" / "data" / "announcement-monitor.json"
@@ -47,7 +48,10 @@ def validate_config(config: dict[str, Any], queue: dict[str, Any]) -> list[str]:
     if len(tickers) != len(set(tickers)):
         errors.append("Duplicate monitored ticker found.")
     leadership = json.loads(LEADERSHIP_PATH.read_text(encoding="utf-8"))
-    leadership_tickers = {company["ticker"] for company in leadership["companies"]}
+    expansion = json.loads(LEADERSHIP_EXPANSION_PATH.read_text(encoding="utf-8"))
+    leadership_tickers = {
+        company["ticker"] for company in [*leadership["companies"], *expansion["companies"]]
+    }
     if set(tickers) != leadership_tickers:
         errors.append("Monitored tickers do not exactly match the source-verified leadership cohort.")
     keyword_groups = config.get("keywordGroups", {})

@@ -2,8 +2,22 @@
   "asOfDate": "2026-08-08",
   "methodologyVersion": "0.4",
   "definition": "An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office.",
-  "reviewedTickers": ["SHEL", "NXT", "MKS", "CNA", "LSEG", "ULVR", "IHG", "RIO", "HSBA", "MRO", "CTEC", "CCEP", "AAL", "BP", "CCC", "IMI", "RTO", "KGF", "ANTO", "NWG", "AZN", "BARC", "TSCO", "BA", "NG", "III", "ABF", "AV", "BAB", "BTRW", "BEZ", "BATS", "BLND", "BT.A", "BNZL", "BRBY", "CCH", "CPG", "CRDA", "DGE", "ENT", "EXPN", "GLEN", "GSK", "HLN", "IAG", "LLOY", "REL", "RR", "VOD"],
+  "reviewedTickers": ["SHEL", "NXT", "MKS", "CNA", "LSEG", "ULVR", "IHG", "RIO", "HSBA", "MRO", "CTEC", "CCEP", "AAL", "BP", "CCC", "IMI", "RTO", "KGF", "ANTO", "NWG", "AZN", "BARC", "TSCO", "BA", "NG", "III", "ABF", "AV", "BAB", "BTRW", "BEZ", "BATS", "BLND", "BT.A", "BNZL", "BRBY", "CCH", "CPG", "CRDA", "DGE", "ENT", "EXPN", "GLEN", "GSK", "HLN", "IAG", "LLOY", "REL", "RR", "VOD", "ABDN", "ADM", "AAF", "ALW", "AUTO", "DCC", "DPLM", "EDV", "FCIT", "FRES", "GAW", "HLMA", "HSX", "HWDN", "ICG", "IGG", "IMB", "INF", "ITRK", "INVP", "JD", "BGEO", "LAND", "LGEN", "LMP", "MNG", "MTLN", "PSON", "PSH", "PSN", "PCT", "PRU", "RKT", "SGE", "SBRY", "SDR", "SMT", "SGRO", "SVT", "SMIN", "SN", "SPX", "SSE", "STAN", "SDLF", "STJ", "BBOX", "UU", "WEIR", "WTB"],
   "cases": [
+    {
+      "id": "jd-chair-2026-04-22-search-underway",
+      "ticker": "JD",
+      "role": "chair",
+      "status": "search-underway",
+      "announcedDate": "2026-04-22",
+      "incumbentName": "Darren Shapland",
+      "successorName": null,
+      "incumbentDepartureDate": null,
+      "successorStartDate": null,
+      "summary": "Darren Shapland became interim Chair at the 2026 AGM while the Board continues its process to appoint a permanent successor.",
+      "sourceUrl": "https://www.jdplc.com/investor-relations/regulatory-news/regulatory-news-details/2026/Directorate-change/default.aspx",
+      "sourceLabel": "JD Sports directorate change"
+    },
     {
       "id": "blnd-ceo-2026-07-02-successor-announced",
       "ticker": "BLND",

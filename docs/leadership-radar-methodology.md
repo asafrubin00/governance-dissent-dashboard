@@ -4,7 +4,7 @@
 
 The radar prioritises FTSE 100 companies for closer leadership-succession research. It does not predict that a CEO or Chair will leave office, and it is not a governance-quality rating.
 
-Methodology `v0.4` separates scored signals from evidence overlays:
+Methodology `v0.5` separates scored signals from evidence overlays:
 
 - role-specific tenure pressure
 - qualifying significant dissent on management-sponsored resolutions in the existing Proxy Voting dataset
@@ -17,10 +17,9 @@ Profit-warning and succession evidence are visible but not scored. Share-price s
 
 - The public FTSE 100 constituent table on Wikipedia is used as a reproducible 100-company roster snapshot.
 - FTSE Russell remains the index authority; the public table is not presented as an official licensed index feed.
-- Fifty companies have source-verified CEO and Chair appointment records in `data/leadership_sources.json`.
+- All 100 companies have source-verified leadership records across `data/leadership_sources.json` and `data/leadership_sources_expansion.json`.
 - The evidence cutoff for the current cohort is 8 August 2026.
-- The other constituents are retained in the interface as visibly `Unrated` research candidates.
-- No leadership names, dates, or scores are inferred for unresearched companies.
+- Six externally managed issuers without a company CEO are marked `Not applicable`; no CEO score is inferred for them.
 
 ## Score construction
 
@@ -56,7 +55,7 @@ The initial overlay uses a 36-month lookback and includes only official issuer a
 
 Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded. Each event records its announcement date, affected period, event type, severity, concise summary, principal drivers, and primary-source link.
 
-The same review protocol was applied to the original 25-company cohort for the 36 months to 8 August 2026. Four high-confidence events were captured across Rentokil Initial, Marks & Spencer, Kingfisher, and Computacenter. Review outcomes and source hubs are recorded in `data/profit_warning_reviews.json`.
+The same review protocol was applied to 50 companies for the 36 months to 8 August 2026. Eleven high-confidence events were captured across nine issuers. Review outcomes and source hubs are recorded in `data/profit_warning_reviews.json`.
 
 For companies inside the reviewed subset, no warning badge means no qualifying event was captured under this protocol, not proof that no adverse announcement occurred. Companies outside the reviewed subset carry no warning inference. The overlay does not alter the 0-100 pressure score in methodology `v0.4`; any score contribution requires calibration and outcome testing first.
 
@@ -64,7 +63,7 @@ For companies inside the reviewed subset, no warning badge means no qualifying e
 
 An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office. Informal speculation, general succession-planning language, and completed appointments are excluded.
 
-All 50 rated companies were reviewed to 8 August 2026. The current release captures six active processes: CEO transitions at Babcock International, Barratt Redrow, British Land, and Kingfisher, plus Chair transitions at British American Tobacco and Burberry. The exact incumbent, status, dates, named successor where available, and primary-source link are stored in `data/succession_sources.json`.
+All 100 companies were reviewed to 8 August 2026. The current release captures seven active processes: CEO transitions at Babcock International, Barratt Redrow, British Land, and Kingfisher, plus Chair processes at British American Tobacco, Burberry, and JD Sports. The exact incumbent, status, dates, named successor where available, and primary-source link are stored in `data/succession_sources.json`.
 
 Succession status is displayed as live evidence and does not alter the pressure score. Absence means no qualifying official announcement was captured by the evidence date, not proof that a board is not planning succession privately.
 
@@ -75,6 +74,7 @@ Succession status is displayed as live evidence and does not alter the pressure 
 - `Elevated`: 50-69
 - `Acute`: 70-100
 - `Unrated`: leadership evidence has not yet been researched
+- `Not applicable`: the externally managed listed issuer has no company CEO
 
 ## Validation
 
@@ -83,6 +83,8 @@ The build fails if it finds:
 - a roster other than exactly 100 constituents
 - duplicate constituent or curated tickers
 - a rated role without a primary source URL
+- leadership evidence that does not exactly match the current 100-company roster
+- a future appointment date, non-HTTPS source, or unsourced not-applicable designation
 - a score outside 0-100
 - a duplicate or malformed profit-warning event ID
 - a warning ticker outside the current roster
@@ -98,6 +100,6 @@ The generated file records validation status, methodology version, source mode, 
 
 ## Refresh model
 
-`npm run data` refreshes the public constituent snapshot, rebuilds the Proxy Voting dataset, recalculates radar scores, and runs as part of the weekly GitHub Actions workflow.
+`npm run data` refreshes the public constituent snapshot, rebuilds Proxy Voting, recalculates radar scores, refreshes the ten-company market-performance pilot, and runs as part of the weekly GitHub Actions workflow.
 
 Leadership appointments, profit-warning events, and succession cases remain editorially approved because issuer disclosures vary and a false automated match would be more damaging than a visible evidence gap. The weekly monitor discovers candidate issuer links, but never publishes them as analytical evidence automatically.

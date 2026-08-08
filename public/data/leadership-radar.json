@@ -1,29 +1,30 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-08T07:40:11.914398+00:00",
+    "generatedAt": "2026-08-08T08:26:24.911334+00:00",
     "asOfDate": "2026-08-08",
-    "methodologyVersion": "0.4",
+    "methodologyVersion": "0.5",
     "rosterSource": {
       "name": "Wikipedia FTSE 100 constituent table",
       "url": "https://en.wikipedia.org/wiki/FTSE_100_Index",
       "mode": "live-public-snapshot",
       "note": "Used only as a reproducible public constituent snapshot; FTSE Russell remains the index authority."
     },
-    "ratedCompanyCount": 50,
+    "sourceVerifiedCompanyCount": 100,
+    "ratedCompanyCount": 94,
     "constituentCount": 100,
     "profitWarningCoverage": {
-      "eventCount": 4,
-      "companyCount": 4,
-      "reviewedCompanyCount": 25,
+      "eventCount": 11,
+      "companyCount": 9,
+      "reviewedCompanyCount": 50,
       "asOfDate": "2026-08-08",
       "lookbackMonths": 36,
       "definition": "A qualifying event is an official issuer announcement that either cuts full-year earnings guidance or quantifies a material prospective adverse impact on profit. Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded.",
       "scoreTreatment": "Displayed as a source-verified overlay and excluded from the pressure score pending calibration and outcome testing."
     },
     "successionCoverage": {
-      "activeCaseCount": 6,
-      "reviewedCompanyCount": 50,
+      "activeCaseCount": 7,
+      "reviewedCompanyCount": 100,
       "asOfDate": "2026-08-08",
       "definition": "An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office.",
       "scoreTreatment": "Displayed as a source-verified status and excluded from the pressure score."
@@ -45,9 +46,9 @@
     },
     "limitations": [
       "This is a research prioritisation score, not a prediction that an individual will leave office.",
-      "50 companies have source-verified leadership records in methodology 0.4; all others remain visibly unrated.",
+      "All 100 companies have source-verified leadership records in methodology 0.5; externally managed issuers without a chief executive are marked not applicable rather than scored.",
       "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-      "The profit-warning review currently covers 25 of 50 rated companies; event absence outside that reviewed subset must not be interpreted as evidence of no warning.",
+      "The profit-warning review currently covers 50 of 100 rated companies; event absence outside that reviewed subset must not be interpreted as evidence of no warning.",
       "Succession status reflects official announcements found by the evidence date and may change between refreshes.",
       "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded."
     ],
@@ -109,7 +110,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "III",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.3i.com/investor-relations/results-centre/",
+          "reviewNote": "Results and portfolio updates reviewed; no qualifying Group earnings event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -122,16 +128,46 @@
       "sector": "Financial Services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Jason Windsor",
+          "roleStartDate": "2024-09-01",
+          "sourceUrl": "https://www.aberdeenplc.com/en-gb/about-us/our-leadership-team",
+          "sourceLabel": "Aberdeen leadership team",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 1.9,
+          "score": 15.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 15.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Jonathan Asquith",
+          "roleStartDate": "2026-04-28",
+          "sourceUrl": "https://www.aberdeenplc.com/en-gb/about-us/our-leadership-team",
+          "sourceLabel": "Aberdeen leadership team",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.3,
+          "score": 2.7,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 2.7,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -151,16 +187,46 @@
       "sector": "Insurance",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Milena Mondini de Focatiis",
+          "roleStartDate": "2021-01-01",
+          "sourceUrl": "https://www.admiralgroup.co.uk/who-we-are/our-board-and-management",
+          "sourceLabel": "Admiral board and management",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 5.6,
+          "score": 44.8,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 44.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Mike Rogers",
+          "roleStartDate": "2023-04-27",
+          "sourceUrl": "https://admiralgroup.co.uk/news-releases/news-release-details/directorate-change-21",
+          "sourceLabel": "Admiral directorate change",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.3,
+          "score": 29.3,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 29.3,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -180,16 +246,46 @@
       "sector": "Telecommunications services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Sunil Taldar",
+          "roleStartDate": "2024-07-01",
+          "sourceUrl": "https://www.airtel.africa/leadership",
+          "sourceLabel": "Airtel Africa leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 2.1,
+          "score": 16.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 16.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Sunil Bharti Mittal",
+          "roleStartDate": "2018-07-01",
+          "sourceUrl": "https://www.airtel.africa/leadership",
+          "sourceLabel": "Airtel Africa leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 8.1,
+          "score": 72.0,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 72.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "8.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -209,16 +305,35 @@
       "sector": "Investment Trusts",
       "roles": {
         "ceo": {
+          "status": "not-applicable",
+          "reason": "Externally managed investment trust; the listed issuer has no chief executive.",
+          "sourceUrl": "https://www.alliancewitan.com/people/dean-buckley",
+          "sourceLabel": "Alliance Witan governance profile",
           "rated": false,
+          "notApplicable": true,
           "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "band": "Not applicable"
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Dean Buckley",
+          "roleStartDate": "2024-01-01",
+          "sourceUrl": "https://www.alliancewitan.com/people/dean-buckley",
+          "sourceLabel": "Alliance Witan Chair profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.6,
+          "score": 23.1,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 23.1,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -426,7 +541,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "ABF",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.abf.co.uk/investors/results-presentations-and-reports",
+          "reviewNote": "Results and trading updates reviewed; segment sales changes did not produce a qualifying Group profit warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -503,16 +623,46 @@
       "sector": "Media",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Nathan Coe",
+          "roleStartDate": "2020-03-01",
+          "sourceUrl": "https://plc.autotrader.co.uk/media/fdvcy2os/ixbrl-viewer-2025.html",
+          "sourceLabel": "Auto Trader annual report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.4,
+          "score": 51.2,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 51.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "6.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Matt Davies",
+          "roleStartDate": "2023-09-14",
+          "sourceUrl": "https://plc.autotrader.co.uk/news-views/company-news/new-chair-designate-announced/",
+          "sourceLabel": "Auto Trader Chair announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.9,
+          "score": 25.8,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 25.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -578,7 +728,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "AV",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.aviva.com/investors/results-reports-and-presentations/",
+          "reviewNote": "Results and trading updates reviewed; Group operating-profit guidance was maintained or improved in the evidence window."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -637,7 +792,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "BAB",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.babcockinternational.com/investors/results-reports-and-presentations/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 1,
@@ -839,7 +999,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "BTRW",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.barrattredrow.co.uk/investors/results-reports-and-presentations",
+          "reviewNote": "Results and trading updates reviewed; completion guidance changes were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 1,
@@ -913,7 +1078,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "BEZ",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.beazley.com/en/investors/results-reports-and-presentations/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying Group earnings event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -1050,7 +1220,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "BATS",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.bat.com/investors-and-reporting/results-centre",
+          "reviewNote": "Results and pre-close updates reviewed; impairments and category-specific movements were excluded where full-year adjusted-profit guidance was retained."
+        }
       },
       "successionEvidence": {
         "count": 1,
@@ -1124,7 +1299,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "BLND",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.britishland.com/investors/results-reports-and-presentations/",
+          "reviewNote": "Results and operational updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 1,
@@ -1198,7 +1378,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "BT.A",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.bt.com/about/investors/financial-reporting-and-news",
+          "reviewNote": "Results and trading updates reviewed; no qualifying full-year Group profit warning captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -1254,10 +1439,37 @@
         }
       },
       "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": null
+        "count": 1,
+        "latestDate": "2025-04-16",
+        "events": [
+          {
+            "id": "bnzl-2025-04-16-guidance-cut",
+            "ticker": "BNZL",
+            "companyName": "Bunzl",
+            "announcementDate": "2025-04-16",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2025",
+            "metric": "Group operating margin",
+            "previousGuidance": "Operating margin in line with 8.3% achieved in 2024",
+            "revisedGuidance": "Moderately below 8.0%",
+            "changePct": null,
+            "summary": "Bunzl reduced its FY25 operating-margin guidance after first-quarter adjusted operating profit fell significantly amid North American and Continental European weakness.",
+            "drivers": [
+              "North American revenue softness and execution challenges",
+              "Continental European margin pressure",
+              "Deflation and higher operating costs"
+            ],
+            "sourceUrl": "https://www.bunzl.com/newsroom/bunzl-q1-trading-statement-2025/",
+            "sourceLabel": "Bunzl April 2025 first-quarter trading statement"
+          }
+        ],
+        "review": {
+          "ticker": "BNZL",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.bunzl.com/newsroom/bunzl-q1-trading-statement-2025/",
+          "reviewNote": "The April 2025 reduction to full-year operating-margin guidance is captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -1313,10 +1525,79 @@
         }
       },
       "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": null
+        "count": 3,
+        "latestDate": "2024-07-15",
+        "events": [
+          {
+            "id": "brby-2024-07-15-guidance-cut",
+            "ticker": "BRBY",
+            "companyName": "Burberry Group",
+            "announcementDate": "2024-07-15",
+            "eventType": "guidance-cut",
+            "severity": "severe",
+            "affectedPeriod": "FY 2024/25",
+            "metric": "Operating profit",
+            "previousGuidance": "Market consensus for FY25 operating profit",
+            "revisedGuidance": "Below consensus, with a first-half operating loss if the Q1 trend persisted",
+            "changePct": null,
+            "summary": "Burberry warned that continued weak trading could produce a first-half operating loss and FY25 operating profit below consensus, and suspended FY25 dividends.",
+            "drivers": [
+              "21% decline in first-quarter comparable store sales",
+              "Broad luxury-sector slowdown",
+              "Weakness across key regions"
+            ],
+            "sourceUrl": "https://www.burberryplc.com/news/financial/2024/first-quarter-trading-update",
+            "sourceLabel": "Burberry FY25 first-quarter trading update"
+          },
+          {
+            "id": "brby-2024-01-12-guidance-cut",
+            "ticker": "BRBY",
+            "companyName": "Burberry Group",
+            "announcementDate": "2024-01-12",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2023/24",
+            "metric": "Adjusted operating profit",
+            "previousGuidance": "Lower end of the then-current \u00a3552m-\u00a3668m consensus range",
+            "revisedGuidance": "\u00a3410m-\u00a3460m",
+            "changePct": null,
+            "summary": "Burberry reduced FY24 adjusted operating-profit guidance to \u00a3410m-\u00a3460m as the slowdown in luxury demand continued to affect trading.",
+            "drivers": [
+              "Luxury-demand slowdown",
+              "Weak Americas trading",
+              "Currency headwinds"
+            ],
+            "sourceUrl": "https://www.burberryplc.com/news/financial/2024/trading-update",
+            "sourceLabel": "Burberry January 2024 trading update"
+          },
+          {
+            "id": "brby-2023-11-16-guidance-cut",
+            "ticker": "BRBY",
+            "companyName": "Burberry Group",
+            "announcementDate": "2023-11-16",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2023/24",
+            "metric": "Adjusted operating profit",
+            "previousGuidance": "Prior revenue guidance and market operating-profit expectations",
+            "revisedGuidance": "Lower end of the then-current \u00a3552m-\u00a3668m consensus range if weaker demand persisted",
+            "changePct": null,
+            "summary": "Burberry warned that weaker luxury demand made its prior FY24 revenue guidance unlikely and would place adjusted operating profit toward the lower end of consensus.",
+            "drivers": [
+              "Global luxury-demand slowdown",
+              "Weaker current trading",
+              "Macroeconomic pressure"
+            ],
+            "sourceUrl": "https://www.burberryplc.com/news/financial/2023/interim-results-for-26-weeks-ended-30-september-2023",
+            "sourceLabel": "Burberry FY24 interim results"
+          }
+        ],
+        "review": {
+          "ticker": "BRBY",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.burberryplc.com/news/financial",
+          "reviewNote": "Three official deteriorations in FY24 and FY25 earnings guidance are captured."
+        }
       },
       "successionEvidence": {
         "count": 1,
@@ -1546,7 +1827,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "CCH",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.coca-colahellenic.com/en/investors/results-reports-presentations",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -1605,7 +1891,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "CPG",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.compass-group.com/en/investors/results-presentations.html",
+          "reviewNote": "Results and trading updates reviewed; Group profit guidance was maintained or improved in the evidence window."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -1851,10 +2142,37 @@
         }
       },
       "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": null
+        "count": 1,
+        "latestDate": "2023-10-09",
+        "events": [
+          {
+            "id": "crda-2023-10-09-guidance-cut",
+            "ticker": "CRDA",
+            "companyName": "Croda International",
+            "announcementDate": "2023-10-09",
+            "eventType": "guidance-cut",
+            "severity": "severe",
+            "affectedPeriod": "FY 2023",
+            "metric": "Group adjusted profit before tax",
+            "previousGuidance": "\u00a3370m-\u00a3400m",
+            "revisedGuidance": "\u00a3300m-\u00a3320m",
+            "changePct": -20.8,
+            "summary": "Croda reduced FY23 Group adjusted profit before tax guidance after continued customer destocking and weaker Crop Protection and industrial demand.",
+            "drivers": [
+              "Customer destocking",
+              "Weaker Crop Protection sales",
+              "Weak global industrial demand"
+            ],
+            "sourceUrl": "https://www.croda.com/en-gb/media-hub/news/general/third-quarter-trading-update-oct-2023",
+            "sourceLabel": "Croda October 2023 third-quarter trading update"
+          }
+        ],
+        "review": {
+          "ticker": "CRDA",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.croda.com/en-gb/media-hub/news/general/third-quarter-trading-update-oct-2023",
+          "reviewNote": "The October 2023 full-year adjusted profit before tax downgrade is captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -1867,16 +2185,46 @@
       "sector": "Support services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Donal Murphy",
+          "roleStartDate": "2017-07-14",
+          "sourceUrl": "https://www.dcc.ie/news-and-insights/news/2017/chief-executive-succession",
+          "sourceLabel": "DCC CEO succession",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 9.1,
+          "score": 72.8,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 72.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "9.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Mark Breuer",
+          "roleStartDate": "2021-07-01",
+          "sourceUrl": "https://www.dcc.ie/about-us/board-and-leadership",
+          "sourceLabel": "DCC board and leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 5.1,
+          "score": 45.3,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 45.3,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -1939,10 +2287,37 @@
         }
       },
       "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": null
+        "count": 1,
+        "latestDate": "2023-11-10",
+        "events": [
+          {
+            "id": "dge-2023-11-10-guidance-cut",
+            "ticker": "DGE",
+            "companyName": "Diageo",
+            "announcementDate": "2023-11-10",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "H1 FY 2023/24",
+            "metric": "Organic operating profit growth",
+            "previousGuidance": "Gradual improvement from the second half of FY23",
+            "revisedGuidance": "A decline compared with the first half of FY23",
+            "changePct": null,
+            "summary": "Diageo reversed its first-half organic operating-profit growth outlook after a materially weaker performance forecast in Latin America and the Caribbean.",
+            "drivers": [
+              "More than 20% expected organic sales decline in Latin America and the Caribbean",
+              "Consumer downtrading",
+              "Lower operating leverage and adverse mix"
+            ],
+            "sourceUrl": "https://www.diageo.com/en/news-and-media/press-releases/2023/diageo-issues-trading-update-due-to-a-weaker-performance-outlook",
+            "sourceLabel": "Diageo November 2023 trading update"
+          }
+        ],
+        "review": {
+          "ticker": "DGE",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.diageo.com/en/news-and-media/press-releases/2023/diageo-issues-trading-update-due-to-a-weaker-performance-outlook",
+          "reviewNote": "The November 2023 reversal in first-half organic operating-profit growth expectations is captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -1955,16 +2330,46 @@
       "sector": "Industrial Support services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Johnny Thomson",
+          "roleStartDate": "2019-02-25",
+          "sourceUrl": "https://www.diplomaplc.com/about-us/leadership/",
+          "sourceLabel": "Diploma leadership",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 7.4,
+          "score": 59.2,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 59.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "7.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "David Lowden",
+          "roleStartDate": "2021-10-01",
+          "sourceUrl": "https://www.diplomaplc.com/about-us/leadership/",
+          "sourceLabel": "Diploma leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 4.9,
+          "score": 43.6,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 43.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -1984,16 +2389,46 @@
       "sector": "Mining",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Ian Cockerill",
+          "roleStartDate": "2024-01-01",
+          "sourceUrl": "https://www.endeavourmining.com/about-us/our-leadership/",
+          "sourceLabel": "Endeavour leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 2.6,
+          "score": 20.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 20.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Srinivasan Venkatakrishnan",
+          "roleStartDate": "2022-05-24",
+          "sourceUrl": "https://www.endeavourmining.com/news-and-media/news/endeavour-appoints-srinivasan-venkatakrishnan-chair-and-ian-cockerill-senior-independent-director/",
+          "sourceLabel": "Endeavour Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.2,
+          "score": 37.3,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 37.3,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2056,10 +2491,36 @@
         }
       },
       "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": null
+        "count": 1,
+        "latestDate": "2023-11-02",
+        "events": [
+          {
+            "id": "ent-2023-11-02-material-profit-impact",
+            "ticker": "ENT",
+            "companyName": "Entain",
+            "announcementDate": "2023-11-02",
+            "eventType": "material-profit-impact",
+            "severity": "material",
+            "affectedPeriod": "Q4 FY 2023",
+            "metric": "Group EBITDA",
+            "previousGuidance": "\u00a31.00bn-\u00a31.05bn FY2023 Group EBITDA range",
+            "revisedGuidance": "Range retained, with approximately \u00a345m adverse October EBITDA impact disclosed",
+            "changePct": null,
+            "summary": "Entain quantified an approximately \u00a345m October EBITDA impact from customer-friendly sports results while retaining its full-year guidance range.",
+            "drivers": [
+              "Customer-friendly sports results",
+              "Unusually negative football margins"
+            ],
+            "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2023/2023-q3-trading-update/",
+            "sourceLabel": "Entain 2023 third-quarter trading update"
+          }
+        ],
+        "review": {
+          "ticker": "ENT",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2023/2023-q3-trading-update/",
+          "reviewNote": "The quantified October 2023 adverse EBITDA impact is captured; the full-year range itself was retained."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2118,7 +2579,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "EXPN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.experianplc.com/investors/results-reports-and-presentations",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2131,16 +2597,35 @@
       "sector": "Collective investments",
       "roles": {
         "ceo": {
+          "status": "not-applicable",
+          "reason": "Externally managed investment trust; the listed issuer has no chief executive.",
+          "sourceUrl": "https://www.fandc.com/meet-the-board-landing-page/",
+          "sourceLabel": "F&C board and governance",
           "rated": false,
+          "notApplicable": true,
           "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "band": "Not applicable"
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Beatrice Hollond",
+          "roleStartDate": "2022-07-01",
+          "sourceUrl": "https://www.fandc.com/meet-the-board-landing-page/",
+          "sourceLabel": "F&C board profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 4.1,
+          "score": 36.4,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 36.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2160,16 +2645,46 @@
       "sector": "Mining",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Octavio Alvidrez",
+          "roleStartDate": "2012-08-15",
+          "sourceUrl": "https://www.fresnilloplc.com/media/e4thkqnc/fresnillo-annual-report-2012.pdf",
+          "sourceLabel": "Fresnillo annual report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 14.0,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "14.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Alejandro Bailleres",
+          "roleStartDate": "2021-04-29",
+          "sourceUrl": "https://fresnilloplc.com/media/zgcbodxt/46566-fresnillo-ar24-web.pdf",
+          "sourceLabel": "Fresnillo annual report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 5.3,
+          "score": 47.1,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 47.1,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2189,16 +2704,46 @@
       "sector": "Leisure Goods",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Kevin Rountree",
+          "roleStartDate": "2015-01-01",
+          "sourceUrl": "https://investor.games-workshop.com/news-posts/appointment-of-ceo",
+          "sourceLabel": "Games Workshop CEO appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 11.6,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "11.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Mark Lam",
+          "roleStartDate": "2024-11-01",
+          "sourceUrl": "https://investor.games-workshop.com/news-posts/appointmentofchair101024",
+          "sourceLabel": "Games Workshop Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.8,
+          "score": 16.0,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 16.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2264,7 +2809,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "GLEN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.glencore.com/investors/reports-results",
+          "reviewNote": "Results and production reports reviewed; production and cost guidance changes were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2323,7 +2873,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "GSK",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.gsk.com/en-gb/investors/financial-reports/",
+          "reviewNote": "Financial results reviewed; Group earnings guidance was maintained or upgraded in the evidence window."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2382,7 +2937,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "HLN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.haleon.com/investors/results-reports-and-presentations",
+          "reviewNote": "Results and trading statements reviewed; no qualifying Group profit event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2395,16 +2955,46 @@
       "sector": "Electronic equipment & parts",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Marc Ronchetti",
+          "roleStartDate": "2023-04-01",
+          "sourceUrl": "https://www.halma.com/who-we-are/our-leadership",
+          "sourceLabel": "Halma leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 3.4,
+          "score": 27.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 27.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Dame Louise Makin",
+          "roleStartDate": "2021-07-01",
+          "sourceUrl": "https://www.halma.com/who-we-are/our-leadership",
+          "sourceLabel": "Halma leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 5.1,
+          "score": 45.3,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 45.3,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2424,16 +3014,46 @@
       "sector": "Non-life Insurance",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Aki Hussain",
+          "roleStartDate": "2022-01-11",
+          "sourceUrl": "https://www.hiscoxgroup.com/news/blog/introducing-our-new-group-ceo-aki-hussain",
+          "sourceLabel": "Hiscox CEO introduction",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.6,
+          "score": 36.8,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 36.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Peter Clarke",
+          "roleStartDate": "2025-07-01",
+          "sourceUrl": "https://www.hiscoxgroup.com/about-hiscox/management",
+          "sourceLabel": "Hiscox management",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.1,
+          "score": 9.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 9.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2453,16 +3073,46 @@
       "sector": "Homebuilding & construction supplies",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Andrew Livingston",
+          "roleStartDate": "2018-04-01",
+          "sourceUrl": "https://www.howdenjoinerygroupplc.com/about/our-leadership/executive-members/andrew-livingston.asp",
+          "sourceLabel": "Howdens CEO profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 8.4,
+          "score": 67.2,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 67.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "8.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Peter Ventress",
+          "roleStartDate": "2022-09-17",
+          "sourceUrl": "https://www.howdenjoinerygroupplc.com/media-centre/archive/2023/230223.asp",
+          "sourceLabel": "Howdens board profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.9,
+          "score": 34.7,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 34.7,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2546,16 +3196,46 @@
       "sector": "Financial services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Benoit Durteste",
+          "roleStartDate": "2017-07-25",
+          "sourceUrl": "https://www.icgam.com/2017/03/23/icg-announces-change-in-leadership/",
+          "sourceLabel": "ICG leadership change",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 9.0,
+          "score": 72.0,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 72.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "9.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "William Rucker",
+          "roleStartDate": "2023-01-31",
+          "sourceUrl": "https://www.icgam.com/people/william-rucker/",
+          "sourceLabel": "ICG Chair profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.5,
+          "score": 31.1,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 31.1,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2575,16 +3255,46 @@
       "sector": "Financial services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Breon Corcoran",
+          "roleStartDate": "2024-01-29",
+          "sourceUrl": "https://www.iggroup.com/investor-relations/press-releases/2023/appointment-of-chief-executive-officer",
+          "sourceLabel": "IG CEO appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.5,
+          "score": 20.0,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 20.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Andrew Barron",
+          "roleStartDate": "2026-04-01",
+          "sourceUrl": "https://www.iggroup.com/investor-relations/press-releases/2026/appointment-of-board-chair-march-31",
+          "sourceLabel": "IG Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.4,
+          "score": 3.6,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 3.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2772,16 +3482,46 @@
       "sector": "Tobacco",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Lukas Paravicini",
+          "roleStartDate": "2025-10-01",
+          "sourceUrl": "https://www.imperialbrandsplc.com/news/key-announcements/2025/stefan-bomhard-to-retire-as-chief-executive-officer-of-imperial-",
+          "sourceLabel": "Imperial Brands CEO succession",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.9,
+          "score": 7.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 7.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Therese Esperdy",
+          "roleStartDate": "2020-02-03",
+          "sourceUrl": "https://www.imperialbrandsplc.com/news/key-announcements/2019/imperial-brands-announces-new-chairman",
+          "sourceLabel": "Imperial Brands Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.5,
+          "score": 57.8,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 57.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "6.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2801,16 +3541,46 @@
       "sector": "Media",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Stephen Carter",
+          "roleStartDate": "2013-09-01",
+          "sourceUrl": "https://www.informa.com/about-us/leadership/",
+          "sourceLabel": "Informa leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 12.9,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "12.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "John Rishton",
+          "roleStartDate": "2021-06-01",
+          "sourceUrl": "https://www.informa.com/globalassets/documents/investor-relations/2026/2025-informa-annual-report.pdf",
+          "sourceLabel": "Informa annual report",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 5.2,
+          "score": 46.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 46.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2876,7 +3646,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "IAG",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.iairgroup.com/investors-and-shareholders/financial-reporting/",
+          "reviewNote": "Results and trading updates reviewed; capacity and operating-metric revisions were excluded without a qualifying Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -2889,16 +3664,46 @@
       "sector": "Support services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Andre Lacroix",
+          "roleStartDate": "2015-05-16",
+          "sourceUrl": "https://www.intertek.com/about/executive-committee/",
+          "sourceLabel": "Intertek executive committee",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 11.2,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "11.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Steve Mogford",
+          "roleStartDate": "2026-05-01",
+          "sourceUrl": "https://www.intertek.com/investors/board/",
+          "sourceLabel": "Intertek board",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 0.3,
+          "score": 2.7,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 2.7,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2918,16 +3723,46 @@
       "sector": "Financial Services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Fani Titi",
+          "roleStartDate": "2020-03-01",
+          "sourceUrl": "https://www.investec.com/en_za/welcome-to-investec/contact-us/our-offices/johannesburg-office/fani-titi-bio.html",
+          "sourceLabel": "Investec CEO profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 6.4,
+          "score": 51.2,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 51.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "6.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Philip Hourquebie",
+          "roleStartDate": "2021-08-05",
+          "sourceUrl": "https://www.investec.com/content/dam/international/corporate-governance/2022/Board-composition.pdf",
+          "sourceLabel": "Investec board composition",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 5.0,
+          "score": 44.4,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 44.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2947,16 +3782,46 @@
       "sector": "General retailers",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Regis Schultz",
+          "roleStartDate": "2022-09-01",
+          "sourceUrl": "https://www.jdplc.com/investor-relations/regulatory-news/regulatory-news-details/2023/Year-End-Announcement-05-17-2023/default.aspx",
+          "sourceLabel": "JD annual results",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 3.9,
+          "score": 31.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 31.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Darren Shapland",
+          "roleStartDate": "2026-07-21",
+          "sourceUrl": "https://www.jdplc.com/investor-relations/regulatory-news/regulatory-news-details/2026/Directorate-change/default.aspx",
+          "sourceLabel": "JD directorate change",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.0,
+          "score": 0,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -2966,8 +3831,23 @@
         "review": null
       },
       "successionEvidence": {
-        "count": 0,
-        "cases": []
+        "count": 1,
+        "cases": [
+          {
+            "id": "jd-chair-2026-04-22-search-underway",
+            "ticker": "JD",
+            "role": "chair",
+            "status": "search-underway",
+            "announcedDate": "2026-04-22",
+            "incumbentName": "Darren Shapland",
+            "successorName": null,
+            "incumbentDepartureDate": null,
+            "successorStartDate": null,
+            "summary": "Darren Shapland became interim Chair at the 2026 AGM while the Board continues its process to appoint a permanent successor.",
+            "sourceUrl": "https://www.jdplc.com/investor-relations/regulatory-news/regulatory-news-details/2026/Directorate-change/default.aspx",
+            "sourceLabel": "JD Sports directorate change"
+          }
+        ]
       }
     },
     {
@@ -2976,16 +3856,46 @@
       "sector": "Banking Services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Archil Gachechiladze",
+          "roleStartDate": "2019-01-28",
+          "sourceUrl": "https://lionfinancegroup.uk/leadership-and-governance/the-board-of-directors/",
+          "sourceLabel": "Lion Finance board",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 7.5,
+          "score": 60.0,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 60.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "7.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Mel Carvill",
+          "roleStartDate": "2022-03-10",
+          "sourceUrl": "https://lionfinancegroup.uk/leadership-and-governance/the-board-of-directors/",
+          "sourceLabel": "Lion Finance board",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.4,
+          "score": 39.1,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 39.1,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3120,16 +4030,46 @@
       "sector": "Real estate investment trusts",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Mark Allan",
+          "roleStartDate": "2020-04-14",
+          "sourceUrl": "https://landsec.com/sites/default/files/2021-06/Landsec_AR2021_final.pdf",
+          "sourceLabel": "Landsec annual report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.3,
+          "score": 50.4,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 50.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "6.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Sir Ian Cheshire",
+          "roleStartDate": "2023-05-16",
+          "sourceUrl": "https://www.landsec.com/en/about/about-landsec/our-leadership/sir-ian-cheshire",
+          "sourceLabel": "Landsec Chair profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.2,
+          "score": 28.4,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 28.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3149,16 +4089,46 @@
       "sector": "Life insurance",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Antonio Simoes",
+          "roleStartDate": "2024-01-01",
+          "sourceUrl": "https://group.legalandgeneral.com/newsroom/multimedia/2024/1/antonio-simoes-joins-legal-general/",
+          "sourceLabel": "Legal & General CEO appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.6,
+          "score": 20.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 20.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Scott Wheway",
+          "roleStartDate": "2026-05-21",
+          "sourceUrl": "https://group.legalandgeneral.com/asset/49331c/globalassets/group/newsroom/press-releases/pdfs/2025/10/scott-wheway-appointed-legal-general-group-plc-chair.pdf",
+          "sourceLabel": "Legal & General Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.2,
+          "score": 1.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 1.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3224,7 +4194,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "LLOY",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.lloydsbankinggroup.com/investors/financial-performance.html",
+          "reviewNote": "Results reviewed; banking operating-metric changes were excluded without an explicit Group earnings warning."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -3237,16 +4212,46 @@
       "sector": "Real Estate Investment Trusts",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Andrew Jones",
+          "roleStartDate": "2013-01-01",
+          "sourceUrl": "https://www.londonmetric.com/about-us/board-of-directors",
+          "sourceLabel": "LondonMetric board",
+          "datePrecision": "year",
+          "rated": true,
+          "tenureYears": 13.6,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "13.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Alistair Elliott",
+          "roleStartDate": "2023-07-11",
+          "sourceUrl": "https://www.londonmetric.com/pdf-viewer.aspx?gid=364072326&src=%2F~%2Fmedia%2FFiles%2FL%2Flondonmetric%2Fpress-release%2F23-01-26-board-changes-and-agm-voting-update.pdf",
+          "sourceLabel": "LondonMetric board change",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.1,
+          "score": 27.6,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 27.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3344,16 +4349,46 @@
       "sector": "Financial services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Andrea Rossi",
+          "roleStartDate": "2022-10-10",
+          "sourceUrl": "https://www.mandg.com/~/media/Files/M/MandG-Plc/documents/press-kit/2022/29-09-2022-ceo-appointment.pdf",
+          "sourceLabel": "M&G CEO appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.8,
+          "score": 30.4,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 30.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Edward Braham",
+          "roleStartDate": "2022-03-14",
+          "sourceUrl": "https://www.mandg.com/news-and-media/press-releases/mandg-plc/2022/08-03-2022",
+          "sourceLabel": "M&G results and Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.4,
+          "score": 39.1,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 39.1,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3537,16 +4572,46 @@
       "sector": "Multiline utilities",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Christos Gavalas",
+          "roleStartDate": "2026-01-01",
+          "sourceUrl": "https://www.metlengroup.com/media/pull4rbi/metlen-big-three-pr_en.pdf",
+          "sourceLabel": "Metlen leadership structure",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.6,
+          "score": 4.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 4.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Evangelos Mytilineos",
+          "roleStartDate": "2026-01-01",
+          "sourceUrl": "https://www.metlengroup.com/media/pull4rbi/metlen-big-three-pr_en.pdf",
+          "sourceLabel": "Metlen leadership structure",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.6,
+          "score": 5.3,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 5.3,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3758,16 +4823,46 @@
       "sector": "Media",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Omar Abbosh",
+          "roleStartDate": "2024-01-08",
+          "sourceUrl": "https://plc.pearson.com/en-GB/node/2578",
+          "sourceLabel": "Pearson CEO profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.6,
+          "score": 20.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 20.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Omid Kordestani",
+          "roleStartDate": "2022-04-29",
+          "sourceUrl": "https://plc.pearson.com/sites/pearson-corp/files/pearson/annual-report-2024/governance-and-remuneration-2024.pdf",
+          "sourceLabel": "Pearson governance report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.3,
+          "score": 38.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 38.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3787,16 +4882,35 @@
       "sector": "Financial services",
       "roles": {
         "ceo": {
+          "status": "not-applicable",
+          "reason": "Externally managed closed-ended investment company; the listed issuer has no chief executive.",
+          "sourceUrl": "https://pershingsquareholdings.com/corporate/corporate-governance/",
+          "sourceLabel": "Pershing Square Holdings governance",
           "rated": false,
+          "notApplicable": true,
           "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "band": "Not applicable"
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Rupert Morley",
+          "roleStartDate": "2025-05-01",
+          "sourceUrl": "https://pershingsquareholdings.com/corporate/corporate-governance/",
+          "sourceLabel": "Pershing Square Holdings governance",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 1.3,
+          "score": 11.6,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 11.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3816,16 +4930,46 @@
       "sector": "Household goods & home construction",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Dean Finch",
+          "roleStartDate": "2020-09-28",
+          "sourceUrl": "https://www.persimmonhomes.com/corporate/about-us/board-of-directors/",
+          "sourceLabel": "Persimmon board",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 5.9,
+          "score": 47.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 47.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Roger Devlin",
+          "roleStartDate": "2018-06-01",
+          "sourceUrl": "https://www.persimmonhomes.com/corporate/about-us/board-of-directors/",
+          "sourceLabel": "Persimmon board",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 8.2,
+          "score": 72.9,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 72.9,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "8.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3845,16 +4989,35 @@
       "sector": "Investment trusts",
       "roles": {
         "ceo": {
+          "status": "not-applicable",
+          "reason": "Externally managed investment trust; the listed issuer has no chief executive.",
+          "sourceUrl": "https://www.polarcapitaltechnologytrust.co.uk/About-Us/FAQ/",
+          "sourceLabel": "PCT governance FAQ",
           "rated": false,
+          "notApplicable": true,
           "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "band": "Not applicable"
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Catherine Cripps",
+          "roleStartDate": "2022-09-01",
+          "sourceUrl": "https://www.polarcapitaltechnologytrust.co.uk/About-Us/FAQ/",
+          "sourceLabel": "PCT governance FAQ",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 3.9,
+          "score": 34.7,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 34.7,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3874,16 +5037,46 @@
       "sector": "Life insurance",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Anil Wadhwani",
+          "roleStartDate": "2023-02-01",
+          "sourceUrl": "https://www.prudentialplc.com/en/about-us/our-leadership/",
+          "sourceLabel": "Prudential leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 3.5,
+          "score": 28.0,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 28.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Sir Douglas Flint",
+          "roleStartDate": "2026-05-28",
+          "sourceUrl": "https://www.prudentialplc.com/en/newsroom/company-news/2025/Prudential-plc-appoints-Sir-Douglas-Flint-CBE-to-succeed-Shriti-Vadera-as-Chair/",
+          "sourceLabel": "Prudential Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.2,
+          "score": 1.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 1.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3903,16 +5096,46 @@
       "sector": "Household goods & home construction",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Kris Licht",
+          "roleStartDate": "2023-10-01",
+          "sourceUrl": "https://www.reckitt.com/our-company/our-leadership/kris-licht/",
+          "sourceLabel": "Reckitt CEO profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.9,
+          "score": 23.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 23.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Sir Jeremy Darroch",
+          "roleStartDate": "2024-05-01",
+          "sourceUrl": "https://www.reckitt.com/media/djqh4f33/reckitt_ar23_nom_final.pdf",
+          "sourceLabel": "Reckitt AGM notice",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 2.3,
+          "score": 20.4,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 20.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -3978,7 +5201,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "REL",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.relx.com/investors/results",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4215,7 +5443,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "RR",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.rolls-royce.com/investors/results-reports-and-events.aspx",
+          "reviewNote": "Results and trading updates reviewed; operating-profit guidance was maintained or improved in the evidence window."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4228,16 +5461,46 @@
       "sector": "Software & computer services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Steve Hare",
+          "roleStartDate": "2018-11-02",
+          "sourceUrl": "https://www.sage.com/en-us/company/about-sage/leadership/board-of-directors/",
+          "sourceLabel": "Sage board",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 7.8,
+          "score": 62.4,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 62.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "7.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Andrew Duff",
+          "roleStartDate": "2021-10-01",
+          "sourceUrl": "https://www.sage.com/en-us/company/about-sage/leadership/board-of-directors/",
+          "sourceLabel": "Sage board",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.9,
+          "score": 43.6,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 43.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4257,16 +5520,46 @@
       "sector": "Food & drug retailing",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Simon Roberts",
+          "roleStartDate": "2020-06-01",
+          "sourceUrl": "https://corporate.sainsburys.co.uk/media/wvfi5tqo/notice-of-meeting-2020.pdf",
+          "sourceLabel": "Sainsbury AGM notice",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.2,
+          "score": 49.6,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 49.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "6.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Martin Scicluna",
+          "roleStartDate": "2019-03-10",
+          "sourceUrl": "https://corporate.sainsburys.co.uk/media/wvfi5tqo/notice-of-meeting-2020.pdf",
+          "sourceLabel": "Sainsbury AGM notice",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 7.4,
+          "score": 65.8,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 65.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "7.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4286,16 +5579,46 @@
       "sector": "Financial services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Richard Oldfield",
+          "roleStartDate": "2024-11-08",
+          "sourceUrl": "https://www.schroders.com/en/global/individual/people/richard-oldfield/",
+          "sourceLabel": "Schroders CEO profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.7,
+          "score": 13.6,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 13.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Dame Elizabeth Corley",
+          "roleStartDate": "2022-04-28",
+          "sourceUrl": "https://www.schroders.com/en/global/individual/people/dame-elizabeth-corley/",
+          "sourceLabel": "Schroders Chair profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.3,
+          "score": 38.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 38.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4315,16 +5638,35 @@
       "sector": "Collective investments",
       "roles": {
         "ceo": {
+          "status": "not-applicable",
+          "reason": "Externally managed investment trust; the listed issuer has no chief executive.",
+          "sourceUrl": "https://www.scottishmortgage.com/en/uk/individual-investors/about-us/our-directors",
+          "sourceLabel": "Scottish Mortgage directors",
           "rated": false,
+          "notApplicable": true,
           "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "band": "Not applicable"
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Christopher Samuel",
+          "roleStartDate": "2025-07-01",
+          "sourceUrl": "https://www.scottishmortgage.com/en/uk/individual-investors/about-us/our-directors",
+          "sourceLabel": "Scottish Mortgage directors",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 1.1,
+          "score": 9.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 9.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4344,16 +5686,46 @@
       "sector": "Real estate investment trusts",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "David Sleath",
+          "roleStartDate": "2011-04-28",
+          "sourceUrl": "https://www.segro.com/about/leadership/the-board",
+          "sourceLabel": "SEGRO board",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 15.3,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "15.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Andy Harrison",
+          "roleStartDate": "2022-06-30",
+          "sourceUrl": "https://www.segro.com/about/leadership/the-board",
+          "sourceLabel": "SEGRO board",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.1,
+          "score": 36.4,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 36.4,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4373,16 +5745,46 @@
       "sector": "Multiline utilities",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "James Jesic",
+          "roleStartDate": "2026-01-01",
+          "sourceUrl": "https://www.severntrent.com/media/news-releases/severn-trent-plc-announces-james-jesic-as-next-ceo--as-liv-garfi/",
+          "sourceLabel": "Severn Trent CEO succession",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.6,
+          "score": 4.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 4.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Christine Hodgson",
+          "roleStartDate": "2020-04-01",
+          "sourceUrl": "https://www.severntrent.com/content/dam/stw-plc/fy-results-19-20/Severn%20Trent%20Investor%20Presentation%20FY20%20Final.pdf",
+          "sourceLabel": "Severn Trent investor presentation",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.4,
+          "score": 56.9,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 56.9,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "6.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4480,16 +5882,46 @@
       "sector": "General industrials",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Roland Carter",
+          "roleStartDate": "2024-03-26",
+          "sourceUrl": "https://www.smiths.com/news-and-insights/news/2024/appointment-of-chief-executive-officer",
+          "sourceLabel": "Smiths CEO appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.4,
+          "score": 19.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 19.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Steve Williams",
+          "roleStartDate": "2023-11-15",
+          "sourceUrl": "https://www.smiths.com/media/nmcmpiy2/smiths-annual-report-2024-governance.pdf",
+          "sourceLabel": "Smiths governance report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.7,
+          "score": 24.0,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 24.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4509,16 +5941,46 @@
       "sector": "Health care equipment & supplies",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Deepak Nath",
+          "roleStartDate": "2022-04-01",
+          "sourceUrl": "https://www.smith-nephew.com/en/news/2022/02/22/20220222-smith-nephew-announces-new-chief-executive-officer",
+          "sourceLabel": "Smith+Nephew CEO appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.4,
+          "score": 35.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 35.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Rupert Soames",
+          "roleStartDate": "2023-09-15",
+          "sourceUrl": "https://www.smith-nephew.com/en/news/2023/02/17/20230217-smith-and-nephew-announces-rupert-soames-as-chair-designate",
+          "sourceLabel": "Smith+Nephew Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.9,
+          "score": 25.8,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 25.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4538,16 +6000,46 @@
       "sector": "Industrial engineering",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Nimesh Patel",
+          "roleStartDate": "2024-01-01",
+          "sourceUrl": "https://www.spiraxgroup.com/en/investors/results-reports-and-presentations/2024-digital-annual-report",
+          "sourceLabel": "Spirax annual report",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 2.6,
+          "score": 20.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 20.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Tim Cobbold",
+          "roleStartDate": "2025-01-01",
+          "sourceUrl": "https://www.spiraxgroup.com/en/investors/results-reports-and-presentations/2024-digital-annual-report",
+          "sourceLabel": "Spirax annual report",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.6,
+          "score": 14.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 14.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4567,16 +6059,46 @@
       "sector": "Electrical utilities & independent power producers",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Martin Pibworth",
+          "roleStartDate": "2025-07-17",
+          "sourceUrl": "https://www.sse.com/news-and-views/2025/03/sse-plc-announces-martin-pibworth-as-chief-executive/",
+          "sourceLabel": "SSE CEO appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.1,
+          "score": 8.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 8.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Sir John Manzoni",
+          "roleStartDate": "2020-07-23",
+          "sourceUrl": "https://www.sse.com/news-and-views/2020/07/appointment-of-chair/",
+          "sourceLabel": "SSE Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.0,
+          "score": 53.3,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 53.3,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "6.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4596,16 +6118,46 @@
       "sector": "Banks",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Bill Winters",
+          "roleStartDate": "2015-06-01",
+          "sourceUrl": "https://www.sc.com/en/people/bill-winters/",
+          "sourceLabel": "Standard Chartered CEO profile",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 11.2,
+          "score": 80,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 80,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "11.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Maria Ramos",
+          "roleStartDate": "2025-05-08",
+          "sourceUrl": "https://www.sc.com/en/people/maria-ramos/",
+          "sourceLabel": "Standard Chartered Chair profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.3,
+          "score": 11.6,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 11.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "1.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4625,16 +6177,46 @@
       "sector": "Life insurance",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Andy Briggs",
+          "roleStartDate": "2020-03-10",
+          "sourceUrl": "https://www.standardlifeplc.com/about/our-team/leadership",
+          "sourceLabel": "Standard Life leadership",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 6.4,
+          "score": 51.2,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 51.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "6.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Sir Nicholas Lyons",
+          "roleStartDate": "2023-12-01",
+          "sourceUrl": "https://www.standardlifeplc.com/about/our-team/leadership",
+          "sourceLabel": "Standard Life leadership",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.7,
+          "score": 24.0,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 24.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4654,16 +6236,46 @@
       "sector": "Financial services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Mark FitzPatrick",
+          "roleStartDate": "2023-12-01",
+          "sourceUrl": "https://www.sjp.co.uk/shareholders/about-us/directors/mark-fitzpatrick",
+          "sourceLabel": "St James's Place CEO profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 2.7,
+          "score": 21.6,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 21.6,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "2.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Paul Manduca",
+          "roleStartDate": "2021-05-01",
+          "sourceUrl": "https://www.sjp.co.uk/sites/sjp-corp/files/SJP/shareholders/shareholder-meetings/SJP_NoM_2026_14.3.26.pdf",
+          "sourceLabel": "St James's Place AGM notice",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 5.3,
+          "score": 47.1,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 47.1,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "5.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4747,16 +6359,35 @@
       "sector": "Real Estate Investment Trusts",
       "roles": {
         "ceo": {
+          "status": "not-applicable",
+          "reason": "Externally managed REIT; the listed issuer has no chief executive.",
+          "sourceUrl": "https://www.tritaxbigbox.co.uk/about-us/board/",
+          "sourceLabel": "Tritax Big Box board and structure",
           "rated": false,
+          "notApplicable": true,
           "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "band": "Not applicable"
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Aubrey Adams",
+          "roleStartDate": "2017-09-11",
+          "sourceUrl": "https://www.tritaxbigbox.co.uk/about-us/board/",
+          "sourceLabel": "Tritax Big Box Chair profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 8.9,
+          "score": 79.1,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 79.1,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "8.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4854,16 +6485,46 @@
       "sector": "Multiline utilities",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Louise Beardmore",
+          "roleStartDate": "2023-03-31",
+          "sourceUrl": "https://www.unitedutilities.com/globalassets/z_corporate-site/investor-pdfs/euro-medium-term-notes/uu---supplementary-oc-final.pdf",
+          "sourceLabel": "United Utilities offering circular",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.4,
+          "score": 27.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 27.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Sir David Higgins",
+          "roleStartDate": "2020-01-01",
+          "sourceUrl": "https://www.unitedutilities.com/corporate/about-us/governance/our-board/",
+          "sourceLabel": "United Utilities board",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 6.6,
+          "score": 58.7,
+          "band": "Elevated",
+          "components": {
+            "tenurePressure": 58.7,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "6.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4929,7 +6590,12 @@
         "count": 0,
         "latestDate": null,
         "events": [],
-        "review": null
+        "review": {
+          "ticker": "VOD",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.vodafone.com/investors/annual-reports",
+          "reviewNote": "Results and trading updates reviewed; no qualifying full-year adjusted-profit warning captured."
+        }
       },
       "successionEvidence": {
         "count": 0,
@@ -4942,16 +6608,46 @@
       "sector": "Industrial goods and services",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Jon Stanton",
+          "roleStartDate": "2016-10-01",
+          "sourceUrl": "https://www.global.weir/about-us/leadership/",
+          "sourceLabel": "Weir leadership",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 9.9,
+          "score": 79.2,
+          "band": "Acute",
+          "components": {
+            "tenurePressure": 79.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "9.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Barbara Jeremiah",
+          "roleStartDate": "2022-04-28",
+          "sourceUrl": "https://www.global.weir/newsroom/global-news/charles-berry-to-be-succeeded-by-barbara-jeremiah-as-weir-group-chair/",
+          "sourceLabel": "Weir Chair succession",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.3,
+          "score": 38.2,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 38.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "4.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {
@@ -4971,16 +6667,46 @@
       "sector": "Retail hospitality",
       "roles": {
         "ceo": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Dominic Paul",
+          "roleStartDate": "2023-01-16",
+          "sourceUrl": "https://www.whitbread.co.uk/about-us/management/",
+          "sourceLabel": "Whitbread management",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 3.6,
+          "score": 28.8,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 28.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "3.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
         "chair": {
-          "rated": false,
-          "score": null,
-          "band": "Unrated",
-          "reason": "Leadership evidence not yet researched for this release."
+          "name": "Cilla Snowball",
+          "roleStartDate": "2025-09-01",
+          "sourceUrl": "https://www.whitbread.co.uk/about-us/management/",
+          "sourceLabel": "Whitbread management",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 0.9,
+          "score": 8.0,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 8.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxVotesAgainstPct": null,
+            "records": []
+          },
+          "reason": "0.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
       },
       "profitWarningEvidence": {

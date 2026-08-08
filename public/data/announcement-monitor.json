@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-08T07:36:07.991863+00:00",
+    "generatedAt": "2026-08-08T08:26:34.989181+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
-    "sourceCount": 50,
-    "activeSourceCount": 22,
-    "reachableSourceCount": 39,
-    "unavailableSourceCount": 11,
+    "sourceCount": 100,
+    "activeSourceCount": 48,
+    "reachableSourceCount": 76,
+    "unavailableSourceCount": 24,
     "newCandidateCount": 0,
     "pendingCandidateCount": 0,
     "pendingCandidateCountBySignal": {
@@ -123,7 +123,7 @@
     {
       "ticker": "BP",
       "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html"
+      "error": "HTTPSConnectionPool(host='www.bp.com', port=443): Max retries exceeded with url: /en/global/corporate/news-and-insights/press-releases.html (Caused by NewConnec"
     },
     {
       "ticker": "CCC",
@@ -413,8 +413,12 @@
     },
     {
       "ticker": "RR",
-      "status": "unavailable",
-      "error": "HTTPSConnectionPool(host='www.rolls-royce.com', port=443): Read timed out. (read timeout=4)"
+      "status": "active",
+      "matchedLinkCount": 44,
+      "matchedLinkCountBySignal": {
+        "earnings": 36,
+        "succession": 8
+      }
     },
     {
       "ticker": "VOD",
@@ -422,6 +426,400 @@
       "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
         "earnings": 1,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "ABDN",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "ADM",
+      "status": "unavailable",
+      "error": "HTTPSConnectionPool(host='admiralgroup.co.uk', port=443): Read timed out. (read timeout=4)"
+    },
+    {
+      "ticker": "AAF",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://www.airtel.africa/investors/financial-results"
+    },
+    {
+      "ticker": "ALW",
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "AUTO",
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 1
+      }
+    },
+    {
+      "ticker": "DCC",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://www.dccenergy.com/news"
+    },
+    {
+      "ticker": "DPLM",
+      "status": "active",
+      "matchedLinkCount": 50,
+      "matchedLinkCountBySignal": {
+        "earnings": 50,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "EDV",
+      "status": "unavailable",
+      "error": "HTTPSConnectionPool(host='www.endeavourmining.com', port=443): Max retries exceeded with url: /news-and-media/news/ (Caused by SSLError(SSLError(1, '[SSL: TLSV1"
+    },
+    {
+      "ticker": "FCIT",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://www.fandc.com/news-and-insights/"
+    },
+    {
+      "ticker": "FRES",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://www.fresnilloplc.com/media/press-releases/"
+    },
+    {
+      "ticker": "GAW",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://investor.games-workshop.com/news-posts"
+    },
+    {
+      "ticker": "HLMA",
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "HSX",
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "HWDN",
+      "status": "active",
+      "matchedLinkCount": 7,
+      "matchedLinkCountBySignal": {
+        "earnings": 7,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "ICG",
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "IGG",
+      "status": "active",
+      "matchedLinkCount": 5,
+      "matchedLinkCountBySignal": {
+        "earnings": 5,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "IMB",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "INF",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://www.informa.com/investors/results-reports-and-events/"
+    },
+    {
+      "ticker": "ITRK",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "INVP",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.investec.com/en_gb/welcome-to-investec/investor-relations/financial-information.html"
+    },
+    {
+      "ticker": "JD",
+      "status": "active",
+      "matchedLinkCount": 6,
+      "matchedLinkCountBySignal": {
+        "earnings": 4,
+        "succession": 2
+      }
+    },
+    {
+      "ticker": "BGEO",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "LAND",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "LGEN",
+      "status": "active",
+      "matchedLinkCount": 5,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 4
+      }
+    },
+    {
+      "ticker": "LMP",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://www.londonmetric.com/investors/results-reports-and-presentations"
+    },
+    {
+      "ticker": "MNG",
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 1
+      }
+    },
+    {
+      "ticker": "MTLN",
+      "status": "active",
+      "matchedLinkCount": 3,
+      "matchedLinkCountBySignal": {
+        "earnings": 3,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "PSON",
+      "status": "active",
+      "matchedLinkCount": 9,
+      "matchedLinkCountBySignal": {
+        "earnings": 9,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "PSH",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://pershingsquareholdings.com/company-reports/letters-to-shareholders/"
+    },
+    {
+      "ticker": "PSN",
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "PCT",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "PRU",
+      "status": "active",
+      "matchedLinkCount": 50,
+      "matchedLinkCountBySignal": {
+        "earnings": 21,
+        "succession": 29
+      }
+    },
+    {
+      "ticker": "RKT",
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "SGE",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.sage.com/en-gb/company/digital-newsroom/"
+    },
+    {
+      "ticker": "SBRY",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "SDR",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://www.schroders.com/en/global/individual/media-relations/"
+    },
+    {
+      "ticker": "SMT",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "SGRO",
+      "status": "active",
+      "matchedLinkCount": 14,
+      "matchedLinkCountBySignal": {
+        "earnings": 14,
+        "succession": 2
+      }
+    },
+    {
+      "ticker": "SVT",
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 1
+      }
+    },
+    {
+      "ticker": "SMIN",
+      "status": "active",
+      "matchedLinkCount": 3,
+      "matchedLinkCountBySignal": {
+        "earnings": 3,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "SN",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "SPX",
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 2
+      }
+    },
+    {
+      "ticker": "SSE",
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "STAN",
+      "status": "active",
+      "matchedLinkCount": 6,
+      "matchedLinkCountBySignal": {
+        "earnings": 6,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "SDLF",
+      "status": "active",
+      "matchedLinkCount": 39,
+      "matchedLinkCountBySignal": {
+        "earnings": 7,
+        "succession": 32
+      }
+    },
+    {
+      "ticker": "STJ",
+      "status": "active",
+      "matchedLinkCount": 8,
+      "matchedLinkCountBySignal": {
+        "earnings": 8,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "BBOX",
+      "status": "unavailable",
+      "error": "404 Client Error: Not Found for url: https://www.tritaxbigbox.co.uk/news-insights/"
+    },
+    {
+      "ticker": "UU",
+      "status": "active",
+      "matchedLinkCount": 5,
+      "matchedLinkCountBySignal": {
+        "earnings": 3,
+        "succession": 2
+      }
+    },
+    {
+      "ticker": "WEIR",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "WTB",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
         "succession": 0
       }
     }

@@ -5,7 +5,7 @@ Proxy Wars is a focused FTSE 100 governance research portfolio project. It now c
 - **Leadership Pressure Radar**: a source-backed research preview that prioritises CEO and Chair succession signals.
 - **Proxy Voting**: a resolution-level tracker for significant shareholder dissent against management.
 
-The product is intentionally transparent about incomplete coverage. Unresearched leadership records remain visibly unrated, and the voting module covers significant dissent rather than general AGM voting books.
+The product is intentionally transparent about scope. Leadership evidence now covers the current 100-company roster; externally managed issuers without a company CEO are marked not applicable, and the voting module covers significant dissent rather than general AGM voting books.
 
 ## Preview
 
@@ -18,11 +18,13 @@ The product is intentionally transparent about incomplete coverage. Unresearched
 ### Leadership Pressure Radar
 
 - Universe: a 100-company FTSE 100 public constituent snapshot.
-- Verified cohort: 50 companies with official issuer sources for both CEO and Chair appointments.
-- Signals in methodology `v0.4`: role tenure, qualifying registered dissent, source-verified profit-warning evidence, and officially announced live CEO or Chair succession processes.
-- The original 25-company cohort has received the same 36-month warning review. Four qualifying official issuer events are captured; the other 25 rated companies remain visibly outside that warning-audit coverage.
-- All 50 rated companies have been reviewed for active CEO and Chair succession announcements. Six live processes are captured in the current evidence window.
-- Excluded for now: market-price stress, activism, controversies, and broader news.
+- Leadership coverage: all 100 companies have official issuer sources for current CEO and Chair appointments or a sourced structural `not applicable` designation.
+- Signals in methodology `v0.5`: role tenure, qualifying registered dissent, source-verified profit-warning evidence, and officially announced live CEO or Chair succession processes.
+- Profit-warning audit: 50 companies reviewed over 36 months, with 11 qualifying official events across nine issuers.
+- Succession review: all 100 companies reviewed, with seven live processes captured in the current evidence window.
+- Market-performance pilot: ten companies with monthly share-price and dividend-adjusted returns against the FTSE 100 price index.
+- Profile pilot: the same ten companies have concise sourced CEO/Chair biographies, official links, and local issuer assets where stable.
+- Excluded for now: activism, controversies, broader news, and any unlicensed claim to institutional-grade TSR.
 - Output: `public/data/leadership-radar.json`.
 
 The score is a research-prioritisation device, not a prediction that an individual will leave office. Full details are in [the radar methodology](docs/leadership-radar-methodology.md).
@@ -65,17 +67,18 @@ npm run build
 
 ## Data refresh
 
-`npm run data` performs both builds:
+`npm run data` performs the connected builds:
 
 1. Refreshes and verifies the significant-dissent dataset.
 2. Fetches the public FTSE 100 roster snapshot, falling back to the cached snapshot if unavailable.
-3. Joins the manually verified leadership source file.
-4. Validates the 25-company profit-warning review as an explicit subset of the rated cohort and joins approved official warning evidence.
-5. Validates exact rated-cohort coverage for official active-succession evidence.
+3. Joins both manually verified leadership source files and validates exact 100-company roster coverage.
+4. Validates the 50-company profit-warning review and joins approved official warning evidence.
+5. Validates exact 100-company coverage for official active-succession review.
 6. Recalculates role-specific pressure scores without allowing either overlay to change the score.
-7. Runs validation before writing the public JSON files.
+7. Refreshes and validates the ten-company monthly market-performance pilot.
+8. Runs validation before writing the public JSON files.
 
-The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations and the constituent roster, then checks 50 official issuer pages for new earnings- and succession-related links. Matches enter a typed review queue and never alter the radar automatically. Verified appointments, qualifying warning events, and active succession cases must still be approved in their source files before publication.
+The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations, the constituent roster, and the market pilot, then checks 100 official issuer pages for new earnings- and succession-related links. Matches enter a typed review queue and never alter the radar automatically. Verified appointments, qualifying warning events, and active succession cases must still be approved in their source files before publication.
 
 Run the monitor independently with `npm run data:monitor`. Its source health and editorial safeguards are explained in [the monitor methodology](docs/announcement-monitor-methodology.md).
 
@@ -84,6 +87,7 @@ Run the monitor independently with `npm run data:monitor`. Its source health and
 ```text
 data/
   leadership_sources.json          # manually verified leadership evidence
+  leadership_sources_expansion.json # second 50-company evidence cohort
   profit_warning_sources.json      # curated official warning events
   profit_warning_reviews.json      # warning-audit outcomes and official sources
   succession_sources.json          # official active-succession evidence
@@ -99,9 +103,12 @@ docs/
   project-log.md
 public/data/
   leadership-radar.json
+  market-performance.json
+  leadership-profiles.json
   tracker-data.json
 scripts/
   build_leadership_radar.py
+  build_market_performance.py
   build_dataset.py
 src/
   pages/LeadershipRadarPage.tsx
@@ -110,21 +117,21 @@ src/
 
 ## Analytical limitations
 
-- Fifty companies are rated; the other 50 remain visibly unrated until both leadership roles are verified.
+- All 100 companies are source verified; six externally managed issuers have no issuer CEO and are not scored for that role.
 - CEO tenure has no formal UK governance limit; the ten-year horizon is an analytical reference only.
 - Chair tenure is interpreted in the context of the Code's nine-year independence and succession guidance.
 - The dissent uplift is based on a narrow 2025 source window, not complete historical voting coverage.
-- The profit-warning audit currently covers 25 of 50 rated companies; no-warning interpretation is limited to that reviewed subset.
+- The profit-warning audit covers 50 companies; no-warning interpretation remains limited to that reviewed subset.
 - Warning and succession evidence are excluded from the score pending calibration and outcome testing.
 - A public constituent table is used for reproducibility and is not an official FTSE Russell feed.
 - Classification and parsing rules remain suitable for a portfolio MVP, not a commercial proxy-research service.
+- Yahoo adjusted close is used only as a transparent dividend-adjusted research proxy; it is not a licensed total-return index and excludes tax, costs, and currency effects.
 
 ## Product roadmap
 
-- Expand the same source-verification protocol from 50 to all 100 constituents.
-- Improve monitor coverage where official sites currently block automated access or render no usable links.
-- Add compact company logos to heatmap tiles and the evidence rail using issuer-approved assets, with a text fallback and no analytical effect.
-- Add concise leader profiles and tenure-aligned share-price/TSR analysis in staged releases.
+- Extend the profit-warning audit from 50 to all 100 constituents.
+- Improve monitor reliability where official sites block automated access or render no usable links.
+- Extend the source-backed profile and market-performance pilots beyond ten companies.
 - Evaluate warning and succession score contributions only after back-testing, sensitivity analysis, and a documented governance rationale.
 
 ## Verification

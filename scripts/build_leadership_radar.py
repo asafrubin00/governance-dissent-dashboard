@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_PATH = ROOT / "data" / "leadership_sources.json"
+EXPANSION_SOURCE_PATH = ROOT / "data" / "leadership_sources_expansion.json"
 PROFIT_WARNING_PATH = ROOT / "data" / "profit_warning_sources.json"
 PROFIT_WARNING_REVIEW_PATH = ROOT / "data" / "profit_warning_reviews.json"
 SUCCESSION_PATH = ROOT / "data" / "succession_sources.json"
@@ -253,6 +254,7 @@ def validate(
     roster: list[dict[str, str]],
     curated: list[dict[str, Any]],
     companies: list[dict[str, Any]],
+    as_of: str,
     warning_errors: list[str],
     review_errors: list[str],
     succession_errors: list[str],
@@ -265,17 +267,29 @@ def validate(
         errors.append("Duplicate constituent tickers found.")
     if len({row["ticker"] for row in curated}) != len(curated):
         errors.append("Duplicate curated leadership tickers found.")
+    roster_tickers = set(tickers)
+    curated_tickers = {row["ticker"] for row in curated}
+    if curated_tickers != roster_tickers:
+        errors.append("Leadership evidence does not exactly match the current FTSE 100 roster.")
     for company in companies:
         for role_name, role in company["roles"].items():
             if role["score"] is not None and not 0 <= role["score"] <= 100:
                 errors.append(f"Impossible {role_name} score for {company['ticker']}.")
             if role["rated"] and not role.get("sourceUrl"):
                 errors.append(f"Missing source URL for {company['ticker']} {role_name}.")
+            if role.get("notApplicable") and not role.get("sourceUrl"):
+                errors.append(f"Missing structural source for {company['ticker']} {role_name}.")
+            if role.get("sourceUrl") and not role["sourceUrl"].startswith("https://"):
+                errors.append(f"Non-HTTPS source URL for {company['ticker']} {role_name}.")
+            if role.get("roleStartDate") and date.fromisoformat(role["roleStartDate"]) > date.fromisoformat(as_of):
+                errors.append(f"Future role start date for {company['ticker']} {role_name}.")
     return {"status": "pass" if not errors else "fail", "errors": errors}
 
 
 def main() -> None:
     source = json.loads(SOURCE_PATH.read_text(encoding="utf-8"))
+    expansion = json.loads(EXPANSION_SOURCE_PATH.read_text(encoding="utf-8"))
+    source["companies"] = [*source["companies"], *expansion["companies"]]
     warning_source = json.loads(PROFIT_WARNING_PATH.read_text(encoding="utf-8"))
     warning_review_source = json.loads(PROFIT_WARNING_REVIEW_PATH.read_text(encoding="utf-8"))
     succession_source = json.loads(SUCCESSION_PATH.read_text(encoding="utf-8"))
@@ -327,6 +341,15 @@ def main() -> None:
                 continue
 
             role = curated["roles"][role_name]
+            if role.get("status") == "not-applicable":
+                role_output[role_name] = {
+                    **role,
+                    "rated": False,
+                    "notApplicable": True,
+                    "score": None,
+                    "band": "Not applicable",
+                }
+                continue
             tenure_years = years_between(role["roleStartDate"], as_of)
             tenure_score = tenure_pressure(role_name, tenure_years)
             max_against = dissent_record["maxVotesAgainstPct"] if dissent_record else None
@@ -365,6 +388,7 @@ def main() -> None:
         roster,
         source["companies"],
         companies,
+        as_of,
         warning_errors,
         review_errors,
         succession_errors,
@@ -384,7 +408,10 @@ def main() -> None:
                 "mode": roster_mode,
                 "note": "Used only as a reproducible public constituent snapshot; FTSE Russell remains the index authority.",
             },
-            "ratedCompanyCount": len(source["companies"]),
+            "sourceVerifiedCompanyCount": len(source["companies"]),
+            "ratedCompanyCount": sum(
+                1 for company in companies if company["roles"]["ceo"]["rated"] and company["roles"]["chair"]["rated"]
+            ),
             "constituentCount": len(roster),
             "profitWarningCoverage": {
                 "eventCount": len(warning_source["events"]),
@@ -414,7 +441,7 @@ def main() -> None:
             },
             "limitations": [
                 "This is a research prioritisation score, not a prediction that an individual will leave office.",
-                f"{len(source['companies'])} companies have source-verified leadership records in methodology {source['methodologyVersion']}; all others remain visibly unrated.",
+                f"All {len(source['companies'])} companies have source-verified leadership records in methodology {source['methodologyVersion']}; externally managed issuers without a chief executive are marked not applicable rather than scored.",
                 "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
                 f"The profit-warning review currently covers {len(warning_review_source['reviews'])} of {len(source['companies'])} rated companies; event absence outside that reviewed subset must not be interpreted as evidence of no warning.",
                 "Succession status reflects official announcements found by the evidence date and may change between refreshes.",
@@ -425,7 +452,7 @@ def main() -> None:
         "companies": companies,
     }
     OUTPUT_PATH.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {OUTPUT_PATH} with {len(companies)} constituents and {len(source['companies'])} rated companies.")
+    print(f"Wrote {OUTPUT_PATH} with {len(companies)} constituents and {len(source['companies'])} source-verified companies.")
 
 
 if __name__ == "__main__":

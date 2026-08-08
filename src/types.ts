@@ -106,6 +106,8 @@ export type Filters = {
 
 export type LeadershipRole = {
   rated: boolean
+  notApplicable?: boolean
+  status?: 'not-applicable'
   name?: string
   roleStartDate?: string
   sourceUrl?: string
@@ -113,7 +115,7 @@ export type LeadershipRole = {
   datePrecision?: 'day' | 'month' | 'year'
   tenureYears?: number
   score: number | null
-  band: 'Lower' | 'Watch' | 'Elevated' | 'Acute' | 'Unrated'
+  band: 'Lower' | 'Watch' | 'Elevated' | 'Acute' | 'Unrated' | 'Not applicable'
   reason: string
   components?: {
     tenurePressure: number
@@ -191,6 +193,7 @@ export type LeadershipRadarData = {
     generatedAt: string
     asOfDate: string
     methodologyVersion: string
+    sourceVerifiedCompanyCount: number
     ratedCompanyCount: number
     constituentCount: number
     profitWarningCoverage: {
@@ -232,4 +235,57 @@ export type LeadershipRadarData = {
     }
   }
   companies: LeadershipCompany[]
+}
+
+export type MarketPerformanceData = {
+  metadata: {
+    generatedAt: string
+    companyCount: number
+    sourceName: string
+    sourceUrl: string
+    frequency: string
+    methodology: string
+    limitations: string
+    validation: { status: string; errors: string[] }
+  }
+  benchmark: {
+    symbol: string
+    name: string
+    points: MarketPerformancePoint[]
+  }
+  companies: Array<{
+    ticker: string
+    companyName: string
+    marketSymbol: string
+    roles: Record<'ceo' | 'chair', { name: string; roleStartDate: string }>
+    points: MarketPerformancePoint[]
+  }>
+}
+
+export type MarketPerformancePoint = {
+  date: string
+  close: number
+  adjustedClose: number
+  priceReturnPct: number
+  dividendAdjustedReturnPct: number
+}
+
+export type LeadershipProfilesData = {
+  metadata: {
+    asOfDate: string
+    companyCount: number
+    scope: string
+    limitations: string
+    validation: { status: string; errors: string[] }
+  }
+  companies: Array<{
+    ticker: string
+    logoPath: string | null
+    roles: Record<'ceo' | 'chair', {
+      name: string
+      summary: string
+      sourceUrl: string
+      portraitPath: string | null
+    }>
+  }>
 }

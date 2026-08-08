@@ -1,7 +1,7 @@
 {
   "asOfDate": "2026-08-08",
   "lookbackMonths": 36,
-  "methodologyVersion": "0.3",
+  "methodologyVersion": "0.4",
   "definition": "A qualifying event is an official issuer announcement that either cuts full-year earnings guidance or quantifies a material prospective adverse impact on profit. Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded.",
   "events": [
     {
@@ -87,6 +87,152 @@
       ],
       "sourceUrl": "https://www.kingfisher.com/~/media/Files/K/Kingfisher-Plc/Universal/documents/media/news-and-insights/2023/20230919-2023-24-half-year-results-rns-part-1.pdf",
       "sourceLabel": "Kingfisher FY 2023/24 half-year results"
+    },
+    {
+      "id": "brby-2023-11-16-guidance-cut",
+      "ticker": "BRBY",
+      "companyName": "Burberry Group",
+      "announcementDate": "2023-11-16",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2023/24",
+      "metric": "Adjusted operating profit",
+      "previousGuidance": "Prior revenue guidance and market operating-profit expectations",
+      "revisedGuidance": "Lower end of the then-current £552m-£668m consensus range if weaker demand persisted",
+      "changePct": null,
+      "summary": "Burberry warned that weaker luxury demand made its prior FY24 revenue guidance unlikely and would place adjusted operating profit toward the lower end of consensus.",
+      "drivers": [
+        "Global luxury-demand slowdown",
+        "Weaker current trading",
+        "Macroeconomic pressure"
+      ],
+      "sourceUrl": "https://www.burberryplc.com/news/financial/2023/interim-results-for-26-weeks-ended-30-september-2023",
+      "sourceLabel": "Burberry FY24 interim results"
+    },
+    {
+      "id": "brby-2024-01-12-guidance-cut",
+      "ticker": "BRBY",
+      "companyName": "Burberry Group",
+      "announcementDate": "2024-01-12",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2023/24",
+      "metric": "Adjusted operating profit",
+      "previousGuidance": "Lower end of the then-current £552m-£668m consensus range",
+      "revisedGuidance": "£410m-£460m",
+      "changePct": null,
+      "summary": "Burberry reduced FY24 adjusted operating-profit guidance to £410m-£460m as the slowdown in luxury demand continued to affect trading.",
+      "drivers": [
+        "Luxury-demand slowdown",
+        "Weak Americas trading",
+        "Currency headwinds"
+      ],
+      "sourceUrl": "https://www.burberryplc.com/news/financial/2024/trading-update",
+      "sourceLabel": "Burberry January 2024 trading update"
+    },
+    {
+      "id": "brby-2024-07-15-guidance-cut",
+      "ticker": "BRBY",
+      "companyName": "Burberry Group",
+      "announcementDate": "2024-07-15",
+      "eventType": "guidance-cut",
+      "severity": "severe",
+      "affectedPeriod": "FY 2024/25",
+      "metric": "Operating profit",
+      "previousGuidance": "Market consensus for FY25 operating profit",
+      "revisedGuidance": "Below consensus, with a first-half operating loss if the Q1 trend persisted",
+      "changePct": null,
+      "summary": "Burberry warned that continued weak trading could produce a first-half operating loss and FY25 operating profit below consensus, and suspended FY25 dividends.",
+      "drivers": [
+        "21% decline in first-quarter comparable store sales",
+        "Broad luxury-sector slowdown",
+        "Weakness across key regions"
+      ],
+      "sourceUrl": "https://www.burberryplc.com/news/financial/2024/first-quarter-trading-update",
+      "sourceLabel": "Burberry FY25 first-quarter trading update"
+    },
+    {
+      "id": "crda-2023-10-09-guidance-cut",
+      "ticker": "CRDA",
+      "companyName": "Croda International",
+      "announcementDate": "2023-10-09",
+      "eventType": "guidance-cut",
+      "severity": "severe",
+      "affectedPeriod": "FY 2023",
+      "metric": "Group adjusted profit before tax",
+      "previousGuidance": "£370m-£400m",
+      "revisedGuidance": "£300m-£320m",
+      "changePct": -20.8,
+      "summary": "Croda reduced FY23 Group adjusted profit before tax guidance after continued customer destocking and weaker Crop Protection and industrial demand.",
+      "drivers": [
+        "Customer destocking",
+        "Weaker Crop Protection sales",
+        "Weak global industrial demand"
+      ],
+      "sourceUrl": "https://www.croda.com/en-gb/media-hub/news/general/third-quarter-trading-update-oct-2023",
+      "sourceLabel": "Croda October 2023 third-quarter trading update"
+    },
+    {
+      "id": "dge-2023-11-10-guidance-cut",
+      "ticker": "DGE",
+      "companyName": "Diageo",
+      "announcementDate": "2023-11-10",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "H1 FY 2023/24",
+      "metric": "Organic operating profit growth",
+      "previousGuidance": "Gradual improvement from the second half of FY23",
+      "revisedGuidance": "A decline compared with the first half of FY23",
+      "changePct": null,
+      "summary": "Diageo reversed its first-half organic operating-profit growth outlook after a materially weaker performance forecast in Latin America and the Caribbean.",
+      "drivers": [
+        "More than 20% expected organic sales decline in Latin America and the Caribbean",
+        "Consumer downtrading",
+        "Lower operating leverage and adverse mix"
+      ],
+      "sourceUrl": "https://www.diageo.com/en/news-and-media/press-releases/2023/diageo-issues-trading-update-due-to-a-weaker-performance-outlook",
+      "sourceLabel": "Diageo November 2023 trading update"
+    },
+    {
+      "id": "ent-2023-11-02-material-profit-impact",
+      "ticker": "ENT",
+      "companyName": "Entain",
+      "announcementDate": "2023-11-02",
+      "eventType": "material-profit-impact",
+      "severity": "material",
+      "affectedPeriod": "Q4 FY 2023",
+      "metric": "Group EBITDA",
+      "previousGuidance": "£1.00bn-£1.05bn FY2023 Group EBITDA range",
+      "revisedGuidance": "Range retained, with approximately £45m adverse October EBITDA impact disclosed",
+      "changePct": null,
+      "summary": "Entain quantified an approximately £45m October EBITDA impact from customer-friendly sports results while retaining its full-year guidance range.",
+      "drivers": [
+        "Customer-friendly sports results",
+        "Unusually negative football margins"
+      ],
+      "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2023/2023-q3-trading-update/",
+      "sourceLabel": "Entain 2023 third-quarter trading update"
+    },
+    {
+      "id": "bnzl-2025-04-16-guidance-cut",
+      "ticker": "BNZL",
+      "companyName": "Bunzl",
+      "announcementDate": "2025-04-16",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2025",
+      "metric": "Group operating margin",
+      "previousGuidance": "Operating margin in line with 8.3% achieved in 2024",
+      "revisedGuidance": "Moderately below 8.0%",
+      "changePct": null,
+      "summary": "Bunzl reduced its FY25 operating-margin guidance after first-quarter adjusted operating profit fell significantly amid North American and Continental European weakness.",
+      "drivers": [
+        "North American revenue softness and execution challenges",
+        "Continental European margin pressure",
+        "Deflation and higher operating costs"
+      ],
+      "sourceUrl": "https://www.bunzl.com/newsroom/bunzl-q1-trading-statement-2025/",
+      "sourceLabel": "Bunzl April 2025 first-quarter trading statement"
     }
   ]
 }

@@ -275,7 +275,7 @@ def build_row_id(company_slug: str, meeting_date: str, resolution_title: str) ->
 
 
 def fetch_url(url: str) -> str:
-    response = requests.get(url, headers=REQUEST_HEADERS, timeout=60)
+    response = requests.get(url, headers=REQUEST_HEADERS, timeout=(5, 20))
     response.raise_for_status()
     return response.text
 
@@ -683,7 +683,7 @@ def enrich_with_update_statement_documents(
 
     for url in pdf_urls:
         try:
-            response = requests.get(url, headers=REQUEST_HEADERS, timeout=60)
+            response = requests.get(url, headers=REQUEST_HEADERS, timeout=(5, 20))
             response.raise_for_status()
         except requests.RequestException as error:
             audit_rows.append({"url": url, "status": "fetch-failed", "error": str(error)})
@@ -760,7 +760,7 @@ def enrich_with_result_documents(
 
     for document in result_documents:
         try:
-            response = requests.get(document.url, headers=REQUEST_HEADERS, timeout=60)
+            response = requests.get(document.url, headers=REQUEST_HEADERS, timeout=(5, 20))
             response.raise_for_status()
         except requests.RequestException as error:
             audit_rows.append(
