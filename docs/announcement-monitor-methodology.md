@@ -9,7 +9,7 @@ Nothing detected by the monitor changes the Leadership Pressure Radar or its sco
 ## Coverage
 
 - The configuration contains one official issuer landing page for each of the 25 companies in the source-verified leadership cohort.
-- The initial baseline has 15 reachable sources, of which seven expose monitorable earnings-related links in server-rendered HTML.
+- The current baseline has 15 reachable sources, of which 11 expose monitorable earnings-related links in server-rendered HTML.
 - Ten sources are currently unavailable to the monitor because of access controls, timeouts, or incompatible delivery.
 - Source health is recalculated on every run and written to `public/data/announcement-monitor.json`.
 

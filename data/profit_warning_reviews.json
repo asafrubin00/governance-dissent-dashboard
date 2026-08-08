@@ -1,0 +1,32 @@
+{
+  "asOfDate": "2026-08-08",
+  "lookbackStartDate": "2023-08-08",
+  "method": "Official issuer results, trading-update and announcement archives were reviewed for explicit full-year earnings guidance cuts or quantified material prospective adverse profit impacts.",
+  "reviews": [
+    { "ticker": "SHEL", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.shell.com/investors/results-and-reporting.html", "reviewNote": "Quarterly outlook updates reviewed; no qualifying full-year profit warning captured." },
+    { "ticker": "NXT", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.nextplc.co.uk/investors/reports-and-presentations/2025-26", "reviewNote": "Trading statements reviewed; guidance movements in the window were not qualifying downward profit revisions." },
+    { "ticker": "MKS", "outcome": "qualifying-event-captured", "sourceUrl": "https://corporate.marksandspencer.com/investors/our-performance-updates/results-reports-webcasts-presentations", "reviewNote": "The quantified prospective cyber-related operating-profit impact is captured." },
+    { "ticker": "CNA", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.centrica.com/investors/results-reports-and-presentations/results-reports-and-presentations/archive/", "reviewNote": "Segment-level guidance movements were reviewed; offsetting Group movements did not meet the defined threshold." },
+    { "ticker": "LSEG", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.lseg.com/en/investor-relations/financial-results", "reviewNote": "Financial-results archive reviewed; no qualifying event captured." },
+    { "ticker": "ULVR", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.unilever.com/investors/results-events/", "reviewNote": "Results and trading statements reviewed; no qualifying event captured." },
+    { "ticker": "IHG", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.ihgplc.com/investors/results-reports-and-presentations", "reviewNote": "Results archive reviewed; no qualifying event captured." },
+    { "ticker": "RIO", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.riotinto.com/en/news/releases", "reviewNote": "Results and production updates reviewed; operational guidance changes are excluded from the profit-warning definition." },
+    { "ticker": "HSBA", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.hsbc.com/investors/results-and-announcements", "reviewNote": "Results reviewed; credit-loss and operating-metric guidance movements are excluded where Group profit targets were retained." },
+    { "ticker": "MRO", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.melroseplc.net/investors/", "reviewNote": "Results and trading updates reviewed; no qualifying event captured." },
+    { "ticker": "CTEC", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.convatecgroup.com/investors/results-centre/", "reviewNote": "Results and trading updates reviewed; no qualifying event captured." },
+    { "ticker": "CCEP", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://ir.cocacolaep.com/news-releases", "reviewNote": "Issuer announcements reviewed; no qualifying event captured." },
+    { "ticker": "AAL", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.angloamerican.com/media/press-releases", "reviewNote": "Production, cost and capital guidance changes are excluded because they were not explicit Group earnings warnings." },
+    { "ticker": "BP", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.bp.com/en/global/corporate/investors/results-reporting-and-presentations.html", "reviewNote": "Results and quarterly indicators reviewed; no qualifying full-year earnings warning captured." },
+    { "ticker": "CCC", "outcome": "qualifying-event-captured", "sourceUrl": "https://investors.computacenter.com/news-releases", "reviewNote": "The October 2024 full-year adjusted profit downgrade is captured." },
+    { "ticker": "IMI", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.imiplc.com/en/investors/results-reports-presentations/", "reviewNote": "Results and trading updates reviewed; no qualifying event captured." },
+    { "ticker": "RTO", "outcome": "qualifying-event-captured", "sourceUrl": "https://www.rentokil-initial.com/investors/results-centre/results-2026.aspx", "reviewNote": "The September 2024 full-year adjusted profit downgrade is captured." },
+    { "ticker": "KGF", "outcome": "qualifying-event-captured", "sourceUrl": "https://www.kingfisher.com/investors", "reviewNote": "The September 2023 adjusted profit before tax downgrade is captured." },
+    { "ticker": "ANTO", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.antofagasta.co.uk/investors/reports-presentations/", "reviewNote": "Production and cost guidance changes are excluded from the profit-warning definition." },
+    { "ticker": "NWG", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://investors.natwestgroup.com/results-centre.aspx", "reviewNote": "Results reviewed; net-interest-margin and other operating-metric changes are excluded without an explicit Group earnings warning." },
+    { "ticker": "AZN", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.astrazeneca.com/investor-relations/results-and-presentations.html", "reviewNote": "Financial-results archive reviewed; no qualifying event captured." },
+    { "ticker": "BARC", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://home.barclays/investor-relations/reports-and-events/results/", "reviewNote": "Results archive reviewed; no qualifying event captured." },
+    { "ticker": "TSCO", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://origin.tescoplc.com/investors/reports-results-and-presentations/results-and-presentations", "reviewNote": "Results and trading statements reviewed; no qualifying event captured." },
+    { "ticker": "BA", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://investors.baesystems.com/results-centre", "reviewNote": "Results and trading statements reviewed; no qualifying event captured." },
+    { "ticker": "NG", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.nationalgrid.com/investors/events/results-centre", "reviewNote": "Results archive reviewed; no qualifying event captured." }
+  ]
+}

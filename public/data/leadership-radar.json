@@ -1,9 +1,9 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-08T06:24:07.696663+00:00",
+    "generatedAt": "2026-08-08T07:13:58.755847+00:00",
     "asOfDate": "2026-08-06",
-    "methodologyVersion": "0.2",
+    "methodologyVersion": "0.3",
     "rosterSource": {
       "name": "Wikipedia FTSE 100 constituent table",
       "url": "https://en.wikipedia.org/wiki/FTSE_100_Index",
@@ -13,12 +13,20 @@
     "ratedCompanyCount": 25,
     "constituentCount": 100,
     "profitWarningCoverage": {
-      "eventCount": 3,
-      "companyCount": 3,
+      "eventCount": 4,
+      "companyCount": 4,
+      "reviewedCompanyCount": 25,
       "asOfDate": "2026-08-08",
       "lookbackMonths": 36,
       "definition": "A qualifying event is an official issuer announcement that either cuts full-year earnings guidance or quantifies a material prospective adverse impact on profit. Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded.",
-      "scoreTreatment": "Displayed as a source-verified overlay and excluded from the pressure score until cohort-wide research coverage is complete."
+      "scoreTreatment": "Displayed as a source-verified overlay and excluded from the pressure score pending calibration and outcome testing."
+    },
+    "successionCoverage": {
+      "activeCaseCount": 1,
+      "reviewedCompanyCount": 25,
+      "asOfDate": "2026-08-08",
+      "definition": "An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office.",
+      "scoreTreatment": "Displayed as a source-verified status and excluded from the pressure score."
     },
     "scoreDefinition": {
       "label": "Leadership transition pressure",
@@ -27,6 +35,7 @@
       "chair": "Tenure pressure rises toward the UK Code's nine-year chair independence and succession reference point, capped at 80 points.",
       "dissent": "Up to 20 additional points reflect verified 20%+ dissent on management-sponsored resolutions in the existing tracker window. Shareholder proposals are excluded.",
       "profitWarnings": "Qualifying official issuer events are shown as an evidence overlay but do not yet alter the score.",
+      "succession": "Officially announced active CEO and Chair succession processes are shown as a status overlay but do not alter the score.",
       "bands": {
         "Lower": "0-24",
         "Watch": "25-49",
@@ -36,9 +45,10 @@
     },
     "limitations": [
       "This is a research prioritisation score, not a prediction that an individual will leave office.",
-      "25 companies have source-verified leadership records in methodology v0.1; all others remain visibly unrated.",
+      "25 companies have source-verified leadership records in methodology 0.3; all others remain visibly unrated.",
       "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-      "Profit-warning evidence is deliberately narrow and event absence means only that no qualifying event is captured in the current curated file.",
+      "The verified cohort received a consistent 36-month profit-warning review; event absence still means no qualifying event was captured, not proof of absence.",
+      "Succession status reflects official announcements found by the evidence date and may change between refreshes.",
       "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded."
     ],
     "validation": {
@@ -68,7 +78,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -92,7 +107,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -116,7 +136,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -140,7 +165,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -164,7 +194,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -232,7 +267,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "AAL",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.angloamerican.com/media/press-releases",
+          "reviewNote": "Production, cost and capital guidance changes are excluded because they were not explicit Group earnings warnings."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -286,7 +331,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "ANTO",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.antofagasta.co.uk/investors/reports-presentations/",
+          "reviewNote": "Production and cost guidance changes are excluded from the profit-warning definition."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -310,7 +365,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -364,7 +424,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "AZN",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.astrazeneca.com/investor-relations/results-and-presentations.html",
+          "reviewNote": "Financial-results archive reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -388,7 +458,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -412,7 +487,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -436,7 +516,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -490,7 +575,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "BA",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://investors.baesystems.com/results-centre",
+          "reviewNote": "Results and trading statements reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -544,7 +639,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "BARC",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://home.barclays/investor-relations/reports-and-events/results/",
+          "reviewNote": "Results archive reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -568,7 +673,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -592,7 +702,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -660,7 +775,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "BP",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.bp.com/en/global/corporate/investors/results-reporting-and-presentations.html",
+          "reviewNote": "Results and quarterly indicators reviewed; no qualifying full-year earnings warning captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -684,7 +809,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -708,7 +838,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -732,7 +867,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -756,7 +896,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -780,7 +925,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -848,7 +998,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "CNA",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.centrica.com/investors/results-reports-and-presentations/results-reports-and-presentations/archive/",
+          "reviewNote": "Segment-level guidance movements were reviewed; offsetting Group movements did not meet the defined threshold."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -916,7 +1076,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "CCEP",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://ir.cocacolaep.com/news-releases",
+          "reviewNote": "Issuer announcements reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -940,7 +1110,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -964,7 +1139,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1030,9 +1210,41 @@
         }
       },
       "profitWarningEvidence": {
+        "count": 1,
+        "latestDate": "2024-10-28",
+        "events": [
+          {
+            "id": "ccc-2024-10-28-guidance-cut",
+            "ticker": "CCC",
+            "companyName": "Computacenter",
+            "announcementDate": "2024-10-28",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2024",
+            "metric": "Adjusted profit before tax at constant currency",
+            "previousGuidance": "Further progress versus FY 2023",
+            "revisedGuidance": "Modestly behind FY 2023",
+            "changePct": null,
+            "summary": "Computacenter revised its FY24 adjusted profit outlook from further progress to modestly behind the prior year after a softer end to the third quarter.",
+            "drivers": [
+              "Softer-than-anticipated end to the third quarter",
+              "Prudent corporate technology spending",
+              "Weaker performance in France"
+            ],
+            "sourceUrl": "https://investors.computacenter.com/news-releases/news-release-details/computacenter-q3-trading-update-28-october-2024",
+            "sourceLabel": "Computacenter Q3 2024 trading update"
+          }
+        ],
+        "review": {
+          "ticker": "CCC",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://investors.computacenter.com/news-releases",
+          "reviewNote": "The October 2024 full-year adjusted profit downgrade is captured."
+        }
+      },
+      "successionEvidence": {
         "count": 0,
-        "latestDate": null,
-        "events": []
+        "cases": []
       }
     },
     {
@@ -1112,7 +1324,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "CTEC",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.convatecgroup.com/investors/results-centre/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1136,7 +1358,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1160,7 +1387,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1184,7 +1416,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1208,7 +1445,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1232,7 +1474,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1256,7 +1503,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1280,7 +1532,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1304,7 +1561,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1328,7 +1590,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1352,7 +1619,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1376,7 +1648,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1400,7 +1677,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1424,7 +1706,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1448,7 +1735,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1472,7 +1764,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1496,7 +1793,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1550,7 +1852,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "HSBA",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.hsbc.com/investors/results-and-announcements",
+          "reviewNote": "Results reviewed; credit-loss and operating-metric guidance movements are excluded where Group profit targets were retained."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1574,7 +1886,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1598,7 +1915,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1678,7 +2000,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "IHG",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.ihgplc.com/investors/results-reports-and-presentations",
+          "reviewNote": "Results archive reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1746,7 +2078,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "IMI",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.imiplc.com/en/investors/results-reports-presentations/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1770,7 +2112,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1794,7 +2141,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1818,7 +2170,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1842,7 +2199,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1866,7 +2228,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1890,7 +2257,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -1914,7 +2286,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2004,6 +2381,31 @@
             "sourceUrl": "https://www.kingfisher.com/~/media/Files/K/Kingfisher-Plc/Universal/documents/media/news-and-insights/2023/20230919-2023-24-half-year-results-rns-part-1.pdf",
             "sourceLabel": "Kingfisher FY 2023/24 half-year results"
           }
+        ],
+        "review": {
+          "ticker": "KGF",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.kingfisher.com/investors",
+          "reviewNote": "The September 2023 adjusted profit before tax downgrade is captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 1,
+        "cases": [
+          {
+            "id": "kgf-ceo-2026-05-06-search-underway",
+            "ticker": "KGF",
+            "role": "ceo",
+            "status": "search-underway",
+            "announcedDate": "2026-05-06",
+            "incumbentName": "Thierry Garnier",
+            "successorName": null,
+            "incumbentDepartureDate": null,
+            "successorStartDate": null,
+            "summary": "Thierry Garnier has resigned to take another role. He remains CEO during a 12-month notice period while the Nomination Committee conducts an internal and external successor search.",
+            "sourceUrl": "https://www.kingfisher.com/media/news/2026/directorate-change",
+            "sourceLabel": "Kingfisher directorate change"
+          }
         ]
       }
     },
@@ -2028,7 +2430,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2052,7 +2459,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2076,7 +2488,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2100,7 +2517,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2168,7 +2590,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "LSEG",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.lseg.com/en/investor-relations/financial-results",
+          "reviewNote": "Financial-results archive reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2192,7 +2624,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2268,7 +2705,17 @@
             "sourceUrl": "https://corporate.marksandspencer.com/newsroom/press-releases/full-year-results-52-weeks-ended-29-march-2025",
             "sourceLabel": "Marks & Spencer FY 2024/25 results"
           }
-        ]
+        ],
+        "review": {
+          "ticker": "MKS",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://corporate.marksandspencer.com/investors/our-performance-updates/results-reports-webcasts-presentations",
+          "reviewNote": "The quantified prospective cyber-related operating-profit impact is captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2336,7 +2783,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "MRO",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.melroseplc.net/investors/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2360,7 +2817,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2414,7 +2876,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "NG",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.nationalgrid.com/investors/events/results-centre",
+          "reviewNote": "Results archive reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2468,7 +2940,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "NWG",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://investors.natwestgroup.com/results-centre.aspx",
+          "reviewNote": "Results reviewed; net-interest-margin and other operating-metric changes are excluded without an explicit Group earnings warning."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2522,7 +3004,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "NXT",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.nextplc.co.uk/investors/reports-and-presentations/2025-26",
+          "reviewNote": "Trading statements reviewed; guidance movements in the window were not qualifying downward profit revisions."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2546,7 +3038,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2570,7 +3067,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2594,7 +3096,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2618,7 +3125,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2642,7 +3154,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2666,7 +3183,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2690,7 +3212,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2780,7 +3307,17 @@
             "sourceUrl": "https://www.rentokil-initial.com/~/media/Files/R/Rentokil/documents/rns-11-september-2024.pdf",
             "sourceLabel": "Rentokil Initial trading update"
           }
-        ]
+        ],
+        "review": {
+          "ticker": "RTO",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.rentokil-initial.com/investors/results-centre/results-2026.aspx",
+          "reviewNote": "The September 2024 full-year adjusted profit downgrade is captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2848,7 +3385,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "RIO",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.riotinto.com/en/news/releases",
+          "reviewNote": "Results and production updates reviewed; operational guidance changes are excluded from the profit-warning definition."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2872,7 +3419,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2896,7 +3448,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2920,7 +3477,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2944,7 +3506,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2968,7 +3535,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -2992,7 +3564,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3016,7 +3593,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3084,7 +3666,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "SHEL",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.shell.com/investors/results-and-reporting.html",
+          "reviewNote": "Quarterly outlook updates reviewed; no qualifying full-year profit warning captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3108,7 +3700,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3132,7 +3729,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3156,7 +3758,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3180,7 +3787,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3204,7 +3816,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3228,7 +3845,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3252,7 +3874,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3306,7 +3933,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "TSCO",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://origin.tescoplc.com/investors/reports-results-and-presentations/results-and-presentations",
+          "reviewNote": "Results and trading statements reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3330,7 +3967,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3398,7 +4040,17 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": {
+          "ticker": "ULVR",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.unilever.com/investors/results-events/",
+          "reviewNote": "Results and trading statements reviewed; no qualifying event captured."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3422,7 +4074,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3446,7 +4103,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3470,7 +4132,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     },
     {
@@ -3494,7 +4161,12 @@
       "profitWarningEvidence": {
         "count": 0,
         "latestDate": null,
-        "events": []
+        "events": [],
+        "review": null
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
       }
     }
   ]

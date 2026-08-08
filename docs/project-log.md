@@ -113,3 +113,25 @@
 - Source health distinguishes active pages, reachable pages with no monitorable matches, and unavailable pages.
 - A newly reachable source establishes a baseline before generating candidates, preventing a full historic archive from flooding the queue.
 - The monitor validates exact cohort alignment, unique candidate IDs, HTTPS source URLs, and review statuses.
+
+## Evidence audit and active succession overlay v0.3
+
+### Warning audit decision
+
+- Applied one explicit 36-month review protocol to all 25 companies in the source-verified cohort.
+- Captured four qualifying official issuer events: Marks & Spencer, Computacenter, Rentokil Initial, and Kingfisher.
+- Recorded a source and review outcome for every company, including transparent exclusions for operating-metric, production, cost, and segment-level changes that did not meet the Group earnings definition.
+- Kept warnings outside the score pending calibration and outcome testing; complete review coverage does not by itself justify a weighting.
+
+### Succession decision
+
+- Reviewed the same 25-company cohort for official active CEO and Chair succession announcements.
+- Captured Kingfisher's active CEO search and linked the official directorate-change announcement.
+- Excluded informal speculation, generic succession-planning language, completed appointments, and governance-relevant tenure extensions where no active process was announced.
+- Added exact-cohort, incumbent, role, status, date, and source validation while leaving the pressure score unchanged.
+
+### Monitor improvement
+
+- Repointed six issuer configurations to more stable official results or announcement hubs.
+- Increased active monitor coverage from seven to 11 sources; 15 remain reachable and ten unavailable to the automated fetcher.
+- Re-established the monitor baseline without creating retrospective review noise.

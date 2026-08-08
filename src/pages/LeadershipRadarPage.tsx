@@ -59,9 +59,14 @@ export function LeadershipRadarPage({ data }: LeadershipRadarPageProps) {
     (total, company) => total + company.profitWarningEvidence.count,
     0,
   )
+  const successionCount = visibleCompanies.reduce(
+    (total, company) => total + company.successionEvidence.cases.filter((item) => item.role === role).length,
+    0,
+  )
   const selected =
     data.companies.find((company) => company.ticker === selectedTicker) ?? visibleCompanies[0]
   const selectedRole = selected?.roles[role]
+  const selectedSuccession = selected?.successionEvidence.cases.find((item) => item.role === role)
 
   function resetFilters() {
     setSector('All sectors')
@@ -111,7 +116,7 @@ export function LeadershipRadarPage({ data }: LeadershipRadarPageProps) {
           <div className="radar-kpis">
             <div><span>Rated in view</span><strong>{ratedVisible.length}</strong></div>
             <div><span>Average pressure</span><strong>{averageScore.toFixed(0)}</strong></div>
-            <div><span>Acute / warning signals</span><strong>{acuteCount} / {warningCount}</strong></div>
+            <div><span>Acute / warnings / live process</span><strong>{acuteCount} / {warningCount} / {successionCount}</strong></div>
             <div><span>Evidence date</span><strong>{new Date(data.metadata.asOfDate).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</strong></div>
           </div>
 
@@ -135,7 +140,12 @@ export function LeadershipRadarPage({ data }: LeadershipRadarPageProps) {
                       <span>{company.ticker}</span>
                       <small>{universe === 'rated' ? company.companyName : roleData.rated ? roleData.band : 'Pending'}</small>
                       <strong>{roleData.score?.toFixed(0) ?? '—'}</strong>
-                      {company.profitWarningEvidence.count ? <i className="heat-tile__warning" title={`${company.profitWarningEvidence.count} qualifying warning event${company.profitWarningEvidence.count === 1 ? '' : 's'} captured`}>PW</i> : null}
+                      {company.profitWarningEvidence.count || company.successionEvidence.cases.some((item) => item.role === role) ? (
+                        <span className="heat-tile__signals">
+                          {company.profitWarningEvidence.count ? <i className="heat-tile__warning" title={`${company.profitWarningEvidence.count} qualifying warning event${company.profitWarningEvidence.count === 1 ? '' : 's'} captured`}>PW</i> : null}
+                          {company.successionEvidence.cases.some((item) => item.role === role) ? <i className="heat-tile__succession" title={`Official ${formatRole(role)} succession process captured`}>SC</i> : null}
+                        </span>
+                      ) : null}
                     </button>
                   )
                 })}
@@ -161,6 +171,14 @@ export function LeadershipRadarPage({ data }: LeadershipRadarPageProps) {
                       </dl>
                       <p className="evidence-rail__readout">{selectedRole.reason}</p>
                       <a className="evidence-rail__source" href={selectedRole.sourceUrl} target="_blank" rel="noreferrer">View primary leadership source ↗</a>
+                      {selectedSuccession ? (
+                        <div className="evidence-rail__succession">
+                          <div><span>Live succession process</span><time>{new Date(selectedSuccession.announcedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</time></div>
+                          <strong>{selectedSuccession.status === 'search-underway' ? `${formatRole(role)} search underway` : selectedSuccession.status === 'successor-announced' ? 'Successor announced' : 'Departure announced'}</strong>
+                          <p>{selectedSuccession.summary}</p>
+                          <a href={selectedSuccession.sourceUrl} target="_blank" rel="noreferrer">View official announcement ↗</a>
+                        </div>
+                      ) : null}
                       {selected.profitWarningEvidence.events[0] ? (
                         <div className="evidence-rail__warning">
                           <div><span>Profit warning signal</span><time>{new Date(selected.profitWarningEvidence.events[0].announcementDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</time></div>
@@ -178,6 +196,7 @@ export function LeadershipRadarPage({ data }: LeadershipRadarPageProps) {
                     <p>{role === 'ceo' ? data.metadata.scoreDefinition.ceo : data.metadata.scoreDefinition.chair}</p>
                     <p>{data.metadata.scoreDefinition.dissent}</p>
                     <p>{data.metadata.scoreDefinition.profitWarnings}</p>
+                    <p>{data.metadata.scoreDefinition.succession}</p>
                   </div>
                 </>
               ) : null}

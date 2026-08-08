@@ -155,6 +155,29 @@ export type LeadershipCompany = {
       sourceUrl: string
       sourceLabel: string
     }>
+    review: {
+      ticker: string
+      outcome: 'qualifying-event-captured' | 'reviewed-no-qualifying-event'
+      sourceUrl: string
+      reviewNote: string
+    } | null
+  }
+  successionEvidence: {
+    count: number
+    cases: Array<{
+      id: string
+      ticker: string
+      role: 'ceo' | 'chair'
+      status: 'search-underway' | 'successor-announced' | 'departure-announced'
+      announcedDate: string
+      incumbentName: string
+      successorName: string | null
+      incumbentDepartureDate: string | null
+      successorStartDate: string | null
+      summary: string
+      sourceUrl: string
+      sourceLabel: string
+    }>
   }
   roles: {
     ceo: LeadershipRole
@@ -173,8 +196,16 @@ export type LeadershipRadarData = {
     profitWarningCoverage: {
       eventCount: number
       companyCount: number
+      reviewedCompanyCount: number
       asOfDate: string
       lookbackMonths: number
+      definition: string
+      scoreTreatment: string
+    }
+    successionCoverage: {
+      activeCaseCount: number
+      reviewedCompanyCount: number
+      asOfDate: string
       definition: string
       scoreTreatment: string
     }
@@ -191,6 +222,7 @@ export type LeadershipRadarData = {
       chair: string
       dissent: string
       profitWarnings: string
+      succession: string
       bands: Record<string, string>
     }
     limitations: string[]

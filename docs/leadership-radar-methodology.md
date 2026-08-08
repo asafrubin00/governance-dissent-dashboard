@@ -4,13 +4,14 @@
 
 The radar prioritises FTSE 100 companies for closer leadership-succession research. It does not predict that a CEO or Chair will leave office, and it is not a governance-quality rating.
 
-Methodology `v0.2` separates scored signals from an evidence overlay:
+Methodology `v0.3` separates scored signals from evidence overlays:
 
 - role-specific tenure pressure
 - qualifying significant dissent on management-sponsored resolutions in the existing Proxy Voting dataset
 - official issuer profit-warning and material prospective profit-impact announcements
+- officially announced active CEO and Chair succession processes
 
-Profit-warning evidence is visible but not scored until coverage is comparable across the verified cohort. Share-price stress, activism, controversies, and broader news are not yet included.
+Profit-warning and succession evidence are visible but not scored. Share-price stress, activism, controversies, and broader news are not yet included.
 
 ## Universe and coverage
 
@@ -55,9 +56,17 @@ The initial overlay uses a 36-month lookback and includes only official issuer a
 
 Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded. Each event records its announcement date, affected period, event type, severity, concise summary, principal drivers, and primary-source link.
 
-The current source file contains three high-confidence events across Rentokil Initial, Marks & Spencer, and Kingfisher. This is intentionally a narrow initial set, not complete cohort coverage. A company without a badge should therefore be read as “no qualifying event captured in the current curated file,” not “no profit warning issued.”
+The same review protocol was applied to all 25 companies in the verified cohort for the 36 months to 8 August 2026. Four high-confidence events were captured across Rentokil Initial, Marks & Spencer, Kingfisher, and Computacenter. Review outcomes and source hubs are recorded in `data/profit_warning_reviews.json`.
 
-The overlay does not alter the 0-100 pressure score in methodology `v0.2`. A bounded warning contribution will only be considered after the same research protocol has been applied across the full verified cohort.
+A company without a warning badge means no qualifying event was captured under this protocol, not proof that no adverse announcement occurred. The overlay does not alter the 0-100 pressure score in methodology `v0.3`; any score contribution requires calibration and outcome testing first.
+
+## Active succession overlay
+
+An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office. Informal speculation, general succession-planning language, and completed appointments are excluded.
+
+All 25 rated companies were reviewed to 8 August 2026. The current release captures one active process: Kingfisher's internal and external CEO search following Thierry Garnier's announced resignation. The exact incumbent, status, dates, named successor where available, and primary-source link are stored in `data/succession_sources.json`.
+
+Succession status is displayed as live evidence and does not alter the pressure score. Absence means no qualifying official announcement was captured by the evidence date, not proof that a board is not planning succession privately.
 
 ## Pressure bands
 
@@ -80,6 +89,10 @@ The build fails if it finds:
 - an unsupported event type or severity
 - an invalid, future, or out-of-window event date
 - missing source evidence or an impossible percentage change
+- warning reviews that do not exactly cover the verified cohort
+- warning-review outcomes that do not reconcile to captured events
+- succession reviews that do not exactly cover the verified cohort
+- an invalid succession status, date, source, role, or incumbent mismatch
 
 The generated file records validation status, methodology version, source mode, generation time, evidence date, and limitations.
 
@@ -87,4 +100,4 @@ The generated file records validation status, methodology version, source mode, 
 
 `npm run data` refreshes the public constituent snapshot, rebuilds the Proxy Voting dataset, recalculates radar scores, and runs as part of the weekly GitHub Actions workflow.
 
-Leadership appointments and profit-warning events remain manually curated because issuer disclosures vary and a false automated match would be more damaging than visibly incomplete coverage. The weekly workflow recalculates and validates approved evidence but does not yet discover and publish new events autonomously.
+Leadership appointments, profit-warning events, and succession cases remain editorially approved because issuer disclosures vary and a false automated match would be more damaging than a visible evidence gap. The weekly monitor discovers candidate issuer links, but never publishes them as analytical evidence automatically.

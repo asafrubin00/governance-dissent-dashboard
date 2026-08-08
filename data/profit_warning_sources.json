@@ -1,9 +1,30 @@
 {
   "asOfDate": "2026-08-08",
   "lookbackMonths": 36,
-  "methodologyVersion": "0.2",
+  "methodologyVersion": "0.3",
   "definition": "A qualifying event is an official issuer announcement that either cuts full-year earnings guidance or quantifies a material prospective adverse impact on profit. Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded.",
   "events": [
+    {
+      "id": "ccc-2024-10-28-guidance-cut",
+      "ticker": "CCC",
+      "companyName": "Computacenter",
+      "announcementDate": "2024-10-28",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2024",
+      "metric": "Adjusted profit before tax at constant currency",
+      "previousGuidance": "Further progress versus FY 2023",
+      "revisedGuidance": "Modestly behind FY 2023",
+      "changePct": null,
+      "summary": "Computacenter revised its FY24 adjusted profit outlook from further progress to modestly behind the prior year after a softer end to the third quarter.",
+      "drivers": [
+        "Softer-than-anticipated end to the third quarter",
+        "Prudent corporate technology spending",
+        "Weaker performance in France"
+      ],
+      "sourceUrl": "https://investors.computacenter.com/news-releases/news-release-details/computacenter-q3-trading-update-28-october-2024",
+      "sourceLabel": "Computacenter Q3 2024 trading update"
+    },
     {
       "id": "rto-2024-09-11-guidance-cut",
       "ticker": "RTO",

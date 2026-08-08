@@ -1,0 +1,22 @@
+{
+  "asOfDate": "2026-08-08",
+  "methodologyVersion": "0.3",
+  "definition": "An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office.",
+  "reviewedTickers": ["SHEL", "NXT", "MKS", "CNA", "LSEG", "ULVR", "IHG", "RIO", "HSBA", "MRO", "CTEC", "CCEP", "AAL", "BP", "CCC", "IMI", "RTO", "KGF", "ANTO", "NWG", "AZN", "BARC", "TSCO", "BA", "NG"],
+  "cases": [
+    {
+      "id": "kgf-ceo-2026-05-06-search-underway",
+      "ticker": "KGF",
+      "role": "ceo",
+      "status": "search-underway",
+      "announcedDate": "2026-05-06",
+      "incumbentName": "Thierry Garnier",
+      "successorName": null,
+      "incumbentDepartureDate": null,
+      "successorStartDate": null,
+      "summary": "Thierry Garnier has resigned to take another role. He remains CEO during a 12-month notice period while the Nomination Committee conducts an internal and external successor search.",
+      "sourceUrl": "https://www.kingfisher.com/media/news/2026/directorate-change",
+      "sourceLabel": "Kingfisher directorate change"
+    }
+  ]
+}

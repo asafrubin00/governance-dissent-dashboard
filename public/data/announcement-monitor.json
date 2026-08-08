@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-08T06:41:47.898866+00:00",
+    "generatedAt": "2026-08-08T07:13:02.560446+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a review candidate only. Nothing is added to the radar without source verification.",
     "sourceCount": 25,
-    "activeSourceCount": 7,
+    "activeSourceCount": 11,
     "reachableSourceCount": 15,
     "unavailableSourceCount": 10,
     "newCandidateCount": 0,
@@ -27,8 +27,8 @@
     },
     {
       "ticker": "MKS",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0
+      "status": "active",
+      "matchedLinkCount": 9
     },
     {
       "ticker": "CNA",
@@ -37,8 +37,8 @@
     },
     {
       "ticker": "LSEG",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0
+      "status": "active",
+      "matchedLinkCount": 186
     },
     {
       "ticker": "ULVR",
@@ -47,8 +47,8 @@
     },
     {
       "ticker": "IHG",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0
+      "status": "active",
+      "matchedLinkCount": 9
     },
     {
       "ticker": "RIO",
@@ -67,8 +67,8 @@
     },
     {
       "ticker": "CTEC",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0
+      "status": "active",
+      "matchedLinkCount": 5
     },
     {
       "ticker": "CCEP",

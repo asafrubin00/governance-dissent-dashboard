@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_PATH = ROOT / "data" / "leadership_sources.json"
 PROFIT_WARNING_PATH = ROOT / "data" / "profit_warning_sources.json"
+PROFIT_WARNING_REVIEW_PATH = ROOT / "data" / "profit_warning_reviews.json"
+SUCCESSION_PATH = ROOT / "data" / "succession_sources.json"
 ROSTER_PATH = ROOT / "data" / "ftse100_constituents.json"
 TRACKER_PATH = ROOT / "public" / "data" / "tracker-data.json"
 OUTPUT_PATH = ROOT / "public" / "data" / "leadership-radar.json"
@@ -179,13 +181,83 @@ def profit_warnings_by_company(
     return grouped, errors
 
 
+def validate_profit_warning_reviews(
+    review_source: dict[str, Any],
+    curated_tickers: set[str],
+    warning_tickers: set[str],
+) -> tuple[dict[str, dict[str, Any]], list[str]]:
+    errors: list[str] = []
+    reviews = review_source.get("reviews", [])
+    review_tickers = [review.get("ticker") for review in reviews]
+    allowed_outcomes = {"qualifying-event-captured", "reviewed-no-qualifying-event"}
+    if set(review_tickers) != curated_tickers or len(review_tickers) != len(curated_tickers):
+        errors.append("Profit-warning reviews do not exactly cover the verified leadership cohort.")
+    if len(review_tickers) != len(set(review_tickers)):
+        errors.append("Duplicate profit-warning review ticker found.")
+    captured_tickers = set()
+    for review in reviews:
+        if review.get("outcome") not in allowed_outcomes:
+            errors.append(f"Unsupported profit-warning review outcome for {review.get('ticker')}.")
+        if not review.get("sourceUrl") or not review.get("reviewNote"):
+            errors.append(f"Missing profit-warning review evidence for {review.get('ticker')}.")
+        if review.get("outcome") == "qualifying-event-captured":
+            captured_tickers.add(review.get("ticker"))
+    if captured_tickers != warning_tickers:
+        errors.append("Captured profit-warning review tickers do not match the event dataset.")
+    return {review["ticker"]: review for review in reviews}, errors
+
+
+def succession_by_company(
+    succession_source: dict[str, Any],
+    curated_by_ticker: dict[str, dict[str, Any]],
+) -> tuple[dict[str, dict[str, Any]], list[str]]:
+    errors: list[str] = []
+    curated_tickers = set(curated_by_ticker)
+    reviewed_tickers = succession_source.get("reviewedTickers", [])
+    if set(reviewed_tickers) != curated_tickers or len(reviewed_tickers) != len(curated_tickers):
+        errors.append("Succession reviews do not exactly cover the verified leadership cohort.")
+    if len(reviewed_tickers) != len(set(reviewed_tickers)):
+        errors.append("Duplicate succession review ticker found.")
+    allowed_statuses = {"search-underway", "successor-announced", "departure-announced"}
+    grouped: dict[str, dict[str, Any]] = {}
+    seen_ids: set[str] = set()
+    as_of = date.fromisoformat(succession_source["asOfDate"])
+    for case in succession_source.get("cases", []):
+        case_id = case.get("id", "")
+        ticker = case.get("ticker", "")
+        role = case.get("role")
+        if not case_id or case_id in seen_ids:
+            errors.append(f"Missing or duplicate succession case ID: {case_id or '[blank]'}.")
+        seen_ids.add(case_id)
+        if ticker not in curated_tickers or role not in {"ceo", "chair"}:
+            errors.append(f"Invalid succession ticker or role for {case_id}.")
+            continue
+        if case.get("status") not in allowed_statuses:
+            errors.append(f"Unsupported succession status for {case_id}.")
+        if case.get("incumbentName") != curated_by_ticker[ticker]["roles"][role]["name"]:
+            errors.append(f"Succession incumbent does not match leadership evidence for {case_id}.")
+        if not case.get("sourceUrl") or not case.get("summary"):
+            errors.append(f"Missing succession evidence for {case_id}.")
+        try:
+            if date.fromisoformat(case["announcedDate"]) > as_of:
+                errors.append(f"Future-dated succession case: {case_id}.")
+        except (KeyError, ValueError):
+            errors.append(f"Invalid succession announcement date for {case_id}.")
+        grouped.setdefault(ticker, {"count": 0, "cases": []})
+        grouped[ticker]["count"] += 1
+        grouped[ticker]["cases"].append(case)
+    return grouped, errors
+
+
 def validate(
     roster: list[dict[str, str]],
     curated: list[dict[str, Any]],
     companies: list[dict[str, Any]],
     warning_errors: list[str],
+    review_errors: list[str],
+    succession_errors: list[str],
 ) -> dict[str, Any]:
-    errors: list[str] = [*warning_errors]
+    errors: list[str] = [*warning_errors, *review_errors, *succession_errors]
     tickers = [row["ticker"] for row in roster]
     if len(roster) != 100:
         errors.append(f"Expected 100 constituents, found {len(roster)}.")
@@ -205,6 +277,8 @@ def validate(
 def main() -> None:
     source = json.loads(SOURCE_PATH.read_text(encoding="utf-8"))
     warning_source = json.loads(PROFIT_WARNING_PATH.read_text(encoding="utf-8"))
+    warning_review_source = json.loads(PROFIT_WARNING_REVIEW_PATH.read_text(encoding="utf-8"))
+    succession_source = json.loads(SUCCESSION_PATH.read_text(encoding="utf-8"))
     roster, roster_mode = load_roster()
     dissent = management_dissent_by_company()
     warnings, warning_errors = profit_warnings_by_company(
@@ -212,6 +286,12 @@ def main() -> None:
         {row["ticker"] for row in roster},
     )
     curated_by_ticker = {row["ticker"]: row for row in source["companies"]}
+    warning_reviews, review_errors = validate_profit_warning_reviews(
+        warning_review_source,
+        set(curated_by_ticker),
+        set(warnings),
+    )
+    successions, succession_errors = succession_by_company(succession_source, curated_by_ticker)
     as_of = source["asOfDate"]
     companies = []
 
@@ -226,6 +306,14 @@ def main() -> None:
         warning_record = warnings.get(
             constituent["ticker"],
             {"count": 0, "latestDate": None, "events": []},
+        )
+        warning_record = {
+            **warning_record,
+            "review": warning_reviews.get(constituent["ticker"]),
+        }
+        succession_record = successions.get(
+            constituent["ticker"],
+            {"count": 0, "cases": []},
         )
 
         for role_name in ("ceo", "chair"):
@@ -270,9 +358,17 @@ def main() -> None:
             **constituent,
             "roles": role_output,
             "profitWarningEvidence": warning_record,
+            "successionEvidence": succession_record,
         })
 
-    validation = validate(roster, source["companies"], companies, warning_errors)
+    validation = validate(
+        roster,
+        source["companies"],
+        companies,
+        warning_errors,
+        review_errors,
+        succession_errors,
+    )
     if validation["status"] != "pass":
         raise RuntimeError("; ".join(validation["errors"]))
 
@@ -293,10 +389,18 @@ def main() -> None:
             "profitWarningCoverage": {
                 "eventCount": len(warning_source["events"]),
                 "companyCount": len(warnings),
+                "reviewedCompanyCount": len(warning_review_source["reviews"]),
                 "asOfDate": warning_source["asOfDate"],
                 "lookbackMonths": warning_source["lookbackMonths"],
                 "definition": warning_source["definition"],
-                "scoreTreatment": "Displayed as a source-verified overlay and excluded from the pressure score until cohort-wide research coverage is complete.",
+                "scoreTreatment": "Displayed as a source-verified overlay and excluded from the pressure score pending calibration and outcome testing.",
+            },
+            "successionCoverage": {
+                "activeCaseCount": len(succession_source["cases"]),
+                "reviewedCompanyCount": len(succession_source["reviewedTickers"]),
+                "asOfDate": succession_source["asOfDate"],
+                "definition": succession_source["definition"],
+                "scoreTreatment": "Displayed as a source-verified status and excluded from the pressure score.",
             },
             "scoreDefinition": {
                 "label": "Leadership transition pressure",
@@ -305,13 +409,15 @@ def main() -> None:
                 "chair": "Tenure pressure rises toward the UK Code's nine-year chair independence and succession reference point, capped at 80 points.",
                 "dissent": "Up to 20 additional points reflect verified 20%+ dissent on management-sponsored resolutions in the existing tracker window. Shareholder proposals are excluded.",
                 "profitWarnings": "Qualifying official issuer events are shown as an evidence overlay but do not yet alter the score.",
+                "succession": "Officially announced active CEO and Chair succession processes are shown as a status overlay but do not alter the score.",
                 "bands": {"Lower": "0-24", "Watch": "25-49", "Elevated": "50-69", "Acute": "70-100"},
             },
             "limitations": [
                 "This is a research prioritisation score, not a prediction that an individual will leave office.",
                 f"{len(source['companies'])} companies have source-verified leadership records in methodology {warning_source['methodologyVersion']}; all others remain visibly unrated.",
                 "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-                "Profit-warning evidence is deliberately narrow and event absence means only that no qualifying event is captured in the current curated file.",
+                "The verified cohort received a consistent 36-month profit-warning review; event absence still means no qualifying event was captured, not proof of absence.",
+                "Succession status reflects official announcements found by the evidence date and may change between refreshes.",
                 "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded.",
             ],
             "validation": validation,
