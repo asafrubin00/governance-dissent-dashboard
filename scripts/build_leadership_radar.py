@@ -190,8 +190,8 @@ def validate_profit_warning_reviews(
     reviews = review_source.get("reviews", [])
     review_tickers = [review.get("ticker") for review in reviews]
     allowed_outcomes = {"qualifying-event-captured", "reviewed-no-qualifying-event"}
-    if set(review_tickers) != curated_tickers or len(review_tickers) != len(curated_tickers):
-        errors.append("Profit-warning reviews do not exactly cover the verified leadership cohort.")
+    if not set(review_tickers).issubset(curated_tickers):
+        errors.append("Profit-warning reviews include a ticker outside the verified leadership cohort.")
     if len(review_tickers) != len(set(review_tickers)):
         errors.append("Duplicate profit-warning review ticker found.")
     captured_tickers = set()
@@ -377,7 +377,7 @@ def main() -> None:
             "title": "FTSE 100 Leadership Pressure Radar",
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "asOfDate": as_of,
-            "methodologyVersion": warning_source["methodologyVersion"],
+            "methodologyVersion": source["methodologyVersion"],
             "rosterSource": {
                 "name": "Wikipedia FTSE 100 constituent table",
                 "url": ROSTER_URL,
@@ -414,9 +414,9 @@ def main() -> None:
             },
             "limitations": [
                 "This is a research prioritisation score, not a prediction that an individual will leave office.",
-                f"{len(source['companies'])} companies have source-verified leadership records in methodology {warning_source['methodologyVersion']}; all others remain visibly unrated.",
+                f"{len(source['companies'])} companies have source-verified leadership records in methodology {source['methodologyVersion']}; all others remain visibly unrated.",
                 "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-                "The verified cohort received a consistent 36-month profit-warning review; event absence still means no qualifying event was captured, not proof of absence.",
+                f"The profit-warning review currently covers {len(warning_review_source['reviews'])} of {len(source['companies'])} rated companies; event absence outside that reviewed subset must not be interpreted as evidence of no warning.",
                 "Succession status reflects official announcements found by the evidence date and may change between refreshes.",
                 "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded.",
             ],

@@ -135,3 +135,24 @@
 - Repointed six issuer configurations to more stable official results or announcement hubs.
 - Increased active monitor coverage from seven to 11 sources; 15 remain reachable and ten unavailable to the automated fetcher.
 - Re-established the monitor baseline without creating retrospective review noise.
+
+## Leadership cohort and succession monitor v0.4
+
+### Coverage decision
+
+- Expanded the source-verified CEO and Chair cohort from 25 to 50 current FTSE 100 constituents.
+- Selected the additional companies for sector breadth and accessible official appointment evidence; the remaining 50 stay visibly unrated.
+- Preserved every existing score weight and calculation rule, so the release changes evidence coverage rather than methodology economics.
+- Kept the completed warning-history audit explicitly at 25 companies instead of implying that leadership verification also completed profit-warning research.
+
+### Live succession decision
+
+- Reviewed all 50 rated companies for active official CEO and Chair transition announcements to 8 August 2026.
+- Added live CEO cases for Babcock International, Barratt Redrow, and British Land, plus Chair cases for British American Tobacco and Burberry; Kingfisher remains active.
+- Recorded named successors and exact dates where disclosed, while retaining null dates where issuers stated only a quarter, year-end, or results-event trigger.
+
+### Automation decision
+
+- Expanded the weekly monitor from 25 to 50 official issuer sources and removed the hard-coded cohort size.
+- Split monitor terms into `earnings` and `succession` groups so candidates carry their review purpose.
+- Baselined existing links before monitoring; the first normal run reached 39 sources, found monitorable links on 22, and created no retrospective candidates.

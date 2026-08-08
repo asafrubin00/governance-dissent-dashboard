@@ -1,14 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-08T07:13:02.560446+00:00",
+    "generatedAt": "2026-08-08T07:36:07.991863+00:00",
     "mode": "monitor",
-    "publicationRule": "Detection creates a review candidate only. Nothing is added to the radar without source verification.",
-    "sourceCount": 25,
-    "activeSourceCount": 11,
-    "reachableSourceCount": 15,
-    "unavailableSourceCount": 10,
+    "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
+    "sourceCount": 50,
+    "activeSourceCount": 22,
+    "reachableSourceCount": 39,
+    "unavailableSourceCount": 11,
     "newCandidateCount": 0,
     "pendingCandidateCount": 0,
+    "pendingCandidateCountBySignal": {
+      "earnings": 0,
+      "succession": 0
+    },
     "validation": {
       "status": "pass",
       "errors": []
@@ -18,17 +22,29 @@
     {
       "ticker": "SHEL",
       "status": "reachable-no-matches",
-      "matchedLinkCount": 0
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "NXT",
       "status": "active",
-      "matchedLinkCount": 6
+      "matchedLinkCount": 6,
+      "matchedLinkCountBySignal": {
+        "earnings": 6,
+        "succession": 0
+      }
     },
     {
       "ticker": "MKS",
       "status": "active",
-      "matchedLinkCount": 9
+      "matchedLinkCount": 9,
+      "matchedLinkCountBySignal": {
+        "earnings": 9,
+        "succession": 0
+      }
     },
     {
       "ticker": "CNA",
@@ -38,7 +54,11 @@
     {
       "ticker": "LSEG",
       "status": "active",
-      "matchedLinkCount": 186
+      "matchedLinkCount": 186,
+      "matchedLinkCountBySignal": {
+        "earnings": 186,
+        "succession": 0
+      }
     },
     {
       "ticker": "ULVR",
@@ -48,17 +68,29 @@
     {
       "ticker": "IHG",
       "status": "active",
-      "matchedLinkCount": 9
+      "matchedLinkCount": 9,
+      "matchedLinkCountBySignal": {
+        "earnings": 9,
+        "succession": 0
+      }
     },
     {
       "ticker": "RIO",
       "status": "active",
-      "matchedLinkCount": 1
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "HSBA",
       "status": "active",
-      "matchedLinkCount": 19
+      "matchedLinkCount": 19,
+      "matchedLinkCountBySignal": {
+        "earnings": 19,
+        "succession": 0
+      }
     },
     {
       "ticker": "MRO",
@@ -68,7 +100,11 @@
     {
       "ticker": "CTEC",
       "status": "active",
-      "matchedLinkCount": 5
+      "matchedLinkCount": 5,
+      "matchedLinkCountBySignal": {
+        "earnings": 5,
+        "succession": 0
+      }
     },
     {
       "ticker": "CCEP",
@@ -78,7 +114,11 @@
     {
       "ticker": "AAL",
       "status": "active",
-      "matchedLinkCount": 2
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 0
+      }
     },
     {
       "ticker": "BP",
@@ -98,22 +138,38 @@
     {
       "ticker": "RTO",
       "status": "reachable-no-matches",
-      "matchedLinkCount": 0
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "KGF",
       "status": "active",
-      "matchedLinkCount": 1
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "ANTO",
       "status": "active",
-      "matchedLinkCount": 18
+      "matchedLinkCount": 20,
+      "matchedLinkCountBySignal": {
+        "earnings": 18,
+        "succession": 2
+      }
     },
     {
       "ticker": "NWG",
       "status": "active",
-      "matchedLinkCount": 1
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "AZN",
@@ -123,12 +179,20 @@
     {
       "ticker": "BARC",
       "status": "reachable-no-matches",
-      "matchedLinkCount": 0
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "TSCO",
       "status": "reachable-no-matches",
-      "matchedLinkCount": 0
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "BA",
@@ -139,6 +203,227 @@
       "ticker": "NG",
       "status": "unavailable",
       "error": "403 Client Error: Forbidden for url: https://www.nationalgrid.com/media-centre/press-releases"
+    },
+    {
+      "ticker": "III",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "ABF",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "AV",
+      "status": "active",
+      "matchedLinkCount": 4,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 3
+      }
+    },
+    {
+      "ticker": "BAB",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "BTRW",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "BEZ",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "BATS",
+      "status": "active",
+      "matchedLinkCount": 72,
+      "matchedLinkCountBySignal": {
+        "earnings": 39,
+        "succession": 34
+      }
+    },
+    {
+      "ticker": "BLND",
+      "status": "active",
+      "matchedLinkCount": 12,
+      "matchedLinkCountBySignal": {
+        "earnings": 9,
+        "succession": 3
+      }
+    },
+    {
+      "ticker": "BT.A",
+      "status": "active",
+      "matchedLinkCount": 4,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 2
+      }
+    },
+    {
+      "ticker": "BNZL",
+      "status": "active",
+      "matchedLinkCount": 4,
+      "matchedLinkCountBySignal": {
+        "earnings": 4,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "BRBY",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "CCH",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "CPG",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "CRDA",
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "DGE",
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 1
+      }
+    },
+    {
+      "ticker": "ENT",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "EXPN",
+      "status": "active",
+      "matchedLinkCount": 3,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 1
+      }
+    },
+    {
+      "ticker": "GLEN",
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "GSK",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "HLN",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "IAG",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "LLOY",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "REL",
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
+    },
+    {
+      "ticker": "RR",
+      "status": "unavailable",
+      "error": "HTTPSConnectionPool(host='www.rolls-royce.com', port=443): Read timed out. (read timeout=4)"
+    },
+    {
+      "ticker": "VOD",
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     }
   ]
 }

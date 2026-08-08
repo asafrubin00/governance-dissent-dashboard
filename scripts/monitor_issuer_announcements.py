@@ -44,16 +44,17 @@ def validate_config(config: dict[str, Any], queue: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     sources = config.get("sources", [])
     tickers = [source.get("ticker") for source in sources]
-    if len(sources) != 25:
-        errors.append(f"Expected 25 monitored issuers, found {len(sources)}.")
     if len(tickers) != len(set(tickers)):
         errors.append("Duplicate monitored ticker found.")
     leadership = json.loads(LEADERSHIP_PATH.read_text(encoding="utf-8"))
     leadership_tickers = {company["ticker"] for company in leadership["companies"]}
     if set(tickers) != leadership_tickers:
         errors.append("Monitored tickers do not exactly match the source-verified leadership cohort.")
-    if not config.get("keywords"):
-        errors.append("No announcement-monitor keywords configured.")
+    keyword_groups = config.get("keywordGroups", {})
+    if set(keyword_groups) != {"earnings", "succession"}:
+        errors.append("Monitor keyword groups must contain earnings and succession.")
+    if any(not keywords for keywords in keyword_groups.values()):
+        errors.append("Announcement-monitor keyword groups cannot be empty.")
     for source in sources:
         if not source.get("ticker") or not source.get("companyName"):
             errors.append("Monitor source is missing a ticker or company name.")
@@ -68,10 +69,15 @@ def validate_config(config: dict[str, Any], queue: dict[str, Any]) -> list[str]:
             errors.append(f"Unsupported review status for {item.get('id', '[unknown]')}.")
         if not item.get("url") or not item.get("ticker"):
             errors.append(f"Review candidate is missing a URL or ticker: {item.get('id', '[unknown]')}.")
+        if not set(item.get("signalTypes", [])).issubset(keyword_groups):
+            errors.append(f"Review candidate has an unsupported signal type: {item.get('id', '[unknown]')}.")
     return errors
 
 
-def fetch_candidates(source: dict[str, str], keywords: list[str]) -> tuple[list[dict[str, str]], str]:
+def fetch_candidates(
+    source: dict[str, str],
+    keyword_groups: dict[str, list[str]],
+) -> tuple[list[dict[str, Any]], str]:
     response = requests.get(
         source["url"],
         headers={"User-Agent": USER_AGENT},
@@ -87,12 +93,17 @@ def fetch_candidates(source: dict[str, str], keywords: list[str]) -> tuple[list[
         href = urljoin(response.url, link["href"])
         host = urlparse(href).netloc.lower().removeprefix("www.")
         haystack = f"{title} {href}".lower().replace("-", " ").replace("_", " ")
-        if not title or len(title) < 6 or not any(keyword in haystack for keyword in keywords):
+        signal_types = sorted(
+            group
+            for group, keywords in keyword_groups.items()
+            if any(keyword in haystack for keyword in keywords)
+        )
+        if not title or len(title) < 6 or not signal_types:
             continue
         if host != source_host and not host.endswith(f".{source_host}") and not source_host.endswith(f".{host}"):
             continue
         url = canonical_url(href)
-        matches[url] = {"title": title[:240], "url": url}
+        matches[url] = {"title": title[:240], "url": url, "signalTypes": signal_types}
 
     return sorted(matches.values(), key=lambda item: item["url"]), response.url
 
@@ -117,10 +128,10 @@ def main() -> None:
     source_health: list[dict[str, Any]] = []
     new_candidate_count = 0
 
-    fetch_results: dict[str, tuple[list[dict[str, str]], str] | Exception] = {}
+    fetch_results: dict[str, tuple[list[dict[str, Any]], str] | Exception] = {}
     with ThreadPoolExecutor(max_workers=len(config["sources"])) as executor:
         futures = {
-            executor.submit(fetch_candidates, source, config["keywords"]): source["ticker"]
+            executor.submit(fetch_candidates, source, config["keywordGroups"]): source["ticker"]
             for source in config["sources"]
         }
         for future in as_completed(futures):
@@ -153,9 +164,10 @@ def main() -> None:
                     "companyName": source["companyName"],
                     "title": item["title"],
                     "url": item["url"],
+                    "signalTypes": item["signalTypes"],
                     "detectedAt": now,
                     "status": "pending",
-                    "reviewNote": "Keyword match only; verify the official announcement before adding analytical evidence.",
+                    "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence.",
                 })
                 existing_queue_ids.add(item_id)
                 new_candidate_count += 1
@@ -172,6 +184,10 @@ def main() -> None:
                 "ticker": ticker,
                 "status": "active" if candidates else "reachable-no-matches",
                 "matchedLinkCount": len(candidates),
+                "matchedLinkCountBySignal": {
+                    group: sum(group in item["signalTypes"] for item in candidates)
+                    for group in config["keywordGroups"]
+                },
             })
         except Exception as error:
             snapshot["sources"][ticker] = {
@@ -192,13 +208,20 @@ def main() -> None:
         "metadata": {
             "generatedAt": now,
             "mode": "baseline" if args.baseline else "monitor",
-            "publicationRule": "Detection creates a review candidate only. Nothing is added to the radar without source verification.",
+            "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
             "sourceCount": len(config["sources"]),
             "activeSourceCount": active_count,
             "reachableSourceCount": reachable_count,
             "unavailableSourceCount": len(source_health) - reachable_count,
             "newCandidateCount": new_candidate_count,
             "pendingCandidateCount": sum(item["status"] == "pending" for item in queue["candidates"]),
+            "pendingCandidateCountBySignal": {
+                group: sum(
+                    item["status"] == "pending" and group in item.get("signalTypes", [])
+                    for item in queue["candidates"]
+                )
+                for group in config["keywordGroups"]
+            },
             "validation": {"status": "pass", "errors": []},
         },
         "sources": source_health,

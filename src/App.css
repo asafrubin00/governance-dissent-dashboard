@@ -1351,6 +1351,45 @@
   grid-auto-rows: minmax(0, 1fr);
 }
 
+.heat-map--cohort {
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 3px;
+}
+
+.heat-map--cohort .heat-tile {
+  padding: 6px 7px;
+  gap: 2px;
+}
+
+.heat-map--cohort .heat-tile span {
+  font-size: 0.65rem;
+}
+
+.heat-map--cohort .heat-tile small {
+  max-width: 82%;
+  font-size: 0.48rem;
+}
+
+.heat-map--cohort .heat-tile strong {
+  right: 6px;
+  bottom: 4px;
+  font-size: 0.75rem;
+}
+
+.heat-map--cohort .heat-tile__signals {
+  top: 5px;
+  right: 5px;
+}
+
+.heat-map--cohort .heat-tile__warning,
+.heat-map--cohort .heat-tile__succession {
+  min-width: 19px;
+  height: 14px;
+  padding: 0 4px;
+  font-size: 0.42rem;
+}
+
 .heat-map--pilot .heat-tile {
   padding: 8px 9px;
   gap: 3px;
@@ -1788,6 +1827,7 @@
   }
 
   .heat-map--pilot,
+  .heat-map--cohort,
   .heat-map--full {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: none;

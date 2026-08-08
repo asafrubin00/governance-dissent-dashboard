@@ -1,18 +1,32 @@
 {
-  "version": "0.1",
-  "keywords": [
-    "annual result",
-    "full year",
-    "half year",
-    "interim result",
-    "profit",
-    "outlook",
-    "guidance",
-    "trading statement",
-    "trading update",
-    "market update",
-    "financial result"
-  ],
+  "version": "0.2",
+  "keywordGroups": {
+    "earnings": [
+      "annual result",
+      "full year",
+      "half year",
+      "interim result",
+      "profit",
+      "outlook",
+      "guidance",
+      "trading statement",
+      "trading update",
+      "market update",
+      "financial result"
+    ],
+    "succession": [
+      "chief executive",
+      "ceo",
+      "chair succession",
+      "chair designate",
+      "chair appointment",
+      "directorate change",
+      "board change",
+      "succession plan",
+      "step down",
+      "retire"
+    ]
+  },
   "sources": [
     { "ticker": "SHEL", "companyName": "Shell", "url": "https://www.shell.com/investors/results-and-reporting.html" },
     { "ticker": "NXT", "companyName": "Next", "url": "https://www.nextplc.co.uk/investors/reports-and-presentations/2025-26" },
@@ -38,6 +52,31 @@
     { "ticker": "BARC", "companyName": "Barclays", "url": "https://home.barclays/news/press-releases/" },
     { "ticker": "TSCO", "companyName": "Tesco", "url": "https://origin.tescoplc.com/investors/reports-results-and-presentations/results-and-presentations" },
     { "ticker": "BA", "companyName": "BAE Systems", "url": "https://www.baesystems.com/en/media-centre/news-releases" },
-    { "ticker": "NG", "companyName": "National Grid", "url": "https://www.nationalgrid.com/media-centre/press-releases" }
+    { "ticker": "NG", "companyName": "National Grid", "url": "https://www.nationalgrid.com/media-centre/press-releases" },
+    { "ticker": "III", "companyName": "3i", "url": "https://www.3i.com/media/news/" },
+    { "ticker": "ABF", "companyName": "Associated British Foods", "url": "https://www.abf.co.uk/media/news" },
+    { "ticker": "AV", "companyName": "Aviva", "url": "https://www.aviva.com/newsroom/news-releases/" },
+    { "ticker": "BAB", "companyName": "Babcock International", "url": "https://www.babcockinternational.com/news/" },
+    { "ticker": "BTRW", "companyName": "Barratt Redrow", "url": "https://www.barrattredrow.co.uk/news" },
+    { "ticker": "BEZ", "companyName": "Beazley", "url": "https://www.beazley.com/en/news/" },
+    { "ticker": "BATS", "companyName": "British American Tobacco", "url": "https://www.bat.com/media/press-releases" },
+    { "ticker": "BLND", "companyName": "British Land", "url": "https://www.britishland.com/investors/press-releases/" },
+    { "ticker": "BT.A", "companyName": "BT Group", "url": "https://newsroom.bt.com/" },
+    { "ticker": "BNZL", "companyName": "Bunzl", "url": "https://www.bunzl.com/newsroom/" },
+    { "ticker": "BRBY", "companyName": "Burberry Group", "url": "https://www.burberryplc.com/news/corporate" },
+    { "ticker": "CCH", "companyName": "Coca-Cola HBC", "url": "https://www.coca-colahellenic.com/en/media/news/corporate_news" },
+    { "ticker": "CPG", "companyName": "Compass Group", "url": "https://www.compass-group.com/en/media/news.html" },
+    { "ticker": "CRDA", "companyName": "Croda International", "url": "https://www.croda.com/en-gb/media-hub/news" },
+    { "ticker": "DGE", "companyName": "Diageo", "url": "https://www.diageo.com/en/news-and-media/press-releases" },
+    { "ticker": "ENT", "companyName": "Entain", "url": "https://www.entaingroup.com/news-insights/latest-news/" },
+    { "ticker": "EXPN", "companyName": "Experian", "url": "https://www.experianplc.com/newsroom/press-releases" },
+    { "ticker": "GLEN", "companyName": "Glencore", "url": "https://www.glencore.com/media-and-insights/news" },
+    { "ticker": "GSK", "companyName": "GSK", "url": "https://www.gsk.com/en-gb/media/press-releases/" },
+    { "ticker": "HLN", "companyName": "Haleon", "url": "https://www.haleon.com/news/press-releases" },
+    { "ticker": "IAG", "companyName": "International Airlines Group", "url": "https://www.iairgroup.com/press-releases/" },
+    { "ticker": "LLOY", "companyName": "Lloyds Banking Group", "url": "https://www.lloydsbankinggroup.com/media/press-releases.html" },
+    { "ticker": "REL", "companyName": "RELX", "url": "https://www.relx.com/media/press-releases" },
+    { "ticker": "RR", "companyName": "Rolls-Royce Holdings", "url": "https://www.rolls-royce.com/media/press-releases.aspx" },
+    { "ticker": "VOD", "companyName": "Vodafone Group", "url": "https://www.vodafone.com/news/newsroom" }
   ]
 }

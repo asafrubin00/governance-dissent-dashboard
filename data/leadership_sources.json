@@ -1,6 +1,6 @@
 {
-  "asOfDate": "2026-08-06",
-  "methodologyVersion": "0.1",
+  "asOfDate": "2026-08-08",
+  "methodologyVersion": "0.4",
   "companies": [
     {
       "companyName": "Shell plc",
@@ -523,6 +523,531 @@
           "roleStartDate": "2021-05-31",
           "sourceUrl": "https://www.nationalgrid.com/about-us/our-leadership-team/the-board/paula-rosput-reynolds",
           "sourceLabel": "National Grid Chair profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "3i",
+      "ticker": "III",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Simon Borrows",
+          "roleStartDate": "2012-05-01",
+          "sourceUrl": "https://www.3i.com/about-us/our-team/executive-committee/simon-borrows/",
+          "sourceLabel": "3i Chief Executive profile",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "David Hutchison OBE",
+          "roleStartDate": "2021-11-01",
+          "sourceUrl": "https://www.3i.com/about-us/our-team/board-of-directors/david-hutchison-obe/",
+          "sourceLabel": "3i Chair profile",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "Associated British Foods",
+      "ticker": "ABF",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "George Weston",
+          "roleStartDate": "2005-04-01",
+          "sourceUrl": "https://www.abf.co.uk/about-us/corporate-governance/board-of-directors",
+          "sourceLabel": "ABF Board profile",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "Michael McLintock",
+          "roleStartDate": "2018-04-11",
+          "sourceUrl": "https://www.abf.co.uk/media/news/2018/2018-directorate-change",
+          "sourceLabel": "ABF directorate change",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Aviva",
+      "ticker": "AV",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Dame Amanda Blanc",
+          "roleStartDate": "2020-07-06",
+          "sourceUrl": "https://www.aviva.com/about-us/our-board-and-executives-overview/leader-profiles/amanda-blanc/",
+          "sourceLabel": "Aviva Group CEO profile",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "George Culmer",
+          "roleStartDate": "2020-05-27",
+          "sourceUrl": "https://www.aviva.com/about-us/leader-profiles/george-culmer/",
+          "sourceLabel": "Aviva Chair profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Babcock International",
+      "ticker": "BAB",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "David Lockwood OBE",
+          "roleStartDate": "2020-09-14",
+          "sourceUrl": "https://www.babcockinternational.com/news/babcock-appoints-new-chief-executive/",
+          "sourceLabel": "Babcock Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Dame Ruth Cairnie DBE",
+          "roleStartDate": "2019-07-18",
+          "sourceUrl": "https://www.babcockinternational.com/who-we-are/leadership-and-governance/the-board/ruth-cairnie/",
+          "sourceLabel": "Babcock Chair profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Barratt Redrow",
+      "ticker": "BTRW",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "David Thomas",
+          "roleStartDate": "2015-07-01",
+          "sourceUrl": "https://www.barrattredrow.co.uk/news/2015/pr-27-03-2015",
+          "sourceLabel": "Barratt Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Caroline Silver",
+          "roleStartDate": "2023-06-30",
+          "sourceUrl": "https://www.barrattredrow.co.uk/about-us/leadership/the-board",
+          "sourceLabel": "Barratt Redrow Board profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Beazley",
+      "ticker": "BEZ",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Adrian Cox",
+          "roleStartDate": "2021-04-01",
+          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
+          "sourceLabel": "Beazley Board profile",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "Clive Bannister",
+          "roleStartDate": "2023-04-25",
+          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
+          "sourceLabel": "Beazley Board profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "British American Tobacco",
+      "ticker": "BATS",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Tadeu Marroco",
+          "roleStartDate": "2023-05-15",
+          "sourceUrl": "https://www.bat.com/media/press-releases/_2023/may/may-15---bat-announces-tadeu-marroco-as-chief-executive",
+          "sourceLabel": "BAT Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Luc Jobin",
+          "roleStartDate": "2021-04-28",
+          "sourceUrl": "https://www.bat.com/media/press-releases/_2026/february/board-update-chair-extension-and-senior-independent-director-appointment",
+          "sourceLabel": "BAT Chair extension and succession update",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "British Land",
+      "ticker": "BLND",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Simon Carter",
+          "roleStartDate": "2020-11-18",
+          "sourceUrl": "https://www.britishland.com/news/chris-grigg-to-step-down-as-chief-executive-officer-simon-carter-appointed-as-his-successor/",
+          "sourceLabel": "British Land Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "William Rucker",
+          "roleStartDate": "2024-07-09",
+          "sourceUrl": "https://www.britishland.com/news/british-land-appoints-william-rucker-as-chair-designate/",
+          "sourceLabel": "British Land Chair appointment",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "BT Group",
+      "ticker": "BT.A",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Allison Kirkby",
+          "roleStartDate": "2024-02-01",
+          "sourceUrl": "https://www.bt.com/about/bt/our-board",
+          "sourceLabel": "BT Group Board profile",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "Adam Crozier",
+          "roleStartDate": "2021-12-01",
+          "sourceUrl": "https://www.bt.com/about/bt/our-board/adam-crozier",
+          "sourceLabel": "BT Group Chair profile",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "Bunzl",
+      "ticker": "BNZL",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Frank van Zanten",
+          "roleStartDate": "2016-04-20",
+          "sourceUrl": "https://www.bunzl.com/newsroom/retirement-of-michael-roney-and-appointment-of-frank-van-zanten-as-chief-executive/",
+          "sourceLabel": "Bunzl Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Peter Ventress",
+          "roleStartDate": "2020-04-01",
+          "sourceUrl": "https://www.bunzl.com/about-us/our-leadership/",
+          "sourceLabel": "Bunzl leadership profile",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "Burberry Group",
+      "ticker": "BRBY",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Joshua Schulman",
+          "roleStartDate": "2024-07-17",
+          "sourceUrl": "https://www.burberryplc.com/content/dam/burberryplc/corporate/oar/oar-2024-2025/burberry_annual_report_and_accounts_2024_25_accessibility.pdf",
+          "sourceLabel": "Burberry 2024/25 Annual Report",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Gerry Murphy",
+          "roleStartDate": "2018-05-01",
+          "sourceUrl": "https://www.burberryplc.com/news/corporate/2026/burberry-announces-chair-succession",
+          "sourceLabel": "Burberry Chair succession announcement",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "Coca-Cola HBC",
+      "ticker": "CCH",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Zoran Bogdanovic",
+          "roleStartDate": "2017-12-01",
+          "sourceUrl": "https://www.coca-colahellenic.com/en/about-us/corporate-governance/executive-leadership-team",
+          "sourceLabel": "Coca-Cola HBC Executive Leadership profile",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "Anastassis G. David",
+          "roleStartDate": "2016-01-01",
+          "sourceUrl": "https://www.coca-colahellenic.com/en/about-us/corporate-governance/the-board",
+          "sourceLabel": "Coca-Cola HBC Board profile",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "Compass Group",
+      "ticker": "CPG",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Dominic Blakemore",
+          "roleStartDate": "2018-01-01",
+          "sourceUrl": "https://www.compass-group.com/en/media/news/2018/dominic-blakemore.html",
+          "sourceLabel": "Compass Group Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Ian Meakins",
+          "roleStartDate": "2020-12-01",
+          "sourceUrl": "https://www.compass-group.com/en/who-we-are/ourleadership/leadership.html",
+          "sourceLabel": "Compass Group Board profile",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "Croda International",
+      "ticker": "CRDA",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Steve Foots CBE",
+          "roleStartDate": "2012-01-01",
+          "sourceUrl": "https://www.croda.com/en-gb/about-us/leadership",
+          "sourceLabel": "Croda leadership profile",
+          "datePrecision": "year"
+        },
+        "chair": {
+          "name": "Danuta Gray",
+          "roleStartDate": "2024-04-24",
+          "sourceUrl": "https://www.croda.com/en-gb/media-hub/news/appointments/appointment-of-chair-designate",
+          "sourceLabel": "Croda Chair appointment",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Diageo",
+      "ticker": "DGE",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Sir Dave Lewis",
+          "roleStartDate": "2026-01-01",
+          "sourceUrl": "https://www.diageo.com/en/news-and-media/press-releases/2025/sir-dave-lewis-appointed-diageo-plc-ceo",
+          "sourceLabel": "Diageo Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Sir John Manzoni",
+          "roleStartDate": "2025-02-05",
+          "sourceUrl": "https://www.diageo.com/en/our-business/corporate-governance/remuneration-at-diageo.",
+          "sourceLabel": "Diageo Chair terms",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Entain",
+      "ticker": "ENT",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Stella David",
+          "roleStartDate": "2025-04-29",
+          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/appointment-of-chief-executive-officer/",
+          "sourceLabel": "Entain Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Pierre Bouchut",
+          "roleStartDate": "2025-08-12",
+          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/2025-interim-results/",
+          "sourceLabel": "Entain Chair appointment confirmation",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Experian",
+      "ticker": "EXPN",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Brian Cassin",
+          "roleStartDate": "2014-07-16",
+          "sourceUrl": "https://www.experianplc.com/newsroom/press-releases/2014/16-07-2014",
+          "sourceLabel": "Experian Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Adam Crozier",
+          "roleStartDate": "2026-07-22",
+          "sourceUrl": "https://www.experianplc.com/about-us/board-and-senior-management/adam-crozier",
+          "sourceLabel": "Experian Chair profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Glencore",
+      "ticker": "GLEN",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Gary Nagle",
+          "roleStartDate": "2021-07-01",
+          "sourceUrl": "https://www.glencore.com/who-we-are/our-leadership",
+          "sourceLabel": "Glencore leadership profile",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Kalidas Madhavpeddi",
+          "roleStartDate": "2021-07-30",
+          "sourceUrl": "https://www.glencore.com/media-and-insights/news/appointment-of-new-chairman",
+          "sourceLabel": "Glencore Chair appointment",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "GSK plc",
+      "ticker": "GSK",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Luke Miels",
+          "roleStartDate": "2026-01-01",
+          "sourceUrl": "https://www.gsk.com/en-gb/media/press-releases/luke-miels-appointed-ceo-designate-for-gsk/",
+          "sourceLabel": "GSK Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Sir Jonathan Symonds CBE",
+          "roleStartDate": "2019-09-01",
+          "sourceUrl": "https://www.gsk.com/en-gb/company/board-of-directors-and-leadership-team/sir-jonathan-symonds/",
+          "sourceLabel": "GSK Chair profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Haleon",
+      "ticker": "HLN",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Brian McNamara",
+          "roleStartDate": "2022-07-18",
+          "sourceUrl": "https://www.haleon.com/content/dam/haleon/corporate/documents/investors/agm/Haleon-notice-of-meeting-2026.pdf.downloadasset.pdf",
+          "sourceLabel": "Haleon 2026 AGM notice",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Manvinder Singh Banga",
+          "roleStartDate": "2026-01-01",
+          "sourceUrl": "https://www.haleon.com/investors/annual-report-2025",
+          "sourceLabel": "Haleon 2025 Annual Report",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "International Airlines Group",
+      "ticker": "IAG",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Luis Gallego",
+          "roleStartDate": "2020-09-08",
+          "sourceUrl": "https://www.iairgroup.com/governance/board-of-directors/luis-gallego/",
+          "sourceLabel": "IAG Chief Executive profile",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Javier Ferrán",
+          "roleStartDate": "2021-01-07",
+          "sourceUrl": "https://www.iairgroup.com/press-releases/2021/iag-chairman/",
+          "sourceLabel": "IAG Chair appointment",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Lloyds Banking Group",
+      "ticker": "LLOY",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Charlie Nunn",
+          "roleStartDate": "2021-08-16",
+          "sourceUrl": "https://www.lloydsbankinggroup.com/who-we-are/group-overview/directors-and-governance.html",
+          "sourceLabel": "Lloyds Banking Group Board profile",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Sir Robin Budenberg CBE",
+          "roleStartDate": "2021-01-01",
+          "sourceUrl": "https://www.lloydsbankinggroup.com/assets/pdfs/investors/shareholder-information/shareholder-meetings/2025-agm/2025-lbg-notice-of-agm.pdf",
+          "sourceLabel": "Lloyds Banking Group AGM notice",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "RELX",
+      "ticker": "REL",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Erik Engstrom",
+          "roleStartDate": "2009-11-01",
+          "sourceUrl": "https://www.relx.com/investors/corporate-governance/board-of-directors",
+          "sourceLabel": "RELX Board profile",
+          "datePrecision": "month"
+        },
+        "chair": {
+          "name": "Paul Walker",
+          "roleStartDate": "2021-03-01",
+          "sourceUrl": "https://www.relx.com/investors/corporate-governance/board-of-directors",
+          "sourceLabel": "RELX Board profile",
+          "datePrecision": "month"
+        }
+      }
+    },
+    {
+      "companyName": "Rolls-Royce Holdings",
+      "ticker": "RR",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Tufan Erginbilgic",
+          "roleStartDate": "2023-01-01",
+          "sourceUrl": "https://www.rolls-royce.com/media/press-releases/2022/26-07-2022-rr-appoints-tufan-erginbilgic-as-chief-executive-officer.aspx",
+          "sourceLabel": "Rolls-Royce Chief Executive appointment",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Dame Anita Frew",
+          "roleStartDate": "2021-10-01",
+          "sourceUrl": "https://www.rolls-royce.com/about/leadership/board.aspx",
+          "sourceLabel": "Rolls-Royce Board profile",
+          "datePrecision": "day"
+        }
+      }
+    },
+    {
+      "companyName": "Vodafone Group",
+      "ticker": "VOD",
+      "trackerAliases": [],
+      "roles": {
+        "ceo": {
+          "name": "Margherita Della Valle",
+          "roleStartDate": "2023-04-27",
+          "sourceUrl": "https://www.vodafone.com/our-company/leadership/board-of-directors/margherita-della-valle",
+          "sourceLabel": "Vodafone Group Chief Executive profile",
+          "datePrecision": "day"
+        },
+        "chair": {
+          "name": "Jean-François van Boxmeer",
+          "roleStartDate": "2020-11-03",
+          "sourceUrl": "https://www.vodafone.com/our-company/leadership/board-of-directors/jean-francois-van-boxmeer",
+          "sourceLabel": "Vodafone Group Chair profile",
           "datePrecision": "day"
         }
       }

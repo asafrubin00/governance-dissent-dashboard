@@ -1,9 +1,37 @@
 {
   "asOfDate": "2026-08-08",
-  "methodologyVersion": "0.3",
+  "methodologyVersion": "0.4",
   "definition": "An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office.",
-  "reviewedTickers": ["SHEL", "NXT", "MKS", "CNA", "LSEG", "ULVR", "IHG", "RIO", "HSBA", "MRO", "CTEC", "CCEP", "AAL", "BP", "CCC", "IMI", "RTO", "KGF", "ANTO", "NWG", "AZN", "BARC", "TSCO", "BA", "NG"],
+  "reviewedTickers": ["SHEL", "NXT", "MKS", "CNA", "LSEG", "ULVR", "IHG", "RIO", "HSBA", "MRO", "CTEC", "CCEP", "AAL", "BP", "CCC", "IMI", "RTO", "KGF", "ANTO", "NWG", "AZN", "BARC", "TSCO", "BA", "NG", "III", "ABF", "AV", "BAB", "BTRW", "BEZ", "BATS", "BLND", "BT.A", "BNZL", "BRBY", "CCH", "CPG", "CRDA", "DGE", "ENT", "EXPN", "GLEN", "GSK", "HLN", "IAG", "LLOY", "REL", "RR", "VOD"],
   "cases": [
+    {
+      "id": "blnd-ceo-2026-07-02-successor-announced",
+      "ticker": "BLND",
+      "role": "ceo",
+      "status": "successor-announced",
+      "announcedDate": "2026-07-02",
+      "incumbentName": "Simon Carter",
+      "successorName": "Joanne McNamara",
+      "incumbentDepartureDate": "2026-08-31",
+      "successorStartDate": "2026-09-14",
+      "summary": "Joanne McNamara will become Chief Executive on 14 September 2026. Simon Carter will leave the Board on 31 August, with the CFO assuming interim leadership responsibilities between those dates.",
+      "sourceUrl": "https://www.britishland.com/media/haefn1kc/jm-sc-start-and-leave-dates.pdf",
+      "sourceLabel": "British Land CEO start-date confirmation"
+    },
+    {
+      "id": "brby-chair-2026-05-14-successor-announced",
+      "ticker": "BRBY",
+      "role": "chair",
+      "status": "successor-announced",
+      "announcedDate": "2026-05-14",
+      "incumbentName": "Gerry Murphy",
+      "successorName": "William Jackson",
+      "incumbentDepartureDate": null,
+      "successorStartDate": null,
+      "summary": "William Jackson will succeed Gerry Murphy as Chair when Murphy retires at Burberry's interim-results announcement in November 2026. Jackson joined the Board on 1 July 2026 for the handover.",
+      "sourceUrl": "https://www.burberryplc.com/news/corporate/2026/burberry-announces-chair-succession",
+      "sourceLabel": "Burberry Chair succession announcement"
+    },
     {
       "id": "kgf-ceo-2026-05-06-search-underway",
       "ticker": "KGF",
@@ -17,6 +45,48 @@
       "summary": "Thierry Garnier has resigned to take another role. He remains CEO during a 12-month notice period while the Nomination Committee conducts an internal and external successor search.",
       "sourceUrl": "https://www.kingfisher.com/media/news/2026/directorate-change",
       "sourceLabel": "Kingfisher directorate change"
+    },
+    {
+      "id": "btrw-ceo-2026-03-04-successor-announced",
+      "ticker": "BTRW",
+      "role": "ceo",
+      "status": "successor-announced",
+      "announcedDate": "2026-03-04",
+      "incumbentName": "David Thomas",
+      "successorName": "Dean Banks",
+      "incumbentDepartureDate": null,
+      "successorStartDate": null,
+      "summary": "Dean Banks will join as Group Chief Executive in the final quarter of 2026. David Thomas remains Chief Executive until the handover and will stay with the Group until March 2027.",
+      "sourceUrl": "https://www.barrattredrow.co.uk/news/2026/barratt-redrow-plc-announces-chief-executive-succession-plan",
+      "sourceLabel": "Barratt Redrow CEO succession plan"
+    },
+    {
+      "id": "bats-chair-2026-02-10-search-underway",
+      "ticker": "BATS",
+      "role": "chair",
+      "status": "search-underway",
+      "announcedDate": "2026-02-10",
+      "incumbentName": "Luc Jobin",
+      "successorName": null,
+      "incumbentDepartureDate": null,
+      "successorStartDate": null,
+      "summary": "BAT extended Luc Jobin's Chair tenure for up to two years while the refreshed search for his successor continues, acknowledging the resulting departure from the Code's nine-year Board-tenure recommendation.",
+      "sourceUrl": "https://www.bat.com/media/press-releases/_2026/february/board-update-chair-extension-and-senior-independent-director-appointment",
+      "sourceLabel": "BAT Chair extension and succession update"
+    },
+    {
+      "id": "bab-ceo-2026-01-23-successor-announced",
+      "ticker": "BAB",
+      "role": "ceo",
+      "status": "successor-announced",
+      "announcedDate": "2026-01-23",
+      "incumbentName": "David Lockwood OBE",
+      "successorName": "Harry Holt",
+      "incumbentDepartureDate": null,
+      "successorStartDate": null,
+      "summary": "Harry Holt has been selected to succeed David Lockwood as Group Chief Executive. Holt joined the Board as Deputy CEO in June 2026, with the handover due before Lockwood retires by year end.",
+      "sourceUrl": "https://www.babcockinternational.com/news/babcock-international-group-plc-announces-ceo-retirement-and-succession/",
+      "sourceLabel": "Babcock CEO retirement and succession announcement"
     }
   ]
 }

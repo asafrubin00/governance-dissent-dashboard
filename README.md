@@ -18,10 +18,10 @@ The product is intentionally transparent about incomplete coverage. Unresearched
 ### Leadership Pressure Radar
 
 - Universe: a 100-company FTSE 100 public constituent snapshot.
-- Verified cohort: 25 companies with official issuer sources for both CEO and Chair appointments.
-- Signals in methodology `v0.3`: role tenure, qualifying registered dissent, source-verified profit-warning evidence, and officially announced live CEO or Chair succession processes.
-- All 25 rated companies have received the same 36-month warning review. Four qualifying official issuer events are captured; warning evidence remains outside the score pending calibration and outcome testing.
-- All 25 rated companies have also been reviewed for active CEO and Chair succession announcements. One live process is captured in the current evidence window.
+- Verified cohort: 50 companies with official issuer sources for both CEO and Chair appointments.
+- Signals in methodology `v0.4`: role tenure, qualifying registered dissent, source-verified profit-warning evidence, and officially announced live CEO or Chair succession processes.
+- The original 25-company cohort has received the same 36-month warning review. Four qualifying official issuer events are captured; the other 25 rated companies remain visibly outside that warning-audit coverage.
+- All 50 rated companies have been reviewed for active CEO and Chair succession announcements. Six live processes are captured in the current evidence window.
 - Excluded for now: market-price stress, activism, controversies, and broader news.
 - Output: `public/data/leadership-radar.json`.
 
@@ -70,12 +70,12 @@ npm run build
 1. Refreshes and verifies the significant-dissent dataset.
 2. Fetches the public FTSE 100 roster snapshot, falling back to the cached snapshot if unavailable.
 3. Joins the manually verified leadership source file.
-4. Validates the 25-company profit-warning review and joins approved official warning evidence.
-5. Validates and joins official active-succession evidence.
+4. Validates the 25-company profit-warning review as an explicit subset of the rated cohort and joins approved official warning evidence.
+5. Validates exact rated-cohort coverage for official active-succession evidence.
 6. Recalculates role-specific pressure scores without allowing either overlay to change the score.
 7. Runs validation before writing the public JSON files.
 
-The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations and the constituent roster, then checks 25 official issuer pages for new earnings-related links. Matches enter a review queue and never alter the radar automatically. Verified appointments, qualifying warning events, and active succession cases must still be approved in their source files before publication.
+The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations and the constituent roster, then checks 50 official issuer pages for new earnings- and succession-related links. Matches enter a typed review queue and never alter the radar automatically. Verified appointments, qualifying warning events, and active succession cases must still be approved in their source files before publication.
 
 Run the monitor independently with `npm run data:monitor`. Its source health and editorial safeguards are explained in [the monitor methodology](docs/announcement-monitor-methodology.md).
 
@@ -85,7 +85,7 @@ Run the monitor independently with `npm run data:monitor`. Its source health and
 data/
   leadership_sources.json          # manually verified leadership evidence
   profit_warning_sources.json      # curated official warning events
-  profit_warning_reviews.json      # 25-company review outcomes and sources
+  profit_warning_reviews.json      # warning-audit outcomes and official sources
   succession_sources.json          # official active-succession evidence
   announcement_monitor_sources.json # official issuer monitoring configuration
   announcement_monitor_snapshot.json # previously seen announcement links
@@ -110,17 +110,18 @@ src/
 
 ## Analytical limitations
 
-- Twenty-five companies are rated; the other 75 remain visibly unrated until both leadership roles are verified.
+- Fifty companies are rated; the other 50 remain visibly unrated until both leadership roles are verified.
 - CEO tenure has no formal UK governance limit; the ten-year horizon is an analytical reference only.
 - Chair tenure is interpreted in the context of the Code's nine-year independence and succession guidance.
 - The dissent uplift is based on a narrow 2025 source window, not complete historical voting coverage.
-- The profit-warning audit applies a consistent definition, but issuer archive structures and disclosure language still create residual discovery risk.
+- The profit-warning audit currently covers 25 of 50 rated companies; no-warning interpretation is limited to that reviewed subset.
 - Warning and succession evidence are excluded from the score pending calibration and outcome testing.
 - A public constituent table is used for reproducibility and is not an official FTSE Russell feed.
 - Classification and parsing rules remain suitable for a portfolio MVP, not a commercial proxy-research service.
 
 ## Product roadmap
 
+- Expand the same source-verification protocol from 50 to all 100 constituents.
 - Improve monitor coverage where official sites currently block automated access or render no usable links.
 - Add compact company logos to heatmap tiles and the evidence rail using issuer-approved assets, with a text fallback and no analytical effect.
 - Add concise leader profiles and tenure-aligned share-price/TSR analysis in staged releases.
