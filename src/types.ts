@@ -280,7 +280,6 @@ export type LeadershipProfilesData = {
   }
   companies: Array<{
     ticker: string
-    logoPath: string | null
     roles: Record<'ceo' | 'chair', {
       name: string
       summary: string

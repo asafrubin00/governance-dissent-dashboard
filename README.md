@@ -23,7 +23,7 @@ The product is intentionally transparent about scope. Leadership evidence now co
 - Profit-warning audit: 50 companies reviewed over 36 months, with 11 qualifying official events across nine issuers.
 - Succession review: all 100 companies reviewed, with seven live processes captured in the current evidence window.
 - Market-performance pilot: ten companies with monthly share-price and dividend-adjusted returns against the FTSE 100 price index.
-- Profile pilot: the same ten companies have concise sourced CEO/Chair biographies, official links, and local issuer assets where stable.
+- Profile pilot: the same ten companies have concise sourced CEO/Chair biographies, official links, and local portraits where stable.
 - Excluded for now: activism, controversies, broader news, and any unlicensed claim to institutional-grade TSR.
 - Output: `public/data/leadership-radar.json`.
 

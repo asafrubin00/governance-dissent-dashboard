@@ -177,3 +177,8 @@
 - Expanded the weekly announcement monitor to 100 official issuer sources; the new baseline reached 75 pages and found monitorable matches on 48 without creating retrospective queue noise.
 - Added exact roster alignment, future-date, HTTPS-source, structural-not-applicable, market-series, duplicate-date, and cross-pilot reconciliation checks.
 - Kept warning, succession, profile, and market evidence outside the leadership pressure score pending calibration and outcome testing.
+
+### Logo presentation rollback
+
+- Removed company logos from the heatmap and evidence rail after visual review found inconsistent issuer icon treatments distracting.
+- Retained sourced leadership portraits and initials fallbacks inside the optional profile modal.

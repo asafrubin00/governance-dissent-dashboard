@@ -156,7 +156,6 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
               <div className={`heat-map ${universe === 'full' ? 'heat-map--full' : visibleCompanies.length > 30 ? 'heat-map--cohort' : 'heat-map--pilot'}`}>
                 {visibleCompanies.map((company) => {
                   const roleData = company.roles[role]
-                  const profileCompany = profilesData.companies.find((profile) => profile.ticker === company.ticker)
                   return (
                     <button
                       aria-label={`${company.companyName}: ${roleData.rated ? `${roleData.score} ${roleData.band}` : roleData.notApplicable ? 'not applicable' : 'unrated'}`}
@@ -166,7 +165,6 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
                       type="button"
                     >
                       <span>{company.ticker}</span>
-                      {profileCompany?.logoPath ? <img className="heat-tile__logo" src={profileCompany.logoPath} alt="" /> : null}
                       <small>{universe === 'rated' ? company.companyName : roleData.rated ? roleData.band : roleData.notApplicable ? 'N/A' : 'Pending'}</small>
                       <strong>{roleData.score?.toFixed(0) ?? '—'}</strong>
                       {company.profitWarningEvidence.count || company.successionEvidence.cases.some((item) => item.role === role) ? (
@@ -187,7 +185,6 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
                 <>
                   <div className="evidence-rail__header">
                     <div><p>{selected.ticker} / {formatRole(role)}</p><h2>{selected.companyName}</h2></div>
-                    {selectedProfileCompany?.logoPath ? <img className="evidence-rail__logo" src={selectedProfileCompany.logoPath} alt="" /> : null}
                     <span className={bandClass(selectedRole.band)}>{selectedRole.band}</span>
                   </div>
                   {selectedRole.rated ? (

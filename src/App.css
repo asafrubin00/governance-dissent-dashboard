@@ -1613,23 +1613,6 @@
 .market-modal__footer p { font-size: 0.68rem; line-height: 1.45; }
 .market-modal__footer a { color: #efc64a; font-size: 0.7rem; white-space: nowrap; }
 
-.heat-tile__logo {
-  position: absolute;
-  top: 7px;
-  right: 7px;
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-  opacity: 0.8;
-}
-
-.evidence-rail__logo {
-  width: 28px;
-  height: 28px;
-  margin-left: auto;
-  object-fit: contain;
-}
-
 .profile-link {
   padding: 0;
   border: 0;
