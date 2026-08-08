@@ -1,0 +1,84 @@
+{
+  "asOfDate": "2026-08-08",
+  "scope": "Completed CEO transitions at current FTSE 100 issuers, selected where an official issuer source provides a clear announcement date, incumbent and transition outcome.",
+  "completedCases": [
+    {
+      "id": "bp-ceo-2023-09-12",
+      "ticker": "BP",
+      "companyName": "BP",
+      "role": "ceo",
+      "incumbentName": "Bernard Looney",
+      "roleStartDate": "2020-02-05",
+      "announcementDate": "2023-09-12",
+      "departureDate": "2023-09-12",
+      "outcomeType": "unplanned-departure",
+      "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/investors/supplementary-prospectus-dated-20-february-2024.pdf",
+      "sourceLabel": "BP supplementary prospectus recording CEO resignation and succession"
+    },
+    {
+      "id": "hsba-ceo-2024-04-30",
+      "ticker": "HSBA",
+      "companyName": "HSBC Holdings",
+      "role": "ceo",
+      "incumbentName": "Noel Quinn",
+      "roleStartDate": "2020-03-17",
+      "announcementDate": "2024-04-30",
+      "departureDate": "2024-09-02",
+      "outcomeType": "planned-retirement",
+      "sourceUrl": "https://www.hsbc.com/news-and-views/news/hsbc-news-archive/group-ceo-noel-quinn-to-retire",
+      "sourceLabel": "HSBC Group CEO retirement announcement"
+    },
+    {
+      "id": "brby-ceo-2024-07-15",
+      "ticker": "BRBY",
+      "companyName": "Burberry Group",
+      "role": "ceo",
+      "incumbentName": "Jonathan Akeroyd",
+      "roleStartDate": "2022-04-01",
+      "announcementDate": "2024-07-15",
+      "departureDate": "2024-07-15",
+      "outcomeType": "board-led-change",
+      "sourceUrl": "https://www.burberryplc.com/news/corporate/2024/burberry-appoints-joshua-schulman-as-chief-executive-officer",
+      "sourceLabel": "Burberry CEO appointment and immediate predecessor departure"
+    },
+    {
+      "id": "ulvr-ceo-2025-02-25",
+      "ticker": "ULVR",
+      "companyName": "Unilever",
+      "role": "ceo",
+      "incumbentName": "Hein Schumacher",
+      "roleStartDate": "2023-07-01",
+      "announcementDate": "2025-02-25",
+      "departureDate": "2025-03-01",
+      "outcomeType": "board-led-change",
+      "sourceUrl": "https://www.unilever.com/files/unilever-annual-report-on-form-20-f-2025.pdf",
+      "sourceLabel": "Unilever Annual Report 2025 executive director changes"
+    },
+    {
+      "id": "rto-ceo-2025-05-07",
+      "ticker": "RTO",
+      "companyName": "Rentokil Initial",
+      "role": "ceo",
+      "incumbentName": "Andy Ransom",
+      "roleStartDate": "2013-10-01",
+      "announcementDate": "2025-05-07",
+      "departureDate": "2026-03-16",
+      "outcomeType": "planned-retirement",
+      "sourceUrl": "https://www.rentokil-initial.com/media/news-releases/2025/07-05-2025.aspx",
+      "sourceLabel": "Rentokil Initial CEO retirement announcement"
+    },
+    {
+      "id": "rio-ceo-2025-07-15",
+      "ticker": "RIO",
+      "companyName": "Rio Tinto",
+      "role": "ceo",
+      "incumbentName": "Jakob Stausholm",
+      "roleStartDate": "2021-01-01",
+      "announcementDate": "2025-07-15",
+      "departureDate": "2025-08-25",
+      "outcomeType": "planned-succession",
+      "sourceUrl": "https://www.riotinto.com/en/news/releases/2025/rio-tinto-appoints-simon-trott-as-chief-executive",
+      "sourceLabel": "Rio Tinto CEO succession announcement"
+    }
+  ]
+}

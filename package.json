@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "data": "python3 scripts/build_dataset.py && python3 scripts/build_leadership_radar.py && python3 scripts/build_market_performance.py && python3 scripts/validate_leadership_profiles.py && python3 scripts/monitor_issuer_announcements.py",
-    "data:radar": "python3 scripts/build_leadership_radar.py",
-    "data:market": "python3 scripts/build_market_performance.py",
+    "data": "python3 scripts/build_dataset.py && python3 scripts/build_leadership_radar.py && python3 scripts/build_market_performance.py && python3 scripts/build_leadership_calibration.py && python3 scripts/validate_leadership_profiles.py && python3 scripts/monitor_issuer_announcements.py",
+    "data:radar": "python3 scripts/build_leadership_radar.py && python3 scripts/build_leadership_calibration.py",
+    "data:market": "python3 scripts/build_market_performance.py && python3 scripts/build_leadership_calibration.py",
+    "data:calibration": "python3 scripts/build_leadership_calibration.py",
     "data:profiles:validate": "python3 scripts/validate_leadership_profiles.py",
     "data:monitor": "python3 scripts/monitor_issuer_announcements.py",
     "data:monitor:baseline": "python3 scripts/monitor_issuer_announcements.py --baseline",

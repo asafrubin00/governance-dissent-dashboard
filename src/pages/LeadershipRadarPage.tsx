@@ -213,6 +213,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
                     <p>{data.metadata.scoreDefinition.dissent}</p>
                     <p>{data.metadata.scoreDefinition.profitWarnings}</p>
                     <p>{data.metadata.scoreDefinition.succession}</p>
+                    <p>Calibration v{data.metadata.calibration.methodologyVersion}: {data.metadata.calibration.outcomeCount} source-backed transition outcomes reviewed; production weights retained.</p>
                   </div>
                 </>
               ) : null}

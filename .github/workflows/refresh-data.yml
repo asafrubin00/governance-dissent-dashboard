@@ -47,6 +47,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/tracker-data.json public/data/leadership-radar.json public/data/market-performance.json public/data/announcement-monitor.json data/processed data/ftse100_constituents.json data/issuer_source_config.json data/profit_warning_sources.json data/profit_warning_reviews.json data/succession_sources.json data/announcement_monitor_snapshot.json data/announcement_review_queue.json
+          git add public/data/tracker-data.json public/data/leadership-radar.json public/data/market-performance.json public/data/leadership-calibration.json public/data/announcement-monitor.json data/processed data/ftse100_constituents.json data/issuer_source_config.json data/profit_warning_sources.json data/profit_warning_reviews.json data/succession_sources.json data/announcement_monitor_snapshot.json data/announcement_review_queue.json
           git commit -m "Refresh governance datasets"
           git push

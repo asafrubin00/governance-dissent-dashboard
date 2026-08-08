@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-08T11:09:29.388573+00:00",
+    "generatedAt": "2026-08-08T11:49:55.061739+00:00",
     "asOfDate": "2026-08-08",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -55,6 +55,13 @@
     "validation": {
       "status": "pass",
       "errors": []
+    },
+    "calibration": {
+      "methodologyVersion": "0.1",
+      "outcomeCount": 12,
+      "comparisonObservationCount": 188,
+      "decision": "retain-current-weights",
+      "note": "The cohort is directionally useful but too small and temporally uneven to justify production score changes. Warning and market-performance sensitivities remain research-only, and the combined model does not improve top-quartile capture beyond warnings alone."
     }
   },
   "companies": [

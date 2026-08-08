@@ -196,6 +196,13 @@ export type LeadershipRadarData = {
     sourceVerifiedCompanyCount: number
     ratedCompanyCount: number
     constituentCount: number
+    calibration: {
+      methodologyVersion: string
+      outcomeCount: number
+      comparisonObservationCount: number
+      decision: 'retain-current-weights'
+      note: string
+    }
     profitWarningCoverage: {
       eventCount: number
       companyCount: number
@@ -245,6 +252,8 @@ export type MarketPerformanceData = {
     sourceUrl: string
     frequency: string
     methodology: string
+    scaleTreatment: string
+    scaleAdjustmentCount: number
     limitations: string
     validation: { status: string; errors: string[] }
   }
@@ -257,6 +266,7 @@ export type MarketPerformanceData = {
     ticker: string
     companyName: string
     marketSymbol: string
+    scaleAdjustmentCount: number
     roles: Record<'ceo' | 'chair', { name: string; roleStartDate: string | null }>
     points: MarketPerformancePoint[]
   }>

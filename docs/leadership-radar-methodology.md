@@ -4,7 +4,7 @@
 
 The radar prioritises FTSE 100 companies for closer leadership-succession research. It does not predict that a CEO or Chair will leave office, and it is not a governance-quality rating.
 
-Methodology `v0.5` separates scored signals from evidence overlays:
+Methodology `v0.6` separates scored signals from evidence overlays:
 
 - role-specific tenure pressure
 - qualifying significant dissent on management-sponsored resolutions in the existing Proxy Voting dataset
@@ -55,9 +55,26 @@ The initial overlay uses a 36-month lookback and includes only official issuer a
 
 Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded. Each event records its announcement date, affected period, event type, severity, concise summary, principal drivers, and primary-source link.
 
-The same review protocol was applied to 50 companies for the 36 months to 8 August 2026. Eleven high-confidence events were captured across nine issuers. Review outcomes and source hubs are recorded in `data/profit_warning_reviews.json`.
+The same review protocol was applied to all 100 companies for the 36 months to 8 August 2026. Fifteen high-confidence events were captured across 11 issuers. Review outcomes and source hubs are recorded in `data/profit_warning_reviews.json`.
 
-For companies inside the reviewed subset, no warning badge means no qualifying event was captured under this protocol, not proof that no adverse announcement occurred. Companies outside the reviewed subset carry no warning inference. The overlay does not alter the 0-100 pressure score in methodology `v0.4`; any score contribution requires calibration and outcome testing first.
+For companies inside the reviewed subset, no warning badge means no qualifying event was captured under this protocol, not proof that no adverse announcement occurred. The overlay does not alter the 0-100 pressure score in methodology `v0.6`; any score contribution requires stronger calibration evidence first.
+
+## Calibration audit
+
+Calibration methodology `v0.1` compares 12 source-backed transition outcomes with 188 current, right-censored role observations. The outcome cohort contains six completed CEO transitions announced from 2023 to 2025 and six eligible active CEO or Chair processes from the current succession evidence. One interim-Chair case is excluded because the recorded incumbent began the role after the succession search was announced.
+
+For each outcome, tenure, warning and dissent signals are measured only up to the official announcement date. Market sensitivity uses the trailing two-year dividend-adjusted company return less the FTSE 100 price-index return. Current comparisons use the evidence date.
+
+The audit tests two exploratory additions without changing production scores:
+
+- a warning uplift of 6 points for a material event or 12 for any severe event, plus 3 for repeats and capped at 18
+- a performance uplift of 8 points for relative underperformance of at least 20 percentage points or 15 points at 40 percentage points
+
+The outcome sample is directionally informative but too small and temporally uneven for stable weighting. Production weights therefore remain unchanged. The next evidence threshold is at least 30 source-backed outcomes with aligned warning, voting and market histories. Full records and summary statistics are published in `public/data/leadership-calibration.json`.
+
+## Market-series quality
+
+The market build validates all 100 company series and the FTSE 100 benchmark. Isolated approximately 100x switches between pounds and pence are aligned to the preceding observation before returns are calculated. Each correction is counted, and the build fails if an extreme discontinuity remains. This does not smooth ordinary market movements.
 
 ## Active succession overlay
 
@@ -95,6 +112,8 @@ The build fails if it finds:
 - warning-review outcomes that do not reconcile to captured events
 - succession reviews that do not exactly cover the verified cohort
 - an invalid succession status, date, source, role, or incumbent mismatch
+- duplicate, future-dated, unsourced, or chronologically impossible calibration outcomes
+- duplicate or unsorted market observations and unresolved extreme scale discontinuities
 
 The generated file records validation status, methodology version, source mode, generation time, evidence date, and limitations.
 

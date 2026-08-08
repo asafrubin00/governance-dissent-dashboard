@@ -203,3 +203,23 @@
 - Added a compact radar-footer abbreviation key for PW, SC, CEO, AGM, and N/A without increasing workspace height.
 - Expanded the source-backed profile pilot from ten to 15 companies, prioritising five issuers near the top of the current pressure ranking.
 - Added profile validation for duplicate tickers, radar-name mismatches, short summaries, non-HTTPS sources, and missing local portraits.
+
+## Leadership calibration audit v0.1
+
+### Outcome design
+
+- Added six completed, official-source CEO transitions from 2023 to 2025 and joined six eligible live succession processes from the existing evidence layer.
+- Excluded one interim-Chair case whose recorded role start followed the search announcement, preventing misleading tenure-at-announcement analysis.
+- Built 188 current-role comparison observations and applied strict announcement-date cutoffs to warnings and dissent.
+
+### Sensitivity decision
+
+- Tested warning and trailing benchmark-relative performance uplifts as research sensitivities only.
+- Prior warnings appeared more frequently in outcomes than comparisons, but the 12-outcome sample is too small and temporally uneven for stable production weights.
+- Retained methodology v0.6 production weights and set a minimum next threshold of 30 aligned, source-backed outcomes.
+
+### Market-data correction
+
+- Identified isolated Yahoo observations alternating between pounds and pence, creating false approximately 100x moves.
+- Added conservative unit-continuity repair, correction counts, and fail-fast validation for unresolved extreme discontinuities.
+- Rebuilt all 100 issuer series and extended historical windows for the completed transition cohort.
