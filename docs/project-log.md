@@ -99,3 +99,17 @@
 
 - Add small issuer-approved company logos to heatmap tiles and the selected-company rail after the analytical layers stabilise.
 - Logos will use a text fallback and will never affect scoring.
+
+## Official issuer announcement monitor
+
+### Automation decision
+
+- Added a weekly review-first monitor for all 25 companies in the verified leadership cohort.
+- New earnings-related links are written to an editorial queue and never published as profit-warning evidence automatically.
+- The first baseline recorded 15 reachable issuer pages, seven active monitor sources, and ten unavailable sources.
+
+### Integrity decision
+
+- Source health distinguishes active pages, reachable pages with no monitorable matches, and unavailable pages.
+- A newly reachable source establishes a baseline before generating candidates, preventing a full historic archive from flooding the queue.
+- The monitor validates exact cohort alignment, unique candidate IDs, HTTPS source URLs, and review statuses.

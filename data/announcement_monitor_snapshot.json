@@ -1,0 +1,265 @@
+{
+  "lastRunAt": "2026-08-08T06:41:47.898866+00:00",
+  "sources": {
+    "SHEL": {
+      "companyName": "Shell",
+      "configuredUrl": "https://www.shell.com/news-and-insights/newsroom/news-and-media-releases.html",
+      "resolvedUrl": "https://www.shell.com/news-and-insights/newsroom/news-and-media-releases.html",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 0,
+      "seenIds": []
+    },
+    "NXT": {
+      "companyName": "Next",
+      "configuredUrl": "https://www.nextplc.co.uk/investors/reports-and-presentations/2025-26",
+      "resolvedUrl": "https://www.nextplc.co.uk/investors/reports-and-presentations/2025-26",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 6,
+      "seenIds": [
+        "nxt-0f05a7bad5028024",
+        "nxt-241d6f4848d2f2a4",
+        "nxt-2b00ba1f75cb4b58",
+        "nxt-32532f362bb9bb54",
+        "nxt-4340f996e09178c0",
+        "nxt-74b763dbadb8e697"
+      ]
+    },
+    "MKS": {
+      "companyName": "Marks & Spencer",
+      "configuredUrl": "https://corporate.marksandspencer.com/newsroom/press-releases",
+      "resolvedUrl": "https://corporate.marksandspencer.com/newsroom",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 0,
+      "seenIds": []
+    },
+    "CNA": {
+      "seenIds": [],
+      "companyName": "Centrica",
+      "configuredUrl": "https://www.centrica.com/media-centre/news/",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "403 Client Error: Forbidden for url: https://www.centrica.com/media-centre/news/"
+    },
+    "LSEG": {
+      "companyName": "London Stock Exchange Group",
+      "configuredUrl": "https://www.lseg.com/en/media-centre/press-releases",
+      "resolvedUrl": "https://www.lseg.com/en/media-centre/press-releases",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 0,
+      "seenIds": []
+    },
+    "ULVR": {
+      "seenIds": [],
+      "companyName": "Unilever",
+      "configuredUrl": "https://www.unilever.com/news/press-and-media/press-releases/",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "403 Client Error: Forbidden for url: https://www.unilever.com/news/press-and-media/press-releases/"
+    },
+    "IHG": {
+      "companyName": "InterContinental Hotels Group",
+      "configuredUrl": "https://www.ihgplc.com/en/news-and-media/news-releases",
+      "resolvedUrl": "https://www.ihgplc.com/en/news-and-media/news-releases",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 0,
+      "seenIds": []
+    },
+    "RIO": {
+      "companyName": "Rio Tinto",
+      "configuredUrl": "https://www.riotinto.com/en/news/releases",
+      "resolvedUrl": "https://www.riotinto.com/en/news/releases",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 1,
+      "seenIds": [
+        "rio-15c5b0f974481bb7"
+      ]
+    },
+    "HSBA": {
+      "companyName": "HSBC",
+      "configuredUrl": "https://www.hsbc.com/investors/results-and-announcements",
+      "resolvedUrl": "https://www.hsbc.com/investors/results-and-announcements",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 19,
+      "seenIds": [
+        "hsba-124c3abf7462f8ee",
+        "hsba-1459855bfba0582b",
+        "hsba-231f9f0003dbe3c2",
+        "hsba-3974de0e6af1dfc4",
+        "hsba-3ce6923ded37357d",
+        "hsba-575cb81682dc4478",
+        "hsba-64924b4fc70722c0",
+        "hsba-6cece29fa0fdb8af",
+        "hsba-7168770f8b2c82d3",
+        "hsba-77ddce079bc1825f",
+        "hsba-934f391c176a941c",
+        "hsba-9628b5744e437c2c",
+        "hsba-b317635c6f13c19a",
+        "hsba-bc5589f10fdd9d25",
+        "hsba-c365b7ff82aaf78a",
+        "hsba-c4a6f2c6c0fc3af0",
+        "hsba-c8bab2824960b69a",
+        "hsba-ced5562bd1408240",
+        "hsba-e0b1e2f6ea4d0fad"
+      ]
+    },
+    "MRO": {
+      "seenIds": [],
+      "companyName": "Melrose Industries",
+      "configuredUrl": "https://www.melroseplc.net/investors/results-reports-and-presentations/",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "403 Client Error: Forbidden for url: https://www.melroseplc.net/investors/results-reports-and-presentations/"
+    },
+    "CTEC": {
+      "companyName": "Convatec",
+      "configuredUrl": "https://www.convatecgroup.com/media/press-releases/",
+      "resolvedUrl": "https://www.convatecgroup.com/media/press-releases/",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 0,
+      "seenIds": []
+    },
+    "CCEP": {
+      "seenIds": [],
+      "companyName": "Coca-Cola Europacific Partners",
+      "configuredUrl": "https://ir.cocacolaep.com/news-releases",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "HTTPSConnectionPool(host='ir.cocacolaep.com', port=443): Read timed out. (read timeout=4)"
+    },
+    "AAL": {
+      "companyName": "Anglo American",
+      "configuredUrl": "https://www.angloamerican.com/media/press-releases",
+      "resolvedUrl": "https://www.angloamerican.com/media/press-releases/2026",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 2,
+      "seenIds": [
+        "aal-744ebd7402e97848",
+        "aal-bafeaa4d490527bf"
+      ]
+    },
+    "BP": {
+      "seenIds": [],
+      "companyName": "BP",
+      "configuredUrl": "https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "403 Client Error: Forbidden for url: https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html"
+    },
+    "CCC": {
+      "seenIds": [],
+      "companyName": "Computacenter",
+      "configuredUrl": "https://investors.computacenter.com/news-releases",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "HTTPSConnectionPool(host='investors.computacenter.com', port=443): Read timed out. (read timeout=4)"
+    },
+    "IMI": {
+      "seenIds": [],
+      "companyName": "IMI",
+      "configuredUrl": "https://www.imiplc.com/news-insights/",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "403 Client Error: Forbidden for url: https://www.imiplc.com/news-insights/"
+    },
+    "RTO": {
+      "companyName": "Rentokil Initial",
+      "configuredUrl": "https://www.rentokil-initial.com/media/news-releases.aspx",
+      "resolvedUrl": "https://www.rentokil-initial.com/media/news-releases/2026.aspx",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 0,
+      "seenIds": []
+    },
+    "KGF": {
+      "companyName": "Kingfisher",
+      "configuredUrl": "https://www.kingfisher.com/media/news",
+      "resolvedUrl": "https://www.kingfisher.com/media/news",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 1,
+      "seenIds": [
+        "kgf-44068f62800349c8"
+      ]
+    },
+    "ANTO": {
+      "companyName": "Antofagasta",
+      "configuredUrl": "https://www.antofagasta.co.uk/investors/news/",
+      "resolvedUrl": "https://www.antofagasta.co.uk/investors/news/",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 18,
+      "seenIds": [
+        "anto-01a7b2e619a570cf",
+        "anto-1865b853da99683b",
+        "anto-1e69fd522149ff63",
+        "anto-2188906238335d1d",
+        "anto-23cfbb64367151a2",
+        "anto-28d9a3c4e0812def",
+        "anto-2cf3d0477ffe65ce",
+        "anto-2d3cdead04d0fbc1",
+        "anto-30bf43cd18b1ccaa",
+        "anto-345f8fac8a9a9bb1",
+        "anto-3ed62e2f815310b2",
+        "anto-4208986418b823a0",
+        "anto-69d931c013a6f72a",
+        "anto-74e8b5cd84d06a26",
+        "anto-81ce8c5b3e181d91",
+        "anto-a0a9abd75c660d06",
+        "anto-affecedb1fc6f62f",
+        "anto-bee64ab39b324293"
+      ]
+    },
+    "NWG": {
+      "companyName": "NatWest Group",
+      "configuredUrl": "https://www.natwestgroup.com/news-and-insights/news-room/press-releases.html",
+      "resolvedUrl": "https://www.natwestgroup.com/news-and-insights/news-room/press-releases.html",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 1,
+      "seenIds": [
+        "nwg-df0fd2942f7c508f"
+      ]
+    },
+    "AZN": {
+      "seenIds": [],
+      "companyName": "AstraZeneca",
+      "configuredUrl": "https://www.astrazeneca.com/media-centre/press-releases.html",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "403 Client Error: Forbidden for url: https://www.astrazeneca.com/media-centre/press-releases.html"
+    },
+    "BARC": {
+      "companyName": "Barclays",
+      "configuredUrl": "https://home.barclays/news/press-releases/",
+      "resolvedUrl": "https://home.barclays/news/press-releases/",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 0,
+      "seenIds": []
+    },
+    "TSCO": {
+      "companyName": "Tesco",
+      "configuredUrl": "https://origin.tescoplc.com/investors/reports-results-and-presentations/results-and-presentations",
+      "resolvedUrl": "https://origin.tescoplc.com/investors/reports-results-and-presentations/results-and-presentations",
+      "lastSuccessAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": null,
+      "matchedLinkCount": 0,
+      "seenIds": []
+    },
+    "BA": {
+      "seenIds": [],
+      "companyName": "BAE Systems",
+      "configuredUrl": "https://www.baesystems.com/en/media-centre/news-releases",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "403 Client Error: Forbidden for url: https://www.baesystems.com/en/media-centre/news-releases"
+    },
+    "NG": {
+      "seenIds": [],
+      "companyName": "National Grid",
+      "configuredUrl": "https://www.nationalgrid.com/media-centre/press-releases",
+      "lastAttemptAt": "2026-08-08T06:41:47.898866+00:00",
+      "lastError": "403 Client Error: Forbidden for url: https://www.nationalgrid.com/media-centre/press-releases"
+    }
+  }
+}

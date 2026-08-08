@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "generatedAt": "2026-08-08T06:41:47.898866+00:00",
+    "mode": "monitor",
+    "publicationRule": "Detection creates a review candidate only. Nothing is added to the radar without source verification.",
+    "sourceCount": 25,
+    "activeSourceCount": 7,
+    "reachableSourceCount": 15,
+    "unavailableSourceCount": 10,
+    "newCandidateCount": 0,
+    "pendingCandidateCount": 0,
+    "validation": {
+      "status": "pass",
+      "errors": []
+    }
+  },
+  "sources": [
+    {
+      "ticker": "SHEL",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0
+    },
+    {
+      "ticker": "NXT",
+      "status": "active",
+      "matchedLinkCount": 6
+    },
+    {
+      "ticker": "MKS",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0
+    },
+    {
+      "ticker": "CNA",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.centrica.com/media-centre/news/"
+    },
+    {
+      "ticker": "LSEG",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0
+    },
+    {
+      "ticker": "ULVR",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.unilever.com/news/press-and-media/press-releases/"
+    },
+    {
+      "ticker": "IHG",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0
+    },
+    {
+      "ticker": "RIO",
+      "status": "active",
+      "matchedLinkCount": 1
+    },
+    {
+      "ticker": "HSBA",
+      "status": "active",
+      "matchedLinkCount": 19
+    },
+    {
+      "ticker": "MRO",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.melroseplc.net/investors/results-reports-and-presentations/"
+    },
+    {
+      "ticker": "CTEC",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0
+    },
+    {
+      "ticker": "CCEP",
+      "status": "unavailable",
+      "error": "HTTPSConnectionPool(host='ir.cocacolaep.com', port=443): Read timed out. (read timeout=4)"
+    },
+    {
+      "ticker": "AAL",
+      "status": "active",
+      "matchedLinkCount": 2
+    },
+    {
+      "ticker": "BP",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html"
+    },
+    {
+      "ticker": "CCC",
+      "status": "unavailable",
+      "error": "HTTPSConnectionPool(host='investors.computacenter.com', port=443): Read timed out. (read timeout=4)"
+    },
+    {
+      "ticker": "IMI",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.imiplc.com/news-insights/"
+    },
+    {
+      "ticker": "RTO",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0
+    },
+    {
+      "ticker": "KGF",
+      "status": "active",
+      "matchedLinkCount": 1
+    },
+    {
+      "ticker": "ANTO",
+      "status": "active",
+      "matchedLinkCount": 18
+    },
+    {
+      "ticker": "NWG",
+      "status": "active",
+      "matchedLinkCount": 1
+    },
+    {
+      "ticker": "AZN",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.astrazeneca.com/media-centre/press-releases.html"
+    },
+    {
+      "ticker": "BARC",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0
+    },
+    {
+      "ticker": "TSCO",
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0
+    },
+    {
+      "ticker": "BA",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.baesystems.com/en/media-centre/news-releases"
+    },
+    {
+      "ticker": "NG",
+      "status": "unavailable",
+      "error": "403 Client Error: Forbidden for url: https://www.nationalgrid.com/media-centre/press-releases"
+    }
+  ]
+}

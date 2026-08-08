@@ -73,7 +73,9 @@ npm run build
 5. Recalculates role-specific pressure scores.
 6. Runs validation before writing the public JSON files.
 
-The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations and the constituent roster, but it cannot yet safely discover leadership changes or new warning events automatically. Verified appointments and warning events must be added to their source files before the weekly build publishes them.
+The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It refreshes calculations and the constituent roster, then checks 25 official issuer pages for new earnings-related links. Matches enter a review queue and never alter the radar automatically. Verified appointments and qualifying warning events must still be approved in their source files before publication.
+
+Run the monitor independently with `npm run data:monitor`. Its source health and editorial safeguards are explained in [the monitor methodology](docs/announcement-monitor-methodology.md).
 
 ## Project structure
 
@@ -81,11 +83,15 @@ The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly 
 data/
   leadership_sources.json          # manually verified leadership evidence
   profit_warning_sources.json      # curated official warning evidence
+  announcement_monitor_sources.json # official issuer monitoring configuration
+  announcement_monitor_snapshot.json # previously seen announcement links
+  announcement_review_queue.json  # candidates awaiting editorial review
   ftse100_constituents.json        # generated public roster snapshot
   company_metadata.json            # Proxy Voting issuer aliases
   issuer_source_config.json        # direct voting-source seeds
 docs/
   leadership-radar-methodology.md
+  announcement-monitor-methodology.md
   project-log.md
 public/data/
   leadership-radar.json
@@ -112,7 +118,7 @@ src/
 ## Product roadmap
 
 - Complete 36-month warning research across the verified cohort, then evaluate a bounded score contribution.
-- Add issuer-page monitoring that creates a review queue rather than publishing unverified event matches.
+- Improve monitor coverage where official sites currently block automated access or render no usable links.
 - Add compact company logos to heatmap tiles and the evidence rail using issuer-approved assets, with a text fallback and no analytical effect.
 - Add announced succession status, concise leader profiles, and tenure-aligned share-price/TSR analysis in staged releases.
 

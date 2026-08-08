@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "data": "python3 scripts/build_dataset.py && python3 scripts/build_leadership_radar.py",
+    "data": "python3 scripts/build_dataset.py && python3 scripts/build_leadership_radar.py && python3 scripts/monitor_issuer_announcements.py",
     "data:radar": "python3 scripts/build_leadership_radar.py",
+    "data:monitor": "python3 scripts/monitor_issuer_announcements.py",
+    "data:monitor:baseline": "python3 scripts/monitor_issuer_announcements.py --baseline",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
