@@ -1,4 +1,18 @@
 {
-  "updatedAt": "2026-08-08T17:48:32.413055+00:00",
-  "candidates": []
+  "updatedAt": "2026-08-10T08:42:11.947869+00:00",
+  "candidates": [
+    {
+      "id": "mtln-d62b3cec8341738b",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/l3ucqcs3/metlen_buyback_weekly_transaction_announcement_-10-8-26.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-10T08:42:11.947869+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    }
+  ]
 }
