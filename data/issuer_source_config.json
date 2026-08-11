@@ -109,6 +109,54 @@
       "source": "official-issuer-agm-result",
       "sourceGroup": "AGM results",
       "parserHint": "united-utilities-agm-results"
+    },
+    {
+      "companyName": "GSK PLC",
+      "meetingDate": "2023-05-03",
+      "url": "https://www.gsk.com/media/udllrtna/2023-agm-results.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "gsk-agm-results"
+    },
+    {
+      "companyName": "GSK PLC",
+      "meetingDate": "2024-05-08",
+      "url": "https://www.gsk.com/media/geigwaue/2024-agm-results.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "gsk-agm-results"
+    },
+    {
+      "companyName": "GSK PLC",
+      "meetingDate": "2025-05-07",
+      "url": "https://www.gsk.com/media/k05impma/2025-agm-results.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "gsk-agm-results"
+    },
+    {
+      "companyName": "SMITHS GROUP PLC",
+      "meetingDate": "2021-11-17",
+      "url": "https://www.smiths.com/media/u2dapgp3/2021-agm-results.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "smiths-agm-results"
+    },
+    {
+      "companyName": "SMITHS GROUP PLC",
+      "meetingDate": "2022-11-16",
+      "url": "https://www.smiths.com/media/u01lrcj0/2022-agm-results.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "smiths-agm-results"
+    },
+    {
+      "companyName": "SMITHS GROUP PLC",
+      "meetingDate": "2023-11-16",
+      "url": "https://www.smiths.com/media/q5sn0zt4/2023-agm-results.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "smiths-agm-results"
     }
   ]
 }

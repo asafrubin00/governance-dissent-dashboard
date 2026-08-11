@@ -417,7 +417,7 @@ def main() -> None:
         "metadata": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "asOfDate": as_of,
-            "methodologyVersion": "0.6",
+            "methodologyVersion": "0.7",
             "outcomeCount": len(enriched_outcomes),
             "completedOutcomeCount": sum(record["cohort"] == "completed" for record in enriched_outcomes),
             "activeOutcomeCount": sum(record["cohort"] == "active" for record in enriched_outcomes),

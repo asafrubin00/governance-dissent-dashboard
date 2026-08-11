@@ -84,6 +84,78 @@
     "parserHint": "united-utilities-agm-results"
   },
   {
+    "url": "https://www.gsk.com/media/udllrtna/2023-agm-results.pdf",
+    "companyName": "GSK PLC",
+    "meetingDate": "2023-05-03",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/b1a620383e88.pdf",
+    "rowsExtracted": 23,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "gsk-agm-results"
+  },
+  {
+    "url": "https://www.gsk.com/media/geigwaue/2024-agm-results.pdf",
+    "companyName": "GSK PLC",
+    "meetingDate": "2024-05-08",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/817f95d37177.pdf",
+    "rowsExtracted": 23,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "gsk-agm-results"
+  },
+  {
+    "url": "https://www.gsk.com/media/k05impma/2025-agm-results.pdf",
+    "companyName": "GSK PLC",
+    "meetingDate": "2025-05-07",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/72c9efd02d64.pdf",
+    "rowsExtracted": 25,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "gsk-agm-results"
+  },
+  {
+    "url": "https://www.smiths.com/media/u2dapgp3/2021-agm-results.pdf",
+    "companyName": "SMITHS GROUP PLC",
+    "meetingDate": "2021-11-17",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/f1cbd9a61823.pdf",
+    "rowsExtracted": 22,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "smiths-agm-results"
+  },
+  {
+    "url": "https://www.smiths.com/media/u01lrcj0/2022-agm-results.pdf",
+    "companyName": "SMITHS GROUP PLC",
+    "meetingDate": "2022-11-16",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/cf36e0022ed4.pdf",
+    "rowsExtracted": 21,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "smiths-agm-results"
+  },
+  {
+    "url": "https://www.smiths.com/media/q5sn0zt4/2023-agm-results.pdf",
+    "companyName": "SMITHS GROUP PLC",
+    "meetingDate": "2023-11-16",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/bc3cf72e62c4.pdf",
+    "rowsExtracted": 21,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "smiths-agm-results"
+  },
+  {
     "url": "https://www.centrica.com/media/dempwpcp/shareholder-update-statement-2025-agm-final-website.pdf",
     "status": "parsed",
     "rawPdfPath": "data/raw/issuer-documents/f966ee813283.pdf",

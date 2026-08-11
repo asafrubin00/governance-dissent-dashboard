@@ -298,3 +298,12 @@
 - Confirmed the highest United Utilities opposition was 8.41%, so no sub-threshold row was added to the significant-dissent product dataset.
 - Increased complete historical AGM windows from three to four and direct issuer meeting coverage from 32 to 35, with no change to the 28-resolution public tracker scope.
 - Retained the production score weights after rebuilding the 56-outcome calibration audit; incomplete evidence continues to be excluded rather than treated as zero.
+
+## GSK and Smiths direct AGM ingestion v0.7
+
+- Completed aligned warning-history reviews for Spirax, Smiths Group, GSK and SSE, increasing complete warning windows from 33 to 37 and reducing pending windows from 17 to 13.
+- Added issuer-specific PDF parsers for GSK and Smiths Group and validated 135 resolutions across six complete AGM poll tables.
+- Confirmed maximum opposition of 11.16% at GSK and 15.04% at Smiths, so no sub-threshold rows entered the significant-dissent dataset.
+- Increased complete historical AGM windows from four to six and direct issuer meeting coverage from 35 to 41.
+- Increased validated official AGM PDF rows from 127 to 262 while preserving the public tracker's 28 significant resolutions and 20% threshold.
+- Rebuilt calibration methodology v0.7 without changing the production radar weights; incomplete warning and AGM histories remain excluded rather than interpreted as zero.

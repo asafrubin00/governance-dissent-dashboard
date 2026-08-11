@@ -61,7 +61,7 @@ For companies inside the reviewed subset, no warning badge means no qualifying e
 
 ## Calibration audit
 
-Calibration methodology `v0.4` records 56 source-backed transition outcomes alongside 188 current, right-censored role observations. The outcome census contains 50 completed CEO transitions and six eligible active CEO or Chair processes. One interim-Chair case remains excluded because the recorded incumbent began the role after the succession search was announced.
+Calibration methodology `v0.7` records 56 source-backed transition outcomes alongside 188 current, right-censored role observations. The outcome census contains 50 completed CEO transitions and six eligible active CEO or Chair processes. One interim-Chair case remains excluded because the recorded incumbent began the role after the succession search was announced.
 
 Completed cases are included only where an official issuer announcement or annual report identifies the incumbent, transition outcome and announcement timing. This is a purposive high-confidence cohort, not a complete census of FTSE 100 CEO changes. Where an issuer gives only a month for a role start, the first day is stored for calculation and the record is explicitly marked with month-level precision.
 
@@ -76,7 +76,7 @@ The audit tests two exploratory additions without changing production scores:
 
 Risk thresholds are derived only from the current-comparison cohort's 75th percentiles, so outcome observations do not influence the cutoffs used to assess them. The six-case evaluation sample established in v0.3 remains locked for comparability and the preceding 18 aligned cases remain the development cohort. In development, warning sensitivity improves capture from 27.8% to 38.9%. In the locked sample, tenure-only, warning and combined models all capture 16.7%. Market underperformance adds no lift. Because this sample has now been evaluated, it is no longer described as pristine unseen evidence.
 
-The result does not support changing production weights. It suggests warnings may add retrospective separation in the development data, but that effect does not generalise in the small locked sample. The next evidential threshold is complete warning backfill for the 17 pending cases, broader complete AGM coverage beyond the first four cases, and a genuinely untouched future transition cohort before dissent or warning weights are promoted into production. Full records and summary statistics are published in `public/data/leadership-calibration.json`.
+The result does not support changing production weights. It suggests warnings may add retrospective separation in the development data, but that effect does not generalise in the small locked sample. The next evidential threshold is complete warning backfill for the 13 pending cases, broader complete AGM coverage beyond the first six cases, and a genuinely untouched future transition cohort before dissent or warning weights are promoted into production. Full records and summary statistics are published in `public/data/leadership-calibration.json`.
 
 ## Market-series quality
 
@@ -130,4 +130,4 @@ The generated file records validation status, methodology version, source mode, 
 
 `npm run data` refreshes the public constituent snapshot, rebuilds Proxy Voting, recalculates radar scores, refreshes market-performance series for all 100 companies, and runs as part of the weekly GitHub Actions workflow.
 
-Leadership appointments, profit-warning events, and succession cases remain editorially approved because issuer disclosures vary and a false automated match would be more damaging than a visible evidence gap. The weekly monitor discovers candidate issuer links, but never publishes them as analytical evidence automatically. Historical calibration currently has 33 complete warning windows and four complete AGM windows across 50 completed transitions; partial histories are not interpreted as zero events.
+Leadership appointments, profit-warning events, and succession cases remain editorially approved because issuer disclosures vary and a false automated match would be more damaging than a visible evidence gap. The weekly monitor discovers candidate issuer links, but never publishes them as analytical evidence automatically. Historical calibration currently has 37 complete warning windows and six complete AGM windows across 50 completed transitions; partial histories are not interpreted as zero events.

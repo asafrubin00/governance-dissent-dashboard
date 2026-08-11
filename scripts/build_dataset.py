@@ -761,6 +761,64 @@ def parse_pdf_result_rows(text: str, parser_hint: str) -> list[dict[str, Any]]:
             )
         return rows
 
+    if parser_hint in {"gsk-agm-results", "smiths-agm-results"}:
+        start_match = re.search(r"\b1\s+(?:Receive|Adoption)", cleaned)
+        working = cleaned[start_match.start():] if start_match else cleaned
+        working = re.sub(
+            r"(?:Resolution\s+)?(?:VOTES|Total votes)\s+FOR.*?VOTES\s+WITHHELD(?:\(\d\))?",
+            " ",
+            working,
+            flags=re.IGNORECASE,
+        )
+        working = re.sub(
+            r"(17\s+Authority for the company to make donations to political organisations)\s+"
+            r"(?P<data>\d[\d,]*\s+\d+\.\d+\s+\d[\d,]*\s+\d+\.\d+\s+\d[\d,]*\s+\d[\d,]*)\s+"
+            r"and incur political expenditure\s+(18\s+Authority to allot shares)",
+            r"\1 and incur political expenditure \g<data> \3",
+            working,
+            flags=re.IGNORECASE,
+        )
+        working = re.sub(
+            r"(15\s+Authority for Audit & Risk Committee to determine the)\s+"
+            r"(?P<data>\d[\d,]*\s+\d+\.\d+\s+\d[\d,]*\s+\d+\.\d+\s+\d[\d,]*\s+\d+\.\d+%\s+\d[\d,]*)\s+"
+            r"remuneration of the auditors\s+(16\s+Authority to Directors to allot shares)",
+            r"\1 remuneration of the auditors \g<data> \3",
+            working,
+            flags=re.IGNORECASE,
+        )
+        pattern = re.compile(
+            r"(?P<num>\d{1,2})\s+(?P<title>.+?)\s+"
+            r"(?P<for_count>\d[\d,]*)\s+"
+            r"(?P<for_pct>\d+\.\d+)\s+"
+            r"(?P<against_count>\d[\d,]*)\s+"
+            r"(?P<against_pct>\d+\.\d+)\s+"
+            r"(?P<total>\d[\d,]*)\s+"
+            r"(?:(?P<isc>\d+\.\d+)%\s+)?"
+            r"(?P<withheld>\d[\d,]*)"
+            r"(?=\s+\d{1,2}\s+[A-Z]|\s+Notes?\b|\s+\(\d\)|$)",
+            flags=re.IGNORECASE,
+        )
+        return [
+            {
+                "resolutionNumber": int(match.group("num")),
+                "resolutionTitle": re.sub(
+                    r"pre-\s+emption",
+                    "pre-emption",
+                    match.group("title").strip(),
+                    flags=re.IGNORECASE,
+                ),
+                "resolutionTitleNormalised": normalise_resolution_title(match.group("title")),
+                "votesForCount": parse_count(match.group("for_count")),
+                "votesForPct": parse_percent(match.group("for_pct")),
+                "votesAgainstCount": parse_count(match.group("against_count")),
+                "votesAgainstPct": parse_percent(match.group("against_pct")),
+                "votesWithheldCount": parse_count(match.group("withheld")),
+                "totalVotesCastCount": parse_count(match.group("total")),
+                "issuedShareCapitalVotedPct": parse_percent(match.group("isc")) if match.group("isc") else None,
+            }
+            for match in pattern.finditer(working)
+        ]
+
     return []
 
 
