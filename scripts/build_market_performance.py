@@ -30,6 +30,7 @@ def fetch_chart(symbol: str, period1: int) -> list[dict[str, float | str]]:
     response = subprocess.run(
         [
             "curl", "--fail", "--location", "--silent", "--show-error",
+            "--retry", "3", "--retry-delay", "1", "--retry-all-errors",
             "--user-agent", "Mozilla/5.0 ProxyWarsGovernanceResearch/1.0",
             f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?{query}",
         ],

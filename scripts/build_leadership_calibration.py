@@ -31,6 +31,14 @@ ALLOWED_OUTCOME_TYPES = {
 }
 ALLOWED_DATE_PRECISIONS = {"day", "month", "year"}
 ALLOWED_COVERAGE_STATUSES = {"complete", "partial"}
+LOCKED_HOLDOUT_IDS = {
+    "hsba-ceo-2024-04-30",
+    "brby-ceo-2024-07-15",
+    "ulvr-ceo-2025-02-25",
+    "rto-ceo-2025-05-07",
+    "rio-ceo-2025-07-15",
+    "dge-ceo-2025-07-16",
+}
 
 
 def normalise(value: str) -> str:
@@ -348,26 +356,30 @@ def main() -> None:
     baseline_threshold = percentile([record["baselineScore"] for record in comparisons], 0.75)
     warning_threshold = percentile([record["warningSensitivityScore"] for record in comparisons], 0.75)
     combined_threshold = percentile([record["combinedSensitivityScore"] for record in comparisons], 0.75)
+    aligned_completed_outcomes = [
+        record for record in enriched_outcomes
+        if record["cohort"] == "completed"
+        and record["warningCoverageStatus"] == "complete"
+        and record["relativePerformancePct"] is not None
+    ]
     sensitivity = {
+        "eligibleCompletedOutcomeCount": len(aligned_completed_outcomes),
         "baselineTopQuartileThreshold": baseline_threshold,
-        "baselineOutcomeCapturePct": capture_rate(enriched_outcomes, "baselineScore", baseline_threshold),
+        "baselineOutcomeCapturePct": capture_rate(aligned_completed_outcomes, "baselineScore", baseline_threshold),
         "warningTopQuartileThreshold": warning_threshold,
-        "warningOutcomeCapturePct": capture_rate(enriched_outcomes, "warningSensitivityScore", warning_threshold),
+        "warningOutcomeCapturePct": capture_rate(aligned_completed_outcomes, "warningSensitivityScore", warning_threshold),
         "candidateWarningRule": "Exploratory only: 6 points for a material warning or 12 for any severe warning, plus 3 for each repeat event, capped at 18.",
         "combinedTopQuartileThreshold": combined_threshold,
-        "combinedOutcomeCapturePct": capture_rate(enriched_outcomes, "combinedSensitivityScore", combined_threshold),
+        "combinedOutcomeCapturePct": capture_rate(aligned_completed_outcomes, "combinedSensitivityScore", combined_threshold),
         "candidatePerformanceRule": "Exploratory only: 8 points for trailing relative underperformance of at least 20 percentage points and 15 points at 40 percentage points.",
     }
 
-    completed_outcomes = sorted(
-        (record for record in enriched_outcomes if record["cohort"] == "completed"),
-        key=lambda record: record["announcementDate"],
-    )
-    holdout_size = min(6, max(1, len(completed_outcomes) // 4))
-    training_outcomes = completed_outcomes[:-holdout_size]
-    holdout_outcomes = completed_outcomes[-holdout_size:]
+    holdout_outcomes = [record for record in aligned_completed_outcomes if record["id"] in LOCKED_HOLDOUT_IDS]
+    training_outcomes = [record for record in aligned_completed_outcomes if record["id"] not in LOCKED_HOLDOUT_IDS]
+    if {record["id"] for record in holdout_outcomes} != LOCKED_HOLDOUT_IDS:
+        errors.append("The locked v0.3 holdout is no longer fully eligible for aligned validation.")
     held_out_validation = {
-        "design": "Out-of-time holdout using the six most recent completed transitions. Risk thresholds are the current-comparison cohort's 75th percentiles and do not use outcome observations.",
+        "design": "Locked six-case out-of-time evaluation sample established in methodology v0.3. Risk thresholds are the current-comparison cohort's 75th percentiles and do not use outcome observations.",
         "trainingOutcomeIds": [record["id"] for record in training_outcomes],
         "holdoutOutcomeIds": [record["id"] for record in holdout_outcomes],
         "thresholdSource": "current-comparison-only",
@@ -386,7 +398,7 @@ def main() -> None:
             "tenureAndWarnings": capture_rate(holdout_outcomes, "warningSensitivityScore", warning_threshold),
             "tenureWarningsAndPerformance": capture_rate(holdout_outcomes, "combinedSensitivityScore", combined_threshold),
         },
-        "caveat": "Six holdout cases are sufficient to detect gross overfitting, not to estimate stable predictive accuracy. Current comparisons are right-censored rather than confirmed negatives.",
+        "caveat": "The six cases remain locked for comparability but have already been evaluated once, so they are no longer a pristine unseen holdout. Current comparisons are right-censored rather than confirmed negatives.",
     }
 
     if errors:
@@ -394,14 +406,14 @@ def main() -> None:
 
     recommendation = {
         "decision": "retain-current-weights",
-        "rationale": "Warning and market-performance signals now use announcement-aligned windows and have been tested on a small out-of-time holdout. The sample remains too small and current comparisons are right-censored, so exploratory uplifts do not become production weights.",
-        "minimumNextEvidence": "Expand to at least 50 completed outcomes, preserve an untouched out-of-time holdout, and establish complete resolution-level AGM coverage before testing dissent as a predictive input.",
+        "rationale": "The completed-transition census now reaches 50 official-source cases, but only 24 have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged.",
+        "minimumNextEvidence": "Backfill the 26 pending warning windows, establish complete resolution-level AGM coverage, and reserve future completed transitions as a genuinely untouched evaluation cohort.",
     }
     payload = {
         "metadata": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "asOfDate": as_of,
-            "methodologyVersion": "0.3",
+            "methodologyVersion": "0.4",
             "outcomeCount": len(enriched_outcomes),
             "completedOutcomeCount": sum(record["cohort"] == "completed" for record in enriched_outcomes),
             "activeOutcomeCount": sum(record["cohort"] == "active" for record in enriched_outcomes),
@@ -411,6 +423,7 @@ def main() -> None:
             "historicalEvidence": {
                 "reviewedOutcomeCount": len(reviews),
                 "completeWarningWindowCount": sum(review["warningCoverage"]["status"] == "complete" for review in reviews),
+                "partialWarningWindowCount": sum(review["warningCoverage"]["status"] == "partial" for review in reviews),
                 "completeDissentWindowCount": sum(review["dissentCoverage"]["status"] == "complete" for review in reviews),
                 "warningEventCount": len(historical.get("warningEvents", [])),
                 "dissentEventCount": len(historical.get("dissentEvents", [])),
@@ -419,7 +432,7 @@ def main() -> None:
         "method": {
             "outcomeDefinition": "An official issuer announcement of a CEO or Chair departure, retirement, board-led replacement or active succession process.",
             "caseSelectionRule": "Completed cases are included only where an official issuer source identifies the incumbent, transition outcome and announcement timing. The cohort is high-confidence and purposive, not a complete census of FTSE 100 transitions.",
-            "cutoffRule": "Completed-outcome warning evidence uses a fixed 36-month window ending on the transition announcement. Market evidence ends at the announcement. Current comparison observations use the evidence date.",
+            "cutoffRule": "Completed-outcome warning evidence uses a fixed 36-month window ending on the transition announcement. Cases enter aligned metrics only after that warning window is marked complete and market evidence is available through the announcement. Current comparison observations use the evidence date.",
             "datePrecisionRule": "Where an issuer source gives only a month for a role start, the first day is stored for calculation and roleStartDatePrecision is set to month; this can shift calculated tenure by less than one month.",
             "longTenureRule": "Eight years for a CEO and seven years for a Chair, used as an exploratory discriminator rather than a governance breach threshold.",
             "marketPerformanceTreatment": "Exploratory two-year dividend-adjusted company return less FTSE 100 price-index return. Isolated GBP/GBp scale switches are corrected and validated before use.",
@@ -428,12 +441,13 @@ def main() -> None:
                 "The outcome cohort is deliberately high-confidence and purposive rather than comprehensive.",
                 "Current-role comparisons are right-censored observations, not proven non-events.",
                 "Historical voting evidence is event-backed but meeting coverage remains partial, so dissent is disclosed but excluded from the aligned score.",
-                "Historical profit-warning reviews cover all completed outcomes but depend on issuer archive availability and the stated strict warning definition.",
+                "Twenty-six newly verified transitions remain excluded from aligned metrics until their historical warning archives are fully reviewed.",
                 "The market comparison mixes a dividend-adjusted company proxy with a price-only benchmark and is suitable only for sensitivity analysis.",
             ],
         },
         "summary": {
             "outcomes": group_summary(enriched_outcomes),
+            "alignedCompletedOutcomes": group_summary(aligned_completed_outcomes),
             "currentComparisons": group_summary(comparisons),
             "sensitivity": sensitivity,
             "heldOutValidation": held_out_validation,
@@ -447,6 +461,9 @@ def main() -> None:
     radar["metadata"]["calibration"] = {
         "methodologyVersion": payload["metadata"]["methodologyVersion"],
         "outcomeCount": payload["metadata"]["outcomeCount"],
+        "completedOutcomeCount": payload["metadata"]["completedOutcomeCount"],
+        "activeOutcomeCount": payload["metadata"]["activeOutcomeCount"],
+        "alignedCompletedOutcomeCount": payload["summary"]["sensitivity"]["eligibleCompletedOutcomeCount"],
         "comparisonObservationCount": payload["metadata"]["comparisonObservationCount"],
         "decision": recommendation["decision"],
         "note": recommendation["rationale"],

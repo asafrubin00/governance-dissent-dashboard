@@ -133,13 +133,14 @@ src/
 - A public constituent table is used for reproducibility and is not an official FTSE Russell feed.
 - Classification and parsing rules remain suitable for a portfolio MVP, not a commercial proxy-research service.
 - Yahoo adjusted close is used only as a transparent dividend-adjusted research proxy; it is not a licensed total-return index and excludes tax, costs, and currency effects.
-- The calibration cohort comprises 24 completed transitions and six live processes. Its six-case out-of-time holdout shows no capture improvement from warning or performance uplifts, so it supports sensitivity analysis rather than transition probabilities.
+- The transition census comprises 50 completed transitions and six live processes. Only 24 completed cases currently have complete aligned 36-month warning windows; the locked six-case evaluation sample shows no capture improvement from warning or performance uplifts, so the audit supports sensitivity analysis rather than transition probabilities.
 
 ## Product roadmap
 
-- Improve monitor reliability where official sites block automated access or render no usable links.
-- Extend the source-backed leadership profile pilot beyond the current 15 companies.
-- Align at least 30 transitions to complete 36-month warning, voting, and performance histories, then test candidate weights on a held-out sample.
+- Backfill complete 36-month warning windows for the 26 newly added transition cases and complete resolution-level AGM histories across the cohort.
+- Reserve future completed transitions as a genuinely untouched evaluation cohort before changing production weights.
+- Extend the source-backed leadership profile pilot beyond the current 25 companies.
+- Add direct post-October-2025 proxy-voting ingestion from official issuer AGM announcements, with editorial review before publication.
 - Replace the public adjusted-close proxy with licensed total-return data if the project moves beyond portfolio research use.
 
 ## Verification

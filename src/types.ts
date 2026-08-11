@@ -199,6 +199,9 @@ export type LeadershipRadarData = {
     calibration: {
       methodologyVersion: string
       outcomeCount: number
+      completedOutcomeCount: number
+      activeOutcomeCount: number
+      alignedCompletedOutcomeCount: number
       comparisonObservationCount: number
       decision: 'retain-current-weights'
       note: string

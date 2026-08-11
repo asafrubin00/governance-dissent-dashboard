@@ -1,16 +1,20 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-10T08:42:11.947869+00:00",
+    "generatedAt": "2026-08-11T14:06:03.168588+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 49,
-    "reachableSourceCount": 83,
-    "unavailableSourceCount": 17,
-    "newCandidateCount": 1,
-    "pendingCandidateCount": 1,
+    "activeSourceCount": 58,
+    "reachableSourceCount": 91,
+    "unavailableSourceCount": 9,
+    "unavailableSourceCountByCategory": {
+      "access-blocked": 8,
+      "tls-error": 1
+    },
+    "newCandidateCount": 0,
+    "pendingCandidateCount": 3,
     "pendingCandidateCountBySignal": {
-      "earnings": 1,
+      "earnings": 3,
       "succession": 0
     },
     "validation": {
@@ -49,24 +53,33 @@
     {
       "ticker": "CNA",
       "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.centrica.com/media-centre/news/"
+      "failureCategory": "access-blocked",
+      "error": "https://www.centrica.com/media-centre/news/: 403 Client Error: Forbidden for url: https://www.centrica.com/media-centre/news/"
     },
     {
       "ticker": "LSEG",
-      "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.lseg.com/en/investor-relations/financial-results"
+      "status": "active",
+      "matchedLinkCount": 186,
+      "matchedLinkCountBySignal": {
+        "earnings": 186,
+        "succession": 0
+      }
     },
     {
       "ticker": "ULVR",
-      "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.unilever.com/news/press-and-media/press-releases/"
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "IHG",
       "status": "active",
-      "matchedLinkCount": 9,
+      "matchedLinkCount": 11,
       "matchedLinkCountBySignal": {
-        "earnings": 9,
+        "earnings": 11,
         "succession": 0
       }
     },
@@ -91,7 +104,8 @@
     {
       "ticker": "MRO",
       "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.melroseplc.net/investors/results-reports-and-presentations/"
+      "failureCategory": "access-blocked",
+      "error": "https://www.melroseplc.net/investors/results-reports-and-presentations/: 403 Client Error: Forbidden for url: https://www.melroseplc.net/investors/results-reports-and-presentations/"
     },
     {
       "ticker": "CTEC",
@@ -104,8 +118,12 @@
     },
     {
       "ticker": "CCEP",
-      "status": "unavailable",
-      "error": "HTTPSConnectionPool(host='ir.cocacolaep.com', port=443): Read timed out. (read timeout=12)"
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "AAL",
@@ -119,17 +137,23 @@
     {
       "ticker": "BP",
       "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html"
+      "failureCategory": "access-blocked",
+      "error": "https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html: 403 Client Error: Forbidden for url: https://www.bp.com/en/global/corporate/news-and-insights/press-releases.html"
     },
     {
       "ticker": "CCC",
-      "status": "unavailable",
-      "error": "HTTPSConnectionPool(host='investors.computacenter.com', port=443): Read timed out. (read timeout=12)"
+      "status": "active",
+      "matchedLinkCount": 2,
+      "matchedLinkCountBySignal": {
+        "earnings": 2,
+        "succession": 0
+      }
     },
     {
       "ticker": "IMI",
       "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.imiplc.com/news-insights/"
+      "failureCategory": "access-blocked",
+      "error": "https://www.imiplc.com/news-insights/: 403 Client Error: Forbidden for url: https://www.imiplc.com/news-insights/"
     },
     {
       "ticker": "RTO",
@@ -170,7 +194,8 @@
     {
       "ticker": "AZN",
       "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.astrazeneca.com/media-centre/press-releases.html"
+      "failureCategory": "access-blocked",
+      "error": "https://www.astrazeneca.com/media-centre/press-releases.html: 403 Client Error: Forbidden for url: https://www.astrazeneca.com/media-centre/press-releases.html"
     },
     {
       "ticker": "BARC",
@@ -192,13 +217,18 @@
     },
     {
       "ticker": "BA",
-      "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.baesystems.com/en/media-centre/news-releases"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "NG",
       "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.nationalgrid.com/media-centre/press-releases"
+      "failureCategory": "access-blocked",
+      "error": "https://www.nationalgrid.com/media-centre/press-releases: 403 Client Error: Forbidden for url: https://www.nationalgrid.com/media-centre/press-releases"
     },
     {
       "ticker": "III",
@@ -310,10 +340,10 @@
     },
     {
       "ticker": "CPG",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
+      "status": "active",
+      "matchedLinkCount": 3,
       "matchedLinkCountBySignal": {
-        "earnings": 0,
+        "earnings": 3,
         "succession": 0
       }
     },
@@ -373,10 +403,10 @@
     },
     {
       "ticker": "HLN",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
+      "status": "active",
+      "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
-        "earnings": 0,
+        "earnings": 1,
         "succession": 0
       }
     },
@@ -436,8 +466,12 @@
     },
     {
       "ticker": "ADM",
-      "status": "unavailable",
-      "error": "HTTPSConnectionPool(host='admiralgroup.co.uk', port=443): Read timed out. (read timeout=12)"
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 0
+      }
     },
     {
       "ticker": "AAF",
@@ -486,12 +520,9 @@
     },
     {
       "ticker": "EDV",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
-      "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "tls-error",
+      "error": "https://www.endeavourmining.com/investors/results-and-reporting/: HTTPSConnectionPool(host='www.endeavourmining.com', port=443): Max retries exceeded with url: /investors/results-and-reporting/ (Caused by SSLError(SSLError(1, '[SSL: TLSV1_A"
     },
     {
       "ticker": "FCIT",
@@ -576,8 +607,12 @@
     },
     {
       "ticker": "INF",
-      "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.informa.com/investors/results-presentations/"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "ITRK",
@@ -591,7 +626,8 @@
     {
       "ticker": "INVP",
       "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.investec.com/en_gb/welcome-to-investec/investor-relations/financial-information.html"
+      "failureCategory": "access-blocked",
+      "error": "https://www.investec.com/en_gb/welcome-to-investec/investor-relations/financial-information.html: 403 Client Error: Forbidden for url: https://www.investec.com/en_gb/welcome-to-investec/investor-relations/financial-information.html"
     },
     {
       "ticker": "JD",
@@ -622,8 +658,12 @@
     },
     {
       "ticker": "LGEN",
-      "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://group.legalandgeneral.com/newsroom/press-releases/"
+      "status": "active",
+      "matchedLinkCount": 5,
+      "matchedLinkCountBySignal": {
+        "earnings": 1,
+        "succession": 4
+      }
     },
     {
       "ticker": "LMP",
@@ -700,16 +740,17 @@
     {
       "ticker": "RKT",
       "status": "active",
-      "matchedLinkCount": 2,
+      "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
-        "earnings": 2,
+        "earnings": 1,
         "succession": 0
       }
     },
     {
       "ticker": "SGE",
       "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.sage.com/en-gb/company/digital-newsroom/"
+      "failureCategory": "access-blocked",
+      "error": "https://www.sage.com/en-gb/company/digital-newsroom/: 403 Client Error: Forbidden for url: https://www.sage.com/en-gb/company/digital-newsroom/"
     },
     {
       "ticker": "SBRY",
@@ -749,8 +790,12 @@
     },
     {
       "ticker": "SVT",
-      "status": "unavailable",
-      "error": "403 Client Error: Forbidden for url: https://www.severntrent.com/media/news-releases/"
+      "status": "active",
+      "matchedLinkCount": 1,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 1
+      }
     },
     {
       "ticker": "SMIN",

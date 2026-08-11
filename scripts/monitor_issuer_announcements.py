@@ -15,6 +15,8 @@ from urllib.parse import urljoin, urlparse, urlunparse
 
 import requests
 from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -64,6 +66,9 @@ def validate_config(config: dict[str, Any], queue: dict[str, Any]) -> list[str]:
             errors.append("Monitor source is missing a ticker or company name.")
         if not str(source.get("url", "")).startswith("https://"):
             errors.append(f"Monitor URL must use HTTPS for {source.get('ticker', '[unknown]')}.")
+        for fallback_url in source.get("fallbackUrls", []):
+            if not str(fallback_url).startswith("https://"):
+                errors.append(f"Monitor fallback URL must use HTTPS for {source.get('ticker', '[unknown]')}.")
     queue_ids = [item.get("id") for item in queue.get("candidates", [])]
     if len(queue_ids) != len(set(queue_ids)):
         errors.append("Duplicate announcement review-queue ID found.")
@@ -79,15 +84,43 @@ def validate_config(config: dict[str, Any], queue: dict[str, Any]) -> list[str]:
 
 
 def fetch_candidates(
-    source: dict[str, str],
+    source: dict[str, Any],
     keyword_groups: dict[str, list[str]],
 ) -> tuple[list[dict[str, Any]], str]:
-    response = requests.get(
-        source["url"],
-        headers={"User-Agent": USER_AGENT},
-        timeout=(5, 12),
+    session = requests.Session()
+    session.mount(
+        "https://",
+        HTTPAdapter(
+            max_retries=Retry(
+                total=2,
+                connect=2,
+                read=2,
+                backoff_factor=0.5,
+                status_forcelist=(429, 500, 502, 503, 504),
+                allowed_methods=("GET",),
+            )
+        ),
     )
-    response.raise_for_status()
+    errors = []
+    response = None
+    for url in [source["url"], *source.get("fallbackUrls", [])]:
+        try:
+            response = session.get(
+                url,
+                headers={
+                    "User-Agent": USER_AGENT,
+                    "Accept": "text/html,application/xhtml+xml",
+                    "Accept-Language": "en-GB,en;q=0.8",
+                },
+                timeout=(7, 20),
+            )
+            response.raise_for_status()
+            break
+        except requests.RequestException as error:
+            errors.append(f"{url}: {error}")
+            response = None
+    if response is None:
+        raise requests.RequestException("; ".join(errors))
     soup = BeautifulSoup(response.text, "html.parser")
     source_host = urlparse(response.url).netloc.lower().removeprefix("www.")
     matches: dict[str, dict[str, str]] = {}
@@ -112,6 +145,21 @@ def fetch_candidates(
     return sorted(matches.values(), key=lambda item: item["url"]), response.url
 
 
+def failure_category(error: Exception) -> str:
+    message = str(error).lower()
+    if "403" in message or "401" in message:
+        return "access-blocked"
+    if "timed out" in message or "timeout" in message:
+        return "timeout"
+    if "ssl" in message or "certificate" in message:
+        return "tls-error"
+    if "404" in message:
+        return "not-found"
+    if "429" in message:
+        return "rate-limited"
+    return "fetch-error"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -133,7 +181,7 @@ def main() -> None:
     new_candidate_count = 0
 
     fetch_results: dict[str, tuple[list[dict[str, Any]], str] | Exception] = {}
-    with ThreadPoolExecutor(max_workers=len(config["sources"])) as executor:
+    with ThreadPoolExecutor(max_workers=min(20, len(config["sources"]))) as executor:
         futures = {
             executor.submit(fetch_candidates, source, config["keywordGroups"]): source["ticker"]
             for source in config["sources"]
@@ -201,13 +249,22 @@ def main() -> None:
                 "lastAttemptAt": now,
                 "lastError": str(error)[:300],
             }
-            source_health.append({"ticker": ticker, "status": "unavailable", "error": str(error)[:160]})
+            source_health.append({
+                "ticker": ticker,
+                "status": "unavailable",
+                "failureCategory": failure_category(error),
+                "error": str(error)[:240],
+            })
 
     snapshot["lastRunAt"] = now
     queue["updatedAt"] = now
     queue["candidates"].sort(key=lambda item: item["detectedAt"], reverse=True)
     active_count = sum(item["status"] == "active" for item in source_health)
     reachable_count = sum(item["status"] != "unavailable" for item in source_health)
+    unavailable_by_category = {
+        category: sum(item.get("failureCategory") == category for item in source_health)
+        for category in sorted({item.get("failureCategory") for item in source_health if item.get("failureCategory")})
+    }
     status = {
         "metadata": {
             "generatedAt": now,
@@ -217,6 +274,7 @@ def main() -> None:
             "activeSourceCount": active_count,
             "reachableSourceCount": reachable_count,
             "unavailableSourceCount": len(source_health) - reachable_count,
+            "unavailableSourceCountByCategory": unavailable_by_category,
             "newCandidateCount": new_candidate_count,
             "pendingCandidateCount": sum(item["status"] == "pending" for item in queue["candidates"]),
             "pendingCandidateCountBySignal": {

@@ -254,3 +254,20 @@
 - Derived top-quartile thresholds only from 188 current comparison observations and reserved the six most recent completed transitions as an out-of-time holdout.
 - Warning sensitivity improved development-cohort capture from 27.8% to 38.9%, but tenure-only, warning, and combined models each captured only 16.7% of the holdout.
 - Retained production weights. The next threshold is at least 50 completed outcomes, an untouched holdout, and complete AGM histories before dissent enters predictive testing.
+
+## Leadership evidence expansion v0.4
+
+### Transition census
+
+- Expanded the official-source completed-transition census from 24 to 50 CEO cases while retaining the six active succession outcomes.
+- Added an explicit 36-month review window for every new case and marked all 26 new warning and dissent histories partial pending archive backfill.
+- Restricted aligned sensitivity metrics to the original 24 cases with complete warning windows, preventing missing evidence from being interpreted as zero events.
+- Kept the six-case v0.3 evaluation sample locked for comparability and clarified that it is no longer a pristine unseen holdout.
+
+### Monitor and profiles
+
+- Added bounded monitor concurrency, transient-failure retries, optional official fallback URLs, and failure-category reporting without bypassing issuer access controls.
+- Repaired four stale official routes and increased live monitor reach from 86 to 91 issuers and active sources from 52 to 58, reducing unavailable sources from 14 to nine.
+- Added bounded retries to the public market-series fetcher after a transient provider response correctly stopped a 100-company refresh.
+- Expanded concise official-source CEO and Chair profiles from 15 to 25 companies.
+- Retained methodology v0.6 production weights; the next research task is evidence backfill rather than additional scoring complexity.

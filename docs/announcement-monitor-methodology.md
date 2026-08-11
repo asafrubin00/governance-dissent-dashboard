@@ -9,13 +9,13 @@ Nothing detected by the monitor changes the Leadership Pressure Radar or its sco
 ## Coverage
 
 - The configuration contains one official issuer landing page for each of the 100 companies in the source-verified leadership cohort.
-- The current monitor baseline reached 86 sources, of which 52 exposed monitorable links in server-rendered HTML.
+- The current monitor run reached 91 sources, of which 58 exposed monitorable links in server-rendered HTML; nine official sites remained unavailable to the responsible fetcher.
 - Fourteen sources were unavailable to that run because of access controls, timeouts, TLS incompatibility, or incompatible delivery.
 - Source health is recalculated on every run and written to `public/data/announcement-monitor.json`.
 
 Reachability is not the same as complete disclosure coverage. A reachable page may expose no matching links, and an unavailable page may still be accessible to a human browser.
 
-The monitor uses modest connection and response timeouts so slower issuer sites are not incorrectly classified as unavailable. It does not bypass access controls or substitute third-party news feeds where an official site blocks automated requests.
+The monitor uses bounded concurrency, modest connection and response timeouts, and limited retries for transient network or server failures. Optional official fallback URLs are supported, and unavailable sources are classified by failure type. It does not bypass access controls or substitute third-party news feeds where an official site blocks automated requests.
 
 ## Detection rules
 
