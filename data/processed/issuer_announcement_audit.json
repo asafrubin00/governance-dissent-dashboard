@@ -218,5 +218,65 @@
     "rowsExtracted": 27,
     "rowsMatched": 1,
     "rowsAdded": 0
+  },
+  {
+    "url": "https://www.entaingroup.com/news-insights/latest-news/2021/2021-agm-results/",
+    "companyName": "ENTAIN PLC",
+    "meetingDate": "2021-06-25",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/22fa204a1c65.html",
+    "rowsExtracted": 21,
+    "rowsMatched": 0,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://www.entaingroup.com/news-insights/latest-news/2022/2022-annual-general-meeting-agm-results/",
+    "companyName": "ENTAIN PLC",
+    "meetingDate": "2022-06-24",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/39688a733eba.html",
+    "rowsExtracted": 20,
+    "rowsMatched": 0,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://www.entaingroup.com/news-insights/latest-news/2023/2023-annual-general-meeting-agm-results/",
+    "companyName": "ENTAIN PLC",
+    "meetingDate": "2023-04-25",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/be7634769219.html",
+    "rowsExtracted": 20,
+    "rowsMatched": 0,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://otp.investis.com/clients/uk/glencore2/rns/regulatory-story.aspx?cid=275&newsid=1005336",
+    "companyName": "GLENCORE PLC",
+    "meetingDate": "2018-05-02",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/a47fa4fe3ea1.html",
+    "rowsExtracted": 17,
+    "rowsMatched": 0,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://otp.investis.com/clients/uk/glencore2/rns/regulatory-story.aspx?cid=275&newsid=1261112",
+    "companyName": "GLENCORE PLC",
+    "meetingDate": "2019-05-09",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/7a0e7ecb7b05.html",
+    "rowsExtracted": 17,
+    "rowsMatched": 0,
+    "rowsAdded": 0
+  },
+  {
+    "url": "https://otp.tools.investis.com/clients/uk/glencore2/rns/regulatory-story.aspx?cid=275&newsid=1394377",
+    "companyName": "GLENCORE PLC",
+    "meetingDate": "2020-06-02",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/787eb074a4bc.html",
+    "rowsExtracted": 18,
+    "rowsMatched": 0,
+    "rowsAdded": 0
   }
 ]

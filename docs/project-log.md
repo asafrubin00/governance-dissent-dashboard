@@ -271,3 +271,20 @@
 - Added bounded retries to the public market-series fetcher after a transient provider response correctly stopped a 100-company refresh.
 - Expanded concise official-source CEO and Chair profiles from 15 to 25 companies.
 - Retained methodology v0.6 production weights; the next research task is evidence backfill rather than additional scoring complexity.
+
+## Historical evidence and direct AGM ingestion v0.5
+
+### Aligned evidence backfill
+
+- Completed four additional 36-month warning reviews for Glencore, Hiscox, Entain and Landsec, increasing complete warning windows from 24 to 28 and reducing pending windows from 26 to 22.
+- Added one qualifying official-source event: Hiscox's April 2020 guidance withdrawal. Glencore's retrospective impairment loss and Entain's revenue-guidance reduction with maintained EBITDA were documented but excluded under the stricter prospective earnings definition.
+- Established the first three complete historical AGM windows for Glencore, Entain and Landsec by reviewing every official poll table in each aligned window; none contained a qualifying 20% management-sponsored vote.
+- Kept Hiscox AGM history partial because complete resolution-level coverage was not yet established.
+
+### Post-register voting path
+
+- Added a direct official-issuer PDF parser for the standard British Land poll layout and parsed all 21 resolutions from its 14 July 2026 AGM.
+- Added no British Land records because the highest opposition was 11.20%; the audit records the reviewed meeting without weakening the tracker's 20% publication threshold.
+- Added explicit direct-issuer meeting coverage metadata, distinguishing reviewed zero-dissent meetings from published significant-dissent records.
+- Preserved the three IHG half-year documents as pending editorial candidates; they did not enter warning evidence or affect any score.
+- Expanded concise official-source CEO and Chair profiles from 25 to 30 companies, adding Next, Lloyds Banking Group, NatWest Group, Legal & General and Barclays.

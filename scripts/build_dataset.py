@@ -41,6 +41,7 @@ class AnnouncementPage:
     source: str
     source_group: str
     allow_issuer_only: bool = True
+    parser_hint: str | None = None
 
 
 @dataclass
@@ -92,6 +93,7 @@ def load_source_config() -> tuple[list[AnnouncementPage], list[ResultDocument]]:
                 source=item.get("source", "manual-seed"),
                 source_group=item.get("sourceGroup", "Issuer announcement seed"),
                 allow_issuer_only=item.get("allowIssuerOnly", True),
+                parser_hint=item.get("parserHint"),
             )
         )
 
@@ -478,26 +480,42 @@ def parse_official_vote_row(cells: list[str]) -> dict[str, Any] | None:
     if any("no votes required" in part.lower() for part in body):
         return None
 
-    votes_for_count = parse_count(body[0]) if len(body) > 0 else None
-    votes_for_pct = parse_percent(body[1]) if len(body) > 1 else None
-    votes_against_count = parse_count(body[2]) if len(body) > 2 else None
-    votes_against_pct = parse_percent(body[3]) if len(body) > 3 else None
+    total_first_layout = (
+        len(body) == 6
+        and (parse_percent(body[2]) or 0) <= 100
+        and (parse_percent(body[4]) or 0) <= 100
+        and parse_percent(body[1]) is None
+        and parse_percent(body[3]) is None
+    )
+    if total_first_layout:
+        total_votes_cast_count = parse_count(body[0])
+        votes_for_count = parse_count(body[1])
+        votes_for_pct = parse_percent(body[2])
+        votes_against_count = parse_count(body[3])
+        votes_against_pct = parse_percent(body[4])
+        votes_withheld_count = parse_count(body[5])
+        issued_share_capital_voted_pct = None
+    else:
+        votes_for_count = parse_count(body[0]) if len(body) > 0 else None
+        votes_for_pct = parse_percent(body[1]) if len(body) > 1 else None
+        votes_against_count = parse_count(body[2]) if len(body) > 2 else None
+        votes_against_pct = parse_percent(body[3]) if len(body) > 3 else None
 
-    total_votes_cast_count: int | None = None
-    votes_withheld_count: int | None = None
-    issued_share_capital_voted_pct: float | None = None
+        total_votes_cast_count = None
+        votes_withheld_count = None
+        issued_share_capital_voted_pct = None
 
-    if len(body) == 6:
-        votes_withheld_count = parse_count(body[4])
-        issued_share_capital_voted_pct = parse_percent(body[5])
-    elif len(body) == 7:
-        total_votes_cast_count = parse_count(body[4])
-        issued_share_capital_voted_pct = parse_percent(body[5])
-        votes_withheld_count = parse_count(body[6])
-    elif len(body) >= 8:
-        total_votes_cast_count = parse_count(body[4])
-        issued_share_capital_voted_pct = parse_percent(body[6]) or parse_percent(body[5])
-        votes_withheld_count = parse_count(body[7])
+        if len(body) == 6:
+            votes_withheld_count = parse_count(body[4])
+            issued_share_capital_voted_pct = parse_percent(body[5])
+        elif len(body) == 7:
+            total_votes_cast_count = parse_count(body[4])
+            issued_share_capital_voted_pct = parse_percent(body[5])
+            votes_withheld_count = parse_count(body[6])
+        elif len(body) >= 8:
+            total_votes_cast_count = parse_count(body[4])
+            issued_share_capital_voted_pct = parse_percent(body[6]) or parse_percent(body[5])
+            votes_withheld_count = parse_count(body[7])
 
     return {
         "resolutionNumber": resolution_number,
@@ -513,7 +531,47 @@ def parse_official_vote_row(cells: list[str]) -> dict[str, Any] | None:
     }
 
 
-def parse_announcement_tables(html: str) -> list[dict[str, Any]]:
+def parse_entain_vote_rows(html: str) -> list[dict[str, Any]]:
+    soup = BeautifulSoup(html, "html.parser")
+    main = soup.find("main") or soup
+    text = re.sub(r"\s+", " ", main.get_text(" ", strip=True))
+    start = text.find("1. To ")
+    working = text[start:] if start != -1 else text
+    pattern = re.compile(
+        r"(?P<num>\d{1,2})\.\s*(?P<title>.+?)\s+"
+        r"(?P<total>\d[\d,]*)\s+"
+        r"(?P<for_count>\d[\d,]*)\s+"
+        r"(?P<for_pct>\d+[\.,]\d+)\s+"
+        r"(?P<against_count>\d[\d,]*)\s+"
+        r"(?P<against_pct>\d+[\.,]\d+|>\d+[\.,]\d+)\s+"
+        r"(?P<withheld>\d[\d,]*)"
+        r"(?=\s+\d{1,2}\.\s|\s+Special Resolutions|\s+Note:|$)",
+        flags=re.IGNORECASE,
+    )
+    rows: list[dict[str, Any]] = []
+    for match in pattern.finditer(working):
+        title = match.group("title").strip()
+        rows.append(
+            {
+                "resolutionNumber": int(match.group("num")),
+                "resolutionTitle": title,
+                "resolutionTitleNormalised": normalise_resolution_title(title),
+                "votesForCount": parse_count(match.group("for_count")),
+                "votesForPct": parse_percent(match.group("for_pct").replace(",", ".")),
+                "votesAgainstCount": parse_count(match.group("against_count")),
+                "votesAgainstPct": parse_percent(match.group("against_pct").replace(">", "").replace(",", ".")),
+                "votesWithheldCount": parse_count(match.group("withheld")),
+                "totalVotesCastCount": parse_count(match.group("total")),
+                "issuedShareCapitalVotedPct": None,
+            }
+        )
+    return rows
+
+
+def parse_announcement_tables(html: str, parser_hint: str | None = None) -> list[dict[str, Any]]:
+    if parser_hint == "entain-agm-results":
+        return parse_entain_vote_rows(html)
+
     soup = BeautifulSoup(html, "html.parser")
     rows: list[dict[str, Any]] = []
 
@@ -631,7 +689,63 @@ def parse_pdf_result_rows(text: str, parser_hint: str) -> list[dict[str, Any]]:
             )
         return rows
 
+    if parser_hint == "standard-agm-results":
+        start = cleaned.find("1 To ")
+        working = cleaned[start:] if start != -1 else cleaned
+        working = re.sub(
+            r"\s+General\s+emptive offer to shareholders, up to the specified amount3",
+            "",
+            working,
+            flags=re.IGNORECASE,
+        )
+        pattern = re.compile(
+            r"(?P<num>\d{1,2})\s+(?P<title>.+?)\s+"
+            r"(?P<for_count>\d[\d,]*)\s+"
+            r"(?P<for_pct>\d+\.\d+)\s+"
+            r"(?P<against_count>\d[\d,]*)\s+"
+            r"(?P<against_pct>\d+\.\d+)\s+"
+            r"(?P<total>\d[\d,]*)\s+"
+            r"(?P<isc>\d+\.\d+)\s+"
+            r"(?P<withheld>\d[\d,]*)"
+            r"(?=\s+\d{1,2}\s+To\s|\s+General\s+emptive offer|\s+\d+\s+Includes discretionary votes|$)",
+            flags=re.IGNORECASE,
+        )
+        return [
+            {
+                "resolutionNumber": int(match.group("num")),
+                "resolutionTitle": match.group("title").strip(),
+                "resolutionTitleNormalised": normalise_resolution_title(match.group("title")),
+                "votesForCount": parse_count(match.group("for_count")),
+                "votesForPct": parse_percent(match.group("for_pct")),
+                "votesAgainstCount": parse_count(match.group("against_count")),
+                "votesAgainstPct": parse_percent(match.group("against_pct")),
+                "votesWithheldCount": parse_count(match.group("withheld")),
+                "totalVotesCastCount": parse_count(match.group("total")),
+                "issuedShareCapitalVotedPct": parse_percent(match.group("isc")),
+            }
+            for match in pattern.finditer(working)
+        ]
+
     return []
+
+
+def validate_official_vote_rows(rows: list[dict[str, Any]], source_url: str) -> None:
+    if not rows:
+        raise ValueError(f"Configured AGM source produced no vote rows: {source_url}")
+
+    resolution_keys = [
+        (row["resolutionNumber"], row["resolutionTitleNormalised"])
+        for row in rows
+        if row["resolutionNumber"] is not None
+    ]
+    if len(resolution_keys) != len(set(resolution_keys)):
+        raise ValueError(f"Configured AGM source produced duplicate resolution rows: {source_url}")
+
+    for row in rows:
+        for field in ("votesForPct", "votesAgainstPct", "issuedShareCapitalVotedPct"):
+            value = row.get(field)
+            if value is not None and not 0 <= value <= 100:
+                raise ValueError(f"Configured AGM source produced an impossible {field}: {source_url}")
 
 
 def extract_update_statement_summary(text: str) -> str | None:
@@ -796,6 +910,7 @@ def enrich_with_result_documents(
             continue
 
         official_rows = parse_pdf_result_rows(text, document.parser_hint)
+        validate_official_vote_rows(official_rows, document.url)
         parsed += 1
         extracted_rows += len(official_rows)
         page_matches = 0
@@ -999,7 +1114,9 @@ def enrich_with_official_announcements(
             continue
 
         raw_path = write_raw_announcement_html(page.url, html)
-        official_rows = parse_announcement_tables(html)
+        official_rows = parse_announcement_tables(html, page.parser_hint)
+        if page.source != "ia-linked-announcement":
+            validate_official_vote_rows(official_rows, page.url)
         parsed_pages += 1
         extracted_rows += len(official_rows)
         page_matches = 0
@@ -1248,13 +1365,27 @@ def write_outputs(
     generated_at = datetime.now(timezone.utc).isoformat()
     start_date = min((item["meetingDate"] for item in resolutions), default=None)
     end_date = max((item["meetingDate"] for item in resolutions), default=None)
+    reviewed_meetings = {
+        (item["companyName"], item["meetingDate"])
+        for item in announcement_audit + document_audit
+        if item.get("status") == "parsed"
+        and item.get("rowsExtracted", 0) > 0
+        and item.get("companyName")
+        and item.get("meetingDate")
+    }
+    direct_dates = sorted(meeting_date for _, meeting_date in reviewed_meetings)
+    post_register_meetings = [
+        {"companyName": company_name, "meetingDate": meeting_date}
+        for company_name, meeting_date in sorted(reviewed_meetings)
+        if meeting_date > "2025-10-31"
+    ]
     payload = {
         "metadata": {
             "title": "FTSE 100 Shareholder Dissent Tracker",
             "sourceName": "IA Public Register + official issuer announcements",
             "sourceUrl": SOURCE_URL,
             "generatedAt": generated_at,
-            "refreshMode": "manual-script",
+            "refreshMode": "weekly-automated-refresh-with-editorial-source-onboarding",
             "focusStatement": "This app tracks significant shareholder dissent, not general AGM voting coverage.",
             "coverageStatement": (
                 "Phase 2 combines the Investment Association Public Register with parsed issuer announcement pages "
@@ -1263,6 +1394,14 @@ def write_outputs(
             "coveragePeriod": {
                 "startDate": start_date,
                 "endDate": end_date,
+            },
+            "directIssuerMeetingCoverage": {
+                "reviewedMeetingCount": len(reviewed_meetings),
+                "startDate": direct_dates[0] if direct_dates else None,
+                "endDate": direct_dates[-1] if direct_dates else None,
+                "postRegisterMeetingCount": len(post_register_meetings),
+                "postRegisterMeetings": post_register_meetings,
+                "interpretation": "Reviewed meetings include complete official vote tables even when no resolution crossed the 20% publication threshold.",
             },
             "sourceLayers": [
                 {
@@ -1294,7 +1433,7 @@ def write_outputs(
             "limitations": [
                 "The IA Public Register records significant votes against management or withdrawn resolutions rather than every AGM resolution.",
                 "The Investment Association stated in October 2025 that no new companies or resolutions would be added to the register.",
-                "Issuer-announcement enrichment currently covers HTML result pages plus a small set of company-specific AGM result PDFs rather than a universal PDF parser.",
+                "Issuer-announcement enrichment covers configured HTML result pages and selected stable PDF layouts; new issuer formats require editorial parser review before publication.",
                 "FTSE 100 inclusion relies on a maintained alias file rather than a live constituent feed.",
                 "Resolution categories are assigned using rules based on source table captions and resolution text.",
             ],

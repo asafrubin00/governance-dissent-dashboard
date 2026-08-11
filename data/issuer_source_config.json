@@ -6,6 +6,51 @@
       "url": "https://otp.tools.investis.com/clients/uk/rbs3/rns/regulatory-story.aspx?cid=365&newsid=1932512&culture=en-GB&val=638810172105163220",
       "source": "manual-html-seed",
       "sourceGroup": "Director election"
+    },
+    {
+      "companyName": "ENTAIN PLC",
+      "meetingDate": "2021-06-25",
+      "url": "https://www.entaingroup.com/news-insights/latest-news/2021/2021-agm-results/",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "entain-agm-results"
+    },
+    {
+      "companyName": "ENTAIN PLC",
+      "meetingDate": "2022-06-24",
+      "url": "https://www.entaingroup.com/news-insights/latest-news/2022/2022-annual-general-meeting-agm-results/",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "entain-agm-results"
+    },
+    {
+      "companyName": "ENTAIN PLC",
+      "meetingDate": "2023-04-25",
+      "url": "https://www.entaingroup.com/news-insights/latest-news/2023/2023-annual-general-meeting-agm-results/",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "entain-agm-results"
+    },
+    {
+      "companyName": "GLENCORE PLC",
+      "meetingDate": "2018-05-02",
+      "url": "https://otp.investis.com/clients/uk/glencore2/rns/regulatory-story.aspx?cid=275&newsid=1005336",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results"
+    },
+    {
+      "companyName": "GLENCORE PLC",
+      "meetingDate": "2019-05-09",
+      "url": "https://otp.investis.com/clients/uk/glencore2/rns/regulatory-story.aspx?cid=275&newsid=1261112",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results"
+    },
+    {
+      "companyName": "GLENCORE PLC",
+      "meetingDate": "2020-06-02",
+      "url": "https://otp.tools.investis.com/clients/uk/glencore2/rns/regulatory-story.aspx?cid=275&newsid=1394377",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results"
     }
   ],
   "resultDocumentSeeds": [
@@ -32,6 +77,14 @@
       "source": "manual-pdf-seed",
       "sourceGroup": "Withdrawn resolution",
       "parserHint": "anto-agm-results"
+    },
+    {
+      "companyName": "BRITISH LAND COMPANY PLC",
+      "meetingDate": "2026-07-14",
+      "url": "https://www.britishland.com/media/u0hhqkv0/agm-poll-results-rns.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "standard-agm-results"
     }
   ]
 }

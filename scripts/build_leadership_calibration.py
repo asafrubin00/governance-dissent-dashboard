@@ -404,16 +404,20 @@ def main() -> None:
     if errors:
         raise RuntimeError("; ".join(errors))
 
+    completed_count = sum(record["cohort"] == "completed" for record in enriched_outcomes)
+    complete_warning_count = sum(review["warningCoverage"]["status"] == "complete" for review in reviews)
+    partial_warning_count = sum(review["warningCoverage"]["status"] == "partial" for review in reviews)
+    complete_dissent_count = sum(review["dissentCoverage"]["status"] == "complete" for review in reviews)
     recommendation = {
         "decision": "retain-current-weights",
-        "rationale": "The completed-transition census now reaches 50 official-source cases, but only 24 have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged.",
-        "minimumNextEvidence": "Backfill the 26 pending warning windows, establish complete resolution-level AGM coverage, and reserve future completed transitions as a genuinely untouched evaluation cohort.",
+        "rationale": f"The completed-transition census now reaches {completed_count} official-source cases, but only {complete_warning_count} have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged.",
+        "minimumNextEvidence": f"Backfill the {partial_warning_count} pending warning windows, extend complete resolution-level AGM coverage beyond the current {complete_dissent_count} cases, and reserve future completed transitions as a genuinely untouched evaluation cohort.",
     }
     payload = {
         "metadata": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "asOfDate": as_of,
-            "methodologyVersion": "0.4",
+            "methodologyVersion": "0.5",
             "outcomeCount": len(enriched_outcomes),
             "completedOutcomeCount": sum(record["cohort"] == "completed" for record in enriched_outcomes),
             "activeOutcomeCount": sum(record["cohort"] == "active" for record in enriched_outcomes),
@@ -422,9 +426,9 @@ def main() -> None:
             "validation": {"status": "pass", "errors": []},
             "historicalEvidence": {
                 "reviewedOutcomeCount": len(reviews),
-                "completeWarningWindowCount": sum(review["warningCoverage"]["status"] == "complete" for review in reviews),
-                "partialWarningWindowCount": sum(review["warningCoverage"]["status"] == "partial" for review in reviews),
-                "completeDissentWindowCount": sum(review["dissentCoverage"]["status"] == "complete" for review in reviews),
+                "completeWarningWindowCount": complete_warning_count,
+                "partialWarningWindowCount": partial_warning_count,
+                "completeDissentWindowCount": complete_dissent_count,
                 "warningEventCount": len(historical.get("warningEvents", [])),
                 "dissentEventCount": len(historical.get("dissentEvents", [])),
             },
@@ -440,8 +444,8 @@ def main() -> None:
                 "This is a retrospective discrimination audit, not a prospective probability model.",
                 "The outcome cohort is deliberately high-confidence and purposive rather than comprehensive.",
                 "Current-role comparisons are right-censored observations, not proven non-events.",
-                "Historical voting evidence is event-backed but meeting coverage remains partial, so dissent is disclosed but excluded from the aligned score.",
-                "Twenty-six newly verified transitions remain excluded from aligned metrics until their historical warning archives are fully reviewed.",
+                f"Historical voting evidence is event-backed, but only {complete_dissent_count} completed cases have complete meeting coverage; dissent remains excluded from the aligned score.",
+                f"{partial_warning_count} completed transitions remain excluded from aligned metrics until their historical warning archives are fully reviewed.",
                 "The market comparison mixes a dividend-adjusted company proxy with a price-only benchmark and is suitable only for sensitivity analysis.",
             ],
         },
