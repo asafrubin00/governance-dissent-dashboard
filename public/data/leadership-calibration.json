@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-11T18:05:54.956720+00:00",
+    "generatedAt": "2026-08-11T18:13:11.046587+00:00",
     "asOfDate": "2026-08-08",
-    "methodologyVersion": "0.7",
+    "methodologyVersion": "0.8",
     "outcomeCount": 56,
     "completedOutcomeCount": 50,
     "activeOutcomeCount": 6,
@@ -19,10 +19,10 @@
     },
     "historicalEvidence": {
       "reviewedOutcomeCount": 50,
-      "completeWarningWindowCount": 37,
-      "partialWarningWindowCount": 13,
+      "completeWarningWindowCount": 41,
+      "partialWarningWindowCount": 9,
       "completeDissentWindowCount": 6,
-      "warningEventCount": 11,
+      "warningEventCount": 13,
       "dissentEventCount": 6
     }
   },
@@ -38,7 +38,7 @@
       "The outcome cohort is deliberately high-confidence and purposive rather than comprehensive.",
       "Current-role comparisons are right-censored observations, not proven non-events.",
       "Historical voting evidence is event-backed, but only 6 completed cases have complete meeting coverage; dissent remains excluded from the aligned score.",
-      "13 completed transitions remain excluded from aligned metrics until their historical warning archives are fully reviewed.",
+      "9 completed transitions remain excluded from aligned metrics until their historical warning archives are fully reviewed.",
       "The market comparison mixes a dividend-adjusted company proxy with a price-only benchmark and is suitable only for sensitivity analysis."
     ]
   },
@@ -49,23 +49,23 @@
       "medianBaselineScore": 46.0,
       "medianWarningSensitivityScore": 46.0,
       "longTenureRatePct": 33.9,
-      "priorWarningRatePct": 19.6,
+      "priorWarningRatePct": 23.2,
       "priorDissentRatePct": 10.7,
       "marketCoveragePct": 100.0,
       "medianRelativePerformancePct": -18.2,
       "marketStressRatePct": 46.4
     },
     "alignedCompletedOutcomes": {
-      "count": 37,
+      "count": 41,
       "medianTenureYears": 5.9,
       "medianBaselineScore": 47.2,
       "medianWarningSensitivityScore": 47.2,
-      "longTenureRatePct": 37.8,
-      "priorWarningRatePct": 24.3,
-      "priorDissentRatePct": 13.5,
+      "longTenureRatePct": 41.5,
+      "priorWarningRatePct": 26.8,
+      "priorDissentRatePct": 12.2,
       "marketCoveragePct": 100.0,
-      "medianRelativePerformancePct": -19.6,
-      "marketStressRatePct": 48.6
+      "medianRelativePerformancePct": -18.1,
+      "marketStressRatePct": 46.3
     },
     "currentComparisons": {
       "count": 188,
@@ -80,14 +80,14 @@
       "marketStressRatePct": 32.8
     },
     "sensitivity": {
-      "eligibleCompletedOutcomeCount": 37,
+      "eligibleCompletedOutcomeCount": 41,
       "baselineTopQuartileThreshold": 58.7,
-      "baselineOutcomeCapturePct": 37.8,
+      "baselineOutcomeCapturePct": 41.5,
       "warningTopQuartileThreshold": 59.2,
-      "warningOutcomeCapturePct": 43.2,
+      "warningOutcomeCapturePct": 46.3,
       "candidateWarningRule": "Exploratory only: 6 points for a material warning or 12 for any severe warning, plus 3 for each repeat event, capped at 18.",
       "combinedTopQuartileThreshold": 62.2,
-      "combinedOutcomeCapturePct": 45.9,
+      "combinedOutcomeCapturePct": 48.8,
       "candidatePerformanceRule": "Exploratory only: 8 points for trailing relative underperformance of at least 20 percentage points and 15 points at 40 percentage points."
     },
     "heldOutValidation": {
@@ -115,13 +115,17 @@
         "glen-ceo-2020-12-04",
         "adm-ceo-2020-03-05",
         "hsx-ceo-2021-07-21",
+        "bats-ceo-2023-05-15",
         "ent-ceo-2023-12-13",
+        "edv-ceo-2024-01-04",
         "uu-ceo-2022-04-27",
         "land-ceo-2019-07-11",
         "spx-ceo-2023-08-08",
         "smin-ceo-2024-03-26",
         "blnd-ceo-2020-09-10",
         "hlma-ceo-2022-06-16",
+        "iag-ceo-2020-01-09",
+        "aal-ceo-2021-11-03",
         "gsk-ceo-2025-09-29",
         "sse-ceo-2024-11-13"
       ],
@@ -140,9 +144,9 @@
         "tenureWarningsAndPerformance": 62.2
       },
       "trainingCapturePct": {
-        "tenureOnly": 41.9,
-        "tenureAndWarnings": 48.4,
-        "tenureWarningsAndPerformance": 51.6
+        "tenureOnly": 45.7,
+        "tenureAndWarnings": 51.4,
+        "tenureWarningsAndPerformance": 54.3
       },
       "holdoutCapturePct": {
         "tenureOnly": 16.7,
@@ -153,8 +157,8 @@
     },
     "recommendation": {
       "decision": "retain-current-weights",
-      "rationale": "The completed-transition census now reaches 50 official-source cases, but only 37 have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged.",
-      "minimumNextEvidence": "Backfill the 13 pending warning windows, extend complete resolution-level AGM coverage beyond the current 6 cases, and reserve future completed transitions as a genuinely untouched evaluation cohort."
+      "rationale": "The completed-transition census now reaches 50 official-source cases, but only 41 have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged.",
+      "minimumNextEvidence": "Backfill the 9 pending warning windows, extend complete resolution-level AGM coverage beyond the current 6 cases, and reserve future completed transitions as a genuinely untouched evaluation cohort."
     }
   },
   "outcomes": [
@@ -1261,17 +1265,19 @@
       "cutoffDate": "2023-05-15",
       "tenureYears": 4.1,
       "longTenure": false,
-      "priorWarningCount": 0,
+      "priorWarningCount": 1,
       "priorSevereWarningCount": 0,
-      "priorWarningIds": [],
+      "priorWarningIds": [
+        "bats-2020-06-09-guidance-cut"
+      ],
       "priorDissentCount": 0,
       "maxPriorDissentPct": null,
       "priorDissentIds": [],
-      "warningCoverageStatus": "partial",
+      "warningCoverageStatus": "complete",
       "dissentCoverageStatus": "partial",
       "baselineScore": 32.8,
-      "exploratoryWarningUplift": 0,
-      "warningSensitivityScore": 32.8,
+      "exploratoryWarningUplift": 6.0,
+      "warningSensitivityScore": 38.8,
       "marketWindowStart": "2021-05-31",
       "marketWindowEnd": "2023-04-30",
       "companyDividendAdjustedReturnPct": -8.6,
@@ -1279,7 +1285,7 @@
       "relativePerformancePct": -14.4,
       "marketStress": false,
       "exploratoryPerformanceUplift": 0,
-      "combinedSensitivityScore": 32.8
+      "combinedSensitivityScore": 38.8
     },
     {
       "id": "ent-ceo-2023-12-13",
@@ -1340,7 +1346,7 @@
       "priorDissentCount": 0,
       "maxPriorDissentPct": null,
       "priorDissentIds": [],
-      "warningCoverageStatus": "partial",
+      "warningCoverageStatus": "complete",
       "dissentCoverageStatus": "partial",
       "baselineScore": 64.0,
       "exploratoryWarningUplift": 0,
@@ -1665,17 +1671,19 @@
       "cutoffDate": "2020-01-09",
       "tenureYears": 9.0,
       "longTenure": true,
-      "priorWarningCount": 0,
+      "priorWarningCount": 1,
       "priorSevereWarningCount": 0,
-      "priorWarningIds": [],
+      "priorWarningIds": [
+        "iag-2019-10-31-guidance-cut"
+      ],
       "priorDissentCount": 0,
       "maxPriorDissentPct": null,
       "priorDissentIds": [],
-      "warningCoverageStatus": "partial",
+      "warningCoverageStatus": "complete",
       "dissentCoverageStatus": "partial",
       "baselineScore": 72.0,
-      "exploratoryWarningUplift": 0,
-      "warningSensitivityScore": 72.0,
+      "exploratoryWarningUplift": 6.0,
+      "warningSensitivityScore": 78.0,
       "marketWindowStart": "2018-02-01",
       "marketWindowEnd": "2020-01-01",
       "companyDividendAdjustedReturnPct": -7.2,
@@ -1683,7 +1691,7 @@
       "relativePerformancePct": -8.0,
       "marketStress": false,
       "exploratoryPerformanceUplift": 0,
-      "combinedSensitivityScore": 72.0
+      "combinedSensitivityScore": 78.0
     },
     {
       "id": "rkt-ceo-2022-09-01",
@@ -1854,7 +1862,7 @@
       "priorDissentCount": 0,
       "maxPriorDissentPct": null,
       "priorDissentIds": [],
-      "warningCoverageStatus": "partial",
+      "warningCoverageStatus": "complete",
       "dissentCoverageStatus": "partial",
       "baselineScore": 68.8,
       "exploratoryWarningUplift": 0,

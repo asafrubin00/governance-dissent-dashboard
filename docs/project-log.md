@@ -307,3 +307,11 @@
 - Increased complete historical AGM windows from four to six and direct issuer meeting coverage from 35 to 41.
 - Increased validated official AGM PDF rows from 127 to 262 while preserving the public tracker's 28 significant resolutions and 20% threshold.
 - Rebuilt calibration methodology v0.7 without changing the production radar weights; incomplete warning and AGM histories remain excluded rather than interpreted as zero.
+
+## Historical warning backfill v0.8
+
+- Completed aligned warning-history reviews for British American Tobacco, Endeavour Mining, IAG and Anglo American, increasing complete warning windows from 37 to 41 and reducing pending windows from 13 to nine.
+- Added BAT's 9 June 2020 adjusted diluted EPS guidance reduction and IAG's 31 October 2019 operating-profit outlook reduction as qualifying historical warning events from official issuer sources.
+- Recorded explicit exclusion decisions for Endeavour's mine-level production and cost revisions and Anglo American's production-guidance changes because neither constituted a group earnings warning under the published definition.
+- Increased qualifying historical warning events from 11 to 13 while leaving complete AGM coverage at six windows and the public dissent tracker at 28 significant resolutions.
+- Rebuilt calibration methodology v0.8 without changing production radar methodology v0.6 or its weights; partial histories remain excluded rather than interpreted as zero.

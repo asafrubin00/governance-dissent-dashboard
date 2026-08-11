@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-11T18:05:40.398426+00:00",
+    "generatedAt": "2026-08-11T18:12:56.528440+00:00",
     "asOfDate": "2026-08-08",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -57,14 +57,14 @@
       "errors": []
     },
     "calibration": {
-      "methodologyVersion": "0.7",
+      "methodologyVersion": "0.8",
       "outcomeCount": 56,
       "completedOutcomeCount": 50,
       "activeOutcomeCount": 6,
-      "alignedCompletedOutcomeCount": 37,
+      "alignedCompletedOutcomeCount": 41,
       "comparisonObservationCount": 188,
       "decision": "retain-current-weights",
-      "note": "The completed-transition census now reaches 50 official-source cases, but only 37 have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged."
+      "note": "The completed-transition census now reaches 50 official-source cases, but only 41 have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged."
     }
   },
   "companies": [
