@@ -85,6 +85,30 @@
       "source": "official-issuer-agm-result",
       "sourceGroup": "AGM results",
       "parserHint": "standard-agm-results"
+    },
+    {
+      "companyName": "UNITED UTILITIES GROUP PLC",
+      "meetingDate": "2019-07-26",
+      "url": "https://cumbria.unitedutilities.com/globalassets/documents/pdf/26-july-2019-agm-poll-result.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "united-utilities-agm-results"
+    },
+    {
+      "companyName": "UNITED UTILITIES GROUP PLC",
+      "meetingDate": "2020-07-24",
+      "url": "https://cumbria.unitedutilities.com/globalassets/z_corporate-site/investor-pdfs/annualgm-pdfs/24-july-2020-agm-poll-result.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "united-utilities-agm-results"
+    },
+    {
+      "companyName": "UNITED UTILITIES GROUP PLC",
+      "meetingDate": "2021-07-23",
+      "url": "https://cumbria.unitedutilities.com/globalassets/documents/pdf/23-july-2021-agm-poll-result-.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "united-utilities-agm-results"
     }
   ]
 }

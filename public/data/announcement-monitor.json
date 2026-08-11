@@ -1,14 +1,15 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-11T17:28:00.375488+00:00",
+    "generatedAt": "2026-08-11T17:51:54.948357+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 58,
-    "reachableSourceCount": 91,
-    "unavailableSourceCount": 9,
+    "activeSourceCount": 57,
+    "reachableSourceCount": 90,
+    "unavailableSourceCount": 10,
     "unavailableSourceCountByCategory": {
       "access-blocked": 8,
+      "fetch-error": 1,
       "tls-error": 1
     },
     "newCandidateCount": 0,
@@ -799,12 +800,9 @@
     },
     {
       "ticker": "SMIN",
-      "status": "active",
-      "matchedLinkCount": 3,
-      "matchedLinkCountBySignal": {
-        "earnings": 3,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "fetch-error",
+      "error": "https://www.smiths.com/news-and-insights/news: HTTPSConnectionPool(host='www.smiths.com', port=443): Max retries exceeded with url: /news-and-insights/news (Caused by ResponseError('too many 503 error responses'))"
     },
     {
       "ticker": "SN",

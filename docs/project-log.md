@@ -284,7 +284,17 @@
 ### Post-register voting path
 
 - Added a direct official-issuer PDF parser for the standard British Land poll layout and parsed all 21 resolutions from its 14 July 2026 AGM.
+
 - Added no British Land records because the highest opposition was 11.20%; the audit records the reviewed meeting without weakening the tracker's 20% publication threshold.
 - Added explicit direct-issuer meeting coverage metadata, distinguishing reviewed zero-dissent meetings from published significant-dissent records.
 - Preserved the three IHG half-year documents as pending editorial candidates; they did not enter warning evidence or affect any score.
 - Expanded concise official-source CEO and Chair profiles from 25 to 30 companies, adding Next, Lloyds Banking Group, NatWest Group, Legal & General and Barclays.
+
+## Evidence backfill and United Utilities AGM coverage v0.6
+
+- Completed aligned warning-history reviews for Tesco, Admiral, United Utilities, British Land and Halma, increasing complete warning windows from 28 to 33 and reducing pending windows from 22 to 17.
+- Added Halma's 19 March 2020 adjusted profit-before-tax guidance cut to the historical calibration evidence only; it remains outside the live rolling 36-month warning feed.
+- Added a dedicated parser for United Utilities' official AGM poll-result PDFs and validated all 62 resolutions across the 2019, 2020 and 2021 meetings.
+- Confirmed the highest United Utilities opposition was 8.41%, so no sub-threshold row was added to the significant-dissent product dataset.
+- Increased complete historical AGM windows from three to four and direct issuer meeting coverage from 32 to 35, with no change to the 28-resolution public tracker scope.
+- Retained the production score weights after rebuilding the 56-outcome calibration audit; incomplete evidence continues to be excluded rather than treated as zero.

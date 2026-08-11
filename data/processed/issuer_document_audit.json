@@ -48,6 +48,42 @@
     "parserHint": "standard-agm-results"
   },
   {
+    "url": "https://cumbria.unitedutilities.com/globalassets/documents/pdf/26-july-2019-agm-poll-result.pdf",
+    "companyName": "UNITED UTILITIES GROUP PLC",
+    "meetingDate": "2019-07-26",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/17bcbe45d22d.pdf",
+    "rowsExtracted": 23,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "united-utilities-agm-results"
+  },
+  {
+    "url": "https://cumbria.unitedutilities.com/globalassets/z_corporate-site/investor-pdfs/annualgm-pdfs/24-july-2020-agm-poll-result.pdf",
+    "companyName": "UNITED UTILITIES GROUP PLC",
+    "meetingDate": "2020-07-24",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/aa548169a8d3.pdf",
+    "rowsExtracted": 18,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "united-utilities-agm-results"
+  },
+  {
+    "url": "https://cumbria.unitedutilities.com/globalassets/documents/pdf/23-july-2021-agm-poll-result-.pdf",
+    "companyName": "UNITED UTILITIES GROUP PLC",
+    "meetingDate": "2021-07-23",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/0ca93f587938.pdf",
+    "rowsExtracted": 21,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "united-utilities-agm-results"
+  },
+  {
     "url": "https://www.centrica.com/media/dempwpcp/shareholder-update-statement-2025-agm-final-website.pdf",
     "status": "parsed",
     "rawPdfPath": "data/raw/issuer-documents/f966ee813283.pdf",

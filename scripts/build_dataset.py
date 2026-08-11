@@ -726,6 +726,41 @@ def parse_pdf_result_rows(text: str, parser_hint: str) -> list[dict[str, Any]]:
             for match in pattern.finditer(working)
         ]
 
+    if parser_hint == "united-utilities-agm-results":
+        start = cleaned.find("1 Receiving")
+        working = cleaned[start:] if start != -1 else cleaned
+        pattern = re.compile(
+            r"(?P<num>\d{1,2})\s+(?P<title>.+?)\s+"
+            r"(?P<for_count>\d[\d,]*)\s+"
+            r"(?P<for_pct>\d+\.\d+)%?\s+"
+            r"(?P<against_count>\d[\d,]*)\s+"
+            r"(?P<against_pct>\d+\.\d+)%?\s+"
+            r"(?P<isc>\d+\.\d+)\s+"
+            r"(?P<withheld>\d[\d,]*)"
+            r"(?=\s+\d{1,2}\s+[A-Z]|\s+LEI\s+-|$)",
+            flags=re.IGNORECASE,
+        )
+        rows: list[dict[str, Any]] = []
+        for match in pattern.finditer(working):
+            votes_for = parse_count(match.group("for_count"))
+            votes_against = parse_count(match.group("against_count"))
+            title = re.sub(r"pre-\s+emption", "pre-emption", match.group("title").strip(), flags=re.IGNORECASE)
+            rows.append(
+                {
+                    "resolutionNumber": int(match.group("num")),
+                    "resolutionTitle": title,
+                    "resolutionTitleNormalised": normalise_resolution_title(title),
+                    "votesForCount": votes_for,
+                    "votesForPct": parse_percent(match.group("for_pct")),
+                    "votesAgainstCount": votes_against,
+                    "votesAgainstPct": parse_percent(match.group("against_pct")),
+                    "votesWithheldCount": parse_count(match.group("withheld")),
+                    "totalVotesCastCount": (votes_for + votes_against) if votes_for is not None and votes_against is not None else None,
+                    "issuedShareCapitalVotedPct": parse_percent(match.group("isc")),
+                }
+            )
+        return rows
+
     return []
 
 
