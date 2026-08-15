@@ -7,6 +7,8 @@ Proxy Wars is a focused FTSE 100 governance research portfolio project built aro
 
 The Radar is the primary product. Vote Explorer remains available from the overview and company evidence rail for specialist cross-company and resolution-level analysis; it is not presented as a competing top-level module. The product remains intentionally transparent about scope: leadership evidence covers the current 100-company roster, externally managed issuers without a company CEO are marked not applicable, and voting evidence covers significant dissent rather than general AGM voting books.
 
+Original site design, analytical frameworks, scoring methodology, governance taxonomy, visualisations, and written analysis are © 2026 Asaf Rubin. Public-source data and third-party materials remain the property of their respective owners. See the in-product Terms of Use for details.
+
 ## Preview
 
 ![Proxy Wars module overview](docs/screenshots/overview.png)

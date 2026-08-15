@@ -1,4 +1,5 @@
 import { Link, useOutletContext } from 'react-router-dom'
+import { LegalLine } from '../components/LegalLine'
 import type { LeadershipRadarData, TrackerData } from '../types'
 
 type HomePageProps = {
@@ -85,6 +86,7 @@ export function HomePage({ data, radarData }: HomePageProps) {
 
         <div className="workspace-micro-note">
           <span>Generated {new Date(generatedAt).toLocaleDateString('en-GB')}</span>
+          <LegalLine />
           <span>FTSE 100 governance research</span>
         </div>
       </section>

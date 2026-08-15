@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { LegalLine } from '../components/LegalLine'
 import type { LeadershipProfilesData, LeadershipRadarData, MarketPerformanceData } from '../types'
 
 type LeadershipRadarPageProps = {
@@ -309,6 +310,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
 
           <div className="radar-footer">
             <span>{data.metadata.rosterSource.name} / {data.metadata.constituentCount} constituents</span>
+            <LegalLine />
             <div className="radar-key">
               <button type="button">Abbreviations</button>
               <div className="radar-key__popover" role="tooltip">

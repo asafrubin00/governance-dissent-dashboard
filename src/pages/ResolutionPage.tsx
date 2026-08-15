@@ -1,5 +1,6 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { formatCount, formatDate, formatPercent, formatShortPercent } from '../lib/format'
+import { LegalLine } from '../components/LegalLine'
 import type { TrackerData } from '../types'
 
 type ResolutionPageProps = {
@@ -180,6 +181,7 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
           )}
         </article>
       </section>
+      <footer className="detail-legal"><LegalLine /></footer>
     </div>
   )
 }

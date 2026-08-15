@@ -15,6 +15,7 @@ import {
   YAxis,
 } from 'recharts'
 import { FilterBar } from '../components/FilterBar'
+import { LegalLine } from '../components/LegalLine'
 import { InfoHint } from '../components/InfoHint'
 import { StatCard } from '../components/StatCard'
 import {
@@ -451,6 +452,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
 
           <div className="workspace-micro-note">
             <span>{data.metadata.sourceName}</span>
+            <LegalLine />
             <span>{data.metadata.validation.status.toUpperCase()} validation</span>
           </div>
         </div>

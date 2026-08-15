@@ -528,8 +528,8 @@
 }
 
 .workspace-micro-note {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   gap: 18px;
   align-items: center;
   color: rgba(202, 212, 220, 0.64);
@@ -537,6 +537,35 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   padding: 0 4px;
+}
+
+.workspace-micro-note > span:last-child {
+  justify-self: end;
+}
+
+.legal-line {
+  color: rgba(180, 195, 205, 0.55);
+  font-size: inherit;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.legal-line a {
+  color: inherit;
+  text-decoration-color: rgba(180, 195, 205, 0.34);
+  text-underline-offset: 2px;
+}
+
+.legal-line a:hover {
+  color: #efc64a;
+}
+
+.legal-line i {
+  margin: 0 6px;
+  color: rgba(180, 195, 205, 0.34);
+  font-style: normal;
 }
 
 .table-card {
@@ -1942,13 +1971,92 @@
 
 .radar-footer {
   display: grid;
-  grid-template-columns: 1fr auto auto 1fr;
+  grid-template-columns: 1fr auto auto auto 1fr;
   gap: 18px;
   align-items: center;
   color: rgba(180, 195, 205, 0.55);
   font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.detail-legal {
+  padding: 10px 0 4px;
+  text-align: center;
+}
+
+/* Terms */
+.terms-screen {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 76px 24px 24px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(36, 79, 106, 0.2), transparent 36%),
+    #09192c;
+}
+
+.terms-panel {
+  width: min(820px, calc(100vw - 48px));
+  padding: 34px 38px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 18px;
+  background: rgba(5, 12, 18, 0.72);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.24);
+}
+
+.terms-panel__back {
+  display: inline-block;
+  margin-bottom: 34px;
+  color: rgba(188, 202, 211, 0.64);
+  font-size: 0.72rem;
+  text-decoration: none;
+}
+
+.terms-panel__back:hover,
+.terms-panel__copy a {
+  color: #efc64a;
+}
+
+.terms-panel__eyebrow {
+  margin: 0 0 8px;
+  color: rgba(184, 198, 208, 0.58);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.terms-panel h1 {
+  margin: 0;
+  color: #efc64a;
+  font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.terms-panel__copy {
+  display: grid;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.terms-panel__copy p {
+  margin: 0;
+  color: rgba(211, 221, 228, 0.76);
+  font-size: 0.84rem;
+  line-height: 1.62;
+}
+
+.terms-panel__copy a {
+  text-underline-offset: 3px;
+}
+
+.terms-panel__footer {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  font-size: 0.66rem;
 }
 
 .radar-key {

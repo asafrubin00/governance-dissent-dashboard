@@ -24,6 +24,11 @@ const LeadershipRadarPage = lazy(async () => {
   return { default: module.LeadershipRadarPage }
 })
 
+const TermsPage = lazy(async () => {
+  const module = await import('./pages/TermsPage')
+  return { default: module.TermsPage }
+})
+
 function LoadingState() {
   return (
     <div className="state-shell">
@@ -117,6 +122,7 @@ function App() {
             <Route path="/proxy-voting" element={<DashboardPage data={data} />} />
             <Route path="/dashboard" element={<Navigate replace to="/radar" />} />
             <Route path="/resolution/:id" element={<ResolutionPage data={data} />} />
+            <Route path="/terms" element={<TermsPage />} />
           </Route>
         </Routes>
       </Suspense>

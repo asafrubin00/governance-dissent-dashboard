@@ -345,3 +345,9 @@
 - Published all qualifying company voting records into Radar evidence, while retaining a separate score-eligible subset for management-sponsored resolutions.
 - Kept board-opposed shareholder proposals visible as context-only stewardship signals so they cannot be misread as automatic CEO or Chair pressure.
 - Added company-level resolution links, significant-vote tile markers, voting-severity filters, and a direct route to the full Vote Explorer.
+
+## Copyright and terms
+
+- Added a compact copyright and Terms of Use link to Radar, Vote Explorer, Overview, and resolution-detail surfaces without increasing workspace height.
+- Added a dedicated dark editorial Terms page covering original product IP, non-commercial use, third-party public-source ownership, research limitations, and licensing enquiries.
+- Linked the author name to Asaf Rubin's personal website throughout the legal treatment.
