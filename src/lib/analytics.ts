@@ -47,7 +47,7 @@ export function getFilterOptions(resolutions: ResolutionRecord[]) {
 
 export function getTopDissent(resolutions: ResolutionRecord[], limit = 8) {
   return [...resolutions]
-    .sort((left, right) => (right.votesAgainstPct ?? 0) - (left.votesAgainstPct ?? 0))
+    .sort((left, right) => (right.managementDissentPct ?? 0) - (left.managementDissentPct ?? 0))
     .slice(0, limit)
 }
 
@@ -62,7 +62,7 @@ export function getTimeline(resolutions: ResolutionRecord[]) {
     const monthKey = `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}`
     const existing = grouped.get(monthKey)
     if (existing) {
-      const total = existing.avgAgainst * existing.resolutions + (item.votesAgainstPct ?? 0)
+      const total = existing.avgAgainst * existing.resolutions + (item.managementDissentPct ?? 0)
       existing.resolutions += 1
       existing.avgAgainst = total / existing.resolutions
       continue
@@ -72,7 +72,7 @@ export function getTimeline(resolutions: ResolutionRecord[]) {
       label: formatMonth(item.meetingDate),
       monthKey,
       resolutions: 1,
-      avgAgainst: item.votesAgainstPct ?? 0,
+      avgAgainst: item.managementDissentPct ?? 0,
     })
   }
 
@@ -110,7 +110,7 @@ export function getCompanyPatterns(resolutions: ResolutionRecord[]) {
 
   for (const item of resolutions) {
     const existing = grouped.get(item.companyName)
-    const against = item.votesAgainstPct ?? 0
+    const against = item.managementDissentPct ?? 0
     if (existing) {
       const total = existing.avgAgainst * existing.resolutions + against
       existing.resolutions += 1
@@ -139,14 +139,14 @@ export function getCompanyPatterns(resolutions: ResolutionRecord[]) {
 export function getSummaryMetrics(resolutions: ResolutionRecord[]) {
   const companies = new Set(resolutions.map((item) => item.companyName))
   const avgAgainst =
-    resolutions.reduce((total, item) => total + (item.votesAgainstPct ?? 0), 0) /
+    resolutions.reduce((total, item) => total + (item.managementDissentPct ?? 0), 0) /
       (resolutions.length || 1)
 
   return {
     resolutions: resolutions.length,
     companies: companies.size,
     averageAgainst: avgAgainst,
-    severeVotes: resolutions.filter((item) => (item.votesAgainstPct ?? 0) >= 50).length,
+    severeVotes: resolutions.filter((item) => (item.managementDissentPct ?? 0) >= 50).length,
   }
 }
 
@@ -157,7 +157,7 @@ export function getRecentHighlights(resolutions: ResolutionRecord[], limit = 4) 
       if (dateOrder !== 0) {
         return dateOrder
       }
-      return (right.votesAgainstPct ?? 0) - (left.votesAgainstPct ?? 0)
+      return (right.managementDissentPct ?? 0) - (left.managementDissentPct ?? 0)
     })
     .slice(0, limit)
 }

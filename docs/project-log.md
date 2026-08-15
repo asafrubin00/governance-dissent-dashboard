@@ -327,3 +327,13 @@
 - Parsed 490 validated resolution rows from 24 issuer PDFs; sub-threshold meetings remain auditable without entering the significant-dissent dataset.
 - Reviewed all newly detected announcement-monitor candidates: dismissed duplicate IHG materials, an Antofagasta production-only revision and a mislabelled Metlen holdings notice; retained Aviva's post-cutoff Health profit-guidance reduction for the next evidence-date roll-forward.
 - Rebuilt calibration methodology v1.2 and retained production radar methodology v0.6 because the locked six-case evaluation sample still shows no incremental capture from warning or market overlays.
+
+## Management-direction correction and post-register expansion v1.3
+
+- Rolled the curated evidence date to 15 August 2026 and promoted Aviva's official reduction in its 2026 Health operating-profit ambition from £100m to approximately £90m.
+- Separated raw votes against a motion from opposition to management. Board-opposed shareholder proposals now use votes for the proposal as the dissent measure; raw for and against percentages remain published.
+- Removed legacy rows that did not meet the 20% management-dissent threshold after directionality was verified, preventing shareholder proposals from inflating dashboard rankings or leadership pressure.
+- Added BP's formal 2026 AGM RNS results, publishing two board resolutions with more than 52% opposition and a board-opposed shareholder resolution with 25.85% support.
+- Added official 2026 poll tables for HSBC, Shell and IHG as reviewed zero-or-sub-threshold coverage, and completed IHG's 2020-2023 historical AGM window.
+- Increased direct meeting coverage from 53 to 61 and validated 645 rows across 31 AGM PDFs; complete historical dissent windows increased from ten to eleven.
+- Expanded source-backed leadership profile access from 30 to all 100 companies while explicitly distinguishing 30 editorial biographies from 70 appointment-only profiles.

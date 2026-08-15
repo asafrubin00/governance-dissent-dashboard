@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T07:54:11.002669+00:00",
+  "updatedAt": "2026-08-15T08:16:12.607036+00:00",
   "candidates": [
     {
       "id": "ihg-901557669011489b",
@@ -50,8 +50,8 @@
         "earnings"
       ],
       "detectedAt": "2026-08-15T07:46:41.769028+00:00",
-      "status": "pending",
-      "reviewNote": "Editorial review identified a likely qualifying guidance cut: Aviva reduced its 2026 Health operating-profit ambition from \u00a3100m in its 14 May Q1 update to approximately \u00a390m on 14 August. The announcement falls after the current 8 August evidence date and should be promoted only with the next approved evidence-date roll-forward."
+      "status": "promoted",
+      "reviewNote": "Promoted after editorial review: Aviva reduced its 2026 Health operating-profit ambition from \u00a3100m in the 14 May Q1 update to approximately \u00a390m in the 14 August half-year results."
     },
     {
       "id": "mtln-7bc3af2fc8d8ea41",

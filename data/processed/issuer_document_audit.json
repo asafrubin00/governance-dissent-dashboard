@@ -1,5 +1,29 @@
 [
   {
+    "url": "https://www.hsbc.com/-/files/hsbc/investors/results-and-announcements/stock-exchange-announcements/2026/may/sea-080526-e-2026-agm-poll-results-announcement.pdf",
+    "companyName": "HSBC HOLDINGS PLC",
+    "meetingDate": "2026-05-08",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/9151cbf2b4fb.pdf",
+    "rowsExtracted": 20,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "hsbc-agm-results"
+  },
+  {
+    "url": "https://www.shell.com/investors/shareholder-meetings/_jcr_content/root/main/section/simple/text.multi.stream/1779203372791/fab6d3036710552faf96b211f1b23405d290498d/voting-results-of-the-2026-annual-general-meeting.pdf",
+    "companyName": "SHELL PLC",
+    "meetingDate": "2026-05-19",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/cb7cc45aeef1.pdf",
+    "rowsExtracted": 22,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "ihg-agm-results"
+  },
+  {
     "url": "https://www.hsbc.com/-/files/hsbc/investors/results-and-announcements/stock-exchange-announcements/2025/may/sea-250502-hsbc-holdings-plc-agm-poll-results-announcement.pdf?download=1",
     "companyName": "HSBC HOLDINGS PLC",
     "meetingDate": "2025-05-02",
@@ -46,6 +70,66 @@
     "rowsMatched": 0,
     "rowsAdded": 0,
     "parserHint": "standard-agm-results"
+  },
+  {
+    "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2020/ihg-agm-results-final.pdf",
+    "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+    "meetingDate": "2020-05-07",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/a19bd5d71710.pdf",
+    "rowsExtracted": 23,
+    "rowsMatched": 0,
+    "rowsAdded": 2,
+    "parserHint": "ihg-agm-results"
+  },
+  {
+    "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2021/ihg-agm-results-rns-final-7521-2.pdf",
+    "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+    "meetingDate": "2021-05-07",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/e5ffe6c5d0f7.pdf",
+    "rowsExtracted": 25,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "ihg-agm-results"
+  },
+  {
+    "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2022/result-of-agm-2022.pdf",
+    "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+    "meetingDate": "2022-05-06",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/40e00636437f.pdf",
+    "rowsExtracted": 23,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "ihg-agm-results"
+  },
+  {
+    "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2023/2023-agm-results.pdf",
+    "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+    "meetingDate": "2023-05-05",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/c5f9d20fc3ca.pdf",
+    "rowsExtracted": 22,
+    "rowsMatched": 0,
+    "rowsAdded": 2,
+    "parserHint": "ihg-agm-results"
+  },
+  {
+    "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/agm/2026/results-of-annual-general-meeting-2026.pdf",
+    "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+    "meetingDate": "2026-05-07",
+    "status": "parsed",
+    "documentType": "pdf-results",
+    "rawPdfPath": "data/raw/issuer-documents/65dd60088611.pdf",
+    "rowsExtracted": 20,
+    "rowsMatched": 0,
+    "rowsAdded": 0,
+    "parserHint": "ihg-agm-results"
   },
   {
     "url": "https://cumbria.unitedutilities.com/globalassets/documents/pdf/26-july-2019-agm-poll-result.pdf",

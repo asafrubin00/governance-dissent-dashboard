@@ -112,9 +112,9 @@ def management_dissent_by_company() -> dict[str, dict[str, Any]]:
 
     for row in tracker["resolutions"]:
         title = row["resolutionTitle"].upper()
-        if row["resolutionCategory"] == "shareholder-proposal" or any(term in title for term in excluded_terms):
+        if row.get("managementSponsored") is False or row["resolutionCategory"] == "shareholder-proposal" or any(term in title for term in excluded_terms):
             continue
-        pct = row.get("votesAgainstPct")
+        pct = row.get("managementDissentPct", row.get("votesAgainstPct"))
         if pct is None or pct < 20:
             continue
         key = normalise(row["companyName"])

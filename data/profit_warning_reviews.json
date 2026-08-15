@@ -1,6 +1,6 @@
 {
-  "asOfDate": "2026-08-08",
-  "lookbackStartDate": "2023-08-08",
+  "asOfDate": "2026-08-15",
+  "lookbackStartDate": "2023-08-15",
   "method": "Official issuer results, trading-update and announcement archives were reviewed for explicit full-year earnings guidance cuts or quantified material prospective adverse profit impacts.",
   "reviews": [
     { "ticker": "SHEL", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.shell.com/investors/results-and-reporting.html", "reviewNote": "Quarterly outlook updates reviewed; no qualifying full-year profit warning captured." },
@@ -30,7 +30,7 @@
     { "ticker": "NG", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.nationalgrid.com/investors/events/results-centre", "reviewNote": "Results archive reviewed; no qualifying event captured." },
     { "ticker": "III", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.3i.com/investor-relations/results-centre/", "reviewNote": "Results and portfolio updates reviewed; no qualifying Group earnings event captured." },
     { "ticker": "ABF", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.abf.co.uk/investors/results-presentations-and-reports", "reviewNote": "Results and trading updates reviewed; segment sales changes did not produce a qualifying Group profit warning." },
-    { "ticker": "AV", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.aviva.com/investors/results-reports-and-presentations/", "reviewNote": "Results and trading updates reviewed; Group operating-profit guidance was maintained or improved in the evidence window." },
+    { "ticker": "AV", "outcome": "qualifying-event-captured", "sourceUrl": "https://www.aviva.com/newsroom/news-and-research-overview/news-releases/2026/08/half-year-2026-results-announcement", "reviewNote": "The August 2026 reduction in the Health operating-profit ambition from £100m to approximately £90m is captured." },
     { "ticker": "BAB", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.babcockinternational.com/investors/results-reports-and-presentations/", "reviewNote": "Results and trading updates reviewed; no qualifying event captured." },
     { "ticker": "BTRW", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.barrattredrow.co.uk/investors/results-reports-and-presentations", "reviewNote": "Results and trading updates reviewed; completion guidance changes were excluded without an explicit Group earnings warning." },
     { "ticker": "BEZ", "outcome": "reviewed-no-qualifying-event", "sourceUrl": "https://www.beazley.com/en/investors/results-reports-and-presentations/", "reviewNote": "Results and trading updates reviewed; no qualifying Group earnings event captured." },

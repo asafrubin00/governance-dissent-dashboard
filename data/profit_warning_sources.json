@@ -1,9 +1,29 @@
 {
-  "asOfDate": "2026-08-08",
+  "asOfDate": "2026-08-15",
   "lookbackMonths": 36,
   "methodologyVersion": "0.4",
   "definition": "A qualifying event is an official issuer announcement that either cuts full-year earnings guidance or quantifies a material prospective adverse impact on profit. Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded.",
   "events": [
+    {
+      "id": "av-2026-08-14-guidance-cut",
+      "ticker": "AV",
+      "companyName": "Aviva",
+      "announcementDate": "2026-08-14",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2026",
+      "metric": "Health operating profit",
+      "previousGuidance": "£100m ambition",
+      "revisedGuidance": "Approximately £90m",
+      "changePct": -10.0,
+      "summary": "Aviva reduced its 2026 Health operating-profit ambition from £100m to approximately £90m as consumer and SME market growth slowed.",
+      "drivers": [
+        "Slower consumer-channel market growth",
+        "Slower SME-channel market growth"
+      ],
+      "sourceUrl": "https://www.aviva.com/newsroom/news-and-research-overview/news-releases/2026/08/half-year-2026-results-announcement",
+      "sourceLabel": "Aviva half-year 2026 results"
+    },
     {
       "id": "ccc-2024-10-28-guidance-cut",
       "ticker": "CCC",

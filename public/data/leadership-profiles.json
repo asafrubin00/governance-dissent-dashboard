@@ -1,41 +1,1680 @@
 {
   "metadata": {
-    "asOfDate": "2026-08-08",
-    "companyCount": 30,
-    "scope": "Source-backed leadership profile pilot covering 30 companies selected for elevated radar pressure or calibration relevance.",
-    "limitations": "Biographies are abbreviated from official issuer materials. Portraits and official-site icons are cached only where a stable issuer-published asset was available; initials are used otherwise.",
-    "validation": {"status": "pass", "errors": []}
+    "asOfDate": "2026-08-15",
+    "companyCount": 100,
+    "editoriallyEnrichedCompanyCount": 30,
+    "appointmentProfileCompanyCount": 70,
+    "scope": "Source-backed leadership profiles for the complete 100-company radar universe.",
+    "limitations": "Thirty priority companies have abbreviated career biographies from official issuer materials. Remaining profiles intentionally contain appointment facts only; portraits are shown only where a stable issuer-published asset is cached.",
+    "validation": {
+      "status": "pass",
+      "errors": []
+    }
   },
   "companies": [
-    {"ticker":"SHEL","roles":{"ceo":{"name":"Wael Sawan","summary":"Shell executive with more than two decades at the group across upstream, downstream and integrated-gas leadership roles. He became Chief Executive in January 2023.","sourceUrl":"https://www.shell.com/who-we-are/leadership/board-of-directors/wael-sawan.html","portraitPath":"/leadership-portraits/SHEL-ceo.jpg"},"chair":{"name":"Sir Andrew Mackenzie","summary":"Former BHP chief executive and geologist with extensive international energy and resources experience. He has chaired Shell since May 2021.","sourceUrl":"https://www.shell.com/who-we-are/leadership/board-of-directors/andrew-mackenzie.html","portraitPath":null}}},
-    {"ticker":"MKS","roles":{"ceo":{"name":"Stuart Machin","summary":"Retail operator who joined M&S in 2018 and led its food business before becoming Chief Executive in May 2022, with responsibility for the group's transformation and growth strategy.","sourceUrl":"https://corporate.marksandspencer.com/newsroom/press-releases/ms-appoints-strong-new-leadership-team-accelerate-progress-transformation","portraitPath":null},"chair":{"name":"Archie Norman","summary":"Experienced listed-company chair and retail leader, formerly chief executive and chair of Asda and chair of ITV. He has chaired M&S since September 2017.","sourceUrl":"https://corporate.marksandspencer.com/newsroom/press-releases/marks-and-spencer-chairmanship","portraitPath":null}}},
-    {"ticker":"CNA","roles":{"ceo":{"name":"Chris O'Shea","summary":"Chartered accountant and energy executive who served as Centrica CFO before becoming Group Chief Executive in April 2020.","sourceUrl":"https://www.centrica.com/media-centre/news/2020/group-chief-executive-appointment/","portraitPath":null},"chair":{"name":"Scott Wheway","summary":"Experienced utilities and consumer-sector chair who previously held senior roles at Aviva and Tesco. He became Centrica Chair in March 2020.","sourceUrl":"https://www.centrica.com/media-centre/news/2020/board-changes/","portraitPath":null}}},
-    {"ticker":"LSEG","roles":{"ceo":{"name":"David Schwimmer","summary":"Former Goldman Sachs executive with a career spanning market structure, capital markets and financial technology. He has led LSEG since August 2018.","sourceUrl":"https://www.lseg.com/en/about-us/board-of-directors","portraitPath":null},"chair":{"name":"Don Robert CBE","summary":"Former Experian chief executive and experienced financial-services chair. He has chaired LSEG since May 2019.","sourceUrl":"https://www.lseg.com/en/about-us/board-of-directors","portraitPath":null}}},
-    {"ticker":"ULVR","roles":{"ceo":{"name":"Fernando Fernandez","summary":"Long-serving Unilever executive whose leadership roles included Latin America and the group's Beauty & Wellbeing business before his appointment as CEO in March 2025.","sourceUrl":"https://www.unilever.com/files/unilever-annual-report-on-form-20-f-2025.pdf","portraitPath":null},"chair":{"name":"Ian Meakins","summary":"Former Wolseley chief executive and experienced international company chair. He became Chair of Unilever in December 2023.","sourceUrl":"https://www.unilever.com/files/unilever-annual-report-on-form-20-f-2025.pdf","portraitPath":null}}},
-    {"ticker":"IHG","roles":{"ceo":{"name":"Elie Maalouf","summary":"Hospitality executive who led IHG's Americas business before becoming Group Chief Executive in July 2023.","sourceUrl":"https://www.ihgplc.com/about-us/our-leadership/executive-committee/elie-maalouf","portraitPath":null},"chair":{"name":"Deanna Oppenheimer","summary":"International consumer and financial-services leader with extensive board experience. She became IHG Chair in September 2022.","sourceUrl":"https://www.ihgplc.com/en/news-and-media/news-releases/2022/retirement-of-patrick-cescau-as-chair-to-be-succeeded-by-deanna-oppenheimer","portraitPath":null}}},
-    {"ticker":"RIO","roles":{"ceo":{"name":"Simon Trott","summary":"Rio Tinto executive with operating and commercial leadership experience across iron ore and group strategy. He became Chief Executive in August 2025.","sourceUrl":"https://www.riotinto.com/news/releases/2025/rio-tinto-appoints-simon-trott-as-chief-executive","portraitPath":null},"chair":{"name":"Dominic Barton","summary":"Former global managing partner of McKinsey and Canada's ambassador to China, with extensive international policy and business experience. He has chaired Rio Tinto since May 2022.","sourceUrl":"https://www.riotinto.com/news/releases/2021/dominic-barton-to-succeed-simon-thompson-as-chair","portraitPath":null}}},
-    {"ticker":"HSBA","roles":{"ceo":{"name":"Georges Elhedery","summary":"International banker who held senior markets, regional and finance roles at HSBC before becoming Group Chief Executive in September 2024.","sourceUrl":"https://www.hsbc.com/who-we-are/our-people/board-of-directors/georges-elhedery","portraitPath":"/leadership-portraits/HSBA-ceo.jpg"},"chair":{"name":"Brendan Nelson","summary":"Former KPMG vice-chair and experienced bank director who served as HSBC's interim Chair before being appointed permanently in 2025.","sourceUrl":"https://www.hsbc.com/news-and-views/news/hsbc-news-archive/brendan-nelson-appointed-as-group-chair","portraitPath":null}}},
-    {"ticker":"BP","roles":{"ceo":{"name":"Murray Auchincloss","summary":"BP executive with deep finance and strategy experience who served as CFO and interim CEO before being appointed Chief Executive in January 2024.","sourceUrl":"https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/news-and-insights/press-releases/murray-auchincloss-appointed-bp-chief-executive-officer.pdf","portraitPath":null},"chair":{"name":"Albert Manifold","summary":"Former CRH chief executive with extensive global industrial, capital-allocation and M&A experience. He became BP Chair in October 2025.","sourceUrl":"https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/news-and-insights/press-releases/albert-manifold-appointed-bp-plc-chair.pdf","portraitPath":null}}},
-    {"ticker":"AUTO","roles":{"ceo":{"name":"Nathan Coe","summary":"Auto Trader executive who previously served as CFO and COO before becoming Chief Executive in March 2020.","sourceUrl":"https://plc.autotrader.co.uk/media/fdvcy2os/ixbrl-viewer-2025.html","portraitPath":null},"chair":{"name":"Matt Davies","summary":"Experienced UK retail and listed-company leader, formerly chief executive of Pets at Home and Halfords. He became Auto Trader Chair in September 2023.","sourceUrl":"https://plc.autotrader.co.uk/news-views/company-news/new-chair-designate-announced/","portraitPath":null}}},
-    {"ticker":"CCEP","roles":{"ceo":{"name":"Damian Gammell","summary":"International beverages executive with more than 30 years in the Coca-Cola system. He has led CCEP since December 2016 and oversaw its expansion into Australia, the Pacific and the Philippines.","sourceUrl":"https://www.cocacolaep.com/who-we-are/governance/board-of-directors/view/damian-gammell-0/","portraitPath":null},"chair":{"name":"Sol Daurella","summary":"Experienced international company director with extensive Coca-Cola bottling and consumer-sector experience. She has chaired CCEP since May 2016.","sourceUrl":"https://www.cocacolaep.com/who-we-are/governance/board-of-directors/view/sol-daurella/","portraitPath":null}}},
-    {"ticker":"CCC","roles":{"ceo":{"name":"Mike Norris","summary":"Long-serving Computacenter executive who joined the group in 1984 and has served as Chief Executive since 1994, leading its development into an international technology-services business.","sourceUrl":"https://investors.computacenter.com/static-files/50960b8b-7543-4003-b0a2-bb7ebd2f9fc1","portraitPath":null},"chair":{"name":"Peter Ryan","summary":"Technology-sector leader with international experience across software, services, systems integration and infrastructure, including senior roles at Hewlett Packard Enterprise, Logica and Sun Microsystems.","sourceUrl":"https://investors.computacenter.com/static-files/50960b8b-7543-4003-b0a2-bb7ebd2f9fc1","portraitPath":null}}},
-    {"ticker":"AAL","roles":{"ceo":{"name":"Duncan Wanblad","summary":"Mining engineer with more than 30 years of global industry experience and a long Anglo American career spanning copper, base metals, strategy and business development. He became Chief Executive in April 2022.","sourceUrl":"https://www.angloamerican.com/about-us/leadership-team","portraitPath":null},"chair":{"name":"Stuart Chambers","summary":"Former Pilkington and Nippon Sheet Glass chief executive with extensive industrial and listed-company board experience, including chairing ARM and Rexam. He has chaired Anglo American since November 2017.","sourceUrl":"https://www.angloamerican.com/about-us/leadership-team/modules-navigation/module-bod-new/board/stuart-chambers","portraitPath":null}}},
-    {"ticker":"III","roles":{"ceo":{"name":"Simon Borrows","summary":"Former investment banker who joined 3i as Chief Investment Officer in 2011 and became Chief Executive in May 2012. His earlier roles included leadership positions at Greenhill and Baring Brothers.","sourceUrl":"https://www.3i.com/about-us/our-team/executive-committee/simon-borrows/","portraitPath":null},"chair":{"name":"David Hutchison OBE","summary":"Former investment banker and social-finance executive who joined the 3i board in 2013 and became Chair in November 2021.","sourceUrl":"https://www.3i.com/about-us/our-team/board-of-directors/david-hutchison-obe/","portraitPath":null}}},
-    {"ticker":"ANTO","roles":{"ceo":{"name":"Iván Arriagada","summary":"Commercial engineer and economist with more than 30 years in mining and energy, including senior roles at Codelco, BHP Billiton and Shell. He joined Antofagasta in 2015 and became Group CEO in 2016.","sourceUrl":"https://www.antofagasta.co.uk/about-us/leadership-team/senior-management/","portraitPath":null},"chair":{"name":"Jean-Paul Luksic","summary":"Antofagasta leader with more than 30 years at the group, including oversight of major mine developments and service as mining-division CEO. He has chaired the company since 2004.","sourceUrl":"https://www.antofagasta.co.uk/about-us/leadership-team/board/","portraitPath":null}}},
-    {"ticker":"TSCO","roles":{"ceo":{"name":"Ken Murphy","summary":"International consumer executive who held senior commercial and regional leadership roles at Walgreens Boots Alliance before becoming Tesco Group Chief Executive in October 2020.","sourceUrl":"https://www.tescoplc.com/about/board-board-committees-and-executive-committee/executive-committee/","portraitPath":null},"chair":{"name":"Dr Gerry Murphy","summary":"Experienced international chair and former operating executive whose listed-company roles span retail, consumer goods and industrial businesses. He became Tesco Chair in September 2023.","sourceUrl":"https://www.tescoplc.com/AGM2025","portraitPath":null}}},
-    {"ticker":"GLEN","roles":{"ceo":{"name":"Gary Nagle","summary":"Mining and commodities executive who joined Glencore in 2000 and held senior coal and alloy leadership roles before becoming Chief Executive in July 2021.","sourceUrl":"https://www.glencore.com/who-we-are/our-leadership","portraitPath":null},"chair":{"name":"Kalidas Madhavpeddi","summary":"International mining executive and director with extensive operating and board experience across resources businesses. He became Glencore Chair in July 2021.","sourceUrl":"https://www.glencore.com/media-and-insights/news/appointment-of-new-chairman","portraitPath":null}}},
-    {"ticker":"PRU","roles":{"ceo":{"name":"Anil Wadhwani","summary":"International insurance executive with senior leadership experience across Asia and the United States, including roles at Manulife and Citi. He became Prudential Chief Executive in February 2023.","sourceUrl":"https://www.prudentialplc.com/en/about-us/our-leadership/","portraitPath":null},"chair":{"name":"Sir Douglas Flint","summary":"Former HSBC Group Chair and experienced financial-services director with extensive international governance and public-policy experience. He became Prudential Chair in May 2026.","sourceUrl":"https://www.prudentialplc.com/en/newsroom/company-news/2025/Prudential-plc-appoints-Sir-Douglas-Flint-CBE-to-succeed-Shriti-Vadera-as-Chair/","portraitPath":null}}},
-    {"ticker":"ADM","roles":{"ceo":{"name":"Milena Mondini de Focatiis","summary":"Insurance executive who joined Admiral in 2007 and led its UK and European operations before becoming Group Chief Executive in January 2021.","sourceUrl":"https://www.admiralgroup.co.uk/who-we-are/our-board-and-management","portraitPath":null},"chair":{"name":"Mike Rogers","summary":"Experienced financial-services chief executive and listed-company director, formerly chief executive of Liverpool Victoria. He became Admiral Chair in April 2023.","sourceUrl":"https://admiralgroup.co.uk/news-releases/news-release-details/directorate-change-21","portraitPath":null}}},
-    {"ticker":"HSX","roles":{"ceo":{"name":"Aki Hussain","summary":"Chartered accountant and insurance executive who served as Hiscox Group CFO before becoming Group Chief Executive in January 2022.","sourceUrl":"https://www.hiscoxgroup.com/news/blog/introducing-our-new-group-ceo-aki-hussain","portraitPath":null},"chair":{"name":"Peter Clarke","summary":"Experienced international financial-services leader and director with executive experience at Man Group and senior board roles across insurance and asset management. He became Hiscox Chair in July 2025.","sourceUrl":"https://www.hiscoxgroup.com/about-hiscox/management","portraitPath":null}}},
-    {"ticker":"BATS","roles":{"ceo":{"name":"Tadeu Marroco","summary":"Long-serving BAT executive who held regional, strategy and finance leadership roles, including Group Finance Director, before becoming Chief Executive in May 2023.","sourceUrl":"https://www.bat.com/media/press-releases/_2023/may/may-15---bat-announces-tadeu-marroco-as-chief-executive","portraitPath":null},"chair":{"name":"Luc Jobin","summary":"Former Canadian National Railway chief executive and experienced international director with consumer, transport and financial leadership experience. He became BAT Chair in April 2021.","sourceUrl":"https://www.bat.com/media/press-releases/_2026/february/board-update-chair-extension-and-senior-independent-director-appointment","portraitPath":null}}},
-    {"ticker":"EDV","roles":{"ceo":{"name":"Ian Cockerill","summary":"Mining executive and engineer with extensive leadership experience across global gold and resources businesses. He became Endeavour Mining Chief Executive in January 2024.","sourceUrl":"https://www.endeavourmining.com/about-us/our-leadership/","portraitPath":null},"chair":{"name":"Srinivasan Venkatakrishnan","summary":"Former AngloGold Ashanti chief executive and experienced international mining director. He became Endeavour Mining Chair in May 2022.","sourceUrl":"https://www.endeavourmining.com/news-and-media/news/endeavour-appoints-srinivasan-venkatakrishnan-chair-and-ian-cockerill-senior-independent-director/","portraitPath":null}}},
-    {"ticker":"UU","roles":{"ceo":{"name":"Louise Beardmore","summary":"Utilities executive who joined United Utilities in 2012 and led customer service and people functions before becoming Chief Executive in March 2023.","sourceUrl":"https://www.unitedutilities.com/globalassets/z_corporate-site/investor-pdfs/euro-medium-term-notes/uu---supplementary-oc-final.pdf","portraitPath":null},"chair":{"name":"Sir David Higgins","summary":"Former chief executive of Network Rail and the Olympic Delivery Authority with extensive infrastructure and public-sector leadership experience. He has chaired United Utilities since 2020.","sourceUrl":"https://www.unitedutilities.com/corporate/about-us/governance/our-board/","portraitPath":null}}},
-    {"ticker":"HLMA","roles":{"ceo":{"name":"Marc Ronchetti","summary":"Halma executive who served as Group Financial Controller and Chief Financial Officer before becoming Group Chief Executive in April 2023.","sourceUrl":"https://www.halma.com/who-we-are/our-leadership","portraitPath":null},"chair":{"name":"Dame Louise Makin","summary":"Former BTG chief executive and experienced life-sciences and industrial director. She became Halma Chair in July 2021.","sourceUrl":"https://www.halma.com/who-we-are/our-leadership","portraitPath":null}}},
-    {"ticker":"SPX","roles":{"ceo":{"name":"Nimesh Patel","summary":"Spirax executive who joined as Chief Financial Officer in 2020 after senior finance roles at De Beers and Anglo American, and became Group Chief Executive in January 2024.","sourceUrl":"https://www.spiraxgroup.com/en/investors/results-reports-and-presentations/2024-digital-annual-report","portraitPath":null},"chair":{"name":"Tim Cobbold","summary":"Former chief executive of UBM, De La Rue and Chloride Group with extensive international industrial and listed-company board experience. He became Spirax Chair in January 2025.","sourceUrl":"https://www.spiraxgroup.com/en/investors/results-reports-and-presentations/2024-digital-annual-report","portraitPath":null}}},
-    {"ticker":"NXT","roles":{"ceo":{"name":"Lord Wolfson of Aspley Guise","summary":"Long-serving Next executive who joined the group in 1991 and led retail sales, Directory, systems and the Next brand before becoming Chief Executive in 2001.","sourceUrl":"https://www.nextplc.co.uk/about-next/our-board","portraitPath":null},"chair":{"name":"Michael Roney","summary":"Former Bunzl chief executive with international leadership experience at Goodyear Dunlop Tires Europe and Johnson Matthey. He became Next Chair in August 2017.","sourceUrl":"https://www.nextplc.co.uk/about-next/our-board","portraitPath":null}}},
-    {"ticker":"LLOY","roles":{"ceo":{"name":"Charlie Nunn","summary":"International banking executive who previously led wealth and personal banking at HSBC before becoming Lloyds Banking Group Chief Executive in August 2021.","sourceUrl":"https://www.lloydsbankinggroup.com/who-we-are/group-overview/directors-and-governance.html","portraitPath":null},"chair":{"name":"Sir Robin Budenberg CBE","summary":"Former UK Financial Investments chief executive and senior investment banker with extensive public- and private-sector board experience. He became Lloyds Banking Group Chair in January 2021.","sourceUrl":"https://www.lloydsbankinggroup.com/who-we-are/group-overview/directors-and-governance.html","portraitPath":null}}},
-    {"ticker":"NWG","roles":{"ceo":{"name":"Paul Thwaite","summary":"Long-serving NatWest executive whose leadership roles included commercial, institutional and corporate banking. He became interim Chief Executive in July 2023 and was appointed permanently in February 2024.","sourceUrl":"https://www.natwestgroup.com/news-and-insights/news-room/press-releases/our-updates/2024/feb/natwest-group-ceo-appointment.html","portraitPath":null},"chair":{"name":"Rick Haythornthwaite","summary":"Experienced listed-company chair and former industrial executive whose governance roles have included Mastercard, Centrica and Network Rail. He became NatWest Group Chair in April 2024.","sourceUrl":"https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/documents/agm-display-documents/2026/2026-agm-letter-to-shareholders.pdf","portraitPath":null}}},
-    {"ticker":"LGEN","roles":{"ceo":{"name":"Antonio Simoes","summary":"International financial-services executive with senior banking leadership experience at HSBC and Santander. He became Legal & General Group Chief Executive in January 2024.","sourceUrl":"https://group.legalandgeneral.com/newsroom/multimedia/2024/1/antonio-simoes-joins-legal-general/","portraitPath":null},"chair":{"name":"Scott Wheway","summary":"Experienced financial-services and consumer leader whose board roles include chairing Aviva and Centrica, following an executive career at Tesco. He became Legal & General Chair in May 2026.","sourceUrl":"https://group.legalandgeneral.com/asset/49331c/globalassets/group/newsroom/press-releases/pdfs/2025/10/scott-wheway-appointed-legal-general-group-plc-chair.pdf","portraitPath":null}}},
-    {"ticker":"BARC","roles":{"ceo":{"name":"C.S. Venkatakrishnan","summary":"International banker with senior experience across markets, risk and strategy at Barclays and JPMorgan. He became Barclays Group Chief Executive in November 2021.","sourceUrl":"https://home.barclays/who-we-are/structure-and-leadership/leadership/c-s-venkatakrishnan/","portraitPath":null},"chair":{"name":"Nigel Higgins","summary":"Former Rothschild senior executive with extensive international banking, advisory and board experience. He became Barclays Group Chair in May 2019.","sourceUrl":"https://home.barclays/who-we-are/structure-and-leadership/leadership/nigel-higgins/","portraitPath":null}}}
+    {
+      "ticker": "III",
+      "roles": {
+        "ceo": {
+          "name": "Simon Borrows",
+          "summary": "Former investment banker who joined 3i as Chief Investment Officer in 2011 and became Chief Executive in May 2012. His earlier roles included leadership positions at Greenhill and Baring Brothers.",
+          "sourceUrl": "https://www.3i.com/about-us/our-team/executive-committee/simon-borrows/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "David Hutchison OBE",
+          "summary": "Former investment banker and social-finance executive who joined the 3i board in 2013 and became Chair in November 2021.",
+          "sourceUrl": "https://www.3i.com/about-us/our-team/board-of-directors/david-hutchison-obe/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "ABDN",
+      "roles": {
+        "ceo": {
+          "name": "Jason Windsor",
+          "summary": "Jason Windsor has served as Chief Executive of Aberdeen Group since September 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.aberdeenplc.com/en-gb/about-us/our-leadership-team",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Jonathan Asquith",
+          "summary": "Jonathan Asquith has served as Chair of Aberdeen Group since April 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.aberdeenplc.com/en-gb/about-us/our-leadership-team",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "ADM",
+      "roles": {
+        "ceo": {
+          "name": "Milena Mondini de Focatiis",
+          "summary": "Insurance executive who joined Admiral in 2007 and led its UK and European operations before becoming Group Chief Executive in January 2021.",
+          "sourceUrl": "https://www.admiralgroup.co.uk/who-we-are/our-board-and-management",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Mike Rogers",
+          "summary": "Experienced financial-services chief executive and listed-company director, formerly chief executive of Liverpool Victoria. He became Admiral Chair in April 2023.",
+          "sourceUrl": "https://admiralgroup.co.uk/news-releases/news-release-details/directorate-change-21",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "AAF",
+      "roles": {
+        "ceo": {
+          "name": "Sunil Taldar",
+          "summary": "Sunil Taldar has served as Chief Executive of Airtel Africa since July 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.airtel.africa/leadership",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sunil Bharti Mittal",
+          "summary": "Sunil Bharti Mittal has served as Chair of Airtel Africa since July 2018. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.airtel.africa/leadership",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "ALW",
+      "roles": {
+        "chair": {
+          "name": "Dean Buckley",
+          "summary": "Dean Buckley has served as Chair of Alliance Witan since January 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.alliancewitan.com/people/dean-buckley",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "AAL",
+      "roles": {
+        "ceo": {
+          "name": "Duncan Wanblad",
+          "summary": "Mining engineer with more than 30 years of global industry experience and a long Anglo American career spanning copper, base metals, strategy and business development. He became Chief Executive in April 2022.",
+          "sourceUrl": "https://www.angloamerican.com/about-us/leadership-team",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Stuart Chambers",
+          "summary": "Former Pilkington and Nippon Sheet Glass chief executive with extensive industrial and listed-company board experience, including chairing ARM and Rexam. He has chaired Anglo American since November 2017.",
+          "sourceUrl": "https://www.angloamerican.com/about-us/leadership-team/modules-navigation/module-bod-new/board/stuart-chambers",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "ANTO",
+      "roles": {
+        "ceo": {
+          "name": "Iván Arriagada",
+          "summary": "Commercial engineer and economist with more than 30 years in mining and energy, including senior roles at Codelco, BHP Billiton and Shell. He joined Antofagasta in 2015 and became Group CEO in 2016.",
+          "sourceUrl": "https://www.antofagasta.co.uk/about-us/leadership-team/senior-management/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Jean-Paul Luksic",
+          "summary": "Antofagasta leader with more than 30 years at the group, including oversight of major mine developments and service as mining-division CEO. He has chaired the company since 2004.",
+          "sourceUrl": "https://www.antofagasta.co.uk/about-us/leadership-team/board/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "ABF",
+      "roles": {
+        "ceo": {
+          "name": "George Weston",
+          "summary": "George Weston has served as Chief Executive of Associated British Foods since April 2005. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.abf.co.uk/about-us/corporate-governance/board-of-directors",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Michael McLintock",
+          "summary": "Michael McLintock has served as Chair of Associated British Foods since April 2018. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.abf.co.uk/media/news/2018/2018-directorate-change",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "AZN",
+      "roles": {
+        "ceo": {
+          "name": "Pascal Soriot",
+          "summary": "Pascal Soriot has served as Chief Executive of AstraZeneca since October 2012. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.astrazeneca.com/content/dam/az/Investor_Relations/Annual-report-2015/AZ_Corporate_Governance_2015.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Michel Demaré",
+          "summary": "Michel Demaré has served as Chair of AstraZeneca since April 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.astrazeneca.com/content/dam/az/PDF/2025/Notice-of-Meeting-2025.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "AUTO",
+      "roles": {
+        "ceo": {
+          "name": "Nathan Coe",
+          "summary": "Auto Trader executive who previously served as CFO and COO before becoming Chief Executive in March 2020.",
+          "sourceUrl": "https://plc.autotrader.co.uk/media/fdvcy2os/ixbrl-viewer-2025.html",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Matt Davies",
+          "summary": "Experienced UK retail and listed-company leader, formerly chief executive of Pets at Home and Halfords. He became Auto Trader Chair in September 2023.",
+          "sourceUrl": "https://plc.autotrader.co.uk/news-views/company-news/new-chair-designate-announced/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "AV",
+      "roles": {
+        "ceo": {
+          "name": "Dame Amanda Blanc",
+          "summary": "Dame Amanda Blanc has served as Chief Executive of Aviva since July 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.aviva.com/about-us/our-board-and-executives-overview/leader-profiles/amanda-blanc/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "George Culmer",
+          "summary": "George Culmer has served as Chair of Aviva since May 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.aviva.com/about-us/leader-profiles/george-culmer/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BAB",
+      "roles": {
+        "ceo": {
+          "name": "David Lockwood OBE",
+          "summary": "David Lockwood OBE has served as Chief Executive of Babcock International since September 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.babcockinternational.com/news/babcock-appoints-new-chief-executive/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Dame Ruth Cairnie DBE",
+          "summary": "Dame Ruth Cairnie DBE has served as Chair of Babcock International since July 2019. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.babcockinternational.com/who-we-are/leadership-and-governance/the-board/ruth-cairnie/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BA",
+      "roles": {
+        "ceo": {
+          "name": "Charles Woodburn",
+          "summary": "Charles Woodburn has served as Chief Executive of BAE Systems since July 2017. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.baesystems.com/en/article/notice-of-directorate-change",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Cressida Hogg",
+          "summary": "Cressida Hogg has served as Chair of BAE Systems since May 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.baesystems.com/en-us/article/chair-designate",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BARC",
+      "roles": {
+        "ceo": {
+          "name": "C.S. Venkatakrishnan",
+          "summary": "International banker with senior experience across markets, risk and strategy at Barclays and JPMorgan. He became Barclays Group Chief Executive in November 2021.",
+          "sourceUrl": "https://home.barclays/who-we-are/structure-and-leadership/leadership/c-s-venkatakrishnan/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Nigel Higgins",
+          "summary": "Former Rothschild senior executive with extensive international banking, advisory and board experience. He became Barclays Group Chair in May 2019.",
+          "sourceUrl": "https://home.barclays/who-we-are/structure-and-leadership/leadership/nigel-higgins/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BTRW",
+      "roles": {
+        "ceo": {
+          "name": "David Thomas",
+          "summary": "David Thomas has served as Chief Executive of Barratt Redrow since July 2015. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.barrattredrow.co.uk/news/2015/pr-27-03-2015",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Caroline Silver",
+          "summary": "Caroline Silver has served as Chair of Barratt Redrow since June 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.barrattredrow.co.uk/about-us/leadership/the-board",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BEZ",
+      "roles": {
+        "ceo": {
+          "name": "Adrian Cox",
+          "summary": "Adrian Cox has served as Chief Executive of Beazley since April 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Clive Bannister",
+          "summary": "Clive Bannister has served as Chair of Beazley since April 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BP",
+      "roles": {
+        "ceo": {
+          "name": "Murray Auchincloss",
+          "summary": "BP executive with deep finance and strategy experience who served as CFO and interim CEO before being appointed Chief Executive in January 2024.",
+          "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/news-and-insights/press-releases/murray-auchincloss-appointed-bp-chief-executive-officer.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Albert Manifold",
+          "summary": "Former CRH chief executive with extensive global industrial, capital-allocation and M&A experience. He became BP Chair in October 2025.",
+          "sourceUrl": "https://www.bp.com/content/dam/bp/business-sites/en/global/corporate/pdfs/news-and-insights/press-releases/albert-manifold-appointed-bp-plc-chair.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BATS",
+      "roles": {
+        "ceo": {
+          "name": "Tadeu Marroco",
+          "summary": "Long-serving BAT executive who held regional, strategy and finance leadership roles, including Group Finance Director, before becoming Chief Executive in May 2023.",
+          "sourceUrl": "https://www.bat.com/media/press-releases/_2023/may/may-15---bat-announces-tadeu-marroco-as-chief-executive",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Luc Jobin",
+          "summary": "Former Canadian National Railway chief executive and experienced international director with consumer, transport and financial leadership experience. He became BAT Chair in April 2021.",
+          "sourceUrl": "https://www.bat.com/media/press-releases/_2026/february/board-update-chair-extension-and-senior-independent-director-appointment",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BLND",
+      "roles": {
+        "ceo": {
+          "name": "Simon Carter",
+          "summary": "Simon Carter has served as Chief Executive of British Land since November 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.britishland.com/news/chris-grigg-to-step-down-as-chief-executive-officer-simon-carter-appointed-as-his-successor/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "William Rucker",
+          "summary": "William Rucker has served as Chair of British Land since July 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.britishland.com/news/british-land-appoints-william-rucker-as-chair-designate/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BT.A",
+      "roles": {
+        "ceo": {
+          "name": "Allison Kirkby",
+          "summary": "Allison Kirkby has served as Chief Executive of BT Group since February 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.bt.com/about/bt/our-board",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Adam Crozier",
+          "summary": "Adam Crozier has served as Chair of BT Group since December 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.bt.com/about/bt/our-board/adam-crozier",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BNZL",
+      "roles": {
+        "ceo": {
+          "name": "Frank van Zanten",
+          "summary": "Frank van Zanten has served as Chief Executive of Bunzl since April 2016. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.bunzl.com/newsroom/retirement-of-michael-roney-and-appointment-of-frank-van-zanten-as-chief-executive/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Peter Ventress",
+          "summary": "Peter Ventress has served as Chair of Bunzl since April 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.bunzl.com/about-us/our-leadership/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BRBY",
+      "roles": {
+        "ceo": {
+          "name": "Joshua Schulman",
+          "summary": "Joshua Schulman has served as Chief Executive of Burberry Group since July 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.burberryplc.com/content/dam/burberryplc/corporate/oar/oar-2024-2025/burberry_annual_report_and_accounts_2024_25_accessibility.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Gerry Murphy",
+          "summary": "Gerry Murphy has served as Chair of Burberry Group since May 2018. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.burberryplc.com/news/corporate/2026/burberry-announces-chair-succession",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "CNA",
+      "roles": {
+        "ceo": {
+          "name": "Chris O'Shea",
+          "summary": "Chartered accountant and energy executive who served as Centrica CFO before becoming Group Chief Executive in April 2020.",
+          "sourceUrl": "https://www.centrica.com/media-centre/news/2020/group-chief-executive-appointment/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Scott Wheway",
+          "summary": "Experienced utilities and consumer-sector chair who previously held senior roles at Aviva and Tesco. He became Centrica Chair in March 2020.",
+          "sourceUrl": "https://www.centrica.com/media-centre/news/2020/board-changes/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "CCEP",
+      "roles": {
+        "ceo": {
+          "name": "Damian Gammell",
+          "summary": "International beverages executive with more than 30 years in the Coca-Cola system. He has led CCEP since December 2016 and oversaw its expansion into Australia, the Pacific and the Philippines.",
+          "sourceUrl": "https://www.cocacolaep.com/who-we-are/governance/board-of-directors/view/damian-gammell-0/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sol Daurella",
+          "summary": "Experienced international company director with extensive Coca-Cola bottling and consumer-sector experience. She has chaired CCEP since May 2016.",
+          "sourceUrl": "https://www.cocacolaep.com/who-we-are/governance/board-of-directors/view/sol-daurella/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "CCH",
+      "roles": {
+        "ceo": {
+          "name": "Zoran Bogdanovic",
+          "summary": "Zoran Bogdanovic has served as Chief Executive of Coca-Cola HBC since December 2017. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.coca-colahellenic.com/en/about-us/corporate-governance/executive-leadership-team",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Anastassis G. David",
+          "summary": "Anastassis G. David has served as Chair of Coca-Cola HBC since January 2016. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.coca-colahellenic.com/en/about-us/corporate-governance/the-board",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "CPG",
+      "roles": {
+        "ceo": {
+          "name": "Dominic Blakemore",
+          "summary": "Dominic Blakemore has served as Chief Executive of Compass Group since January 2018. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.compass-group.com/en/media/news/2018/dominic-blakemore.html",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Ian Meakins",
+          "summary": "Ian Meakins has served as Chair of Compass Group since December 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.compass-group.com/en/who-we-are/ourleadership/leadership.html",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "CCC",
+      "roles": {
+        "ceo": {
+          "name": "Mike Norris",
+          "summary": "Long-serving Computacenter executive who joined the group in 1984 and has served as Chief Executive since 1994, leading its development into an international technology-services business.",
+          "sourceUrl": "https://investors.computacenter.com/static-files/50960b8b-7543-4003-b0a2-bb7ebd2f9fc1",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Peter Ryan",
+          "summary": "Technology-sector leader with international experience across software, services, systems integration and infrastructure, including senior roles at Hewlett Packard Enterprise, Logica and Sun Microsystems.",
+          "sourceUrl": "https://investors.computacenter.com/static-files/50960b8b-7543-4003-b0a2-bb7ebd2f9fc1",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "CTEC",
+      "roles": {
+        "ceo": {
+          "name": "Jonny Mason",
+          "summary": "Jonny Mason has served as Chief Executive of Convatec since November 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.convatecgroup.com/media/press-releases/2025/chief-executive-officer-and-chief-financial-officer-appointments/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Dr John McAdam CBE",
+          "summary": "Dr John McAdam CBE has served as Chair of Convatec since September 2019. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.convatecgroup.com/media-articles/press-releases/2019/john-mcadam-appointed-chairman-of-convatec/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "CRDA",
+      "roles": {
+        "ceo": {
+          "name": "Steve Foots CBE",
+          "summary": "Steve Foots CBE has served as Chief Executive of Croda International since January 2012. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.croda.com/en-gb/about-us/leadership",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Danuta Gray",
+          "summary": "Danuta Gray has served as Chair of Croda International since April 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.croda.com/en-gb/media-hub/news/appointments/appointment-of-chair-designate",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "DCC",
+      "roles": {
+        "ceo": {
+          "name": "Donal Murphy",
+          "summary": "Donal Murphy has served as Chief Executive of DCC Energy since July 2017. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.dcc.ie/news-and-insights/news/2017/chief-executive-succession",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Mark Breuer",
+          "summary": "Mark Breuer has served as Chair of DCC Energy since July 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.dcc.ie/about-us/board-and-leadership",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "DGE",
+      "roles": {
+        "ceo": {
+          "name": "Sir Dave Lewis",
+          "summary": "Sir Dave Lewis has served as Chief Executive of Diageo since January 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.diageo.com/en/news-and-media/press-releases/2025/sir-dave-lewis-appointed-diageo-plc-ceo",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir John Manzoni",
+          "summary": "Sir John Manzoni has served as Chair of Diageo since February 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.diageo.com/en/our-business/corporate-governance/remuneration-at-diageo.",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "DPLM",
+      "roles": {
+        "ceo": {
+          "name": "Johnny Thomson",
+          "summary": "Johnny Thomson has served as Chief Executive of Diploma since February 2019. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.diplomaplc.com/about-us/leadership/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "David Lowden",
+          "summary": "David Lowden has served as Chair of Diploma since October 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.diplomaplc.com/about-us/leadership/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "EDV",
+      "roles": {
+        "ceo": {
+          "name": "Ian Cockerill",
+          "summary": "Mining executive and engineer with extensive leadership experience across global gold and resources businesses. He became Endeavour Mining Chief Executive in January 2024.",
+          "sourceUrl": "https://www.endeavourmining.com/about-us/our-leadership/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Srinivasan Venkatakrishnan",
+          "summary": "Former AngloGold Ashanti chief executive and experienced international mining director. He became Endeavour Mining Chair in May 2022.",
+          "sourceUrl": "https://www.endeavourmining.com/news-and-media/news/endeavour-appoints-srinivasan-venkatakrishnan-chair-and-ian-cockerill-senior-independent-director/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "ENT",
+      "roles": {
+        "ceo": {
+          "name": "Stella David",
+          "summary": "Stella David has served as Chief Executive of Entain since April 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/appointment-of-chief-executive-officer/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Pierre Bouchut",
+          "summary": "Pierre Bouchut has served as Chair of Entain since August 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/2025-interim-results/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "EXPN",
+      "roles": {
+        "ceo": {
+          "name": "Brian Cassin",
+          "summary": "Brian Cassin has served as Chief Executive of Experian since July 2014. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.experianplc.com/newsroom/press-releases/2014/16-07-2014",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Adam Crozier",
+          "summary": "Adam Crozier has served as Chair of Experian since July 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.experianplc.com/about-us/board-and-senior-management/adam-crozier",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "FCIT",
+      "roles": {
+        "chair": {
+          "name": "Beatrice Hollond",
+          "summary": "Beatrice Hollond has served as Chair of F & C Investment Trust since July 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.fandc.com/meet-the-board-landing-page/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "FRES",
+      "roles": {
+        "ceo": {
+          "name": "Octavio Alvidrez",
+          "summary": "Octavio Alvidrez has served as Chief Executive of Fresnillo plc since August 2012. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.fresnilloplc.com/media/e4thkqnc/fresnillo-annual-report-2012.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Alejandro Bailleres",
+          "summary": "Alejandro Bailleres has served as Chair of Fresnillo plc since April 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://fresnilloplc.com/media/zgcbodxt/46566-fresnillo-ar24-web.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "GAW",
+      "roles": {
+        "ceo": {
+          "name": "Kevin Rountree",
+          "summary": "Kevin Rountree has served as Chief Executive of Games Workshop since January 2015. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://investor.games-workshop.com/news-posts/appointment-of-ceo",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Mark Lam",
+          "summary": "Mark Lam has served as Chair of Games Workshop since November 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://investor.games-workshop.com/news-posts/appointmentofchair101024",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "GLEN",
+      "roles": {
+        "ceo": {
+          "name": "Gary Nagle",
+          "summary": "Mining and commodities executive who joined Glencore in 2000 and held senior coal and alloy leadership roles before becoming Chief Executive in July 2021.",
+          "sourceUrl": "https://www.glencore.com/who-we-are/our-leadership",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Kalidas Madhavpeddi",
+          "summary": "International mining executive and director with extensive operating and board experience across resources businesses. He became Glencore Chair in July 2021.",
+          "sourceUrl": "https://www.glencore.com/media-and-insights/news/appointment-of-new-chairman",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "GSK",
+      "roles": {
+        "ceo": {
+          "name": "Luke Miels",
+          "summary": "Luke Miels has served as Chief Executive of GSK plc since January 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.gsk.com/en-gb/media/press-releases/luke-miels-appointed-ceo-designate-for-gsk/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir Jonathan Symonds CBE",
+          "summary": "Sir Jonathan Symonds CBE has served as Chair of GSK plc since September 2019. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.gsk.com/en-gb/company/board-of-directors-and-leadership-team/sir-jonathan-symonds/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "HLN",
+      "roles": {
+        "ceo": {
+          "name": "Brian McNamara",
+          "summary": "Brian McNamara has served as Chief Executive of Haleon since July 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.haleon.com/content/dam/haleon/corporate/documents/investors/agm/Haleon-notice-of-meeting-2026.pdf.downloadasset.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Manvinder Singh Banga",
+          "summary": "Manvinder Singh Banga has served as Chair of Haleon since January 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.haleon.com/investors/annual-report-2025",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "HLMA",
+      "roles": {
+        "ceo": {
+          "name": "Marc Ronchetti",
+          "summary": "Halma executive who served as Group Financial Controller and Chief Financial Officer before becoming Group Chief Executive in April 2023.",
+          "sourceUrl": "https://www.halma.com/who-we-are/our-leadership",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Dame Louise Makin",
+          "summary": "Former BTG chief executive and experienced life-sciences and industrial director. She became Halma Chair in July 2021.",
+          "sourceUrl": "https://www.halma.com/who-we-are/our-leadership",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "HSX",
+      "roles": {
+        "ceo": {
+          "name": "Aki Hussain",
+          "summary": "Chartered accountant and insurance executive who served as Hiscox Group CFO before becoming Group Chief Executive in January 2022.",
+          "sourceUrl": "https://www.hiscoxgroup.com/news/blog/introducing-our-new-group-ceo-aki-hussain",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Peter Clarke",
+          "summary": "Experienced international financial-services leader and director with executive experience at Man Group and senior board roles across insurance and asset management. He became Hiscox Chair in July 2025.",
+          "sourceUrl": "https://www.hiscoxgroup.com/about-hiscox/management",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "HWDN",
+      "roles": {
+        "ceo": {
+          "name": "Andrew Livingston",
+          "summary": "Andrew Livingston has served as Chief Executive of Howdens Joinery since April 2018. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.howdenjoinerygroupplc.com/about/our-leadership/executive-members/andrew-livingston.asp",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Peter Ventress",
+          "summary": "Peter Ventress has served as Chair of Howdens Joinery since September 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.howdenjoinerygroupplc.com/media-centre/archive/2023/230223.asp",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "HSBA",
+      "roles": {
+        "ceo": {
+          "name": "Georges Elhedery",
+          "summary": "International banker who held senior markets, regional and finance roles at HSBC before becoming Group Chief Executive in September 2024.",
+          "sourceUrl": "https://www.hsbc.com/who-we-are/our-people/board-of-directors/georges-elhedery",
+          "portraitPath": "/leadership-portraits/HSBA-ceo.jpg"
+        },
+        "chair": {
+          "name": "Brendan Nelson",
+          "summary": "Former KPMG vice-chair and experienced bank director who served as HSBC's interim Chair before being appointed permanently in 2025.",
+          "sourceUrl": "https://www.hsbc.com/news-and-views/news/hsbc-news-archive/brendan-nelson-appointed-as-group-chair",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "ICG",
+      "roles": {
+        "ceo": {
+          "name": "Benoit Durteste",
+          "summary": "Benoit Durteste has served as Chief Executive of ICG since July 2017. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.icgam.com/2017/03/23/icg-announces-change-in-leadership/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "William Rucker",
+          "summary": "William Rucker has served as Chair of ICG since January 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.icgam.com/people/william-rucker/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "IGG",
+      "roles": {
+        "ceo": {
+          "name": "Breon Corcoran",
+          "summary": "Breon Corcoran has served as Chief Executive of IG Group since January 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.iggroup.com/investor-relations/press-releases/2023/appointment-of-chief-executive-officer",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Andrew Barron",
+          "summary": "Andrew Barron has served as Chair of IG Group since April 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.iggroup.com/investor-relations/press-releases/2026/appointment-of-board-chair-march-31",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "IHG",
+      "roles": {
+        "ceo": {
+          "name": "Elie Maalouf",
+          "summary": "Hospitality executive who led IHG's Americas business before becoming Group Chief Executive in July 2023.",
+          "sourceUrl": "https://www.ihgplc.com/about-us/our-leadership/executive-committee/elie-maalouf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Deanna Oppenheimer",
+          "summary": "International consumer and financial-services leader with extensive board experience. She became IHG Chair in September 2022.",
+          "sourceUrl": "https://www.ihgplc.com/en/news-and-media/news-releases/2022/retirement-of-patrick-cescau-as-chair-to-be-succeeded-by-deanna-oppenheimer",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "IMI",
+      "roles": {
+        "ceo": {
+          "name": "Roy Twite",
+          "summary": "Roy Twite has served as Chief Executive of IMI since May 2019. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.imiplc.com/en/news-insights/ceo-succession/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Jamie Pike",
+          "summary": "Jamie Pike has served as Chair of IMI since January 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.imiplc.com/en/news-insights/jamie-pike-to-succeed-lord-smith-of-kelvin-as-chair/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "IMB",
+      "roles": {
+        "ceo": {
+          "name": "Lukas Paravicini",
+          "summary": "Lukas Paravicini has served as Chief Executive of Imperial Brands since October 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.imperialbrandsplc.com/news/key-announcements/2025/stefan-bomhard-to-retire-as-chief-executive-officer-of-imperial-",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Therese Esperdy",
+          "summary": "Therese Esperdy has served as Chair of Imperial Brands since February 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.imperialbrandsplc.com/news/key-announcements/2019/imperial-brands-announces-new-chairman",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "INF",
+      "roles": {
+        "ceo": {
+          "name": "Stephen Carter",
+          "summary": "Stephen Carter has served as Chief Executive of Informa since September 2013. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.informa.com/about-us/leadership/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "John Rishton",
+          "summary": "John Rishton has served as Chair of Informa since June 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.informa.com/globalassets/documents/investor-relations/2026/2025-informa-annual-report.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "IAG",
+      "roles": {
+        "ceo": {
+          "name": "Luis Gallego",
+          "summary": "Luis Gallego has served as Chief Executive of International Airlines Group since September 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.iairgroup.com/governance/board-of-directors/luis-gallego/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Javier Ferrán",
+          "summary": "Javier Ferrán has served as Chair of International Airlines Group since January 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.iairgroup.com/press-releases/2021/iag-chairman/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "ITRK",
+      "roles": {
+        "ceo": {
+          "name": "Andre Lacroix",
+          "summary": "Andre Lacroix has served as Chief Executive of Intertek since May 2015. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.intertek.com/about/executive-committee/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Steve Mogford",
+          "summary": "Steve Mogford has served as Chair of Intertek since May 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.intertek.com/investors/board/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "INVP",
+      "roles": {
+        "ceo": {
+          "name": "Fani Titi",
+          "summary": "Fani Titi has served as Chief Executive of Investec since March 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.investec.com/en_za/welcome-to-investec/contact-us/our-offices/johannesburg-office/fani-titi-bio.html",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Philip Hourquebie",
+          "summary": "Philip Hourquebie has served as Chair of Investec since August 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.investec.com/content/dam/international/corporate-governance/2022/Board-composition.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "JD",
+      "roles": {
+        "ceo": {
+          "name": "Regis Schultz",
+          "summary": "Regis Schultz has served as Chief Executive of JD Sports since September 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.jdplc.com/investor-relations/regulatory-news/regulatory-news-details/2023/Year-End-Announcement-05-17-2023/default.aspx",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Darren Shapland",
+          "summary": "Darren Shapland has served as Chair of JD Sports since July 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.jdplc.com/investor-relations/regulatory-news/regulatory-news-details/2026/Directorate-change/default.aspx",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BGEO",
+      "roles": {
+        "ceo": {
+          "name": "Archil Gachechiladze",
+          "summary": "Archil Gachechiladze has served as Chief Executive of Lion Finance Group since January 2019. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://lionfinancegroup.uk/leadership-and-governance/the-board-of-directors/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Mel Carvill",
+          "summary": "Mel Carvill has served as Chair of Lion Finance Group since March 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://lionfinancegroup.uk/leadership-and-governance/the-board-of-directors/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "KGF",
+      "roles": {
+        "ceo": {
+          "name": "Thierry Garnier",
+          "summary": "Thierry Garnier has served as Chief Executive of Kingfisher plc since September 2019. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.kingfisher.com/media/news/2026/directorate-change",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Claudia Arney",
+          "summary": "Claudia Arney has served as Chair of Kingfisher plc since June 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.kingfisher.com/media/news/2024/directorate-changes",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "LAND",
+      "roles": {
+        "ceo": {
+          "name": "Mark Allan",
+          "summary": "Mark Allan has served as Chief Executive of Land Securities since April 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://landsec.com/sites/default/files/2021-06/Landsec_AR2021_final.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir Ian Cheshire",
+          "summary": "Sir Ian Cheshire has served as Chair of Land Securities since May 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.landsec.com/en/about/about-landsec/our-leadership/sir-ian-cheshire",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "LGEN",
+      "roles": {
+        "ceo": {
+          "name": "Antonio Simoes",
+          "summary": "International financial-services executive with senior banking leadership experience at HSBC and Santander. He became Legal & General Group Chief Executive in January 2024.",
+          "sourceUrl": "https://group.legalandgeneral.com/newsroom/multimedia/2024/1/antonio-simoes-joins-legal-general/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Scott Wheway",
+          "summary": "Experienced financial-services and consumer leader whose board roles include chairing Aviva and Centrica, following an executive career at Tesco. He became Legal & General Chair in May 2026.",
+          "sourceUrl": "https://group.legalandgeneral.com/asset/49331c/globalassets/group/newsroom/press-releases/pdfs/2025/10/scott-wheway-appointed-legal-general-group-plc-chair.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "LLOY",
+      "roles": {
+        "ceo": {
+          "name": "Charlie Nunn",
+          "summary": "International banking executive who previously led wealth and personal banking at HSBC before becoming Lloyds Banking Group Chief Executive in August 2021.",
+          "sourceUrl": "https://www.lloydsbankinggroup.com/who-we-are/group-overview/directors-and-governance.html",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir Robin Budenberg CBE",
+          "summary": "Former UK Financial Investments chief executive and senior investment banker with extensive public- and private-sector board experience. He became Lloyds Banking Group Chair in January 2021.",
+          "sourceUrl": "https://www.lloydsbankinggroup.com/who-we-are/group-overview/directors-and-governance.html",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "LMP",
+      "roles": {
+        "ceo": {
+          "name": "Andrew Jones",
+          "summary": "Andrew Jones has served as Chief Executive of LondonMetric Property since January 2013. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.londonmetric.com/about-us/board-of-directors",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Alistair Elliott",
+          "summary": "Alistair Elliott has served as Chair of LondonMetric Property since July 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.londonmetric.com/pdf-viewer.aspx?gid=364072326&src=%2F~%2Fmedia%2FFiles%2FL%2Flondonmetric%2Fpress-release%2F23-01-26-board-changes-and-agm-voting-update.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "LSEG",
+      "roles": {
+        "ceo": {
+          "name": "David Schwimmer",
+          "summary": "Former Goldman Sachs executive with a career spanning market structure, capital markets and financial technology. He has led LSEG since August 2018.",
+          "sourceUrl": "https://www.lseg.com/en/about-us/board-of-directors",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Don Robert CBE",
+          "summary": "Former Experian chief executive and experienced financial-services chair. He has chaired LSEG since May 2019.",
+          "sourceUrl": "https://www.lseg.com/en/about-us/board-of-directors",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "MNG",
+      "roles": {
+        "ceo": {
+          "name": "Andrea Rossi",
+          "summary": "Andrea Rossi has served as Chief Executive of M&G since October 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.mandg.com/~/media/Files/M/MandG-Plc/documents/press-kit/2022/29-09-2022-ceo-appointment.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Edward Braham",
+          "summary": "Edward Braham has served as Chair of M&G since March 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.mandg.com/news-and-media/press-releases/mandg-plc/2022/08-03-2022",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "MKS",
+      "roles": {
+        "ceo": {
+          "name": "Stuart Machin",
+          "summary": "Retail operator who joined M&S in 2018 and led its food business before becoming Chief Executive in May 2022, with responsibility for the group's transformation and growth strategy.",
+          "sourceUrl": "https://corporate.marksandspencer.com/newsroom/press-releases/ms-appoints-strong-new-leadership-team-accelerate-progress-transformation",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Archie Norman",
+          "summary": "Experienced listed-company chair and retail leader, formerly chief executive and chair of Asda and chair of ITV. He has chaired M&S since September 2017.",
+          "sourceUrl": "https://corporate.marksandspencer.com/newsroom/press-releases/marks-and-spencer-chairmanship",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "MRO",
+      "roles": {
+        "ceo": {
+          "name": "Peter Dilnot",
+          "summary": "Peter Dilnot has served as Chief Executive of Melrose Industries since March 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.melroseplc.net/media/qc0eu5o1/melrose-annual-report25.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Chris Grigg",
+          "summary": "Chris Grigg has served as Chair of Melrose Industries since March 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.melroseplc.net/governance/board-committees/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "MTLN",
+      "roles": {
+        "ceo": {
+          "name": "Christos Gavalas",
+          "summary": "Christos Gavalas has served as Chief Executive of Metlen Energy & Metals since January 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.metlengroup.com/media/pull4rbi/metlen-big-three-pr_en.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Evangelos Mytilineos",
+          "summary": "Evangelos Mytilineos has served as Chair of Metlen Energy & Metals since January 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.metlengroup.com/media/pull4rbi/metlen-big-three-pr_en.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "NG",
+      "roles": {
+        "ceo": {
+          "name": "Zoë Yujnovich",
+          "summary": "Zoë Yujnovich has served as Chief Executive of National Grid plc since November 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.nationalgrid.com/media-centre/press-releases/john-pettigrew-announces-chief-executive-succession-plan",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Paula Rosput Reynolds",
+          "summary": "Paula Rosput Reynolds has served as Chair of National Grid plc since May 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.nationalgrid.com/about-us/our-leadership-team/the-board/paula-rosput-reynolds",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "NWG",
+      "roles": {
+        "ceo": {
+          "name": "Paul Thwaite",
+          "summary": "Long-serving NatWest executive whose leadership roles included commercial, institutional and corporate banking. He became interim Chief Executive in July 2023 and was appointed permanently in February 2024.",
+          "sourceUrl": "https://www.natwestgroup.com/news-and-insights/news-room/press-releases/our-updates/2024/feb/natwest-group-ceo-appointment.html",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Rick Haythornthwaite",
+          "summary": "Experienced listed-company chair and former industrial executive whose governance roles have included Mastercard, Centrica and Network Rail. He became NatWest Group Chair in April 2024.",
+          "sourceUrl": "https://investors.natwestgroup.com/~/media/Files/R/RBS-IR-V2/documents/agm-display-documents/2026/2026-agm-letter-to-shareholders.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "NXT",
+      "roles": {
+        "ceo": {
+          "name": "Lord Wolfson of Aspley Guise",
+          "summary": "Long-serving Next executive who joined the group in 1991 and led retail sales, Directory, systems and the Next brand before becoming Chief Executive in 2001.",
+          "sourceUrl": "https://www.nextplc.co.uk/about-next/our-board",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Michael Roney",
+          "summary": "Former Bunzl chief executive with international leadership experience at Goodyear Dunlop Tires Europe and Johnson Matthey. He became Next Chair in August 2017.",
+          "sourceUrl": "https://www.nextplc.co.uk/about-next/our-board",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "PSON",
+      "roles": {
+        "ceo": {
+          "name": "Omar Abbosh",
+          "summary": "Omar Abbosh has served as Chief Executive of Pearson plc since January 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://plc.pearson.com/en-GB/node/2578",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Omid Kordestani",
+          "summary": "Omid Kordestani has served as Chair of Pearson plc since April 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://plc.pearson.com/sites/pearson-corp/files/pearson/annual-report-2024/governance-and-remuneration-2024.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "PSH",
+      "roles": {
+        "chair": {
+          "name": "Rupert Morley",
+          "summary": "Rupert Morley has served as Chair of Pershing Square Holdings since May 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://pershingsquareholdings.com/corporate/corporate-governance/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "PSN",
+      "roles": {
+        "ceo": {
+          "name": "Dean Finch",
+          "summary": "Dean Finch has served as Chief Executive of Persimmon since September 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.persimmonhomes.com/corporate/about-us/board-of-directors/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Roger Devlin",
+          "summary": "Roger Devlin has served as Chair of Persimmon since June 2018. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.persimmonhomes.com/corporate/about-us/board-of-directors/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "PCT",
+      "roles": {
+        "chair": {
+          "name": "Catherine Cripps",
+          "summary": "Catherine Cripps has served as Chair of Polar Capital Technology Trust since September 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.polarcapitaltechnologytrust.co.uk/About-Us/FAQ/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "PRU",
+      "roles": {
+        "ceo": {
+          "name": "Anil Wadhwani",
+          "summary": "International insurance executive with senior leadership experience across Asia and the United States, including roles at Manulife and Citi. He became Prudential Chief Executive in February 2023.",
+          "sourceUrl": "https://www.prudentialplc.com/en/about-us/our-leadership/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir Douglas Flint",
+          "summary": "Former HSBC Group Chair and experienced financial-services director with extensive international governance and public-policy experience. He became Prudential Chair in May 2026.",
+          "sourceUrl": "https://www.prudentialplc.com/en/newsroom/company-news/2025/Prudential-plc-appoints-Sir-Douglas-Flint-CBE-to-succeed-Shriti-Vadera-as-Chair/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "RKT",
+      "roles": {
+        "ceo": {
+          "name": "Kris Licht",
+          "summary": "Kris Licht has served as Chief Executive of Reckitt since October 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.reckitt.com/our-company/our-leadership/kris-licht/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir Jeremy Darroch",
+          "summary": "Sir Jeremy Darroch has served as Chair of Reckitt since May 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.reckitt.com/media/djqh4f33/reckitt_ar23_nom_final.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "REL",
+      "roles": {
+        "ceo": {
+          "name": "Erik Engstrom",
+          "summary": "Erik Engstrom has served as Chief Executive of RELX since November 2009. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.relx.com/investors/corporate-governance/board-of-directors",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Paul Walker",
+          "summary": "Paul Walker has served as Chair of RELX since March 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.relx.com/investors/corporate-governance/board-of-directors",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "RTO",
+      "roles": {
+        "ceo": {
+          "name": "Mike Duffy",
+          "summary": "Mike Duffy has served as Chief Executive of Rentokil Initial since March 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.rentokil-initial.com/media/news-releases/2026/13-01-2026.aspx",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Richard Solomons",
+          "summary": "Richard Solomons has served as Chair of Rentokil Initial since May 2019. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.rentokil-initial.com/about-us/leadership/board-of-directors.aspx",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "RIO",
+      "roles": {
+        "ceo": {
+          "name": "Simon Trott",
+          "summary": "Rio Tinto executive with operating and commercial leadership experience across iron ore and group strategy. He became Chief Executive in August 2025.",
+          "sourceUrl": "https://www.riotinto.com/news/releases/2025/rio-tinto-appoints-simon-trott-as-chief-executive",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Dominic Barton",
+          "summary": "Former global managing partner of McKinsey and Canada's ambassador to China, with extensive international policy and business experience. He has chaired Rio Tinto since May 2022.",
+          "sourceUrl": "https://www.riotinto.com/news/releases/2021/dominic-barton-to-succeed-simon-thompson-as-chair",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "RR",
+      "roles": {
+        "ceo": {
+          "name": "Tufan Erginbilgic",
+          "summary": "Tufan Erginbilgic has served as Chief Executive of Rolls-Royce Holdings since January 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.rolls-royce.com/media/press-releases/2022/26-07-2022-rr-appoints-tufan-erginbilgic-as-chief-executive-officer.aspx",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Dame Anita Frew",
+          "summary": "Dame Anita Frew has served as Chair of Rolls-Royce Holdings since October 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.rolls-royce.com/about/leadership/board.aspx",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SGE",
+      "roles": {
+        "ceo": {
+          "name": "Steve Hare",
+          "summary": "Steve Hare has served as Chief Executive of Sage Group since November 2018. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.sage.com/en-us/company/about-sage/leadership/board-of-directors/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Andrew Duff",
+          "summary": "Andrew Duff has served as Chair of Sage Group since October 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.sage.com/en-us/company/about-sage/leadership/board-of-directors/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SBRY",
+      "roles": {
+        "ceo": {
+          "name": "Simon Roberts",
+          "summary": "Simon Roberts has served as Chief Executive of Sainsbury's since June 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://corporate.sainsburys.co.uk/media/wvfi5tqo/notice-of-meeting-2020.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Martin Scicluna",
+          "summary": "Martin Scicluna has served as Chair of Sainsbury's since March 2019. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://corporate.sainsburys.co.uk/media/wvfi5tqo/notice-of-meeting-2020.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SDR",
+      "roles": {
+        "ceo": {
+          "name": "Richard Oldfield",
+          "summary": "Richard Oldfield has served as Chief Executive of Schroders since November 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.schroders.com/en/global/individual/people/richard-oldfield/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Dame Elizabeth Corley",
+          "summary": "Dame Elizabeth Corley has served as Chair of Schroders since April 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.schroders.com/en/global/individual/people/dame-elizabeth-corley/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SMT",
+      "roles": {
+        "chair": {
+          "name": "Christopher Samuel",
+          "summary": "Christopher Samuel has served as Chair of Scottish Mortgage Investment Trust since July 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.scottishmortgage.com/en/uk/individual-investors/about-us/our-directors",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SGRO",
+      "roles": {
+        "ceo": {
+          "name": "David Sleath",
+          "summary": "David Sleath has served as Chief Executive of Segro since April 2011. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.segro.com/about/leadership/the-board",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Andy Harrison",
+          "summary": "Andy Harrison has served as Chair of Segro since June 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.segro.com/about/leadership/the-board",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SVT",
+      "roles": {
+        "ceo": {
+          "name": "James Jesic",
+          "summary": "James Jesic has served as Chief Executive of Severn Trent since January 2026. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.severntrent.com/media/news-releases/severn-trent-plc-announces-james-jesic-as-next-ceo--as-liv-garfi/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Christine Hodgson",
+          "summary": "Christine Hodgson has served as Chair of Severn Trent since April 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.severntrent.com/content/dam/stw-plc/fy-results-19-20/Severn%20Trent%20Investor%20Presentation%20FY20%20Final.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SHEL",
+      "roles": {
+        "ceo": {
+          "name": "Wael Sawan",
+          "summary": "Shell executive with more than two decades at the group across upstream, downstream and integrated-gas leadership roles. He became Chief Executive in January 2023.",
+          "sourceUrl": "https://www.shell.com/who-we-are/leadership/board-of-directors/wael-sawan.html",
+          "portraitPath": "/leadership-portraits/SHEL-ceo.jpg"
+        },
+        "chair": {
+          "name": "Sir Andrew Mackenzie",
+          "summary": "Former BHP chief executive and geologist with extensive international energy and resources experience. He has chaired Shell since May 2021.",
+          "sourceUrl": "https://www.shell.com/who-we-are/leadership/board-of-directors/andrew-mackenzie.html",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SMIN",
+      "roles": {
+        "ceo": {
+          "name": "Roland Carter",
+          "summary": "Roland Carter has served as Chief Executive of Smiths Group since March 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.smiths.com/news-and-insights/news/2024/appointment-of-chief-executive-officer",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Steve Williams",
+          "summary": "Steve Williams has served as Chair of Smiths Group since November 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.smiths.com/media/nmcmpiy2/smiths-annual-report-2024-governance.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SN",
+      "roles": {
+        "ceo": {
+          "name": "Deepak Nath",
+          "summary": "Deepak Nath has served as Chief Executive of Smith & Nephew since April 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.smith-nephew.com/en/news/2022/02/22/20220222-smith-nephew-announces-new-chief-executive-officer",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Rupert Soames",
+          "summary": "Rupert Soames has served as Chair of Smith & Nephew since September 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.smith-nephew.com/en/news/2023/02/17/20230217-smith-and-nephew-announces-rupert-soames-as-chair-designate",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SPX",
+      "roles": {
+        "ceo": {
+          "name": "Nimesh Patel",
+          "summary": "Spirax executive who joined as Chief Financial Officer in 2020 after senior finance roles at De Beers and Anglo American, and became Group Chief Executive in January 2024.",
+          "sourceUrl": "https://www.spiraxgroup.com/en/investors/results-reports-and-presentations/2024-digital-annual-report",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Tim Cobbold",
+          "summary": "Former chief executive of UBM, De La Rue and Chloride Group with extensive international industrial and listed-company board experience. He became Spirax Chair in January 2025.",
+          "sourceUrl": "https://www.spiraxgroup.com/en/investors/results-reports-and-presentations/2024-digital-annual-report",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SSE",
+      "roles": {
+        "ceo": {
+          "name": "Martin Pibworth",
+          "summary": "Martin Pibworth has served as Chief Executive of SSE plc since July 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.sse.com/news-and-views/2025/03/sse-plc-announces-martin-pibworth-as-chief-executive/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir John Manzoni",
+          "summary": "Sir John Manzoni has served as Chair of SSE plc since July 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.sse.com/news-and-views/2020/07/appointment-of-chair/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "STAN",
+      "roles": {
+        "ceo": {
+          "name": "Bill Winters",
+          "summary": "Bill Winters has served as Chief Executive of Standard Chartered since June 2015. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.sc.com/en/people/bill-winters/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Maria Ramos",
+          "summary": "Maria Ramos has served as Chair of Standard Chartered since May 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.sc.com/en/people/maria-ramos/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "SDLF",
+      "roles": {
+        "ceo": {
+          "name": "Andy Briggs",
+          "summary": "Andy Briggs has served as Chief Executive of Standard Life since March 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.standardlifeplc.com/about/our-team/leadership",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir Nicholas Lyons",
+          "summary": "Sir Nicholas Lyons has served as Chair of Standard Life since December 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.standardlifeplc.com/about/our-team/leadership",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "STJ",
+      "roles": {
+        "ceo": {
+          "name": "Mark FitzPatrick",
+          "summary": "Mark FitzPatrick has served as Chief Executive of St. James's Place since December 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.sjp.co.uk/shareholders/about-us/directors/mark-fitzpatrick",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Paul Manduca",
+          "summary": "Paul Manduca has served as Chair of St. James's Place since May 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.sjp.co.uk/sites/sjp-corp/files/SJP/shareholders/shareholder-meetings/SJP_NoM_2026_14.3.26.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "TSCO",
+      "roles": {
+        "ceo": {
+          "name": "Ken Murphy",
+          "summary": "International consumer executive who held senior commercial and regional leadership roles at Walgreens Boots Alliance before becoming Tesco Group Chief Executive in October 2020.",
+          "sourceUrl": "https://www.tescoplc.com/about/board-board-committees-and-executive-committee/executive-committee/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Dr Gerry Murphy",
+          "summary": "Experienced international chair and former operating executive whose listed-company roles span retail, consumer goods and industrial businesses. He became Tesco Chair in September 2023.",
+          "sourceUrl": "https://www.tescoplc.com/AGM2025",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "BBOX",
+      "roles": {
+        "chair": {
+          "name": "Aubrey Adams",
+          "summary": "Aubrey Adams has served as Chair of Tritax Big Box REIT since September 2017. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.tritaxbigbox.co.uk/about-us/board/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "ULVR",
+      "roles": {
+        "ceo": {
+          "name": "Fernando Fernandez",
+          "summary": "Long-serving Unilever executive whose leadership roles included Latin America and the group's Beauty & Wellbeing business before his appointment as CEO in March 2025.",
+          "sourceUrl": "https://www.unilever.com/files/unilever-annual-report-on-form-20-f-2025.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Ian Meakins",
+          "summary": "Former Wolseley chief executive and experienced international company chair. He became Chair of Unilever in December 2023.",
+          "sourceUrl": "https://www.unilever.com/files/unilever-annual-report-on-form-20-f-2025.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "UU",
+      "roles": {
+        "ceo": {
+          "name": "Louise Beardmore",
+          "summary": "Utilities executive who joined United Utilities in 2012 and led customer service and people functions before becoming Chief Executive in March 2023.",
+          "sourceUrl": "https://www.unitedutilities.com/globalassets/z_corporate-site/investor-pdfs/euro-medium-term-notes/uu---supplementary-oc-final.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir David Higgins",
+          "summary": "Former chief executive of Network Rail and the Olympic Delivery Authority with extensive infrastructure and public-sector leadership experience. He has chaired United Utilities since 2020.",
+          "sourceUrl": "https://www.unitedutilities.com/corporate/about-us/governance/our-board/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "VOD",
+      "roles": {
+        "ceo": {
+          "name": "Margherita Della Valle",
+          "summary": "Margherita Della Valle has served as Chief Executive of Vodafone Group since April 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.vodafone.com/our-company/leadership/board-of-directors/margherita-della-valle",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Jean-François van Boxmeer",
+          "summary": "Jean-François van Boxmeer has served as Chair of Vodafone Group since November 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.vodafone.com/our-company/leadership/board-of-directors/jean-francois-van-boxmeer",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "WEIR",
+      "roles": {
+        "ceo": {
+          "name": "Jon Stanton",
+          "summary": "Jon Stanton has served as Chief Executive of Weir since October 2016. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.global.weir/about-us/leadership/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Barbara Jeremiah",
+          "summary": "Barbara Jeremiah has served as Chair of Weir since April 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.global.weir/newsroom/global-news/charles-berry-to-be-succeeded-by-barbara-jeremiah-as-weir-group-chair/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "WTB",
+      "roles": {
+        "ceo": {
+          "name": "Dominic Paul",
+          "summary": "Dominic Paul has served as Chief Executive of Whitbread since January 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.whitbread.co.uk/about-us/management/",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Cilla Snowball",
+          "summary": "Cilla Snowball has served as Chair of Whitbread since September 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.whitbread.co.uk/about-us/management/",
+          "portraitPath": null
+        }
+      }
+    }
   ]
 }

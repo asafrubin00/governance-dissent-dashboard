@@ -165,13 +165,13 @@ export function DashboardPage({ data }: DashboardPageProps) {
             />
             <StatCard
               compact
-              label="Average vote against"
+              label="Average management dissent"
               value={formatShortPercent(metrics.averageAgainst)}
               note="A quick read on how forceful dissent is in this slice."
             />
             <StatCard
               compact
-              label="Votes above 50% against"
+              label="Dissent above 50%"
               value={String(metrics.severeVotes)}
               note="Cases where opposition moved into an especially acute zone."
             />
@@ -233,7 +233,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                         tickLine={false}
                       />
                       <Tooltip
-                        formatter={(value) => [formatTooltipPercent(value), 'Votes Against']}
+                        formatter={(value) => [formatTooltipPercent(value), 'Opposition to management']}
                         labelFormatter={(label) => formatTooltipLabel(label, 'Company')}
                         contentStyle={{
                           background: '#07131d',
@@ -244,7 +244,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                         cursor={{ fill: 'rgba(255,255,255,0.03)' }}
                       />
                       <Bar
-                        dataKey="votesAgainstPct"
+                        dataKey="managementDissentPct"
                         fill="#f0be2a"
                         radius={[0, 8, 8, 0]}
                       />
@@ -340,7 +340,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                             return [String(value ?? ''), 'Resolutions']
                           }
 
-                          return [formatTooltipPercent(value), 'Average votes against']
+                          return [formatTooltipPercent(value), 'Average management dissent']
                         }}
                         labelFormatter={(label) => formatTooltipLabel(label, 'Period')}
                         contentStyle={{
@@ -481,7 +481,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                       <th>Company</th>
                       <th>Date</th>
                       <th>Category</th>
-                      <th>Votes against</th>
+                      <th>Management dissent</th>
                       <th>Resolution</th>
                     </tr>
                   </thead>
@@ -491,7 +491,7 @@ export function DashboardPage({ data }: DashboardPageProps) {
                         <td>{item.companyName}</td>
                         <td>{formatDate(item.meetingDate)}</td>
                         <td>{item.resolutionCategoryLabel}</td>
-                        <td>{formatShortPercent(item.votesAgainstPct)}</td>
+                        <td>{formatShortPercent(item.managementDissentPct)}</td>
                         <td>
                           <Link className="table-link" to={`/resolution/${item.id}`}>
                             {item.resolutionTitle}

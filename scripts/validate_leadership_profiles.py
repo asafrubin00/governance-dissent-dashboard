@@ -23,6 +23,10 @@ def main() -> None:
         errors.append("Duplicate leadership-profile ticker found.")
     if profiles.get("metadata", {}).get("companyCount") != len(tickers):
         errors.append("Leadership-profile metadata count does not match the company records.")
+    if set(tickers) != set(radar_by_ticker):
+        missing = sorted(set(radar_by_ticker) - set(tickers))
+        extra = sorted(set(tickers) - set(radar_by_ticker))
+        errors.append(f"Leadership-profile universe mismatch; missing={missing}, extra={extra}.")
 
     for company in profiles.get("companies", []):
         ticker = company.get("ticker")
@@ -46,6 +50,13 @@ def main() -> None:
                 local_path = ROOT / "public" / portrait_path.lstrip("/")
                 if not local_path.is_file():
                     errors.append(f"Profile portrait is missing for {ticker} {role_key}: {portrait_path}.")
+        expected_roles = {
+            role_key
+            for role_key, radar_role in radar_company.get("roles", {}).items()
+            if not radar_role.get("notApplicable")
+        }
+        if set(company.get("roles", {})) != expected_roles:
+            errors.append(f"Leadership-profile role coverage is incomplete for {ticker}.")
 
     if errors:
         raise RuntimeError("; ".join(errors))

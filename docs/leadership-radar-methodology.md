@@ -42,7 +42,7 @@ Up to 20 points can be added for verified 20%+ dissent on management-sponsored r
 - 50% or more against: 15 points
 - repeat qualifying resolutions add 3 points each, subject to the 20-point cap
 
-Shareholder proposals and shareholder-requisitioned resolutions are excluded because votes against those proposals may align with management's recommendation.
+Shareholder proposals and shareholder-requisitioned resolutions are excluded from the uplift. The voting product separately reports support for board-opposed proposals as dissent against management, while retaining the raw for and against result.
 
 Absence of a qualifying record is not evidence that a company had no dissent outside the tracker's narrow 2025 window.
 
@@ -55,7 +55,7 @@ The initial overlay uses a 36-month lookback and includes only official issuer a
 
 Routine earnings misses, unquantified caution, and reductions to operating metrics without a clear profit implication are excluded. Each event records its announcement date, affected period, event type, severity, concise summary, principal drivers, and primary-source link.
 
-The same review protocol was applied to all 100 companies for the 36 months to 8 August 2026. Fifteen high-confidence events were captured across 11 issuers. Review outcomes and source hubs are recorded in `data/profit_warning_reviews.json`.
+The same review protocol was applied to all 100 companies for the 36 months to 15 August 2026. Sixteen high-confidence events were captured across 12 issuers. Review outcomes and source hubs are recorded in `data/profit_warning_reviews.json`.
 
 For companies inside the reviewed subset, no warning badge means no qualifying event was captured under this protocol, not proof that no adverse announcement occurred. The overlay does not alter the 0-100 pressure score in methodology `v0.6`; any score contribution requires stronger calibration evidence first.
 

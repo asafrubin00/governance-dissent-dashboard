@@ -1,6 +1,13 @@
 {
   "announcementSeeds": [
     {
+      "companyName": "BP PLC",
+      "meetingDate": "2026-04-23",
+      "url": "https://www.investegate.co.uk/announcement/rns/bp--bp./result-of-agm/9535618",
+      "source": "formal-rns-mirror",
+      "sourceGroup": "AGM results"
+    },
+    {
       "companyName": "NATWEST GROUP PLC",
       "meetingDate": "2025-04-23",
       "url": "https://otp.tools.investis.com/clients/uk/rbs3/rns/regulatory-story.aspx?cid=365&newsid=1932512&culture=en-GB&val=638810172105163220",
@@ -64,10 +71,26 @@
   "resultDocumentSeeds": [
     {
       "companyName": "HSBC HOLDINGS PLC",
+      "meetingDate": "2026-05-08",
+      "url": "https://www.hsbc.com/-/files/hsbc/investors/results-and-announcements/stock-exchange-announcements/2026/may/sea-080526-e-2026-agm-poll-results-announcement.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "hsbc-agm-results"
+    },
+    {
+      "companyName": "SHELL PLC",
+      "meetingDate": "2026-05-19",
+      "url": "https://www.shell.com/investors/shareholder-meetings/_jcr_content/root/main/section/simple/text.multi.stream/1779203372791/fab6d3036710552faf96b211f1b23405d290498d/voting-results-of-the-2026-annual-general-meeting.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "ihg-agm-results"
+    },
+    {
+      "companyName": "HSBC HOLDINGS PLC",
       "meetingDate": "2025-05-02",
       "url": "https://www.hsbc.com/-/files/hsbc/investors/results-and-announcements/stock-exchange-announcements/2025/may/sea-250502-hsbc-holdings-plc-agm-poll-results-announcement.pdf?download=1",
       "source": "manual-pdf-seed",
-      "sourceGroup": "Shareholder proposal",
+      "sourceGroup": "AGM results",
       "parserHint": "hsbc-agm-results"
     },
     {
@@ -93,6 +116,46 @@
       "source": "official-issuer-agm-result",
       "sourceGroup": "AGM results",
       "parserHint": "standard-agm-results"
+    },
+    {
+      "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+      "meetingDate": "2020-05-07",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2020/ihg-agm-results-final.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "ihg-agm-results"
+    },
+    {
+      "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+      "meetingDate": "2021-05-07",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2021/ihg-agm-results-rns-final-7521-2.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "ihg-agm-results"
+    },
+    {
+      "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+      "meetingDate": "2022-05-06",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2022/result-of-agm-2022.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "ihg-agm-results"
+    },
+    {
+      "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+      "meetingDate": "2023-05-05",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/shareholder-center/agms-and-meetings/2023/2023-agm-results.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "ihg-agm-results"
+    },
+    {
+      "companyName": "INTERCONTINENTAL HOTELS GROUP PLC",
+      "meetingDate": "2026-05-07",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/investors/agm/2026/results-of-annual-general-meeting-2026.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "ihg-agm-results"
     },
     {
       "companyName": "UNITED UTILITIES GROUP PLC",

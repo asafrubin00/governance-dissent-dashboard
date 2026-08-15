@@ -84,7 +84,7 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
             <span>{resolution.sourceGroup}</span>
             <span>{resolution.recordOriginLabel}</span>
             {resolution.officialAnnouncementVerified ? <span>Officially verified</span> : null}
-            <span>{formatShortPercent(resolution.votesAgainstPct)} against</span>
+            <span>{formatShortPercent(resolution.managementDissentPct)} opposition to management</span>
           </div>
         </article>
       </section>
@@ -173,7 +173,7 @@ export function ResolutionPage({ data }: ResolutionPageProps) {
                     <p className="ranked-list__label">{formatDate(item.meetingDate)}</p>
                     <p className="ranked-list__title">{item.resolutionTitle}</p>
                   </div>
-                  <strong>{formatShortPercent(item.votesAgainstPct)}</strong>
+                  <strong>{formatShortPercent(item.managementDissentPct)}</strong>
                 </Link>
               ))}
             </div>

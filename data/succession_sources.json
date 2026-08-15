@@ -1,5 +1,5 @@
 {
-  "asOfDate": "2026-08-08",
+  "asOfDate": "2026-08-15",
   "methodologyVersion": "0.4",
   "definition": "An active succession case requires an official issuer announcement that an incumbent CEO or Chair will leave, that a search is underway, or that a named successor has not yet taken office.",
   "reviewedTickers": ["SHEL", "NXT", "MKS", "CNA", "LSEG", "ULVR", "IHG", "RIO", "HSBA", "MRO", "CTEC", "CCEP", "AAL", "BP", "CCC", "IMI", "RTO", "KGF", "ANTO", "NWG", "AZN", "BARC", "TSCO", "BA", "NG", "III", "ABF", "AV", "BAB", "BTRW", "BEZ", "BATS", "BLND", "BT.A", "BNZL", "BRBY", "CCH", "CPG", "CRDA", "DGE", "ENT", "EXPN", "GLEN", "GSK", "HLN", "IAG", "LLOY", "REL", "RR", "VOD", "ABDN", "ADM", "AAF", "ALW", "AUTO", "DCC", "DPLM", "EDV", "FCIT", "FRES", "GAW", "HLMA", "HSX", "HWDN", "ICG", "IGG", "IMB", "INF", "ITRK", "INVP", "JD", "BGEO", "LAND", "LGEN", "LMP", "MNG", "MTLN", "PSON", "PSH", "PSN", "PCT", "PRU", "RKT", "SGE", "SBRY", "SDR", "SMT", "SGRO", "SVT", "SMIN", "SN", "SPX", "SSE", "STAN", "SDLF", "STJ", "BBOX", "UU", "WEIR", "WTB"],

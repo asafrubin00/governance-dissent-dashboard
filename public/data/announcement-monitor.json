@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-15T07:54:11.002669+00:00",
+    "generatedAt": "2026-08-15T08:16:12.607036+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
@@ -12,9 +12,9 @@
       "tls-error": 1
     },
     "newCandidateCount": 0,
-    "pendingCandidateCount": 1,
+    "pendingCandidateCount": 0,
     "pendingCandidateCountBySignal": {
-      "earnings": 1,
+      "earnings": 0,
       "succession": 0
     },
     "validation": {

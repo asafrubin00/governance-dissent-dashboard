@@ -210,6 +210,16 @@
     "rowsAdded": 0
   },
   {
+    "url": "https://www.investegate.co.uk/announcement/rns/bp--bp./result-of-agm/9535618",
+    "companyName": "BP PLC",
+    "meetingDate": "2026-04-23",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/5bf64ddd9496.html",
+    "rowsExtracted": 24,
+    "rowsMatched": 0,
+    "rowsAdded": 3
+  },
+  {
     "url": "https://otp.tools.investis.com/clients/uk/rbs3/rns/regulatory-story.aspx?cid=365&newsid=1932512&culture=en-GB&val=638810172105163220",
     "companyName": "NATWEST GROUP PLC",
     "meetingDate": "2025-04-23",

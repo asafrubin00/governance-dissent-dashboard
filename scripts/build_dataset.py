@@ -222,10 +222,55 @@ def classify_resolution(source_group: str, resolution_title: str) -> tuple[str, 
     if "climate" in title or "net zero" in title or "emissions" in title:
         return "climate", "Climate and transition"
 
-    if "employee pay" in title or "supplier" in title or "shareaction" in title:
+    shareholder_keywords = [
+        "employee pay",
+        "supplier",
+        "shareaction",
+        "shareholder requisitioned",
+        "shareholder resolution",
+        "requisitioned resolution",
+        "midland clawback",
+    ]
+    if any(keyword in title for keyword in shareholder_keywords):
         return "shareholder-proposal", "Shareholder proposal"
 
     return "other-governance", "Other governance"
+
+
+def management_vote_context(
+    category_key: str,
+    votes_for_pct: float | None,
+    votes_against_pct: float | None,
+) -> tuple[bool, str, float | None]:
+    if category_key == "shareholder-proposal":
+        return False, "against", votes_for_pct
+    return True, "for", votes_against_pct
+
+
+def apply_management_context(record: dict[str, Any]) -> None:
+    category_key, category_label = classify_resolution(record["sourceGroup"], record["resolutionTitle"])
+    is_register_requisition = (
+        record.get("recordOrigin") == "ia-register"
+        and "requisitioned" in record.get("sourceGroup", "").lower()
+    )
+    if is_register_requisition:
+        management_sponsored, recommendation, dissent_pct = (
+            False,
+            "against",
+            record.get("votesForPct"),
+        )
+    else:
+        management_sponsored, recommendation, dissent_pct = management_vote_context(
+            category_key,
+            record.get("votesForPct"),
+            record.get("votesAgainstPct"),
+        )
+    record["resolutionCategory"] = category_key
+    record["resolutionCategoryLabel"] = category_label
+    record["managementSponsored"] = management_sponsored
+    record["managementRecommendation"] = recommendation
+    record["managementDissentPct"] = dissent_pct
+    record["governanceNote"] = governance_note(category_key, dissent_pct, record["resolutionTitle"])
 
 
 def governance_note(category_key: str, votes_against: float | None, resolution_title: str) -> str:
@@ -646,6 +691,37 @@ def parse_pdf_result_rows(text: str, parser_hint: str) -> list[dict[str, Any]]:
     cleaned = clean_pdf_text(text)
     if not cleaned:
         return []
+
+    if parser_hint == "ihg-agm-results":
+        start = cleaned.find("1 Report")
+        working = cleaned[start:] if start != -1 else cleaned
+        pattern = re.compile(
+            r"(?P<num>\d{1,2})(?:\([a-z]\))?\s+(?P<title>.+?)\s+"
+            r"(?P<for_count>\d[\d,]*)\s+"
+            r"(?P<for_pct>\d+\.\d+)%?\s+"
+            r"(?P<against_count>\d[\d,]*)\s+"
+            r"(?P<against_pct>\d+\.\d+)%?\s+"
+            r"(?P<total>\d[\d,]*)\s+"
+            r"(?P<isc>\d+\.\d+)%?\s+"
+            r"(?P<withheld>\d[\d,]*)"
+            r"(?=\s+\d{1,2}(?:\([a-z]\))?\s+|\s+Notes:|$)",
+            flags=re.IGNORECASE,
+        )
+        return [
+            {
+                "resolutionNumber": int(match.group("num")),
+                "resolutionTitle": match.group("title").strip(),
+                "resolutionTitleNormalised": normalise_resolution_title(match.group("title")),
+                "votesForCount": parse_count(match.group("for_count")),
+                "votesForPct": parse_percent(match.group("for_pct")),
+                "votesAgainstCount": parse_count(match.group("against_count")),
+                "votesAgainstPct": parse_percent(match.group("against_pct")),
+                "votesWithheldCount": parse_count(match.group("withheld")),
+                "totalVotesCastCount": parse_count(match.group("total")),
+                "issuedShareCapitalVotedPct": parse_percent(match.group("isc")),
+            }
+            for match in pattern.finditer(working)
+        ]
 
     if parser_hint == "hsbc-agm-results":
         start = cleaned.find("1. To receive")
@@ -1202,15 +1278,17 @@ def enrich_with_result_documents(
                 verified_rows += 1
                 continue
 
-            if (official["votesAgainstPct"] or 0) < 20:
-                continue
-
             company_match = lookup.get(normalise_name(document.company_name))
             if company_match is None:
                 continue
 
             title = official["resolutionTitle"]
             category_key, category_label = classify_resolution(document.source_group, title)
+            _, _, management_dissent_pct = management_vote_context(
+                category_key, official["votesForPct"], official["votesAgainstPct"]
+            )
+            if (management_dissent_pct or 0) < 20:
+                continue
             company_slug = slugify(company_match.canonical_name)
             record = {
                 "id": build_row_id(company_slug, document.meeting_date, title),
@@ -1413,15 +1491,17 @@ def enrich_with_official_announcements(
             if not page.allow_issuer_only:
                 continue
 
-            if (official["votesAgainstPct"] or 0) < 20:
-                continue
-
             company_match = lookup.get(normalise_name(page.company_name))
             if company_match is None:
                 continue
 
             title = official["resolutionTitle"]
             category_key, category_label = classify_resolution(page.source_group, title)
+            _, _, management_dissent_pct = management_vote_context(
+                category_key, official["votesForPct"], official["votesAgainstPct"]
+            )
+            if (management_dissent_pct or 0) < 20:
+                continue
             company_slug = slugify(company_match.canonical_name)
             record = {
                 "id": build_row_id(company_slug, page.meeting_date, title),
@@ -1503,6 +1583,9 @@ def write_csv(resolutions: list[dict[str, Any]]) -> None:
         "resolutionTitle",
         "votesForPct",
         "votesAgainstPct",
+        "managementDissentPct",
+        "managementSponsored",
+        "managementRecommendation",
         "votesWithheldPct",
         "issuedShareCapitalVotedPct",
         "votesForCount",
@@ -1537,7 +1620,7 @@ def build_summary(resolutions: list[dict[str, Any]]) -> dict[str, Any]:
     companies = sorted({item["companyName"] for item in resolutions})
     categories = Counter(item["resolutionCategoryLabel"] for item in resolutions)
     years = sorted({item["meetingYear"] for item in resolutions})
-    highest = max((item["votesAgainstPct"] or 0.0 for item in resolutions), default=0.0)
+    highest = max((item["managementDissentPct"] or 0.0 for item in resolutions), default=0.0)
     remuneration_count = sum(1 for item in resolutions if item["resolutionCategory"] == "remuneration")
     director_count = sum(1 for item in resolutions if item["resolutionCategory"] == "director-election")
 
@@ -1546,6 +1629,7 @@ def build_summary(resolutions: list[dict[str, Any]]) -> dict[str, Any]:
         "resolutionCount": len(resolutions),
         "yearsCovered": years,
         "highestVotesAgainstPct": highest,
+        "highestManagementDissentPct": highest,
         "categoryBreakdown": categories,
         "remunerationCount": remuneration_count,
         "directorElectionCount": director_count,
@@ -1565,6 +1649,7 @@ def validate_records(resolutions: list[dict[str, Any]]) -> dict[str, Any]:
     percent_fields = [
         "votesForPct",
         "votesAgainstPct",
+        "managementDissentPct",
         "votesWithheldPct",
         "issuedShareCapitalVotedPct",
     ]
@@ -1667,6 +1752,7 @@ def write_outputs(
                     "Records matched with high confidence to the curated FTSE 100 issuer alias file.",
                     "Official issuer announcement pages linked from the register or added as manual issuer seeds where parsable.",
                     "Selected official AGM result PDFs where vote tables can be extracted with high confidence.",
+                    "For board-opposed shareholder proposals, support for the proposal is reported as dissent against management; raw for and against percentages remain separately disclosed.",
                 ],
                 "excluded": [
                     "Routine AGM resolutions that did not reach the tracker’s significance threshold.",
@@ -1722,6 +1808,14 @@ def main() -> None:
         result_documents,
     )
     resolutions, document_stats, document_audit = enrich_with_update_statement_documents(resolutions)
+    for resolution in resolutions:
+        apply_management_context(resolution)
+    resolutions = [
+        resolution
+        for resolution in resolutions
+        if (resolution.get("managementDissentPct") or 0) >= 20
+        or "withdraw" in resolution["resolutionTitle"].lower()
+    ]
     validation = validate_records(resolutions)
     if validation["status"] == "fail":
         raise ValueError(json.dumps(validation, indent=2))
@@ -1731,6 +1825,15 @@ def main() -> None:
         **issuer_stats,
         **pdf_result_stats,
         **document_stats,
+        "issuerVerifiedResolutions": sum(
+            1 for resolution in resolutions if resolution["officialAnnouncementVerified"]
+        ),
+        "issuerOnlyResolutionsAdded": sum(
+            1 for resolution in resolutions if resolution["recordOrigin"] == "issuer-announcement"
+        ),
+        "officialVoteCountCoverage": sum(
+            1 for resolution in resolutions if resolution["votesForCount"] is not None
+        ),
     }
     write_outputs(
         resolutions,

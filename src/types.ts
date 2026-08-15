@@ -11,6 +11,9 @@ export type ResolutionRecord = {
   resolutionTitle: string
   votesForPct: number | null
   votesAgainstPct: number | null
+  managementDissentPct: number | null
+  managementSponsored: boolean
+  managementRecommendation: 'for' | 'against'
   votesWithheldPct: number | null
   issuedShareCapitalVotedPct: number | null
   votesForCount: number | null
@@ -85,6 +88,7 @@ export type TrackerData = {
       resolutionCount: number
       yearsCovered: number[]
       highestVotesAgainstPct: number
+      highestManagementDissentPct: number
       categoryBreakdown: Record<string, number>
       remunerationCount: number
       directorElectionCount: number
