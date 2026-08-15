@@ -278,5 +278,15 @@
     "rowsExtracted": 18,
     "rowsMatched": 0,
     "rowsAdded": 0
+  },
+  {
+    "url": "https://www.stockopedia.com/share-prices/ig-group-LON%3AIGG/news/reg-ig-group-hldgs-plc-result-of-agm-urn%3Anewsml%3Areuters.com%3A20220921%3AnRSU2002Aa/",
+    "companyName": "IG GROUP HOLDINGS PLC",
+    "meetingDate": "2022-09-21",
+    "status": "parsed",
+    "rawHtmlPath": "data/raw/issuer-announcements/c598ee2a1239.html",
+    "rowsExtracted": 22,
+    "rowsMatched": 0,
+    "rowsAdded": 0
   }
 ]

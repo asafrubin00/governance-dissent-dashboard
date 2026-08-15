@@ -315,3 +315,15 @@
 - Recorded explicit exclusion decisions for Endeavour's mine-level production and cost revisions and Anglo American's production-guidance changes because neither constituted a group earnings warning under the published definition.
 - Increased qualifying historical warning events from 11 to 13 while leaving complete AGM coverage at six windows and the public dissent tracker at 28 significant resolutions.
 - Rebuilt calibration methodology v0.8 without changing production radar methodology v0.6 or its weights; partial histories remain excluded rather than interpreted as zero.
+
+## Complete historical evidence census v1.2
+
+- Completed the final nine aligned warning-history reviews for Prudential, abrdn, Persimmon, Reckitt, Smith+Nephew, St. James's Place, M&G, Babcock and IG Group.
+- Reached complete 36-month warning coverage for all 50 completed transition cases; no missing warning history is now interpreted in the calibration cohort.
+- Added Smith+Nephew's 30 March 2020 withdrawal of full-year revenue-growth and trading-margin guidance as the fourteenth qualifying historical warning event.
+- Documented exclusion decisions for retrospective results, operational metrics, asset flows and decisions not to initiate new guidance where no prospective group earnings cut occurred.
+- Added complete official AGM histories for IG Group (2020-2022), Persimmon (2017-2019), Babcock (2017-2019) and Reckitt (2020-2022), increasing complete dissent windows from six to ten and direct issuer meeting coverage from 41 to 53.
+- Added Persimmon's 2018 remuneration-report vote at 48.52% opposition as the seventh aligned historical dissent event and the first issuer-only historical record added to the public tracker.
+- Parsed 490 validated resolution rows from 24 issuer PDFs; sub-threshold meetings remain auditable without entering the significant-dissent dataset.
+- Reviewed all newly detected announcement-monitor candidates: dismissed duplicate IHG materials, an Antofagasta production-only revision and a mislabelled Metlen holdings notice; retained Aviva's post-cutoff Health profit-guidance reduction for the next evidence-date roll-forward.
+- Rebuilt calibration methodology v1.2 and retained production radar methodology v0.6 because the locked six-case evaluation sample still shows no incremental capture from warning or market overlays.

@@ -408,16 +408,26 @@ def main() -> None:
     complete_warning_count = sum(review["warningCoverage"]["status"] == "complete" for review in reviews)
     partial_warning_count = sum(review["warningCoverage"]["status"] == "partial" for review in reviews)
     complete_dissent_count = sum(review["dissentCoverage"]["status"] == "complete" for review in reviews)
+    warning_coverage_rationale = (
+        f"All {completed_count} completed-transition cases now have complete aligned warning windows."
+        if partial_warning_count == 0
+        else f"The completed-transition census now reaches {completed_count} official-source cases, but only {complete_warning_count} have complete aligned warning windows."
+    )
+    warning_next_step = (
+        "Maintain complete warning coverage as new transitions enter the cohort"
+        if partial_warning_count == 0
+        else f"Backfill the {partial_warning_count} pending warning windows"
+    )
     recommendation = {
         "decision": "retain-current-weights",
-        "rationale": f"The completed-transition census now reaches {completed_count} official-source cases, but only {complete_warning_count} have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged.",
-        "minimumNextEvidence": f"Backfill the {partial_warning_count} pending warning windows, extend complete resolution-level AGM coverage beyond the current {complete_dissent_count} cases, and reserve future completed transitions as a genuinely untouched evaluation cohort.",
+        "rationale": f"{warning_coverage_rationale} The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged.",
+        "minimumNextEvidence": f"{warning_next_step}, extend complete resolution-level AGM coverage beyond the current {complete_dissent_count} cases, and reserve future completed transitions as a genuinely untouched evaluation cohort.",
     }
     payload = {
         "metadata": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "asOfDate": as_of,
-            "methodologyVersion": "0.8",
+            "methodologyVersion": "1.2",
             "outcomeCount": len(enriched_outcomes),
             "completedOutcomeCount": sum(record["cohort"] == "completed" for record in enriched_outcomes),
             "activeOutcomeCount": sum(record["cohort"] == "active" for record in enriched_outcomes),

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-11T18:12:56.528440+00:00",
+    "generatedAt": "2026-08-15T07:46:20.259836+00:00",
     "asOfDate": "2026-08-08",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -57,14 +57,14 @@
       "errors": []
     },
     "calibration": {
-      "methodologyVersion": "0.8",
+      "methodologyVersion": "1.2",
       "outcomeCount": 56,
       "completedOutcomeCount": 50,
       "activeOutcomeCount": 6,
-      "alignedCompletedOutcomeCount": 41,
+      "alignedCompletedOutcomeCount": 50,
       "comparisonObservationCount": 188,
       "decision": "retain-current-weights",
-      "note": "The completed-transition census now reaches 50 official-source cases, but only 41 have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged."
+      "note": "All 50 completed-transition cases now have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged."
     }
   },
   "companies": [
@@ -6939,7 +6939,7 @@
       }
     },
     {
-      "companyName": "Weir Group",
+      "companyName": "Weir",
       "ticker": "WEIR",
       "sector": "Industrial goods and services",
       "roles": {

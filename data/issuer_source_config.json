@@ -51,6 +51,14 @@
       "url": "https://otp.tools.investis.com/clients/uk/glencore2/rns/regulatory-story.aspx?cid=275&newsid=1394377",
       "source": "official-issuer-agm-result",
       "sourceGroup": "AGM results"
+    },
+    {
+      "companyName": "IG GROUP HOLDINGS PLC",
+      "meetingDate": "2022-09-21",
+      "url": "https://www.stockopedia.com/share-prices/ig-group-LON%3AIGG/news/reg-ig-group-hldgs-plc-result-of-agm-urn%3Anewsml%3Areuters.com%3A20220921%3AnRSU2002Aa/",
+      "source": "formal-rns-mirror",
+      "sourceGroup": "AGM results",
+      "parserHint": "ig-rns-results"
     }
   ],
   "resultDocumentSeeds": [
@@ -157,6 +165,94 @@
       "source": "official-issuer-agm-result",
       "sourceGroup": "AGM results",
       "parserHint": "smiths-agm-results"
+    },
+    {
+      "companyName": "IG GROUP HOLDINGS PLC",
+      "meetingDate": "2020-09-17",
+      "url": "https://www.iggroup.com/~/media/Files/I/IG-Group/documents/investors/shareholder-information/general-meetings/2020/voting-result.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "standard-agm-results"
+    },
+    {
+      "companyName": "IG GROUP HOLDINGS PLC",
+      "meetingDate": "2021-09-22",
+      "url": "https://www.iggroup.com/~/media/Files/I/IG-Group/documents/investors/shareholder-information/general-meetings/2021/2021-09-22-results-of-agm.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "standard-agm-results"
+    },
+    {
+      "companyName": "PERSIMMON PLC",
+      "meetingDate": "2017-04-27",
+      "url": "https://www.persimmonhomes.com/corporate/media/lpsjofrj/final-proxy-figures-26-apr-17-website.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "persimmon-proxy-results"
+    },
+    {
+      "companyName": "PERSIMMON PLC",
+      "meetingDate": "2018-04-25",
+      "url": "https://www.persimmonhomes.com/corporate/media/mwsni4fx/agm-poll-results-250418.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "gsk-agm-results"
+    },
+    {
+      "companyName": "PERSIMMON PLC",
+      "meetingDate": "2019-05-01",
+      "url": "https://www.persimmonhomes.com/corporate/media/rlsddqzy/poll-results-at-the-annual-general-meeting-held-on-1-may-2019.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "gsk-agm-results"
+    },
+    {
+      "companyName": "BABCOCK INTERNATIONAL GROUP PLC",
+      "meetingDate": "2017-07-13",
+      "url": "https://www.babcockinternational.com/wp-content/uploads/2025/06/Babcock-AGM-Voting-Results-Announcement-13-July-2017.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "babcock-agm-results"
+    },
+    {
+      "companyName": "BABCOCK INTERNATIONAL GROUP PLC",
+      "meetingDate": "2018-07-19",
+      "url": "https://www.babcockinternational.com/wp-content/uploads/2025/06/20180719-Babcock-AGM-Results-Announcement-2018.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "babcock-agm-results"
+    },
+    {
+      "companyName": "BABCOCK INTERNATIONAL GROUP PLC",
+      "meetingDate": "2019-07-18",
+      "url": "https://www.babcockinternational.com/wp-content/uploads/2025/06/2019-Babcock-AGM-Results-Announcement.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "babcock-agm-results"
+    },
+    {
+      "companyName": "RECKITT BENCKISER GROUP PLC",
+      "meetingDate": "2020-05-12",
+      "url": "https://eu-assets.contentstack.com/v3/assets/blt93c8bc7a598af9f0/blt3bd4922fd86de7ca/69c146b277205df380f24e04/2020-05-12-agm-2020-poll-results-rb-com-download-final-3.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "reckitt-agm-results"
+    },
+    {
+      "companyName": "RECKITT BENCKISER GROUP PLC",
+      "meetingDate": "2021-05-28",
+      "url": "https://eu-assets.contentstack.com/v3/assets/blt93c8bc7a598af9f0/bltd34da26e14f19b1a/69c1460b65c969beb8c56f22/results-of-agm-2021.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "reckitt-agm-results"
+    },
+    {
+      "companyName": "RECKITT BENCKISER GROUP PLC",
+      "meetingDate": "2022-05-20",
+      "url": "https://eu-assets.contentstack.com/v3/assets/blt93c8bc7a598af9f0/blte2337af994660c95/69c13eb8a17ac775b218f138/results-of-agm-2022.pdf",
+      "source": "official-issuer-agm-result",
+      "sourceGroup": "AGM results",
+      "parserHint": "reckitt-agm-results"
     }
   ]
 }

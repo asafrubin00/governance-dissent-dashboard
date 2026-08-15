@@ -23,7 +23,7 @@ The product is intentionally transparent about scope. Leadership evidence now co
 - Profit-warning audit: all 100 companies reviewed over 36 months, with 15 qualifying official events across 11 issuers.
 - Succession review: all 100 companies reviewed, with seven live processes captured in the current evidence window.
 - Market-performance coverage: all 100 companies with monthly share-price and dividend-adjusted returns against the FTSE 100 price index.
-- Calibration audit: 50 completed transitions and six active processes compared with 188 current role observations; 41 completed cases now have complete aligned warning windows, while live weights remain unchanged.
+- Calibration audit: 50 completed transitions and six active processes compared with 188 current role observations; all 50 completed cases now have complete aligned warning windows, while live weights remain unchanged.
 - Profile pilot: 30 companies have concise sourced CEO/Chair biographies, official links, and local portraits where stable; the expansion prioritises elevated radar pressure and calibration relevance.
 - Excluded for now: activism, controversies, broader news, and any unlicensed claim to institutional-grade TSR.
 - Output: `public/data/leadership-radar.json`.
@@ -32,10 +32,10 @@ The score is a research-prioritisation device, not a prediction that an individu
 
 ### Proxy Voting
 
-- 28 real significant-dissent resolutions across 24 matched FTSE 100 issuers in the current dataset.
+- 29 real significant-dissent resolutions across 25 matched FTSE 100 issuers in the current dataset.
 - Primary layer: [Investment Association Public Register](https://www.theia.org/public-register).
 - Verification layer: official issuer announcements and selected issuer-published AGM result PDFs.
-- Direct issuer layer: 41 configured official meeting tables are re-fetched weekly; the first post-register meeting is British Land's July 2026 AGM, where all 21 resolutions were parsed and none crossed 20%.
+- Direct issuer layer: 53 configured official meeting tables are re-fetched weekly; 490 resolution rows have been parsed from 24 issuer PDFs, including the first post-register meeting at British Land's July 2026 AGM, where none crossed 20%.
 - Focus: 20%+ opposition on remuneration, director elections, capital authorities, and other board-accountability resolutions.
 - Output: `public/data/tracker-data.json`.
 
@@ -83,7 +83,7 @@ npm run build
 10. Validates profile uniqueness, role-name alignment, source URLs, summaries, and local portrait references.
 11. Runs validation before writing the public JSON files.
 
-The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It re-fetches every configured AGM source, refreshes calculations, the constituent roster, and all market series, then checks 100 official issuer pages for new earnings- and succession-related links. New AGM URLs and parser formats still require editorial onboarding. Announcement-monitor matches enter a typed review queue and never alter the radar automatically; the three current IHG half-year candidates remain pending and affect no score.
+The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It re-fetches every configured AGM source, refreshes calculations, the constituent roster, and all market series, then checks 100 official issuer pages for new earnings- and succession-related links. New AGM URLs and parser formats still require editorial onboarding. Announcement-monitor matches enter a typed review queue and never alter the radar automatically; the current queue has one post-cutoff Aviva guidance candidate awaiting the next approved evidence-date roll-forward.
 
 Run the monitor independently with `npm run data:monitor`. Its source health and editorial safeguards are explained in [the monitor methodology](docs/announcement-monitor-methodology.md).
 
@@ -128,17 +128,17 @@ src/
 - All 100 companies are source verified; six externally managed issuers have no issuer CEO and are not scored for that role.
 - CEO tenure has no formal UK governance limit; the ten-year horizon is an analytical reference only.
 - Chair tenure is interpreted in the context of the Code's nine-year independence and succession guidance.
-- Historical dissent events are source backed. Six completed-transition windows now have complete meeting coverage, while the remainder stay partial; missing AGM history is never treated as zero and dissent remains excluded from aligned calibration.
+- Historical dissent events are source backed. Ten completed-transition windows now have complete meeting coverage, while the remainder stay partial; missing AGM history is never treated as zero and dissent remains excluded from aligned calibration.
 - The profit-warning audit covers all 100 source-verified companies. A no-event outcome means no qualifying issuer announcement was identified under the stated definition and 36-month window, not that the company experienced no adverse trading developments.
 - Warning and succession evidence are excluded from the score pending calibration and outcome testing.
 - A public constituent table is used for reproducibility and is not an official FTSE Russell feed.
 - Classification and parsing rules remain suitable for a portfolio MVP, not a commercial proxy-research service.
 - Yahoo adjusted close is used only as a transparent dividend-adjusted research proxy; it is not a licensed total-return index and excludes tax, costs, and currency effects.
-- The transition census comprises 50 completed transitions and six live processes. Thirty-seven completed cases currently have complete aligned 36-month warning windows; the locked six-case evaluation sample still shows no capture improvement from warning or performance uplifts, so the audit supports sensitivity analysis rather than transition probabilities.
+- The transition census comprises 50 completed transitions and six live processes. All 50 completed cases have complete aligned 36-month warning windows; the locked six-case evaluation sample still shows no capture improvement from warning or performance uplifts, so the audit supports sensitivity analysis rather than transition probabilities.
 
 ## Product roadmap
 
-- Backfill the remaining 13 complete 36-month warning windows and extend resolution-level AGM histories beyond the first six completed cases.
+- Extend complete resolution-level AGM histories beyond the first ten completed cases while preserving the 20% publication threshold.
 - Reserve future completed transitions as a genuinely untouched evaluation cohort before changing production weights.
 - Extend the source-backed leadership profile pilot beyond the current 30 companies.
 - Expand the live direct-issuer AGM registry beyond the first post-October-2025 meeting while retaining editorial parser review before publication.

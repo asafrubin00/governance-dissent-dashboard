@@ -568,9 +568,53 @@ def parse_entain_vote_rows(html: str) -> list[dict[str, Any]]:
     return rows
 
 
+def parse_ig_rns_vote_rows(html: str) -> list[dict[str, Any]]:
+    soup = BeautifulSoup(html, "html.parser")
+    preformatted = soup.find("pre")
+    text = preformatted.get_text("\n") if preformatted else soup.get_text("\n")
+    start = text.find("WITHHELD*")
+    end = text.find("*A vote withheld", start)
+    working = text[start + len("WITHHELD*"):end if end != -1 else None] if start != -1 else text
+    pattern = re.compile(
+        r"^\s*(?P<num>\d{1,2})\s+(?P<title>.+?)\s{2,}"
+        r"(?P<for_count>\d[\d,]*)\s+"
+        r"(?P<for_pct>\d+\.\d+)%?\s+"
+        r"(?P<against_count>\d[\d,]*)\s+"
+        r"(?P<against_pct>\d+\.\d+)%?\s+"
+        r"(?P<total>\d[\d,]*)\s+"
+        r"(?P<isc>\d+\.\d+)%?\s+"
+        r"(?P<withheld>\d[\d,]*)\s*$",
+        flags=re.IGNORECASE,
+    )
+    rows: list[dict[str, Any]] = []
+    for line in working.splitlines():
+        match = pattern.match(line)
+        if match:
+            rows.append(
+                {
+                    "resolutionNumber": int(match.group("num")),
+                    "resolutionTitle": match.group("title").strip(),
+                    "resolutionTitleNormalised": normalise_resolution_title(match.group("title")),
+                    "votesForCount": parse_count(match.group("for_count")),
+                    "votesForPct": parse_percent(match.group("for_pct")),
+                    "votesAgainstCount": parse_count(match.group("against_count")),
+                    "votesAgainstPct": parse_percent(match.group("against_pct")),
+                    "votesWithheldCount": parse_count(match.group("withheld")),
+                    "totalVotesCastCount": parse_count(match.group("total")),
+                    "issuedShareCapitalVotedPct": parse_percent(match.group("isc")),
+                }
+            )
+        elif rows and line.strip():
+            rows[-1]["resolutionTitle"] += f" {line.strip()}"
+            rows[-1]["resolutionTitleNormalised"] = normalise_resolution_title(rows[-1]["resolutionTitle"])
+    return rows
+
+
 def parse_announcement_tables(html: str, parser_hint: str | None = None) -> list[dict[str, Any]]:
     if parser_hint == "entain-agm-results":
         return parse_entain_vote_rows(html)
+    if parser_hint == "ig-rns-results":
+        return parse_ig_rns_vote_rows(html)
 
     soup = BeautifulSoup(html, "html.parser")
     rows: list[dict[str, Any]] = []
@@ -701,11 +745,11 @@ def parse_pdf_result_rows(text: str, parser_hint: str) -> list[dict[str, Any]]:
         pattern = re.compile(
             r"(?P<num>\d{1,2})\s+(?P<title>.+?)\s+"
             r"(?P<for_count>\d[\d,]*)\s+"
-            r"(?P<for_pct>\d+\.\d+)\s+"
+            r"(?P<for_pct>\d+\.\d+)%?\s+"
             r"(?P<against_count>\d[\d,]*)\s+"
-            r"(?P<against_pct>\d+\.\d+)\s+"
+            r"(?P<against_pct>\d+\.\d+)%?\s+"
             r"(?P<total>\d[\d,]*)\s+"
-            r"(?P<isc>\d+\.\d+)\s+"
+            r"(?P<isc>\d+\.\d+)%?\s+"
             r"(?P<withheld>\d[\d,]*)"
             r"(?=\s+\d{1,2}\s+To\s|\s+General\s+emptive offer|\s+\d+\s+Includes discretionary votes|$)",
             flags=re.IGNORECASE,
@@ -725,6 +769,117 @@ def parse_pdf_result_rows(text: str, parser_hint: str) -> list[dict[str, Any]]:
             }
             for match in pattern.finditer(working)
         ]
+
+    if parser_hint == "persimmon-proxy-results":
+        pattern = re.compile(
+            r"RES:(?P<num>\d{3})\s+(?P<title>.+?)\s+"
+            r"(?P<for_holders>\d[\d,]*)\s+(?P<for_count>\d[\d,]*)\s+(?P<for_pct>\d+\.\d+)\s+"
+            r"(?P<against_holders>\d[\d,]*)\s+(?P<against_count>\d[\d,]*)\s+(?P<against_pct>\d+\.\d+)\s+"
+            r"(?P<discretionary_holders>\d[\d,]*)\s+(?P<discretionary_count>\d[\d,]*)\s+(?P<discretionary_pct>\d+\.\d+)\s+"
+            r"(?P<withheld_holders>\d[\d,]*)\s+(?P<withheld_count>\d[\d,]*)\s+"
+            r"(?P<total>\d[\d,]*)\s+(?P<support_holders>\d[\d,]*)\s+"
+            r"(?P<support_count>\d[\d,]*)\s+(?P<support_pct>\d+\.\d+)"
+            r"(?=\s+RES:|$)",
+            flags=re.IGNORECASE,
+        )
+        return [
+            {
+                "resolutionNumber": int(match.group("num")),
+                "resolutionTitle": match.group("title").strip(),
+                "resolutionTitleNormalised": normalise_resolution_title(match.group("title")),
+                # Persimmon's 2017 proxy report presents direct-for and discretionary
+                # votes separately, then combines them in the final support column.
+                "votesForCount": parse_count(match.group("support_count")),
+                "votesForPct": parse_percent(match.group("support_pct")),
+                "votesAgainstCount": parse_count(match.group("against_count")),
+                "votesAgainstPct": parse_percent(match.group("against_pct")),
+                "votesWithheldCount": parse_count(match.group("withheld_count")),
+                "totalVotesCastCount": parse_count(match.group("total")),
+                "issuedShareCapitalVotedPct": None,
+            }
+            for match in pattern.finditer(cleaned)
+        ]
+
+    if parser_hint == "babcock-agm-results":
+        start = re.search(r"\b1\.\s+Approval", cleaned)
+        working = cleaned[start.start():] if start else cleaned
+        working = working.split("Further information:", 1)[0]
+        chunks = re.split(r"(?=\b\d{1,2}\.\s+)", working)
+        data_pattern = re.compile(
+            r"(?P<for_count>\d[\d,]*)\s+"
+            r"(?P<for_pct>\d+\.\d+)\s+"
+            r"(?P<against_count>\d[\d,]*)\s+"
+            r"(?P<against_pct>\d+\.\d+)\s+"
+            r"(?P<total>\d[\d,]*)\s+"
+            r"(?P<withheld>\d[\d,]*)"
+        )
+        rows: list[dict[str, Any]] = []
+        for chunk in chunks:
+            header = re.match(r"(?P<num>\d{1,2})\.\s+(?P<body>.+)", chunk)
+            if not header:
+                continue
+            data = data_pattern.search(header.group("body"))
+            if not data:
+                continue
+            title = clean_pdf_text(
+                f"{header.group('body')[:data.start()]} {header.group('body')[data.end():]}"
+            )
+            rows.append(
+                {
+                    "resolutionNumber": int(header.group("num")),
+                    "resolutionTitle": title,
+                    "resolutionTitleNormalised": normalise_resolution_title(title),
+                    "votesForCount": parse_count(data.group("for_count")),
+                    "votesForPct": parse_percent(data.group("for_pct")),
+                    "votesAgainstCount": parse_count(data.group("against_count")),
+                    "votesAgainstPct": parse_percent(data.group("against_pct")),
+                    "votesWithheldCount": parse_count(data.group("withheld")),
+                    "totalVotesCastCount": parse_count(data.group("total")),
+                    "issuedShareCapitalVotedPct": None,
+                }
+            )
+        return rows
+
+    if parser_hint == "reckitt-agm-results":
+        start = re.search(r"\b1\.\s+(?:To|That)", cleaned)
+        working = cleaned[start.start():] if start else cleaned
+        working = re.split(r"Resolutions?\s+\d+\s+to\s+\d+", working, maxsplit=1)[0]
+        chunks = re.split(r"(?=\b\d{1,2}\.\s+)", working)
+        data_pattern = re.compile(
+            r"(?P<for_count>\d[\d,]*)\s+"
+            r"(?P<for_pct>\d+\.\d+)%?\s+"
+            r"(?P<against_count>\d[\d,]*)\s+"
+            r"(?P<against_pct>\d+\.\d+)%?\s+"
+            r"(?P<total>\d[\d,]*)\s+"
+            r"(?:(?P<isc>\d+\.\d+)%?\s+)?"
+            r"(?P<withheld>\d[\d,]*)"
+        )
+        rows: list[dict[str, Any]] = []
+        for chunk in chunks:
+            header = re.match(r"(?P<num>\d{1,2})\.\s+(?P<body>.+)", chunk)
+            if not header:
+                continue
+            data = data_pattern.search(header.group("body"))
+            if not data:
+                continue
+            title = clean_pdf_text(
+                f"{header.group('body')[:data.start()]} {header.group('body')[data.end():]}"
+            )
+            rows.append(
+                {
+                    "resolutionNumber": int(header.group("num")),
+                    "resolutionTitle": title,
+                    "resolutionTitleNormalised": normalise_resolution_title(title),
+                    "votesForCount": parse_count(data.group("for_count")),
+                    "votesForPct": parse_percent(data.group("for_pct")),
+                    "votesAgainstCount": parse_count(data.group("against_count")),
+                    "votesAgainstPct": parse_percent(data.group("against_pct")),
+                    "votesWithheldCount": parse_count(data.group("withheld")),
+                    "totalVotesCastCount": parse_count(data.group("total")),
+                    "issuedShareCapitalVotedPct": parse_percent(data.group("isc")) if data.group("isc") else None,
+                }
+            )
+        return rows
 
     if parser_hint == "united-utilities-agm-results":
         start = cleaned.find("1 Receiving")
@@ -1373,7 +1528,7 @@ def write_csv(resolutions: list[dict[str, Any]]) -> None:
         "updateStatementDocumentType",
     ]
     with (PROCESSED_DIR / "ftse100_resolutions.csv").open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         writer.writerows(resolutions)
 

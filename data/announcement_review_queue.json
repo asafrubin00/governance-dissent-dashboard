@@ -1,6 +1,71 @@
 {
-  "updatedAt": "2026-08-11T18:13:11.392443+00:00",
+  "updatedAt": "2026-08-15T07:54:11.002669+00:00",
   "candidates": [
+    {
+      "id": "ihg-901557669011489b",
+      "ticker": "IHG",
+      "companyName": "InterContinental Hotels Group",
+      "title": "PDF 11.13MB",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/results/2026/half-year-results-2026/ihg-hy-2026-presentation-11-aug-2026.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-15T07:46:41.769028+00:00",
+      "status": "dismissed",
+      "reviewNote": "Dismissed after editorial review: this is an investor presentation accompanying IHG's half-year results; the official results announcement maintained full-year consensus profit and earnings expectations."
+    },
+    {
+      "id": "ihg-48e9ba2c920c304d",
+      "ticker": "IHG",
+      "companyName": "InterContinental Hotels Group",
+      "title": "PDF 305KB",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/results/2026/half-year-results-2026/ihg-hy26-presentation-and-q-a-transcript.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-15T07:46:41.769028+00:00",
+      "status": "dismissed",
+      "reviewNote": "Dismissed after editorial review: this is a presentation transcript accompanying IHG's half-year results; the official results announcement maintained full-year consensus profit and earnings expectations."
+    },
+    {
+      "id": "anto-0db85fbf38d08c6e",
+      "ticker": "ANTO",
+      "companyName": "Antofagasta",
+      "title": "2026 Half Year Results",
+      "url": "https://www.antofagasta.co.uk/investors/news/2026/2026-half-year-results",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-15T07:46:41.769028+00:00",
+      "status": "dismissed",
+      "reviewNote": "Dismissed after editorial review: Antofagasta revised copper production guidance after severe weather but retained the previously disclosed cash-cost and capital-expenditure guidance; production guidance alone is outside the earnings-warning definition."
+    },
+    {
+      "id": "av-363805d2d2bf0c22",
+      "ticker": "AV",
+      "companyName": "Aviva",
+      "title": "Half year 2026 results announcement",
+      "url": "https://www.aviva.com/newsroom/news-and-research-overview/news-releases/2026/08/half-year-2026-results-announcement",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-15T07:46:41.769028+00:00",
+      "status": "pending",
+      "reviewNote": "Editorial review identified a likely qualifying guidance cut: Aviva reduced its 2026 Health operating-profit ambition from \u00a3100m in its 14 May Q1 update to approximately \u00a390m on 14 August. The announcement falls after the current 8 August evidence date and should be promoted only with the next approved evidence-date roll-forward."
+    },
+    {
+      "id": "mtln-7bc3af2fc8d8ea41",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/zkfnp4wk/20260812_mr-e-mytilineos_tr1_announcement.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-15T07:46:41.769028+00:00",
+      "status": "dismissed",
+      "reviewNote": "Dismissed after editorial review: despite the source-page link label, the linked official PDF is a TR-1 major-holdings notification rather than financial results."
+    },
     {
       "id": "ihg-6ad0179bedcb7c60",
       "ticker": "IHG",
@@ -11,8 +76,8 @@
         "earnings"
       ],
       "detectedAt": "2026-08-11T14:01:16.104382+00:00",
-      "status": "pending",
-      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+      "status": "dismissed",
+      "reviewNote": "Dismissed after editorial review: this is an investor presentation accompanying IHG's half-year results; the official results announcement maintained full-year consensus profit and earnings expectations."
     },
     {
       "id": "ihg-cd431fef2ce1bb90",
@@ -24,8 +89,8 @@
         "earnings"
       ],
       "detectedAt": "2026-08-11T14:01:16.104382+00:00",
-      "status": "pending",
-      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+      "status": "dismissed",
+      "reviewNote": "Dismissed after editorial review: IHG's official half-year announcement states that the group remained on track to meet full-year consensus profit and earnings expectations."
     },
     {
       "id": "ihg-540c7f27039e5bf7",
@@ -37,8 +102,8 @@
         "earnings"
       ],
       "detectedAt": "2026-08-11T14:01:16.104382+00:00",
-      "status": "pending",
-      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+      "status": "dismissed",
+      "reviewNote": "Dismissed after editorial review: this is supplementary material for IHG's half-year results and contains no separate qualifying earnings-guidance cut."
     },
     {
       "id": "mtln-d62b3cec8341738b",
