@@ -1,21 +1,23 @@
 # Proxy Wars
 
-Proxy Wars is a focused FTSE 100 governance research portfolio project. It now contains two connected modules:
+Proxy Wars is a focused FTSE 100 governance research portfolio project built around one integrated Governance Radar:
 
-- **Leadership Pressure Radar**: a source-backed research preview that prioritises CEO and Chair succession signals.
-- **Proxy Voting**: a resolution-level tracker for significant shareholder dissent against management.
+- **Governance Radar**: the main source-backed FTSE 100 research surface, with integrated leadership-pressure and significant-voting lenses alongside profit-warning evidence, active succession processes, and tenure-period market performance.
+- **Vote Explorer**: the supporting resolution-level workspace for verified significant shareholder dissent against management.
 
-The product is intentionally transparent about scope. Leadership evidence now covers the current 100-company roster; externally managed issuers without a company CEO are marked not applicable, and the voting module covers significant dissent rather than general AGM voting books.
+The Radar is the primary product. Vote Explorer remains available from the overview and company evidence rail for specialist cross-company and resolution-level analysis; it is not presented as a competing top-level module. The product remains intentionally transparent about scope: leadership evidence covers the current 100-company roster, externally managed issuers without a company CEO are marked not applicable, and voting evidence covers significant dissent rather than general AGM voting books.
 
 ## Preview
 
 ![Proxy Wars module overview](docs/screenshots/overview.png)
 
-![Leadership Pressure Radar](docs/screenshots/leadership-radar.png)
+![Integrated Governance Radar](docs/screenshots/leadership-radar.png)
+
+![Governance Radar voting lens](docs/screenshots/governance-voting-lens.png)
 
 ## Current coverage
 
-### Leadership Pressure Radar
+### Governance Radar
 
 - Universe: a 100-company FTSE 100 public constituent snapshot.
 - Leadership coverage: all 100 companies have official issuer sources for current CEO and Chair appointments or a sourced structural `not applicable` designation.

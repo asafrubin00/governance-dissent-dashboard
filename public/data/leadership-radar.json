@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-08-15T08:17:16.155238+00:00",
+    "generatedAt": "2026-08-15T11:40:14.318261+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -89,7 +89,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "14.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -110,7 +112,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -153,7 +157,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -174,7 +180,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -217,7 +225,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -238,7 +248,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -281,7 +293,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -302,7 +316,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "8.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -355,7 +371,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -398,13 +416,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 24.28,
+            "maxManagementDissentPct": 24.28,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 24.28,
             "records": [
               {
                 "id": "c3f19c826da7",
                 "title": "Resolution 16: To approve the directors' remuneration report",
                 "votesAgainstPct": 24.28,
-                "meetingDate": "2025-04-30"
+                "managementDissentPct": 24.28,
+                "meetingDate": "2025-04-30",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -426,13 +451,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 24.28,
+            "maxManagementDissentPct": 24.28,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 24.28,
             "records": [
               {
                 "id": "c3f19c826da7",
                 "title": "Resolution 16: To approve the directors' remuneration report",
                 "votesAgainstPct": 24.28,
-                "meetingDate": "2025-04-30"
+                "managementDissentPct": 24.28,
+                "meetingDate": "2025-04-30",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -476,7 +508,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "10.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -497,7 +531,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "22.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -540,7 +576,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "21.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -561,7 +599,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "8.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -604,7 +644,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "13.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -625,7 +667,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -668,7 +712,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -689,7 +735,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -732,7 +780,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -753,7 +803,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -817,7 +869,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -838,7 +892,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "7.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -896,7 +952,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "9.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -917,7 +975,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -960,7 +1020,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -981,7 +1043,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "7.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1024,7 +1088,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "11.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1045,7 +1111,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1103,7 +1171,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1124,7 +1194,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1166,26 +1238,54 @@
             "registeredDissentUplift": 20.0
           },
           "dissentEvidence": {
-            "count": 3,
-            "maxVotesAgainstPct": 52.88,
+            "count": 4,
+            "maxManagementDissentPct": 52.88,
+            "scoredCount": 3,
+            "maxScoredManagementDissentPct": 52.88,
             "records": [
-              {
-                "id": "90545677754a",
-                "title": "Special resolution: Revocation of resolution 25 (2015) and resolution 22 (2019 )",
-                "votesAgainstPct": 52.53,
-                "meetingDate": "2026-04-23"
-              },
               {
                 "id": "b029e8253807",
                 "title": "Special resolution: New Articles of Association",
                 "votesAgainstPct": 52.88,
-                "meetingDate": "2026-04-23"
+                "managementDissentPct": 52.88,
+                "meetingDate": "2026-04-23",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              },
+              {
+                "id": "90545677754a",
+                "title": "Special resolution: Revocation of resolution 25 (2015) and resolution 22 (2019 )",
+                "votesAgainstPct": 52.53,
+                "managementDissentPct": 52.53,
+                "meetingDate": "2026-04-23",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              },
+              {
+                "id": "be8ff4185e03",
+                "title": "Special resolution: Australasian Centre for Corporate Responsibility shareholder resolution",
+                "votesAgainstPct": 25.85,
+                "managementDissentPct": 25.85,
+                "meetingDate": "2026-04-23",
+                "category": "shareholder-proposal",
+                "categoryLabel": "Shareholder proposal",
+                "managementSponsored": false,
+                "scoreTreatment": "context-only"
               },
               {
                 "id": "bec652798370",
                 "title": "Resolution 3: to re-elect Helge Lund as a director of the company",
                 "votesAgainstPct": 24.28,
-                "meetingDate": "2025-04-17"
+                "managementDissentPct": 24.28,
+                "meetingDate": "2025-04-17",
+                "category": "director-election",
+                "categoryLabel": "Director election",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -1206,26 +1306,54 @@
             "registeredDissentUplift": 20.0
           },
           "dissentEvidence": {
-            "count": 3,
-            "maxVotesAgainstPct": 52.88,
+            "count": 4,
+            "maxManagementDissentPct": 52.88,
+            "scoredCount": 3,
+            "maxScoredManagementDissentPct": 52.88,
             "records": [
-              {
-                "id": "90545677754a",
-                "title": "Special resolution: Revocation of resolution 25 (2015) and resolution 22 (2019 )",
-                "votesAgainstPct": 52.53,
-                "meetingDate": "2026-04-23"
-              },
               {
                 "id": "b029e8253807",
                 "title": "Special resolution: New Articles of Association",
                 "votesAgainstPct": 52.88,
-                "meetingDate": "2026-04-23"
+                "managementDissentPct": 52.88,
+                "meetingDate": "2026-04-23",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              },
+              {
+                "id": "90545677754a",
+                "title": "Special resolution: Revocation of resolution 25 (2015) and resolution 22 (2019 )",
+                "votesAgainstPct": 52.53,
+                "managementDissentPct": 52.53,
+                "meetingDate": "2026-04-23",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              },
+              {
+                "id": "be8ff4185e03",
+                "title": "Special resolution: Australasian Centre for Corporate Responsibility shareholder resolution",
+                "votesAgainstPct": 25.85,
+                "managementDissentPct": 25.85,
+                "meetingDate": "2026-04-23",
+                "category": "shareholder-proposal",
+                "categoryLabel": "Shareholder proposal",
+                "managementSponsored": false,
+                "scoreTreatment": "context-only"
               },
               {
                 "id": "bec652798370",
                 "title": "Resolution 3: to re-elect Helge Lund as a director of the company",
                 "votesAgainstPct": 24.28,
-                "meetingDate": "2025-04-17"
+                "managementDissentPct": 24.28,
+                "meetingDate": "2025-04-17",
+                "category": "director-election",
+                "categoryLabel": "Director election",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -1269,7 +1397,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1290,7 +1420,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1348,7 +1480,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1369,7 +1503,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1427,7 +1563,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1448,7 +1586,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1491,7 +1631,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "10.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1512,7 +1654,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1577,7 +1721,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1598,7 +1744,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "8.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1720,13 +1868,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 39.98,
+            "maxManagementDissentPct": 39.98,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 39.98,
             "records": [
               {
                 "id": "aecdf065f4a2",
                 "title": "Resolution 2: To approve the directors' remuneration report",
                 "votesAgainstPct": 39.98,
-                "meetingDate": "2025-05-08"
+                "managementDissentPct": 39.98,
+                "meetingDate": "2025-05-08",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -1748,13 +1903,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 39.98,
+            "maxManagementDissentPct": 39.98,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 39.98,
             "records": [
               {
                 "id": "aecdf065f4a2",
                 "title": "Resolution 2: To approve the directors' remuneration report",
                 "votesAgainstPct": 39.98,
-                "meetingDate": "2025-05-08"
+                "managementDissentPct": 39.98,
+                "meetingDate": "2025-05-08",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -1798,13 +1960,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 25.04,
+            "maxManagementDissentPct": 25.04,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 25.04,
             "records": [
               {
                 "id": "9ae08d2ef75c",
                 "title": "Resolution 24: To approve the Rule 9 Waiver",
                 "votesAgainstPct": 25.04,
-                "meetingDate": "2025-05-22"
+                "managementDissentPct": 25.04,
+                "meetingDate": "2025-05-22",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -1826,13 +1995,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 25.04,
+            "maxManagementDissentPct": 25.04,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 25.04,
             "records": [
               {
                 "id": "9ae08d2ef75c",
                 "title": "Resolution 24: To approve the Rule 9 Waiver",
                 "votesAgainstPct": 25.04,
-                "meetingDate": "2025-05-22"
+                "managementDissentPct": 25.04,
+                "meetingDate": "2025-05-22",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -1876,7 +2052,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "8.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1897,7 +2075,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "10.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1940,7 +2120,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "8.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -1961,7 +2143,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2004,13 +2188,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 22.29,
+            "maxManagementDissentPct": 22.29,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 22.29,
             "records": [
               {
                 "id": "82c8d2b23707",
                 "title": "Resolution 3: To approve the Directors' Remuneration Policy",
                 "votesAgainstPct": 22.29,
-                "meetingDate": "2025-05-15"
+                "managementDissentPct": 22.29,
+                "meetingDate": "2025-05-15",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -2032,13 +2223,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 22.29,
+            "maxManagementDissentPct": 22.29,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 22.29,
             "records": [
               {
                 "id": "82c8d2b23707",
                 "title": "Resolution 3: To approve the Directors' Remuneration Policy",
                 "votesAgainstPct": 22.29,
-                "meetingDate": "2025-05-15"
+                "managementDissentPct": 22.29,
+                "meetingDate": "2025-05-15",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -2104,19 +2302,31 @@
           },
           "dissentEvidence": {
             "count": 2,
-            "maxVotesAgainstPct": 32.96,
+            "maxManagementDissentPct": 32.96,
+            "scoredCount": 2,
+            "maxScoredManagementDissentPct": 32.96,
             "records": [
               {
                 "id": "af6363b64375",
                 "title": "Resolution 3: To approve the Directors' Remuneration Policy",
                 "votesAgainstPct": 32.96,
-                "meetingDate": "2025-05-22"
+                "managementDissentPct": 32.96,
+                "meetingDate": "2025-05-22",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               },
               {
                 "id": "81872a6d23d2",
                 "title": "Resolution 16: To approve the Convatec Group Omnibus Incentive Plan",
                 "votesAgainstPct": 24.36,
-                "meetingDate": "2025-05-22"
+                "managementDissentPct": 24.36,
+                "meetingDate": "2025-05-22",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -2138,19 +2348,31 @@
           },
           "dissentEvidence": {
             "count": 2,
-            "maxVotesAgainstPct": 32.96,
+            "maxManagementDissentPct": 32.96,
+            "scoredCount": 2,
+            "maxScoredManagementDissentPct": 32.96,
             "records": [
               {
                 "id": "af6363b64375",
                 "title": "Resolution 3: To approve the Directors' Remuneration Policy",
                 "votesAgainstPct": 32.96,
-                "meetingDate": "2025-05-22"
+                "managementDissentPct": 32.96,
+                "meetingDate": "2025-05-22",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               },
               {
                 "id": "81872a6d23d2",
                 "title": "Resolution 16: To approve the Convatec Group Omnibus Incentive Plan",
                 "votesAgainstPct": 24.36,
-                "meetingDate": "2025-05-22"
+                "managementDissentPct": 24.36,
+                "meetingDate": "2025-05-22",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -2194,7 +2416,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "14.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2215,7 +2439,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2280,7 +2506,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "9.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2301,7 +2529,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2344,7 +2574,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2365,7 +2597,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2430,7 +2664,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "7.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2451,7 +2687,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2494,7 +2732,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2515,7 +2755,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2558,7 +2800,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2579,7 +2823,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2643,7 +2889,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "12.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2664,7 +2912,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2717,7 +2967,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2760,7 +3012,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "14.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2781,7 +3035,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2824,7 +3080,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "11.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2845,7 +3103,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2888,7 +3148,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2909,7 +3171,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2952,7 +3216,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -2973,7 +3239,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "7.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3016,7 +3284,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3037,7 +3307,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3080,7 +3352,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3101,7 +3375,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3144,7 +3420,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3165,7 +3443,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3208,7 +3488,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "8.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3229,7 +3511,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3272,7 +3556,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3293,7 +3579,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3336,7 +3624,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "9.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3357,7 +3647,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3400,7 +3692,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3421,7 +3715,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3464,43 +3760,75 @@
           },
           "dissentEvidence": {
             "count": 6,
-            "maxVotesAgainstPct": 30.49,
+            "maxManagementDissentPct": 30.49,
+            "scoredCount": 6,
+            "maxScoredManagementDissentPct": 30.49,
             "records": [
-              {
-                "id": "f384011acceb",
-                "title": "Resolution 3: To approve the directors' remuneration report",
-                "votesAgainstPct": 21.0,
-                "meetingDate": "2025-05-08"
-              },
               {
                 "id": "4a6c3a4216bc",
                 "title": "Resolution 2: To approve the Directors' Remuneration Policy",
                 "votesAgainstPct": 30.49,
-                "meetingDate": "2025-05-08"
-              },
-              {
-                "id": "340d0c704c44",
-                "title": "Directors\u2019 Remuneration Report 2022",
-                "votesAgainstPct": 23.06,
-                "meetingDate": "2023-05-05"
+                "managementDissentPct": 30.49,
+                "meetingDate": "2025-05-08",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               },
               {
                 "id": "e4f622787b16",
                 "title": "Directors\u2019 Remuneration Policy",
                 "votesAgainstPct": 25.15,
-                "meetingDate": "2023-05-05"
+                "managementDissentPct": 25.15,
+                "meetingDate": "2023-05-05",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              },
+              {
+                "id": "340d0c704c44",
+                "title": "Directors\u2019 Remuneration Report 2022",
+                "votesAgainstPct": 23.06,
+                "managementDissentPct": 23.06,
+                "meetingDate": "2023-05-05",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               },
               {
                 "id": "2385b95f421a",
                 "title": "Directors\u2019 Remuneration Policy",
                 "votesAgainstPct": 22.86,
-                "meetingDate": "2020-05-07"
+                "managementDissentPct": 22.86,
+                "meetingDate": "2020-05-07",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               },
               {
                 "id": "2d71c80317b9",
                 "title": "Amendment of Long Term Incentive Plan Rules",
                 "votesAgainstPct": 22.74,
-                "meetingDate": "2020-05-07"
+                "managementDissentPct": 22.74,
+                "meetingDate": "2020-05-07",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              },
+              {
+                "id": "f384011acceb",
+                "title": "Resolution 3: To approve the directors' remuneration report",
+                "votesAgainstPct": 21.0,
+                "managementDissentPct": 21.0,
+                "meetingDate": "2025-05-08",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -3522,43 +3850,75 @@
           },
           "dissentEvidence": {
             "count": 6,
-            "maxVotesAgainstPct": 30.49,
+            "maxManagementDissentPct": 30.49,
+            "scoredCount": 6,
+            "maxScoredManagementDissentPct": 30.49,
             "records": [
-              {
-                "id": "f384011acceb",
-                "title": "Resolution 3: To approve the directors' remuneration report",
-                "votesAgainstPct": 21.0,
-                "meetingDate": "2025-05-08"
-              },
               {
                 "id": "4a6c3a4216bc",
                 "title": "Resolution 2: To approve the Directors' Remuneration Policy",
                 "votesAgainstPct": 30.49,
-                "meetingDate": "2025-05-08"
-              },
-              {
-                "id": "340d0c704c44",
-                "title": "Directors\u2019 Remuneration Report 2022",
-                "votesAgainstPct": 23.06,
-                "meetingDate": "2023-05-05"
+                "managementDissentPct": 30.49,
+                "meetingDate": "2025-05-08",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               },
               {
                 "id": "e4f622787b16",
                 "title": "Directors\u2019 Remuneration Policy",
                 "votesAgainstPct": 25.15,
-                "meetingDate": "2023-05-05"
+                "managementDissentPct": 25.15,
+                "meetingDate": "2023-05-05",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              },
+              {
+                "id": "340d0c704c44",
+                "title": "Directors\u2019 Remuneration Report 2022",
+                "votesAgainstPct": 23.06,
+                "managementDissentPct": 23.06,
+                "meetingDate": "2023-05-05",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               },
               {
                 "id": "2385b95f421a",
                 "title": "Directors\u2019 Remuneration Policy",
                 "votesAgainstPct": 22.86,
-                "meetingDate": "2020-05-07"
+                "managementDissentPct": 22.86,
+                "meetingDate": "2020-05-07",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               },
               {
                 "id": "2d71c80317b9",
                 "title": "Amendment of Long Term Incentive Plan Rules",
                 "votesAgainstPct": 22.74,
-                "meetingDate": "2020-05-07"
+                "managementDissentPct": 22.74,
+                "meetingDate": "2020-05-07",
+                "category": "other-governance",
+                "categoryLabel": "Other governance",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              },
+              {
+                "id": "f384011acceb",
+                "title": "Resolution 3: To approve the directors' remuneration report",
+                "votesAgainstPct": 21.0,
+                "managementDissentPct": 21.0,
+                "meetingDate": "2025-05-08",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -3602,13 +3962,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 21.75,
+            "maxManagementDissentPct": 21.75,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 21.75,
             "records": [
               {
                 "id": "8407392c3450",
                 "title": "Resolution B: Authority to allot securities for cash for specific financing",
                 "votesAgainstPct": 21.75,
-                "meetingDate": "2025-05-08"
+                "managementDissentPct": 21.75,
+                "meetingDate": "2025-05-08",
+                "category": "capital-authority",
+                "categoryLabel": "Capital authority",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -3630,13 +3997,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 21.75,
+            "maxManagementDissentPct": 21.75,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 21.75,
             "records": [
               {
                 "id": "8407392c3450",
                 "title": "Resolution B: Authority to allot securities for cash for specific financing",
                 "votesAgainstPct": 21.75,
-                "meetingDate": "2025-05-08"
+                "managementDissentPct": 21.75,
+                "meetingDate": "2025-05-08",
+                "category": "capital-authority",
+                "categoryLabel": "Capital authority",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -3680,7 +4054,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3701,7 +4077,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3744,7 +4122,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "13.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3765,7 +4145,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3808,7 +4190,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3829,7 +4213,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3872,7 +4258,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "11.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3893,7 +4281,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3936,7 +4326,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -3957,7 +4349,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4000,7 +4394,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4021,7 +4417,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4143,7 +4541,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "7.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4164,7 +4564,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4207,13 +4609,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 20.5,
+            "maxManagementDissentPct": 20.5,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 20.5,
             "records": [
               {
                 "id": "e54314c2017f",
                 "title": "Resolution 16: Directors' authority to allot shares",
                 "votesAgainstPct": 20.5,
-                "meetingDate": "2025-06-23"
+                "managementDissentPct": 20.5,
+                "meetingDate": "2025-06-23",
+                "category": "capital-authority",
+                "categoryLabel": "Capital authority",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -4235,13 +4644,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 20.5,
+            "maxManagementDissentPct": 20.5,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 20.5,
             "records": [
               {
                 "id": "e54314c2017f",
                 "title": "Resolution 16: Directors' authority to allot shares",
                 "votesAgainstPct": 20.5,
-                "meetingDate": "2025-06-23"
+                "managementDissentPct": 20.5,
+                "meetingDate": "2025-06-23",
+                "category": "capital-authority",
+                "categoryLabel": "Capital authority",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -4322,7 +4738,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4343,7 +4761,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4386,7 +4806,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4407,7 +4829,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4450,7 +4874,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4471,7 +4897,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4514,7 +4942,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "13.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4535,7 +4965,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4578,13 +5010,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 30.39,
+            "maxManagementDissentPct": 30.39,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 30.39,
             "records": [
               {
                 "id": "b3397dad4891",
                 "title": "Resolution 2: To approve the directors' remuneration report",
                 "votesAgainstPct": 30.39,
-                "meetingDate": "2025-05-01"
+                "managementDissentPct": 30.39,
+                "meetingDate": "2025-05-01",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -4606,13 +5045,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 30.39,
+            "maxManagementDissentPct": 30.39,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 30.39,
             "records": [
               {
                 "id": "b3397dad4891",
                 "title": "Resolution 2: To approve the directors' remuneration report",
                 "votesAgainstPct": 30.39,
-                "meetingDate": "2025-05-01"
+                "managementDissentPct": 30.39,
+                "meetingDate": "2025-05-01",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -4656,7 +5102,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4677,7 +5125,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4719,9 +5169,23 @@
             "registeredDissentUplift": 0
           },
           "dissentEvidence": {
-            "count": 0,
-            "maxVotesAgainstPct": null,
-            "records": []
+            "count": 1,
+            "maxManagementDissentPct": 30.7,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": [
+              {
+                "id": "701cf93da1e4",
+                "title": "Resolution 27: To provide detailed data disclosures relating to the Company's employee pay and the pay of its third-party suppliers and partners",
+                "votesAgainstPct": 30.7,
+                "managementDissentPct": 30.7,
+                "meetingDate": "2025-07-01",
+                "category": "shareholder-proposal",
+                "categoryLabel": "Shareholder proposal",
+                "managementSponsored": false,
+                "scoreTreatment": "context-only"
+              }
+            ]
           },
           "reason": "4.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
@@ -4740,9 +5204,23 @@
             "registeredDissentUplift": 0
           },
           "dissentEvidence": {
-            "count": 0,
-            "maxVotesAgainstPct": null,
-            "records": []
+            "count": 1,
+            "maxManagementDissentPct": 30.7,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": [
+              {
+                "id": "701cf93da1e4",
+                "title": "Resolution 27: To provide detailed data disclosures relating to the Company's employee pay and the pay of its third-party suppliers and partners",
+                "votesAgainstPct": 30.7,
+                "managementDissentPct": 30.7,
+                "meetingDate": "2025-07-01",
+                "category": "shareholder-proposal",
+                "categoryLabel": "Shareholder proposal",
+                "managementSponsored": false,
+                "scoreTreatment": "context-only"
+              }
+            ]
           },
           "reason": "9.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
@@ -4806,13 +5284,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 65.63,
+            "maxManagementDissentPct": 65.63,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 65.63,
             "records": [
               {
                 "id": "b35f24ead8b7",
                 "title": "Resolution 2: To approve the directors' remuneration report",
                 "votesAgainstPct": 65.63,
-                "meetingDate": "2025-04-30"
+                "managementDissentPct": 65.63,
+                "meetingDate": "2025-04-30",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -4834,13 +5319,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 65.63,
+            "maxManagementDissentPct": 65.63,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 65.63,
             "records": [
               {
                 "id": "b35f24ead8b7",
                 "title": "Resolution 2: To approve the directors' remuneration report",
                 "votesAgainstPct": 65.63,
-                "meetingDate": "2025-04-30"
+                "managementDissentPct": 65.63,
+                "meetingDate": "2025-04-30",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -4884,7 +5376,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4905,7 +5399,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4948,7 +5444,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -4969,7 +5467,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5012,7 +5512,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5033,7 +5535,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5075,9 +5579,23 @@
             "registeredDissentUplift": 0
           },
           "dissentEvidence": {
-            "count": 0,
-            "maxVotesAgainstPct": null,
-            "records": []
+            "count": 1,
+            "maxManagementDissentPct": 26.87,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": [
+              {
+                "id": "f175f2558ec7",
+                "title": "Resolution 26: ShareAction Requisitioned Resolution",
+                "votesAgainstPct": 26.87,
+                "managementDissentPct": 26.87,
+                "meetingDate": "2025-05-15",
+                "category": "shareholder-proposal",
+                "categoryLabel": "Shareholder proposal",
+                "managementSponsored": false,
+                "scoreTreatment": "context-only"
+              }
+            ]
           },
           "reason": "25.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
@@ -5096,9 +5614,23 @@
             "registeredDissentUplift": 0
           },
           "dissentEvidence": {
-            "count": 0,
-            "maxVotesAgainstPct": null,
-            "records": []
+            "count": 1,
+            "maxManagementDissentPct": 26.87,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": [
+              {
+                "id": "f175f2558ec7",
+                "title": "Resolution 26: ShareAction Requisitioned Resolution",
+                "votesAgainstPct": 26.87,
+                "managementDissentPct": 26.87,
+                "meetingDate": "2025-05-15",
+                "category": "shareholder-proposal",
+                "categoryLabel": "Shareholder proposal",
+                "managementSponsored": false,
+                "scoreTreatment": "context-only"
+              }
+            ]
           },
           "reason": "9.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
@@ -5140,7 +5672,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5161,7 +5695,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5214,7 +5750,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5249,18 +5787,32 @@
           "datePrecision": "day",
           "rated": true,
           "tenureYears": 5.9,
-          "score": 47.2,
-          "band": "Watch",
+          "score": 55.2,
+          "band": "Elevated",
           "components": {
             "tenurePressure": 47.2,
-            "registeredDissentUplift": 0
+            "registeredDissentUplift": 8.0
           },
           "dissentEvidence": {
-            "count": 0,
-            "maxVotesAgainstPct": null,
-            "records": []
+            "count": 1,
+            "maxManagementDissentPct": 48.52,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 48.52,
+            "records": [
+              {
+                "id": "3e676ec5f074",
+                "title": "Approve Annual Report on Remuneration",
+                "votesAgainstPct": 48.52,
+                "managementDissentPct": 48.52,
+                "meetingDate": "2018-04-25",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              }
+            ]
           },
-          "reason": "5.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+          "reason": "5.9 years in role plus 1 qualifying management-resolution dissent signal(s)."
         },
         "chair": {
           "name": "Roger Devlin",
@@ -5270,18 +5822,32 @@
           "datePrecision": "day",
           "rated": true,
           "tenureYears": 8.2,
-          "score": 72.9,
+          "score": 80.9,
           "band": "Acute",
           "components": {
             "tenurePressure": 72.9,
-            "registeredDissentUplift": 0
+            "registeredDissentUplift": 8.0
           },
           "dissentEvidence": {
-            "count": 0,
-            "maxVotesAgainstPct": null,
-            "records": []
+            "count": 1,
+            "maxManagementDissentPct": 48.52,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 48.52,
+            "records": [
+              {
+                "id": "3e676ec5f074",
+                "title": "Approve Annual Report on Remuneration",
+                "votesAgainstPct": 48.52,
+                "managementDissentPct": 48.52,
+                "meetingDate": "2018-04-25",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
+              }
+            ]
           },
-          "reason": "8.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+          "reason": "8.2 years in role plus 1 qualifying management-resolution dissent signal(s)."
         }
       },
       "profitWarningEvidence": {
@@ -5331,7 +5897,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5374,7 +5942,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5395,7 +5965,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5438,7 +6010,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5459,7 +6033,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5502,7 +6078,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "16.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5523,7 +6101,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.5 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5566,13 +6146,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 21.15,
+            "maxManagementDissentPct": 21.15,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 21.15,
             "records": [
               {
                 "id": "c0937b47d8ed",
                 "title": "Resolution 4: to re-elect Richard Solomons as a director of the company",
                 "votesAgainstPct": 21.15,
-                "meetingDate": "2025-05-07"
+                "managementDissentPct": 21.15,
+                "meetingDate": "2025-05-07",
+                "category": "director-election",
+                "categoryLabel": "Director election",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -5594,13 +6181,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 21.15,
+            "maxManagementDissentPct": 21.15,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 21.15,
             "records": [
               {
                 "id": "c0937b47d8ed",
                 "title": "Resolution 4: to re-elect Richard Solomons as a director of the company",
                 "votesAgainstPct": 21.15,
-                "meetingDate": "2025-05-07"
+                "managementDissentPct": 21.15,
+                "meetingDate": "2025-05-07",
+                "category": "director-election",
+                "categoryLabel": "Director election",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -5666,13 +6260,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 20.92,
+            "maxManagementDissentPct": 20.92,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 20.92,
             "records": [
               {
                 "id": "5df9ff037283",
                 "title": "Resolution 22: Authority to purchase Rio Tinto plc shares",
                 "votesAgainstPct": 20.92,
-                "meetingDate": "2025-04-03"
+                "managementDissentPct": 20.92,
+                "meetingDate": "2025-04-03",
+                "category": "capital-authority",
+                "categoryLabel": "Capital authority",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -5694,13 +6295,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 20.92,
+            "maxManagementDissentPct": 20.92,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 20.92,
             "records": [
               {
                 "id": "5df9ff037283",
                 "title": "Resolution 22: Authority to purchase Rio Tinto plc shares",
                 "votesAgainstPct": 20.92,
-                "meetingDate": "2025-04-03"
+                "managementDissentPct": 20.92,
+                "meetingDate": "2025-04-03",
+                "category": "capital-authority",
+                "categoryLabel": "Capital authority",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -5744,7 +6352,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5765,7 +6375,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5808,7 +6420,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "7.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5829,7 +6443,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5872,7 +6488,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5893,7 +6511,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "7.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5936,7 +6556,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -5957,7 +6579,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6010,7 +6634,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6053,7 +6679,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "15.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6074,7 +6702,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6117,7 +6747,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "0.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6138,7 +6770,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6180,9 +6814,23 @@
             "registeredDissentUplift": 0
           },
           "dissentEvidence": {
-            "count": 0,
-            "maxVotesAgainstPct": null,
-            "records": []
+            "count": 1,
+            "maxManagementDissentPct": 20.56,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": [
+              {
+                "id": "21843d7fc11c",
+                "title": "Resolution 22:  To disclose how the Company's LNG plans align with its net zero emissions target by 2050",
+                "votesAgainstPct": 20.56,
+                "managementDissentPct": 20.56,
+                "meetingDate": "2025-05-20",
+                "category": "climate",
+                "categoryLabel": "Climate and transition",
+                "managementSponsored": false,
+                "scoreTreatment": "context-only"
+              }
+            ]
           },
           "reason": "3.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         },
@@ -6201,9 +6849,23 @@
             "registeredDissentUplift": 0
           },
           "dissentEvidence": {
-            "count": 0,
-            "maxVotesAgainstPct": null,
-            "records": []
+            "count": 1,
+            "maxManagementDissentPct": 20.56,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": [
+              {
+                "id": "21843d7fc11c",
+                "title": "Resolution 22:  To disclose how the Company's LNG plans align with its net zero emissions target by 2050",
+                "votesAgainstPct": 20.56,
+                "managementDissentPct": 20.56,
+                "meetingDate": "2025-05-20",
+                "category": "climate",
+                "categoryLabel": "Climate and transition",
+                "managementSponsored": false,
+                "scoreTreatment": "context-only"
+              }
+            ]
           },
           "reason": "5.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
         }
@@ -6245,7 +6907,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6266,7 +6930,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6309,7 +6975,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6330,7 +6998,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6395,7 +7065,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6416,7 +7088,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6459,7 +7133,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6480,7 +7156,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6523,7 +7201,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "11.2 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6544,7 +7224,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6587,7 +7269,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6608,7 +7292,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6651,7 +7337,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "2.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6672,7 +7360,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6715,7 +7405,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6736,7 +7428,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6789,7 +7483,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "8.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6832,13 +7528,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 27.71,
+            "maxManagementDissentPct": 27.71,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 27.71,
             "records": [
               {
                 "id": "58dd7e1b01d7",
                 "title": "Resolution 2: To approve the directors' remuneration report",
                 "votesAgainstPct": 27.71,
-                "meetingDate": "2025-04-30"
+                "managementDissentPct": 27.71,
+                "meetingDate": "2025-04-30",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -6860,13 +7563,20 @@
           },
           "dissentEvidence": {
             "count": 1,
-            "maxVotesAgainstPct": 27.71,
+            "maxManagementDissentPct": 27.71,
+            "scoredCount": 1,
+            "maxScoredManagementDissentPct": 27.71,
             "records": [
               {
                 "id": "58dd7e1b01d7",
                 "title": "Resolution 2: To approve the directors' remuneration report",
                 "votesAgainstPct": 27.71,
-                "meetingDate": "2025-04-30"
+                "managementDissentPct": 27.71,
+                "meetingDate": "2025-04-30",
+                "category": "remuneration",
+                "categoryLabel": "Remuneration",
+                "managementSponsored": true,
+                "scoreTreatment": "included"
               }
             ]
           },
@@ -6910,7 +7620,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6931,7 +7643,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "6.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6974,7 +7688,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -6995,7 +7711,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "5.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -7038,7 +7756,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "9.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -7059,7 +7779,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "4.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -7102,7 +7824,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "3.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
@@ -7123,7 +7847,9 @@
           },
           "dissentEvidence": {
             "count": 0,
-            "maxVotesAgainstPct": null,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
             "records": []
           },
           "reason": "1.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."

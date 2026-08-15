@@ -25,15 +25,15 @@ export function HomePage({ data, radarData }: HomePageProps) {
           <div className="module-overview__grid">
             <Link className="module-card module-card--primary" to="/radar">
               <div className="module-card__topline">
-                <span>01 / Leadership</span>
-                <strong>Research preview</strong>
+                <span>01 / Governance radar</span>
+                <strong>Main workspace</strong>
               </div>
               <div>
-                <p className="module-card__eyebrow">Leadership pressure radar</p>
-                <h3>Where succession planning may warrant attention</h3>
+                <p className="module-card__eyebrow">Integrated governance radar</p>
+                <h3>Where leadership and stewardship signals concentrate</h3>
                 <p className="module-card__copy">
-                  Compare CEO and Chair tenure pressure across a source-verified cohort,
-                  with every score linked back to its evidence.
+                  Compare CEO and Chair pressure across the FTSE 100, then switch to a
+                  voting lens without leaving the company-level research workspace.
                 </p>
                 <div className="module-card__signal-list">
                   <span><i>01</i> CEO tenure reference horizon</span>
@@ -46,17 +46,17 @@ export function HomePage({ data, radarData }: HomePageProps) {
                 <span><strong>{radarData.metadata.constituentCount}</strong> in universe</span>
                 <span><strong>2</strong> role views</span>
               </div>
-              <span className="module-card__action">Open governance radar</span>
+              <span className="module-card__action">Enter governance radar</span>
             </Link>
 
             <Link className="module-card" to="/proxy-voting">
               <div className="module-card__topline">
-                <span>02 / Stewardship</span>
-                <strong>Live module</strong>
+                <span>02 / Evidence</span>
+                <strong>Supporting workspace</strong>
               </div>
               <div>
-                <p className="module-card__eyebrow">Proxy voting</p>
-                <h3>Significant shareholder dissent against management</h3>
+                <p className="module-card__eyebrow">Vote Explorer</p>
+                <h3>Inspect significant dissent at resolution level</h3>
                 <p className="module-card__copy">
                   Explore verified 20%+ votes on remuneration, elections, capital
                   authorities, and other board-accountability resolutions.
@@ -72,7 +72,7 @@ export function HomePage({ data, radarData }: HomePageProps) {
                 <span><strong>{data.metadata.summary.resolutionCount}</strong> resolutions</span>
                 <span><strong>20%+</strong> threshold</span>
               </div>
-              <span className="module-card__action">Open proxy voting</span>
+              <span className="module-card__action">Open Vote Explorer</span>
             </Link>
           </div>
 

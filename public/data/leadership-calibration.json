@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-15T08:17:16.242995+00:00",
+    "generatedAt": "2026-08-15T11:40:14.412443+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "1.2",
     "outcomeCount": 56,
@@ -74,7 +74,7 @@
       "medianWarningSensitivityScore": 38.3,
       "longTenureRatePct": 22.9,
       "priorWarningRatePct": 11.7,
-      "priorDissentRatePct": 15.4,
+      "priorDissentRatePct": 16.5,
       "marketCoveragePct": 100.0,
       "medianRelativePerformancePct": 0.2,
       "marketStressRatePct": 31.4
@@ -6498,9 +6498,11 @@
       "priorWarningCount": 0,
       "priorSevereWarningCount": 0,
       "priorWarningIds": [],
-      "priorDissentCount": 0,
-      "maxPriorDissentPct": null,
-      "priorDissentIds": [],
+      "priorDissentCount": 1,
+      "maxPriorDissentPct": 48.52,
+      "priorDissentIds": [
+        "3e676ec5f074"
+      ],
       "warningCoverageStatus": "current-window",
       "dissentCoverageStatus": "current-window",
       "baselineScore": 47.2,
@@ -6529,9 +6531,11 @@
       "priorWarningCount": 0,
       "priorSevereWarningCount": 0,
       "priorWarningIds": [],
-      "priorDissentCount": 0,
-      "maxPriorDissentPct": null,
-      "priorDissentIds": [],
+      "priorDissentCount": 1,
+      "maxPriorDissentPct": 48.52,
+      "priorDissentIds": [
+        "3e676ec5f074"
+      ],
       "warningCoverageStatus": "current-window",
       "dissentCoverageStatus": "current-window",
       "baselineScore": 72.9,

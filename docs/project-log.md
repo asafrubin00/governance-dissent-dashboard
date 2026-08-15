@@ -337,3 +337,11 @@
 - Added official 2026 poll tables for HSBC, Shell and IHG as reviewed zero-or-sub-threshold coverage, and completed IHG's 2020-2023 historical AGM window.
 - Increased direct meeting coverage from 53 to 61 and validated 645 rows across 31 AGM PDFs; complete historical dissent windows increased from ten to eleven.
 - Expanded source-backed leadership profile access from 30 to all 100 companies while explicitly distinguishing 30 editorial biographies from 70 appointment-only profiles.
+
+## Integrated Governance Radar v1.4
+
+- Made Radar the primary product and reframed the resolution dashboard as a supporting Vote Explorer rather than an equal top-level module.
+- Added integrated and voting heatmap lenses without changing the production leadership-pressure methodology or weights.
+- Published all qualifying company voting records into Radar evidence, while retaining a separate score-eligible subset for management-sponsored resolutions.
+- Kept board-opposed shareholder proposals visible as context-only stewardship signals so they cannot be misread as automatic CEO or Chair pressure.
+- Added company-level resolution links, significant-vote tile markers, voting-severity filters, and a direct route to the full Vote Explorer.

@@ -105,29 +105,54 @@ def pressure_band(score: float) -> str:
     return "Lower"
 
 
-def management_dissent_by_company() -> dict[str, dict[str, Any]]:
+def voting_evidence_by_company() -> dict[str, dict[str, Any]]:
     tracker = json.loads(TRACKER_PATH.read_text(encoding="utf-8"))
     grouped: dict[str, dict[str, Any]] = {}
     excluded_terms = ("SHAREHOLDER REQUISITION", "SHAREHOLDER-REQUISITION")
 
     for row in tracker["resolutions"]:
         title = row["resolutionTitle"].upper()
-        if row.get("managementSponsored") is False or row["resolutionCategory"] == "shareholder-proposal" or any(term in title for term in excluded_terms):
-            continue
         pct = row.get("managementDissentPct", row.get("votesAgainstPct"))
         if pct is None or pct < 20:
             continue
         key = normalise(row["companyName"])
-        current = grouped.setdefault(key, {"count": 0, "maxVotesAgainstPct": None, "records": []})
+        current = grouped.setdefault(key, {
+            "count": 0,
+            "maxManagementDissentPct": None,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": None,
+            "records": [],
+        })
         current["count"] += 1
-        current["maxVotesAgainstPct"] = max(current["maxVotesAgainstPct"] or 0, pct)
+        current["maxManagementDissentPct"] = max(current["maxManagementDissentPct"] or 0, pct)
+        is_scored = not (
+            row.get("managementSponsored") is False
+            or row["resolutionCategory"] == "shareholder-proposal"
+            or any(term in title for term in excluded_terms)
+        )
+        if is_scored:
+            current["scoredCount"] += 1
+            current["maxScoredManagementDissentPct"] = max(
+                current["maxScoredManagementDissentPct"] or 0,
+                pct,
+            )
         current["records"].append(
             {
                 "id": row["id"],
                 "title": row["resolutionTitle"],
                 "votesAgainstPct": pct,
+                "managementDissentPct": pct,
                 "meetingDate": row["meetingDate"],
+                "category": row["resolutionCategory"],
+                "categoryLabel": row["resolutionCategoryLabel"],
+                "managementSponsored": row.get("managementSponsored", True),
+                "scoreTreatment": "included" if is_scored else "context-only",
             }
+        )
+    for evidence in grouped.values():
+        evidence["records"].sort(
+            key=lambda record: (record["managementDissentPct"], record["meetingDate"]),
+            reverse=True,
         )
     return grouped
 
@@ -294,7 +319,7 @@ def main() -> None:
     warning_review_source = json.loads(PROFIT_WARNING_REVIEW_PATH.read_text(encoding="utf-8"))
     succession_source = json.loads(SUCCESSION_PATH.read_text(encoding="utf-8"))
     roster, roster_mode = load_roster()
-    dissent = management_dissent_by_company()
+    dissent = voting_evidence_by_company()
     warnings, warning_errors = profit_warnings_by_company(
         warning_source,
         {row["ticker"] for row in roster},
@@ -352,8 +377,8 @@ def main() -> None:
                 continue
             tenure_years = years_between(role["roleStartDate"], as_of)
             tenure_score = tenure_pressure(role_name, tenure_years)
-            max_against = dissent_record["maxVotesAgainstPct"] if dissent_record else None
-            dissent_count = dissent_record["count"] if dissent_record else 0
+            max_against = dissent_record["maxScoredManagementDissentPct"] if dissent_record else None
+            dissent_count = dissent_record["scoredCount"] if dissent_record else 0
             uplift = dissent_uplift(max_against, dissent_count)
             score = round(min(100, tenure_score + uplift), 1)
             role_output[role_name] = {
@@ -368,7 +393,9 @@ def main() -> None:
                 },
                 "dissentEvidence": dissent_record or {
                     "count": 0,
-                    "maxVotesAgainstPct": None,
+                    "maxManagementDissentPct": None,
+                    "scoredCount": 0,
+                    "maxScoredManagementDissentPct": None,
                     "records": [],
                 },
                 "reason": (

@@ -127,12 +127,19 @@ export type LeadershipRole = {
   }
   dissentEvidence?: {
     count: number
-    maxVotesAgainstPct: number | null
+    maxManagementDissentPct: number | null
+    scoredCount: number
+    maxScoredManagementDissentPct: number | null
     records: Array<{
       id: string
       title: string
       votesAgainstPct: number
+      managementDissentPct: number
       meetingDate: string
+      category: string
+      categoryLabel: string
+      managementSponsored: boolean
+      scoreTreatment: 'included' | 'context-only'
     }>
   }
 }

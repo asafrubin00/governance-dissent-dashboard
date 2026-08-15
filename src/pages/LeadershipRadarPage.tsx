@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import type { LeadershipProfilesData, LeadershipRadarData, MarketPerformanceData } from '../types'
 
@@ -10,8 +11,10 @@ type LeadershipRadarPageProps = {
 
 type RoleKey = 'ceo' | 'chair'
 type UniverseKey = 'rated' | 'full'
+type LensKey = 'integrated' | 'voting'
 
 const bandOrder = ['Acute', 'Elevated', 'Watch', 'Lower', 'Not applicable', 'Unrated']
+const votingBandOrder = ['Severe', 'Strong', 'Significant', 'No captured signal']
 
 function bandClass(band: string) {
   return `heat-tile--${band.toLowerCase().replaceAll(' ', '-')}`
@@ -21,8 +24,20 @@ function formatRole(role: RoleKey) {
   return role === 'ceo' ? 'CEO' : 'Chair'
 }
 
+function votingBand(maxDissent: number | null | undefined) {
+  if (maxDissent == null) return 'No captured signal'
+  if (maxDissent >= 50) return 'Severe'
+  if (maxDissent >= 30) return 'Strong'
+  return 'Significant'
+}
+
+function votingBandClass(maxDissent: number | null | undefined) {
+  return `heat-tile--vote-${votingBand(maxDissent).toLowerCase().replaceAll(' ', '-')}`
+}
+
 export function LeadershipRadarPage({ data, marketData, profilesData }: LeadershipRadarPageProps) {
   const [role, setRole] = useState<RoleKey>('ceo')
+  const [lens, setLens] = useState<LensKey>('integrated')
   const [universe, setUniverse] = useState<UniverseKey>('rated')
   const [sector, setSector] = useState('All sectors')
   const [band, setBand] = useState('All bands')
@@ -40,9 +55,19 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
     return data.companies
       .filter((company) => universe === 'full' || company.roles[role].rated || company.roles[role].notApplicable)
       .filter((company) => sector === 'All sectors' || company.sector === sector)
-      .filter((company) => band === 'All bands' || company.roles[role].band === band)
-      .sort((a, b) => (b.roles[role].score ?? -1) - (a.roles[role].score ?? -1))
-  }, [band, data.companies, role, sector, universe])
+      .filter((company) => {
+        if (band === 'All bands') return true
+        if (lens === 'voting') return votingBand(company.roles[role].dissentEvidence?.maxManagementDissentPct) === band
+        return company.roles[role].band === band
+      })
+      .sort((a, b) => {
+        if (lens === 'voting') {
+          return (b.roles[role].dissentEvidence?.maxManagementDissentPct ?? -1) -
+            (a.roles[role].dissentEvidence?.maxManagementDissentPct ?? -1)
+        }
+        return (b.roles[role].score ?? -1) - (a.roles[role].score ?? -1)
+      })
+  }, [band, data.companies, lens, role, sector, universe])
 
   const ratedVisible = visibleCompanies.filter((company) => company.roles[role].rated)
   const averageScore = ratedVisible.length
@@ -58,9 +83,24 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
     (total, company) => total + company.successionEvidence.cases.filter((item) => item.role === role).length,
     0,
   )
+  const votingCompanies = visibleCompanies.filter((company) => (company.roles[role].dissentEvidence?.count ?? 0) > 0)
+  const votingResolutionCount = votingCompanies.reduce(
+    (total, company) => total + (company.roles[role].dissentEvidence?.count ?? 0),
+    0,
+  )
+  const severeVotingCount = votingCompanies.filter(
+    (company) => (company.roles[role].dissentEvidence?.maxManagementDissentPct ?? 0) >= 50,
+  ).length
+  const averageStrongestDissent = votingCompanies.length
+    ? votingCompanies.reduce(
+      (total, company) => total + (company.roles[role].dissentEvidence?.maxManagementDissentPct ?? 0),
+      0,
+    ) / votingCompanies.length
+    : 0
   const selected =
     data.companies.find((company) => company.ticker === selectedTicker) ?? visibleCompanies[0]
   const selectedRole = selected?.roles[role]
+  const selectedVoting = selectedRole?.dissentEvidence
   const selectedSuccession = selected?.successionEvidence.cases.find((item) => item.role === role)
   const selectedMarketRecord = marketData.companies.find((company) => company.ticker === selected?.ticker)
   const selectedMarket = selectedMarketRecord?.roles[role].roleStartDate ? selectedMarketRecord : undefined
@@ -101,11 +141,21 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
     }
   }
 
+  function switchLens(nextLens: LensKey) {
+    setLens(nextLens)
+    setBand('All bands')
+  }
+
   return (
     <div className="page-flow">
       <section className="workspace-screen workspace-screen--radar" id="workspace">
         <div className="radar-workspace">
           <div className="radar-controls">
+            <fieldset className="segmented-control">
+              <legend>Signal lens</legend>
+              <button className={lens === 'integrated' ? 'is-active' : ''} onClick={() => switchLens('integrated')} type="button">Integrated</button>
+              <button className={lens === 'voting' ? 'is-active' : ''} onClick={() => switchLens('voting')} type="button">Voting</button>
+            </fieldset>
             <fieldset className="segmented-control">
               <legend>Role</legend>
               <button className={role === 'ceo' ? 'is-active' : ''} onClick={() => switchRole('ceo')} type="button">CEO</button>
@@ -117,46 +167,49 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
               <button className={universe === 'full' ? 'is-active' : ''} onClick={() => setUniverse('full')} type="button">Full FTSE 100</button>
             </fieldset>
             <label className="radar-select"><span>Sector</span><select value={sector} onChange={(event) => setSector(event.target.value)}>{sectors.map((item) => <option key={item}>{item}</option>)}</select></label>
-            <label className="radar-select"><span>Pressure band</span><select value={band} onChange={(event) => setBand(event.target.value)}><option>All bands</option>{bandOrder.map((item) => <option key={item}>{item}</option>)}</select></label>
+            <label className="radar-select"><span>{lens === 'voting' ? 'Voting signal' : 'Pressure band'}</span><select value={band} onChange={(event) => setBand(event.target.value)}><option>All bands</option>{(lens === 'voting' ? votingBandOrder : bandOrder).map((item) => <option key={item}>{item}</option>)}</select></label>
           </div>
 
           <div className="radar-headline">
-            <div><span>Leadership pressure radar</span><strong>{formatRole(role)} transition signals</strong></div>
-            <p>Research prioritisation, not a departure forecast. Select a tile to inspect its evidence.</p>
-            <div className="radar-legend" aria-label="Pressure bands">{bandOrder.map((item) => <span key={item}><i className={bandClass(item)} />{item}</span>)}</div>
+            <div><span>{lens === 'voting' ? 'Stewardship evidence' : 'Governance pressure radar'}</span><strong>{lens === 'voting' ? 'Significant dissent signals' : `${formatRole(role)} transition signals`}</strong></div>
+            <p>{lens === 'voting' ? 'Verified 20%+ opposition to management. Absence is not evidence of zero dissent.' : 'Research prioritisation, not a departure forecast. Select a tile to inspect its evidence.'}</p>
+            <div className="radar-legend" aria-label={lens === 'voting' ? 'Voting signal bands' : 'Pressure bands'}>{(lens === 'voting' ? votingBandOrder : bandOrder).map((item) => <span key={item}><i className={lens === 'voting' ? `heat-tile--vote-${item.toLowerCase().replaceAll(' ', '-')}` : bandClass(item)} />{item}</span>)}</div>
           </div>
 
           <div className="radar-kpis">
-            <div><span>Rated in view</span><strong>{ratedVisible.length}</strong></div>
-            <div><span>Average pressure</span><strong>{averageScore.toFixed(0)}</strong></div>
-            <div><span>Acute / warnings / live process</span><strong>{acuteCount} / {warningCount} / {successionCount}</strong></div>
+            <div><span>{lens === 'voting' ? 'Companies with signals' : 'Rated in view'}</span><strong>{lens === 'voting' ? votingCompanies.length : ratedVisible.length}</strong></div>
+            <div><span>{lens === 'voting' ? 'Qualifying resolutions' : 'Average pressure'}</span><strong>{lens === 'voting' ? votingResolutionCount : averageScore.toFixed(0)}</strong></div>
+            <div><span>{lens === 'voting' ? 'Average strongest / severe' : 'Acute / warnings / live process'}</span><strong>{lens === 'voting' ? `${averageStrongestDissent.toFixed(1)}% / ${severeVotingCount}` : `${acuteCount} / ${warningCount} / ${successionCount}`}</strong></div>
             <div><span>Evidence date</span><strong>{new Date(data.metadata.asOfDate).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</strong></div>
           </div>
 
           <div className="radar-main-row">
             <section className="radar-map-panel">
               <div className="radar-map-panel__heading">
-                <div><p>FTSE 100 leadership map</p><h2>{universe === 'rated' ? 'Source-verified cohort' : 'Full constituent research queue'}</h2></div>
+                <div><p>{lens === 'voting' ? 'FTSE 100 voting map' : 'FTSE 100 leadership map'}</p><h2>{lens === 'voting' ? 'Significant dissent evidence' : universe === 'rated' ? 'Source-verified cohort' : 'Full constituent research queue'}</h2></div>
                 <span>{visibleCompanies.length} companies shown</span>
               </div>
               <div className={`heat-map ${universe === 'full' ? 'heat-map--full' : visibleCompanies.length > 30 ? 'heat-map--cohort' : 'heat-map--pilot'}`}>
                 {visibleCompanies.map((company) => {
                   const roleData = company.roles[role]
+                  const voteMax = roleData.dissentEvidence?.maxManagementDissentPct
+                  const tileBand = lens === 'voting' ? votingBand(voteMax) : roleData.band
                   return (
                     <button
-                      aria-label={`${company.companyName}: ${roleData.rated ? `${roleData.score} ${roleData.band}` : roleData.notApplicable ? 'not applicable' : 'unrated'}`}
-                      className={`heat-tile ${bandClass(roleData.band)} ${selected?.ticker === company.ticker ? 'is-selected' : ''}`}
+                      aria-label={`${company.companyName}: ${lens === 'voting' ? voteMax == null ? 'no captured significant dissent' : `${voteMax}% maximum management dissent` : roleData.rated ? `${roleData.score} ${roleData.band}` : roleData.notApplicable ? 'not applicable' : 'unrated'}`}
+                      className={`heat-tile ${lens === 'voting' ? votingBandClass(voteMax) : bandClass(roleData.band)} ${selected?.ticker === company.ticker ? 'is-selected' : ''}`}
                       key={company.ticker}
                       onClick={() => setSelectedTicker(company.ticker)}
                       type="button"
                     >
                       <span>{company.ticker}</span>
-                      <small>{universe === 'rated' ? company.companyName : roleData.rated ? roleData.band : roleData.notApplicable ? 'N/A' : 'Pending'}</small>
-                      <strong>{roleData.score?.toFixed(0) ?? '—'}</strong>
-                      {company.profitWarningEvidence.count || company.successionEvidence.cases.some((item) => item.role === role) ? (
+                      <small>{lens === 'voting' ? tileBand : universe === 'rated' ? company.companyName : roleData.rated ? roleData.band : roleData.notApplicable ? 'N/A' : 'Pending'}</small>
+                      <strong>{lens === 'voting' ? voteMax == null ? '—' : `${voteMax.toFixed(0)}%` : roleData.score?.toFixed(0) ?? '—'}</strong>
+                      {lens === 'integrated' && (company.profitWarningEvidence.count || company.successionEvidence.cases.some((item) => item.role === role) || (roleData.dissentEvidence?.count ?? 0) > 0) ? (
                         <span className="heat-tile__signals">
                           {company.profitWarningEvidence.count ? <abbr className="heat-tile__warning" title={`${company.profitWarningEvidence.count} qualifying profit warning event${company.profitWarningEvidence.count === 1 ? '' : 's'} captured`}>PW</abbr> : null}
                           {company.successionEvidence.cases.some((item) => item.role === role) ? <abbr className="heat-tile__succession" title={`Official ${formatRole(role)} succession process captured`}>SC</abbr> : null}
+                          {(roleData.dissentEvidence?.count ?? 0) > 0 ? <abbr className="heat-tile__vote" title={`${roleData.dissentEvidence?.count} significant voting signal${roleData.dissentEvidence?.count === 1 ? '' : 's'} captured`}>AGM</abbr> : null}
                         </span>
                       ) : null}
                     </button>
@@ -166,14 +219,41 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
               </div>
             </section>
 
-            <aside className="evidence-rail">
+            <aside className={`evidence-rail ${lens === 'voting' ? 'evidence-rail--voting' : ''}`}>
               {selected && selectedRole ? (
                 <>
                   <div className="evidence-rail__header">
                     <div><p>{selected.ticker} / {formatRole(role)}</p><h2>{selected.companyName}</h2></div>
-                    <span className={bandClass(selectedRole.band)}>{selectedRole.band}</span>
+                    <span className={lens === 'voting' ? votingBandClass(selectedVoting?.maxManagementDissentPct) : bandClass(selectedRole.band)}>{lens === 'voting' ? votingBand(selectedVoting?.maxManagementDissentPct) : selectedRole.band}</span>
                   </div>
-                  {selectedRole.rated ? (
+                  {lens === 'voting' ? (
+                    <>
+                      <div className="evidence-rail__score"><strong>{selectedVoting?.maxManagementDissentPct == null ? '—' : `${selectedVoting.maxManagementDissentPct.toFixed(1)}%`}</strong><span>highest captured<br />management dissent</span></div>
+                      <dl className="evidence-rail__facts">
+                        <div><dt>Signals captured</dt><dd>{selectedVoting?.count ?? 0}</dd></div>
+                        <div><dt>Score eligible</dt><dd>{selectedVoting?.scoredCount ?? 0}</dd></div>
+                        <div><dt>Latest signal</dt><dd>{selectedVoting?.records[0] ? new Date(selectedVoting.records[0].meetingDate).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' }) : 'None captured'}</dd></div>
+                        <div><dt>Coverage</dt><dd>Significant votes only</dd></div>
+                      </dl>
+                      {selectedVoting?.records.length ? (
+                        <div className="evidence-rail__votes">
+                          <span>Resolution evidence</span>
+                          {selectedVoting.records.slice(0, 3).map((record) => (
+                            <Link key={record.id} to={`/resolution/${record.id}`}>
+                              <span>{record.categoryLabel} · {new Date(record.meetingDate).getFullYear()}</span>
+                              <strong>{record.title}</strong>
+                              <small>{record.managementDissentPct.toFixed(1)}% opposition to management · {record.scoreTreatment === 'included' ? 'score eligible' : 'context only'}</small>
+                            </Link>
+                          ))}
+                        </div>
+                      ) : <p className="evidence-rail__readout">No qualifying vote is captured in the current tracker. This is not evidence of zero dissent or complete AGM coverage.</p>}
+                      <div className="evidence-rail__method">
+                        <span>Voting methodology</span>
+                        <p>Management-sponsored resolutions can inform the pressure score. Board-opposed shareholder proposals remain visible context and do not automatically imply CEO or Chair pressure.</p>
+                      </div>
+                      <Link className="evidence-rail__explorer" to="/proxy-voting">Open full Vote Explorer</Link>
+                    </>
+                  ) : selectedRole.rated ? (
                     <>
                       <div className="evidence-rail__score"><strong>{selectedRole.score?.toFixed(0)}</strong><span>pressure score<br />out of 100</span></div>
                       <dl className="evidence-rail__facts">
@@ -185,6 +265,13 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
                       <p className="evidence-rail__readout">{selectedRole.reason}</p>
                       <a className="evidence-rail__source" href={selectedRole.sourceUrl} target="_blank" rel="noreferrer">View primary leadership source ↗</a>
                       {selectedMarket ? <button className="evidence-rail__market" onClick={() => setMarketOpen(true)} type="button">Open tenure performance</button> : null}
+                      {selectedVoting?.records[0] ? (
+                        <div className="evidence-rail__dissent">
+                          <div><span>Voting evidence</span><strong>{selectedVoting.maxManagementDissentPct?.toFixed(1)}%</strong></div>
+                          <Link to={`/resolution/${selectedVoting.records[0].id}`}>{selectedVoting.records[0].title}</Link>
+                          <small>{selectedVoting.count} significant signal{selectedVoting.count === 1 ? '' : 's'} · {selectedVoting.scoredCount} score eligible</small>
+                        </div>
+                      ) : null}
                       {selectedSuccession ? (
                         <div className="evidence-rail__succession">
                           <div><span>Live succession process</span><time>{new Date(selectedSuccession.announcedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</time></div>
@@ -227,6 +314,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
               <div className="radar-key__popover" role="tooltip">
                 <span><strong>PW</strong> Profit warning</span>
                 <span><strong>SC</strong> Succession process</span>
+                <span><strong>AGM</strong> Significant voting signal</span>
                 <span><strong>CEO</strong> Chief Executive Officer</span>
                 <span><strong>AGM</strong> Annual General Meeting</span>
                 <span><strong>N/A</strong> Not applicable</span>

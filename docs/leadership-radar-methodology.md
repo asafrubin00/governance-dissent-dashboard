@@ -44,7 +44,7 @@ Up to 20 points can be added for verified 20%+ dissent on management-sponsored r
 
 Shareholder proposals and shareholder-requisitioned resolutions are excluded from the uplift. The voting product separately reports support for board-opposed proposals as dissent against management, while retaining the raw for and against result.
 
-Absence of a qualifying record is not evidence that a company had no dissent outside the tracker's narrow 2025 window.
+Absence of a qualifying record is not evidence that a company had no dissent outside the tracker's reviewed meeting coverage.
 
 ## Profit-warning overlay
 
@@ -65,9 +65,9 @@ Calibration methodology `v1.2` records 56 source-backed transition outcomes alon
 
 Completed cases are included only where an official issuer announcement or annual report identifies the incumbent, transition outcome and announcement timing. This is a purposive high-confidence cohort, not a complete census of FTSE 100 CEO changes. Where an issuer gives only a month for a role start, the first day is stored for calculation and the record is explicitly marked with month-level precision.
 
-Every completed outcome has an explicit fixed 36-month review window ending on the official transition announcement. All 50 cases now have complete warning reviews and 14 qualifying events have been identified from official issuer sources. All completed cases therefore enter aligned warning sensitivity metrics; missing historical evidence was never interpreted as zero during the backfill. Market sensitivity uses the trailing two-year dividend-adjusted company return less the FTSE 100 price-index return and also ends on the announcement date. Current comparisons use the evidence date.
+Every completed outcome has an explicit fixed 36-month review window ending on the official transition announcement. All 50 cases now have complete warning reviews and 14 qualifying historical events have been identified from official issuer sources. All completed cases therefore enter aligned warning sensitivity metrics; missing historical evidence was never interpreted as zero during the backfill. Market sensitivity uses the trailing two-year dividend-adjusted company return less the FTSE 100 price-index return and also ends on the announcement date. Current comparisons use the evidence date.
 
-Seven source-backed historical dissent resolutions were captured. Ten completed-transition windows now have complete resolution-level coverage for every AGM in scope, while the remaining windows stay partial. Dissent is therefore disclosed as contextual evidence and excluded from the aligned calibration score. Missing AGM history is never treated as zero dissent. The review ledger, event inclusion decisions and source links are stored in `data/calibration_historical_evidence.json`.
+Seven source-backed historical dissent resolutions were captured. Eleven completed-transition windows now have complete resolution-level coverage for every AGM in scope, while the remaining windows stay partial. Dissent is therefore disclosed as contextual evidence and excluded from the aligned calibration score. Missing AGM history is never treated as zero dissent. The review ledger, event inclusion decisions and source links are stored in `data/calibration_historical_evidence.json`.
 
 The audit tests two exploratory additions without changing production scores:
 
@@ -76,7 +76,7 @@ The audit tests two exploratory additions without changing production scores:
 
 Risk thresholds are derived only from the current-comparison cohort's 75th percentiles, so outcome observations do not influence the cutoffs used to assess them. The six-case evaluation sample established in v0.3 remains locked for comparability; the other 44 completed cases form the expanding development cohort. In development, capture is 36.4% for tenure only, 40.9% with warning sensitivity and 43.2% with the exploratory market overlay. In the locked sample, all three models capture 16.7%. Because this sample has now been evaluated, it is no longer described as pristine unseen evidence.
 
-The result does not support changing production weights. It suggests warnings may add retrospective separation in the development data, but that effect does not generalise in the small locked sample. The next evidential threshold is broader complete AGM coverage beyond the first ten cases and a genuinely untouched future transition cohort before dissent or warning weights are promoted into production. Full records and summary statistics are published in `public/data/leadership-calibration.json`.
+The result does not support changing production weights. It suggests warnings may add retrospective separation in the development data, but that effect does not generalise in the small locked sample. The next evidential threshold is broader complete AGM coverage beyond the first eleven cases and a genuinely untouched future transition cohort before dissent or warning weights are promoted into production. Full records and summary statistics are published in `public/data/leadership-calibration.json`.
 
 ## Market-series quality
 

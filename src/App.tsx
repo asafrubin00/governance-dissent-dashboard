@@ -28,7 +28,7 @@ function LoadingState() {
   return (
     <div className="state-shell">
       <p className="eyebrow">Loading dataset</p>
-      <h1>Preparing the shareholder dissent tracker</h1>
+      <h1>Preparing the governance intelligence workspace</h1>
       <p className="lede">
         The app is reading the locally generated governance dataset from this repository.
       </p>
