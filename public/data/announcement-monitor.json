@@ -1,15 +1,16 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-15T08:16:12.607036+00:00",
+    "generatedAt": "2026-08-17T07:55:36.392103+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 57,
-    "reachableSourceCount": 90,
-    "unavailableSourceCount": 10,
+    "activeSourceCount": 51,
+    "reachableSourceCount": 85,
+    "unavailableSourceCount": 15,
     "unavailableSourceCountByCategory": {
-      "access-blocked": 9,
-      "tls-error": 1
+      "access-blocked": 11,
+      "fetch-error": 1,
+      "timeout": 3
     },
     "newCandidateCount": 0,
     "pendingCandidateCount": 0,
@@ -67,12 +68,9 @@
     },
     {
       "ticker": "ULVR",
-      "status": "active",
-      "matchedLinkCount": 1,
-      "matchedLinkCountBySignal": {
-        "earnings": 1,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.unilever.com/news/press-and-media/press-releases/: 403 Client Error: Forbidden for url: https://www.unilever.com/news/press-and-media/press-releases/"
     },
     {
       "ticker": "IHG",
@@ -118,12 +116,9 @@
     },
     {
       "ticker": "CCEP",
-      "status": "active",
-      "matchedLinkCount": 1,
-      "matchedLinkCountBySignal": {
-        "earnings": 1,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "timeout",
+      "error": "https://ir.cocacolaep.com/financial-reports-and-results/financial-releases: HTTPSConnectionPool(host='ir.cocacolaep.com', port=443): Max retries exceeded with url: /financial-reports-and-results/financial-releases (Caused by ReadTimeoutErro"
     },
     {
       "ticker": "AAL",
@@ -142,12 +137,9 @@
     },
     {
       "ticker": "CCC",
-      "status": "active",
-      "matchedLinkCount": 2,
-      "matchedLinkCountBySignal": {
-        "earnings": 2,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "timeout",
+      "error": "https://investors.computacenter.com/regulatory-news: HTTPSConnectionPool(host='investors.computacenter.com', port=443): Max retries exceeded with url: /regulatory-news (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='investors.computa"
     },
     {
       "ticker": "IMI",
@@ -337,10 +329,10 @@
     },
     {
       "ticker": "CPG",
-      "status": "active",
-      "matchedLinkCount": 3,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 3,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -400,10 +392,10 @@
     },
     {
       "ticker": "HLN",
-      "status": "active",
-      "matchedLinkCount": 1,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -463,12 +455,9 @@
     },
     {
       "ticker": "ADM",
-      "status": "active",
-      "matchedLinkCount": 1,
-      "matchedLinkCountBySignal": {
-        "earnings": 1,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "timeout",
+      "error": "https://admiralgroup.co.uk/media/news-releases-and-media-contacts: HTTPSConnectionPool(host='admiralgroup.co.uk', port=443): Max retries exceeded with url: /media/news-releases-and-media-contacts (Caused by ReadTimeoutError(\"HTTPSConnection"
     },
     {
       "ticker": "AAF",
@@ -517,9 +506,12 @@
     },
     {
       "ticker": "EDV",
-      "status": "unavailable",
-      "failureCategory": "tls-error",
-      "error": "https://www.endeavourmining.com/investors/results-and-reporting/: HTTPSConnectionPool(host='www.endeavourmining.com', port=443): Max retries exceeded with url: /investors/results-and-reporting/ (Caused by SSLError(SSLError(1, '[SSL: TLSV1_A"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "FCIT",
@@ -604,12 +596,9 @@
     },
     {
       "ticker": "INF",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
-      "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.informa.com/investors/results-presentations/: 403 Client Error: Forbidden for url: https://www.informa.com/investors/results-presentations/"
     },
     {
       "ticker": "ITRK",
@@ -637,12 +626,9 @@
     },
     {
       "ticker": "BGEO",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
-      "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "fetch-error",
+      "error": "https://lionfinancegroup.uk/news/: HTTPSConnectionPool(host='lionfinancegroup.uk', port=443): Max retries exceeded with url: /news/ (Caused by ResponseError('too many 503 error responses'))"
     },
     {
       "ticker": "LAND",
