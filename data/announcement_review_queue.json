@@ -1,6 +1,32 @@
 {
-  "updatedAt": "2026-08-17T07:55:36.392103+00:00",
+  "updatedAt": "2026-08-24T08:00:08.128822+00:00",
   "candidates": [
+    {
+      "id": "dge-469dfa1e076a0b75",
+      "ticker": "DGE",
+      "companyName": "Diageo",
+      "title": "Chief Executive's Statement",
+      "url": "https://www.diageo.com/en/investors/results-reports-and-events/annual-report-2026/chief-executives-statement",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-08-24T08:00:08.128822+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "jd-f51c30f675387e9b",
+      "ticker": "JD",
+      "companyName": "JD Sports",
+      "title": "Q2 2026/27 TRADING STATEMENT",
+      "url": "https://www.jdplc.com/q2-2026-27-trading-statement",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-24T08:00:08.128822+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "ihg-901557669011489b",
       "ticker": "IHG",

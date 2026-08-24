@@ -1,22 +1,21 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-17T07:55:36.392103+00:00",
+    "generatedAt": "2026-08-24T08:00:08.128822+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
     "activeSourceCount": 51,
-    "reachableSourceCount": 85,
-    "unavailableSourceCount": 15,
+    "reachableSourceCount": 86,
+    "unavailableSourceCount": 14,
     "unavailableSourceCountByCategory": {
       "access-blocked": 11,
-      "fetch-error": 1,
       "timeout": 3
     },
-    "newCandidateCount": 0,
-    "pendingCandidateCount": 0,
+    "newCandidateCount": 2,
+    "pendingCandidateCount": 2,
     "pendingCandidateCountBySignal": {
-      "earnings": 0,
-      "succession": 0
+      "earnings": 1,
+      "succession": 1
     },
     "validation": {
       "status": "pass",
@@ -240,10 +239,10 @@
     {
       "ticker": "AV",
       "status": "active",
-      "matchedLinkCount": 5,
+      "matchedLinkCount": 3,
       "matchedLinkCountBySignal": {
         "earnings": 2,
-        "succession": 3
+        "succession": 1
       }
     },
     {
@@ -294,9 +293,9 @@
     {
       "ticker": "BT.A",
       "status": "active",
-      "matchedLinkCount": 4,
+      "matchedLinkCount": 3,
       "matchedLinkCountBySignal": {
-        "earnings": 2,
+        "earnings": 1,
         "succession": 2
       }
     },
@@ -366,9 +365,9 @@
     {
       "ticker": "EXPN",
       "status": "active",
-      "matchedLinkCount": 3,
+      "matchedLinkCount": 2,
       "matchedLinkCountBySignal": {
-        "earnings": 2,
+        "earnings": 1,
         "succession": 1
       }
     },
@@ -618,17 +617,20 @@
     {
       "ticker": "JD",
       "status": "active",
-      "matchedLinkCount": 6,
+      "matchedLinkCount": 7,
       "matchedLinkCountBySignal": {
-        "earnings": 4,
+        "earnings": 5,
         "succession": 2
       }
     },
     {
       "ticker": "BGEO",
-      "status": "unavailable",
-      "failureCategory": "fetch-error",
-      "error": "https://lionfinancegroup.uk/news/: HTTPSConnectionPool(host='lionfinancegroup.uk', port=443): Max retries exceeded with url: /news/ (Caused by ResponseError('too many 503 error responses'))"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "LAND",
