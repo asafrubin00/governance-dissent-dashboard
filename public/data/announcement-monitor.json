@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-08-24T08:00:08.128822+00:00",
+    "generatedAt": "2026-08-31T14:57:23.489748+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
@@ -8,14 +8,14 @@
     "reachableSourceCount": 86,
     "unavailableSourceCount": 14,
     "unavailableSourceCountByCategory": {
-      "access-blocked": 11,
-      "timeout": 3
+      "access-blocked": 10,
+      "timeout": 4
     },
-    "newCandidateCount": 2,
-    "pendingCandidateCount": 2,
+    "newCandidateCount": 8,
+    "pendingCandidateCount": 10,
     "pendingCandidateCountBySignal": {
-      "earnings": 1,
-      "succession": 1
+      "earnings": 4,
+      "succession": 6
     },
     "validation": {
       "status": "pass",
@@ -200,8 +200,8 @@
     {
       "ticker": "TSCO",
       "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://origin.tescoplc.com/investors/reports-results-and-presentations/results-and-presentations: 403 Client Error: Forbidden for url: https://origin.tescoplc.com/investors/reports-results-and-presentations/results-and-presentations"
+      "failureCategory": "timeout",
+      "error": "https://origin.tescoplc.com/investors/reports-results-and-presentations/results-and-presentations: HTTPSConnectionPool(host='origin.tescoplc.com', port=443): Max retries exceeded with url: /investors/reports-results-and-presentations/result"
     },
     {
       "ticker": "BA",
@@ -716,9 +716,9 @@
     {
       "ticker": "PRU",
       "status": "active",
-      "matchedLinkCount": 50,
+      "matchedLinkCount": 52,
       "matchedLinkCountBySignal": {
-        "earnings": 21,
+        "earnings": 23,
         "succession": 29
       }
     },
@@ -830,10 +830,10 @@
     {
       "ticker": "SDLF",
       "status": "active",
-      "matchedLinkCount": 39,
+      "matchedLinkCount": 44,
       "matchedLinkCountBySignal": {
         "earnings": 7,
-        "succession": 32
+        "succession": 37
       }
     },
     {

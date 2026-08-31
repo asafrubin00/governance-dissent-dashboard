@@ -1,6 +1,110 @@
 {
-  "updatedAt": "2026-08-24T08:00:08.128822+00:00",
+  "updatedAt": "2026-08-31T14:57:23.489748+00:00",
   "candidates": [
+    {
+      "id": "mtln-342045c4fcb4b217",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/4wclq0cr/24826_metlen_buyback-weekly-transaction-announcement.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-31T14:57:23.489748+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "pru-d45657e6cde90090",
+      "ticker": "PRU",
+      "companyName": "Prudential",
+      "title": "LSE Download",
+      "url": "https://www.prudentialplc.com/content/dam/prudential-plc/newsroom/company-news/2026/LSE_Prudential_Plc_2026_Half_Year%20Results.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-31T14:57:23.489748+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "pru-d623c80aded77495",
+      "ticker": "PRU",
+      "companyName": "Prudential",
+      "title": "Prudential plc 2026 Half Year Results",
+      "url": "https://www.prudentialplc.com/en/newsroom/company-news/2026/prudential-plc-2026-half-year-results",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-08-31T14:57:23.489748+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sdlf-ebabfe90190fa219",
+      "ticker": "SDLF",
+      "companyName": "Standard Life",
+      "title": "Articles",
+      "url": "https://www.standardlifeplc.com/centre-for-the-future-of-retirement/articles",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-08-31T14:57:23.489748+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sdlf-7856c399c3bc8d1c",
+      "ticker": "SDLF",
+      "companyName": "Standard Life",
+      "title": "Our work",
+      "url": "https://www.standardlifeplc.com/centre-for-the-future-of-retirement/our-work",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-08-31T14:57:23.489748+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sdlf-3fa0d79149bcf8c1",
+      "ticker": "SDLF",
+      "companyName": "Standard Life",
+      "title": "Research and Reports",
+      "url": "https://www.standardlifeplc.com/centre-for-the-future-of-retirement/research-reports",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-08-31T14:57:23.489748+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sdlf-ce1f47a1031ddc89",
+      "ticker": "SDLF",
+      "companyName": "Standard Life",
+      "title": "Who we are",
+      "url": "https://www.standardlifeplc.com/centre-for-the-future-of-retirement/who-we-are",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-08-31T14:57:23.489748+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sdlf-0829c2b655d61bcb",
+      "ticker": "SDLF",
+      "companyName": "Standard Life",
+      "title": "2026 Q3",
+      "url": "https://www.standardlifeplc.com/news-and-views/press-releases/article-page/hidden-cost-renting-retirement",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-08-31T14:57:23.489748+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "dge-469dfa1e076a0b75",
       "ticker": "DGE",
