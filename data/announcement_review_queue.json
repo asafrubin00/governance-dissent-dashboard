@@ -1,6 +1,45 @@
 {
-  "updatedAt": "2026-08-31T14:57:23.489748+00:00",
+  "updatedAt": "2026-09-07T13:23:28.058649+00:00",
   "candidates": [
+    {
+      "id": "bnzl-0fa5a55f1306214c",
+      "ticker": "BNZL",
+      "companyName": "Bunzl",
+      "title": "Read more",
+      "url": "https://www.bunzl.com/newsroom/half-year-report-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-07T13:23:28.058649+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "mtln-867b164170b5efa2",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/24ahtaoe/7-9-26metlen_buyback-weekly-transaction-announcement.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-07T13:23:28.058649+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sdlf-b6cee293033bc173",
+      "ticker": "SDLF",
+      "companyName": "Standard Life",
+      "title": "2026 Q3",
+      "url": "https://www.standardlifeplc.com/news-and-views/press-releases/article-page/2026-half-year-results",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-07T13:23:28.058649+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "mtln-342045c4fcb4b217",
       "ticker": "MTLN",
