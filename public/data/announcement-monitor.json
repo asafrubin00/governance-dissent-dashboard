@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-07T13:23:28.058649+00:00",
+    "generatedAt": "2026-09-14T13:46:54.487368+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
@@ -12,10 +12,10 @@
       "timeout": 4
     },
     "newCandidateCount": 3,
-    "pendingCandidateCount": 13,
+    "pendingCandidateCount": 16,
     "pendingCandidateCountBySignal": {
-      "earnings": 7,
-      "succession": 6
+      "earnings": 9,
+      "succession": 8
     },
     "validation": {
       "status": "pass",
@@ -92,9 +92,9 @@
     {
       "ticker": "HSBA",
       "status": "active",
-      "matchedLinkCount": 19,
+      "matchedLinkCount": 18,
       "matchedLinkCountBySignal": {
-        "earnings": 19,
+        "earnings": 18,
         "succession": 0
       }
     },
@@ -719,10 +719,10 @@
     {
       "ticker": "RKT",
       "status": "active",
-      "matchedLinkCount": 1,
+      "matchedLinkCount": 2,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
-        "succession": 0
+        "earnings": 2,
+        "succession": 1
       }
     },
     {
@@ -761,9 +761,9 @@
     {
       "ticker": "SGRO",
       "status": "active",
-      "matchedLinkCount": 14,
+      "matchedLinkCount": 11,
       "matchedLinkCountBySignal": {
-        "earnings": 14,
+        "earnings": 11,
         "succession": 2
       }
     },
@@ -824,10 +824,10 @@
     {
       "ticker": "SDLF",
       "status": "active",
-      "matchedLinkCount": 42,
+      "matchedLinkCount": 43,
       "matchedLinkCountBySignal": {
         "earnings": 7,
-        "succession": 35
+        "succession": 36
       }
     },
     {

@@ -1,6 +1,46 @@
 {
-  "updatedAt": "2026-09-07T13:23:28.058649+00:00",
+  "updatedAt": "2026-09-14T13:46:54.487368+00:00",
   "candidates": [
+    {
+      "id": "mtln-bda4350a60fd92b8",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/iq2iuy4a/metlen_buyback_weekly_transaction_announcement_-14-9-26.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-14T13:46:54.487368+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "rkt-3ea11012f72c23c0",
+      "ticker": "RKT",
+      "companyName": "Reckitt",
+      "title": "1 minute read Performance 27 Oct 2026 Q3 Results 2026 Reckitt will publish its 2026 Q3 Trading Update on Tuesday 27 October 2026. Kris Licht CEO and Shannon Eisenhardt CFO\u2026",
+      "url": "https://www.reckitt.com/news/q3-results-2026",
+      "signalTypes": [
+        "earnings",
+        "succession"
+      ],
+      "detectedAt": "2026-09-14T13:46:54.487368+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sdlf-7959aa10daf59b2f",
+      "ticker": "SDLF",
+      "companyName": "Standard Life",
+      "title": "2026 Q3",
+      "url": "https://www.standardlifeplc.com/news-and-views/press-releases/article-page/retirement-on-hold",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-09-14T13:46:54.487368+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "bnzl-0fa5a55f1306214c",
       "ticker": "BNZL",
