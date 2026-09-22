@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-22T03:34:47.184786+00:00",
+    "generatedAt": "2026-09-22T03:38:08.106457+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
