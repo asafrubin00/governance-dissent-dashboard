@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-09-14T13:46:32.822384+00:00",
+    "generatedAt": "2026-09-22T03:31:05.187861+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -14,8 +14,8 @@
     "ratedCompanyCount": 94,
     "constituentCount": 100,
     "profitWarningCoverage": {
-      "eventCount": 16,
-      "companyCount": 12,
+      "eventCount": 15,
+      "companyCount": 11,
       "reviewedCompanyCount": 100,
       "asOfDate": "2026-08-15",
       "lookbackMonths": 36,
@@ -2712,6 +2712,74 @@
       }
     },
     {
+      "companyName": "EasyJet",
+      "ticker": "EZJ",
+      "sector": "Travel and Leisure",
+      "roles": {
+        "ceo": {
+          "name": "Kenton Jarvis",
+          "roleStartDate": "2025-01-01",
+          "sourceUrl": "https://corporate.easyjet.com/about/leadership/person-details/default.aspx?ItemId=30ccfb35-5867-4e42-9588-aea959215f63",
+          "sourceLabel": "easyJet Chief Executive profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.6,
+          "score": 12.8,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 12.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": []
+          },
+          "reason": "1.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        },
+        "chair": {
+          "name": "Sir Stephen Hester",
+          "roleStartDate": "2021-12-01",
+          "sourceUrl": "https://corporate.easyjet.com/about/leadership/person-details/default.aspx",
+          "sourceLabel": "easyJet Chair profile",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 4.7,
+          "score": 41.8,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 41.8,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": []
+          },
+          "reason": "4.7 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": [],
+        "review": {
+          "ticker": "EZJ",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://corporate.easyjet.com/investors/reports-and-presentations/2012/",
+          "reviewNote": "Results and trading updates reviewed; operational and capacity movements did not produce a qualifying downward Group profit revision in the evidence window."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
+      }
+    },
+    {
       "companyName": "Endeavour Mining",
       "ticker": "EDV",
       "sector": "Mining",
@@ -2772,95 +2840,6 @@
           "outcome": "reviewed-no-qualifying-event",
           "sourceUrl": "https://www.endeavourmining.com/news-and-media/news/",
           "reviewNote": "Production and all-in sustaining cost revisions were reviewed but excluded without an explicit Group earnings warning."
-        }
-      },
-      "successionEvidence": {
-        "count": 0,
-        "cases": []
-      }
-    },
-    {
-      "companyName": "Entain",
-      "ticker": "ENT",
-      "sector": "Travel & leisure",
-      "roles": {
-        "ceo": {
-          "name": "Stella David",
-          "roleStartDate": "2025-04-29",
-          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/appointment-of-chief-executive-officer/",
-          "sourceLabel": "Entain Chief Executive appointment",
-          "datePrecision": "day",
-          "rated": true,
-          "tenureYears": 1.3,
-          "score": 10.4,
-          "band": "Lower",
-          "components": {
-            "tenurePressure": 10.4,
-            "registeredDissentUplift": 0
-          },
-          "dissentEvidence": {
-            "count": 0,
-            "maxManagementDissentPct": null,
-            "scoredCount": 0,
-            "maxScoredManagementDissentPct": null,
-            "records": []
-          },
-          "reason": "1.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
-        },
-        "chair": {
-          "name": "Pierre Bouchut",
-          "roleStartDate": "2025-08-12",
-          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/2025-interim-results/",
-          "sourceLabel": "Entain Chair appointment confirmation",
-          "datePrecision": "day",
-          "rated": true,
-          "tenureYears": 1.0,
-          "score": 8.9,
-          "band": "Lower",
-          "components": {
-            "tenurePressure": 8.9,
-            "registeredDissentUplift": 0
-          },
-          "dissentEvidence": {
-            "count": 0,
-            "maxManagementDissentPct": null,
-            "scoredCount": 0,
-            "maxScoredManagementDissentPct": null,
-            "records": []
-          },
-          "reason": "1.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
-        }
-      },
-      "profitWarningEvidence": {
-        "count": 1,
-        "latestDate": "2023-11-02",
-        "events": [
-          {
-            "id": "ent-2023-11-02-material-profit-impact",
-            "ticker": "ENT",
-            "companyName": "Entain",
-            "announcementDate": "2023-11-02",
-            "eventType": "material-profit-impact",
-            "severity": "material",
-            "affectedPeriod": "Q4 FY 2023",
-            "metric": "Group EBITDA",
-            "previousGuidance": "\u00a31.00bn-\u00a31.05bn FY2023 Group EBITDA range",
-            "revisedGuidance": "Range retained, with approximately \u00a345m adverse October EBITDA impact disclosed",
-            "changePct": null,
-            "summary": "Entain quantified an approximately \u00a345m October EBITDA impact from customer-friendly sports results while retaining its full-year guidance range.",
-            "drivers": [
-              "Customer-friendly sports results",
-              "Unusually negative football margins"
-            ],
-            "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2023/2023-q3-trading-update/",
-            "sourceLabel": "Entain 2023 third-quarter trading update"
-          }
-        ],
-        "review": {
-          "ticker": "ENT",
-          "outcome": "qualifying-event-captured",
-          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2023/2023-q3-trading-update/",
-          "reviewNote": "The quantified October 2023 adverse EBITDA impact is captured; the full-year range itself was retained."
         }
       },
       "successionEvidence": {
@@ -4374,6 +4353,74 @@
       }
     },
     {
+      "companyName": "Ithaca Energy",
+      "ticker": "ITH",
+      "sector": "Oil & Gas Producers",
+      "roles": {
+        "ceo": {
+          "name": "Luciano Vasques",
+          "roleStartDate": "2024-10-03",
+          "sourceUrl": "https://www.ithacaenergy.com/press-releases/completion-of-business-combination-with-eni-uk",
+          "sourceLabel": "Ithaca Energy business combination completion",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.9,
+          "score": 15.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 15.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": []
+          },
+          "reason": "1.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        },
+        "chair": {
+          "name": "Yaniv Friedman",
+          "roleStartDate": "2024-07-01",
+          "sourceUrl": "https://investors.ithacaenergy.com/sites/ithaca-ir/files/2026-04/2025-annual-report-interactive-pdf.pdf",
+          "sourceLabel": "Ithaca Energy 2025 annual report",
+          "datePrecision": "month",
+          "rated": true,
+          "tenureYears": 2.1,
+          "score": 18.7,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 18.7,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": []
+          },
+          "reason": "2.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": [],
+        "review": {
+          "ticker": "ITH",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.ithacaenergy.com/media/press-releases",
+          "reviewNote": "Results and trading updates reviewed; production, cost and capital guidance movements were excluded without an explicit Group earnings warning."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
+      }
+    },
+    {
       "companyName": "JD Sports",
       "ticker": "JD",
       "sector": "General retailers",
@@ -5767,98 +5814,6 @@
           "outcome": "reviewed-no-qualifying-event",
           "sourceUrl": "https://pershingsquareholdings.com/company-reports/letters-to-shareholders/",
           "reviewNote": "Investment-company reports reviewed; NAV and portfolio-performance movements are outside the profit-warning definition."
-        }
-      },
-      "successionEvidence": {
-        "count": 0,
-        "cases": []
-      }
-    },
-    {
-      "companyName": "Persimmon",
-      "ticker": "PSN",
-      "sector": "Household goods & home construction",
-      "roles": {
-        "ceo": {
-          "name": "Dean Finch",
-          "roleStartDate": "2020-09-28",
-          "sourceUrl": "https://www.persimmonhomes.com/corporate/about-us/board-of-directors/",
-          "sourceLabel": "Persimmon board",
-          "datePrecision": "day",
-          "rated": true,
-          "tenureYears": 5.9,
-          "score": 55.2,
-          "band": "Elevated",
-          "components": {
-            "tenurePressure": 47.2,
-            "registeredDissentUplift": 8.0
-          },
-          "dissentEvidence": {
-            "count": 1,
-            "maxManagementDissentPct": 48.52,
-            "scoredCount": 1,
-            "maxScoredManagementDissentPct": 48.52,
-            "records": [
-              {
-                "id": "3e676ec5f074",
-                "title": "Approve Annual Report on Remuneration",
-                "votesAgainstPct": 48.52,
-                "managementDissentPct": 48.52,
-                "meetingDate": "2018-04-25",
-                "category": "remuneration",
-                "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              }
-            ]
-          },
-          "reason": "5.9 years in role plus 1 qualifying management-resolution dissent signal(s)."
-        },
-        "chair": {
-          "name": "Roger Devlin",
-          "roleStartDate": "2018-06-01",
-          "sourceUrl": "https://www.persimmonhomes.com/corporate/about-us/board-of-directors/",
-          "sourceLabel": "Persimmon board",
-          "datePrecision": "day",
-          "rated": true,
-          "tenureYears": 8.2,
-          "score": 80.9,
-          "band": "Acute",
-          "components": {
-            "tenurePressure": 72.9,
-            "registeredDissentUplift": 8.0
-          },
-          "dissentEvidence": {
-            "count": 1,
-            "maxManagementDissentPct": 48.52,
-            "scoredCount": 1,
-            "maxScoredManagementDissentPct": 48.52,
-            "records": [
-              {
-                "id": "3e676ec5f074",
-                "title": "Approve Annual Report on Remuneration",
-                "votesAgainstPct": 48.52,
-                "managementDissentPct": 48.52,
-                "meetingDate": "2018-04-25",
-                "category": "remuneration",
-                "categoryLabel": "Remuneration",
-                "managementSponsored": true,
-                "scoreTreatment": "included"
-              }
-            ]
-          },
-          "reason": "8.2 years in role plus 1 qualifying management-resolution dissent signal(s)."
-        }
-      },
-      "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": {
-          "ticker": "PSN",
-          "outcome": "reviewed-no-qualifying-event",
-          "sourceUrl": "https://www.persimmonhomes.com/corporate/media/news/",
-          "reviewNote": "Results and trading updates reviewed; completion guidance changes were excluded without an explicit Group earnings warning."
         }
       },
       "successionEvidence": {

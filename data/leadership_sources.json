@@ -843,22 +843,22 @@
       }
     },
     {
-      "companyName": "Entain",
-      "ticker": "ENT",
+      "companyName": "EasyJet",
+      "ticker": "EZJ",
       "trackerAliases": [],
       "roles": {
         "ceo": {
-          "name": "Stella David",
-          "roleStartDate": "2025-04-29",
-          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/appointment-of-chief-executive-officer/",
-          "sourceLabel": "Entain Chief Executive appointment",
+          "name": "Kenton Jarvis",
+          "roleStartDate": "2025-01-01",
+          "sourceUrl": "https://corporate.easyjet.com/about/leadership/person-details/default.aspx?ItemId=30ccfb35-5867-4e42-9588-aea959215f63",
+          "sourceLabel": "easyJet Chief Executive profile",
           "datePrecision": "day"
         },
         "chair": {
-          "name": "Pierre Bouchut",
-          "roleStartDate": "2025-08-12",
-          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/2025-interim-results/",
-          "sourceLabel": "Entain Chair appointment confirmation",
+          "name": "Sir Stephen Hester",
+          "roleStartDate": "2021-12-01",
+          "sourceUrl": "https://corporate.easyjet.com/about/leadership/person-details/default.aspx",
+          "sourceLabel": "easyJet Chair profile",
           "datePrecision": "day"
         }
       }

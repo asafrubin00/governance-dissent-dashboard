@@ -214,26 +214,6 @@
       "sourceLabel": "Diageo November 2023 trading update"
     },
     {
-      "id": "ent-2023-11-02-material-profit-impact",
-      "ticker": "ENT",
-      "companyName": "Entain",
-      "announcementDate": "2023-11-02",
-      "eventType": "material-profit-impact",
-      "severity": "material",
-      "affectedPeriod": "Q4 FY 2023",
-      "metric": "Group EBITDA",
-      "previousGuidance": "£1.00bn-£1.05bn FY2023 Group EBITDA range",
-      "revisedGuidance": "Range retained, with approximately £45m adverse October EBITDA impact disclosed",
-      "changePct": null,
-      "summary": "Entain quantified an approximately £45m October EBITDA impact from customer-friendly sports results while retaining its full-year guidance range.",
-      "drivers": [
-        "Customer-friendly sports results",
-        "Unusually negative football margins"
-      ],
-      "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2023/2023-q3-trading-update/",
-      "sourceLabel": "Entain 2023 third-quarter trading update"
-    },
-    {
       "id": "bnzl-2025-04-16-guidance-cut",
       "ticker": "BNZL",
       "companyName": "Bunzl",

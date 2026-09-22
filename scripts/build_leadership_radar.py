@@ -295,7 +295,12 @@ def validate(
     roster_tickers = set(tickers)
     curated_tickers = {row["ticker"] for row in curated}
     if curated_tickers != roster_tickers:
-        errors.append("Leadership evidence does not exactly match the current FTSE 100 roster.")
+        missing = ", ".join(sorted(roster_tickers - curated_tickers)) or "none"
+        departed = ", ".join(sorted(curated_tickers - roster_tickers)) or "none"
+        errors.append(
+            "Leadership evidence does not exactly match the current FTSE 100 roster "
+            f"(missing evidence: {missing}; no longer in roster: {departed})."
+        )
     for company in companies:
         for role_name, role in company["roles"].items():
             if role["score"] is not None and not 0 <= role["score"] <= 100:

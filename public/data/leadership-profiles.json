@@ -551,6 +551,23 @@
       }
     },
     {
+      "ticker": "EZJ",
+      "roles": {
+        "ceo": {
+          "name": "Kenton Jarvis",
+          "summary": "Kenton Jarvis has served as Chief Executive of EasyJet since January 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://corporate.easyjet.com/about/leadership/person-details/default.aspx?ItemId=30ccfb35-5867-4e42-9588-aea959215f63",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Sir Stephen Hester",
+          "summary": "Sir Stephen Hester has served as Chair of EasyJet since December 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://corporate.easyjet.com/about/leadership/person-details/default.aspx",
+          "portraitPath": null
+        }
+      }
+    },
+    {
       "ticker": "EDV",
       "roles": {
         "ceo": {
@@ -563,23 +580,6 @@
           "name": "Srinivasan Venkatakrishnan",
           "summary": "Former AngloGold Ashanti chief executive and experienced international mining director. He became Endeavour Mining Chair in May 2022.",
           "sourceUrl": "https://www.endeavourmining.com/news-and-media/news/endeavour-appoints-srinivasan-venkatakrishnan-chair-and-ian-cockerill-senior-independent-director/",
-          "portraitPath": null
-        }
-      }
-    },
-    {
-      "ticker": "ENT",
-      "roles": {
-        "ceo": {
-          "name": "Stella David",
-          "summary": "Stella David has served as Chief Executive of Entain since April 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
-          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/appointment-of-chief-executive-officer/",
-          "portraitPath": null
-        },
-        "chair": {
-          "name": "Pierre Bouchut",
-          "summary": "Pierre Bouchut has served as Chair of Entain since August 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
-          "sourceUrl": "https://www.entaingroup.com/news-insights/latest-news/2025/2025-interim-results/",
           "portraitPath": null
         }
       }
@@ -919,6 +919,23 @@
       }
     },
     {
+      "ticker": "ITH",
+      "roles": {
+        "ceo": {
+          "name": "Luciano Vasques",
+          "summary": "Luciano Vasques has served as Chief Executive of Ithaca Energy since October 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.ithacaenergy.com/press-releases/completion-of-business-combination-with-eni-uk",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Yaniv Friedman",
+          "summary": "Yaniv Friedman has served as Chair of Ithaca Energy since July 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://investors.ithacaenergy.com/sites/ithaca-ir/files/2026-04/2025-annual-report-interactive-pdf.pdf",
+          "portraitPath": null
+        }
+      }
+    },
+    {
       "ticker": "JD",
       "roles": {
         "ceo": {
@@ -1197,23 +1214,6 @@
           "name": "Rupert Morley",
           "summary": "Rupert Morley has served as Chair of Pershing Square Holdings since May 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
           "sourceUrl": "https://pershingsquareholdings.com/corporate/corporate-governance/",
-          "portraitPath": null
-        }
-      }
-    },
-    {
-      "ticker": "PSN",
-      "roles": {
-        "ceo": {
-          "name": "Dean Finch",
-          "summary": "Dean Finch has served as Chief Executive of Persimmon since September 2020. This concise appointment profile is based on the issuer's official leadership evidence.",
-          "sourceUrl": "https://www.persimmonhomes.com/corporate/about-us/board-of-directors/",
-          "portraitPath": null
-        },
-        "chair": {
-          "name": "Roger Devlin",
-          "summary": "Roger Devlin has served as Chair of Persimmon since June 2018. This concise appointment profile is based on the issuer's official leadership evidence.",
-          "sourceUrl": "https://www.persimmonhomes.com/corporate/about-us/board-of-directors/",
           "portraitPath": null
         }
       }

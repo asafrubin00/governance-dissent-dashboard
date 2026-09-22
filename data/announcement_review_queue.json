@@ -1,6 +1,58 @@
 {
-  "updatedAt": "2026-09-14T13:46:54.487368+00:00",
+  "updatedAt": "2026-09-22T03:32:15.683083+00:00",
   "candidates": [
+    {
+      "id": "ccc-7e31a94d44808019",
+      "ticker": "CCC",
+      "companyName": "Computacenter",
+      "title": "Computacenter - 2026 Half Year Results",
+      "url": "https://investors.computacenter.com/news-releases/news-release-details/computacenter-2026-half-year-results",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-22T03:29:03.671734+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "jd-6e477a5effdf66b4",
+      "ticker": "JD",
+      "companyName": "JD Sports",
+      "title": "JD Group strengthens leadership team with JD North America CEO and Group CMO",
+      "url": "https://www.jdplc.com/jd-group-strengthens-leadership-team-with-jd-north-america-ceo-and-group-cmo",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-09-22T03:29:03.671734+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "mtln-afa3b052384ac190",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/i3dettuo/pr_metlen_masvoulas_\u03b5\u03bd.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-22T03:29:03.671734+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sdlf-0a8dd6bbc5a377f4",
+      "ticker": "SDLF",
+      "companyName": "Standard Life",
+      "title": "2026 Q3",
+      "url": "https://www.standardlifeplc.com/news-and-views/press-releases/article-page/retirement-financial-reset",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-09-22T03:29:03.671734+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "mtln-bda4350a60fd92b8",
       "ticker": "MTLN",

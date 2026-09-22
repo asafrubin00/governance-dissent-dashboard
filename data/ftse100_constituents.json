@@ -160,14 +160,14 @@
     "sector": "Industrial Support services"
   },
   {
+    "companyName": "EasyJet",
+    "ticker": "EZJ",
+    "sector": "Travel and Leisure"
+  },
+  {
     "companyName": "Endeavour Mining",
     "ticker": "EDV",
     "sector": "Mining"
-  },
-  {
-    "companyName": "Entain",
-    "ticker": "ENT",
-    "sector": "Travel & leisure"
   },
   {
     "companyName": "Experian",
@@ -270,6 +270,11 @@
     "sector": "Financial Services"
   },
   {
+    "companyName": "Ithaca Energy",
+    "ticker": "ITH",
+    "sector": "Oil & Gas Producers"
+  },
+  {
     "companyName": "JD Sports",
     "ticker": "JD",
     "sector": "General retailers"
@@ -353,11 +358,6 @@
     "companyName": "Pershing Square Holdings",
     "ticker": "PSH",
     "sector": "Financial services"
-  },
-  {
-    "companyName": "Persimmon",
-    "ticker": "PSN",
-    "sector": "Household goods & home construction"
   },
   {
     "companyName": "Polar Capital Technology Trust",

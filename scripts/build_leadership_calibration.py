@@ -162,8 +162,8 @@ def main() -> None:
     if len(case_ids) != len(set(case_ids)):
         errors.append("Duplicate calibration outcome ID found.")
     for case in outcome_cases:
-        if case["ticker"] not in leadership_by_ticker:
-            errors.append(f"Outcome ticker is outside the leadership cohort: {case['ticker']}.")
+        if case["cohort"] == "active" and case["ticker"] not in leadership_by_ticker:
+            errors.append(f"Active outcome ticker is outside the current leadership cohort: {case['ticker']}.")
         if case["role"] not in {"ceo", "chair"}:
             errors.append(f"Unsupported outcome role for {case['id']}.")
         if case["outcomeType"] not in ALLOWED_OUTCOME_TYPES:

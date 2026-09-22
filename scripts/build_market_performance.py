@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import math
 import subprocess
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
@@ -27,19 +28,30 @@ def fetch_chart(symbol: str, period1: int) -> list[dict[str, float | str]]:
         "interval": "1mo",
         "events": "div,splits",
     })
-    response = subprocess.run(
-        [
-            "curl", "--fail", "--location", "--silent", "--show-error",
-            "--retry", "3", "--retry-delay", "1", "--retry-all-errors",
-            "--user-agent", "Mozilla/5.0 ProxyWarsGovernanceResearch/1.0",
-            f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?{query}",
-        ],
-        check=True,
-        capture_output=True,
-        text=True,
-        timeout=30,
-    )
-    result = json.loads(response.stdout)["chart"]["result"][0]
+    last_error: Exception | None = None
+    for attempt in range(4):
+        try:
+            response = subprocess.run(
+                [
+                    "curl", "--fail", "--location", "--silent", "--show-error",
+                    "--retry", "3", "--retry-delay", "1", "--retry-all-errors",
+                    "--user-agent", "Mozilla/5.0 ProxyWarsGovernanceResearch/1.0",
+                    f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?{query}",
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+            result = json.loads(response.stdout)["chart"]["result"][0]
+            break
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired, KeyError, TypeError, json.JSONDecodeError) as error:
+            last_error = error
+            if attempt == 3:
+                raise
+            time.sleep(2 ** attempt)
+    else:
+        raise RuntimeError(f"Unable to fetch {symbol}") from last_error
     timestamps = result["timestamp"]
     quote = result["indicators"]["quote"][0]
     adjusted = result["indicators"]["adjclose"][0]["adjclose"]
@@ -115,8 +127,10 @@ def main() -> None:
     outcomes = json.loads(OUTCOME_PATH.read_text(encoding="utf-8"))
     companies = {company["ticker"]: company for company in leadership["companies"]}
     historical_starts: dict[str, list[str]] = {}
+    historical_cases: dict[str, list[dict[str, str]]] = {}
     for case in outcomes["completedCases"]:
         historical_starts.setdefault(case["ticker"], []).append(case["roleStartDate"])
+        historical_cases.setdefault(case["ticker"], []).append(case)
     errors = []
     series = []
     earliest_start = min(
@@ -168,13 +182,49 @@ def main() -> None:
             "points": normalise(points),
         })
 
-    if errors or len(series) != len(companies) or len(benchmark_points) < 12:
+    former_tickers = sorted(set(historical_cases) - set(companies))
+    for ticker in former_tickers:
+        cases = historical_cases[ticker]
+        symbol = market_symbol(ticker)
+        company_period1 = int(datetime.fromisoformat(min(historical_starts[ticker])).replace(tzinfo=timezone.utc).timestamp())
+        try:
+            points, scale_adjustment_count = repair_scale_discontinuities(fetch_chart(symbol, company_period1))
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired, KeyError, TypeError, json.JSONDecodeError) as exc:
+            errors.append(f"Unable to fetch historical market data for {ticker} ({symbol}): {type(exc).__name__}.")
+            continue
+        if len(points) < 2:
+            errors.append(f"Insufficient historical observations for {ticker}.")
+            continue
+        total_scale_adjustments += scale_adjustment_count
+        roles = {
+            role: {"name": "Not available", "roleStartDate": None}
+            for role in ("ceo", "chair")
+        }
+        for case in cases:
+            roles[case["role"]] = {
+                "name": case["incumbentName"],
+                "roleStartDate": case["roleStartDate"],
+            }
+        series.append({
+            "ticker": ticker,
+            "companyName": cases[-1]["companyName"],
+            "marketSymbol": symbol,
+            "historicalOnly": True,
+            "scaleAdjustmentCount": scale_adjustment_count,
+            "roles": roles,
+            "points": normalise(points),
+        })
+
+    expected_series_count = len(companies) + len(former_tickers)
+    if errors or len(series) != expected_series_count or len(benchmark_points) < 12:
         raise RuntimeError("; ".join(errors or ["Market-performance coverage is incomplete."]))
 
     payload = {
         "metadata": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
             "companyCount": len(series),
+            "currentCompanyCount": len(companies),
+            "historicalCompanyCount": len(former_tickers),
             "sourceName": "Yahoo Finance public chart endpoint",
             "sourceUrl": "https://finance.yahoo.com/",
             "frequency": "Monthly",
