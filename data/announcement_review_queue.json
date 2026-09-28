@@ -1,6 +1,84 @@
 {
-  "updatedAt": "2026-09-22T03:38:08.106457+00:00",
+  "updatedAt": "2026-09-28T15:08:34.769169+00:00",
   "candidates": [
+    {
+      "id": "jd-f418c8bd873b6423",
+      "ticker": "JD",
+      "companyName": "JD Sports",
+      "title": "HALF YEAR RESULTS 2026/27",
+      "url": "https://www.jdplc.com/half-year-results-2026-27",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-28T15:08:34.769169+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "mtln-5c022b33032d7eb4",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/w05louin/28-9-26_metlen_buyback-weekly-transaction-announcement.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-28T15:08:34.769169+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "pru-b7b62d3a99511cca",
+      "ticker": "PRU",
+      "companyName": "Prudential",
+      "title": "Prudential Singapore CEO Chan San San takes up new role at Eastspring Investments",
+      "url": "https://www.prudentialplc.com/en/newsroom/company-news/2026/Prudential-Singapore-CEO-Chan-San-San-takes-up-new-role-at-Eastspring-Investments",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-09-28T15:08:34.769169+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "pru-fba874ce2acee5fa",
+      "ticker": "PRU",
+      "companyName": "Prudential",
+      "title": "Prudential plc appoints Naveed Irshad as Regional CEO for Indonesia, Philippines and Africa",
+      "url": "https://www.prudentialplc.com/en/newsroom/company-news/2026/Prudential-plc-appoints-Naveed-Irshad-as-Regional-CEO-for-Indonesia,-Philippines-and-Africa",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-09-28T15:08:34.769169+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "smin-f2d63cc60cbef1e6",
+      "ticker": "SMIN",
+      "companyName": "Smiths Group",
+      "title": "Smiths Group 22 September 2026 Annual Results for the year ended 31 July 2026 Find out more",
+      "url": "https://www.smiths.com/news-and-insights/news/2026/annual-results-for-the-year-ended-31-july-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-28T15:08:34.769169+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "uu-fb49fcd2c61547c2",
+      "ticker": "UU",
+      "companyName": "United Utilities",
+      "title": "Trading update and 2026 Cost Change Draft Decision Response",
+      "url": "https://www.unitedutilities.com/globalassets/documents/corporate-documents/trading-update-and-2026-cost-change-draft-decision-response.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-09-28T15:08:34.769169+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "ccc-7e31a94d44808019",
       "ticker": "CCC",

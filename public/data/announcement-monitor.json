@@ -1,21 +1,21 @@
 {
   "metadata": {
-    "generatedAt": "2026-09-22T03:38:08.106457+00:00",
+    "generatedAt": "2026-09-28T15:08:34.769169+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 50,
-    "reachableSourceCount": 83,
-    "unavailableSourceCount": 17,
+    "activeSourceCount": 51,
+    "reachableSourceCount": 84,
+    "unavailableSourceCount": 16,
     "unavailableSourceCountByCategory": {
-      "access-blocked": 13,
+      "access-blocked": 12,
       "timeout": 4
     },
-    "newCandidateCount": 0,
-    "pendingCandidateCount": 20,
+    "newCandidateCount": 6,
+    "pendingCandidateCount": 26,
     "pendingCandidateCountBySignal": {
-      "earnings": 11,
-      "succession": 10
+      "earnings": 15,
+      "succession": 12
     },
     "validation": {
       "status": "pass",
@@ -220,9 +220,12 @@
     },
     {
       "ticker": "III",
-      "status": "unavailable",
-      "failureCategory": "access-blocked",
-      "error": "https://www.3i.com/media/news/: 403 Client Error: Forbidden for url: https://www.3i.com/media/news/"
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
+      "matchedLinkCountBySignal": {
+        "earnings": 0,
+        "succession": 0
+      }
     },
     {
       "ticker": "ABF",
@@ -290,10 +293,10 @@
     {
       "ticker": "BT.A",
       "status": "active",
-      "matchedLinkCount": 3,
+      "matchedLinkCount": 2,
       "matchedLinkCountBySignal": {
         "earnings": 1,
-        "succession": 2
+        "succession": 1
       }
     },
     {
@@ -535,11 +538,11 @@
     },
     {
       "ticker": "HLMA",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
+      "status": "active",
+      "matchedLinkCount": 2,
       "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
+        "earnings": 1,
+        "succession": 1
       }
     },
     {
@@ -611,9 +614,9 @@
     {
       "ticker": "JD",
       "status": "active",
-      "matchedLinkCount": 8,
+      "matchedLinkCount": 9,
       "matchedLinkCountBySignal": {
-        "earnings": 5,
+        "earnings": 6,
         "succession": 3
       }
     },
@@ -707,10 +710,10 @@
     {
       "ticker": "PRU",
       "status": "active",
-      "matchedLinkCount": 52,
+      "matchedLinkCount": 54,
       "matchedLinkCountBySignal": {
         "earnings": 23,
-        "succession": 29
+        "succession": 31
       }
     },
     {
@@ -848,9 +851,9 @@
     {
       "ticker": "UU",
       "status": "active",
-      "matchedLinkCount": 5,
+      "matchedLinkCount": 6,
       "matchedLinkCountBySignal": {
-        "earnings": 3,
+        "earnings": 4,
         "succession": 2
       }
     },
