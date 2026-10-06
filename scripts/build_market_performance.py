@@ -150,7 +150,12 @@ def main() -> None:
             for role in ("ceo", "chair")
             if company["roles"][role].get("roleStartDate")
         ]
-        company_period1 = int(datetime.fromisoformat(min([*role_dates, *historical_starts.get(ticker, [])])).replace(tzinfo=timezone.utc).timestamp())
+        available_starts = [*role_dates, *historical_starts.get(ticker, [])]
+        company_period1 = int(
+            datetime.fromisoformat(min(available_starts) if available_starts else earliest_start)
+            .replace(tzinfo=timezone.utc)
+            .timestamp()
+        )
         try:
             points, scale_adjustment_count = repair_scale_discontinuities(fetch_chart(symbol, company_period1))
         except (subprocess.CalledProcessError, subprocess.TimeoutExpired, KeyError, TypeError, json.JSONDecodeError) as exc:

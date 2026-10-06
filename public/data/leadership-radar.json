@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-10-06T08:58:40.806923+00:00",
+    "generatedAt": "2026-10-06T09:09:16.959724+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -13,6 +13,15 @@
     "sourceVerifiedCompanyCount": 100,
     "ratedCompanyCount": 94,
     "constituentCount": 100,
+    "rosterReadiness": {
+      "lastChangedAt": "2026-10-06T09:08:43.621028+00:00",
+      "status": "ready",
+      "currentRosterCount": 100,
+      "sourceVerifiedCurrentCount": 100,
+      "pendingEntrants": [],
+      "departedEvidence": [],
+      "policy": "New entrants remain visible but unrated until official leadership evidence and governance reviews are curated. No score is inferred automatically."
+    },
     "profitWarningCoverage": {
       "eventCount": 17,
       "companyCount": 12,
@@ -46,15 +55,16 @@
     },
     "limitations": [
       "This is a research prioritisation score, not a prediction that an individual will leave office.",
-      "All 100 companies have source-verified leadership records in methodology 0.6; externally managed issuers without a chief executive are marked not applicable rather than scored.",
+      "100 of 100 current constituents have source-verified leadership records in methodology 0.6; any newly detected entrant remains visible but unrated until evidence onboarding is complete.",
       "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-      "The profit-warning review covers 100 of 100 source-verified companies; a no-event outcome means no qualifying issuer announcement was identified under the stated definition and review window.",
+      "The profit-warning review covers 100 of 100 current constituents; a no-event outcome means no qualifying issuer announcement was identified under the stated definition and review window.",
       "Succession status reflects official announcements found by the evidence date and may change between refreshes.",
       "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded."
     ],
     "validation": {
       "status": "pass",
-      "errors": []
+      "errors": [],
+      "warnings": []
     },
     "calibration": {
       "methodologyVersion": "1.2",

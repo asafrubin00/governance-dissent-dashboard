@@ -1,0 +1,111 @@
+name: Monitor FTSE 100 roster readiness
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 6 * * 1-5"
+
+jobs:
+  roster-watch:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install roster-check dependencies
+        run: python -m pip install requests beautifulsoup4
+
+      - name: Check roster evidence readiness
+        id: readiness
+        run: python scripts/check_roster_readiness.py
+
+      - name: Commit changed roster state
+        if: steps.readiness.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ftse100_constituents.json data/roster_readiness.json
+          git commit -m "Update FTSE 100 roster readiness"
+          git push
+
+      - name: Open or resolve evidence-onboarding issue
+        if: steps.readiness.outputs.changed == 'true'
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('data/roster_readiness.json', 'utf8'));
+            const title = '[Data] FTSE 100 roster evidence onboarding';
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const existing = issues.find(issue => issue.title === title);
+            if (report.pendingEntrants.length) {
+              const entrantLines = report.pendingEntrants.map(item =>
+                `- **${item.companyName} (${item.ticker})**: ${item.requiredEvidence.join('; ')}`
+              );
+              const departedLines = report.departedEvidence.length
+                ? report.departedEvidence.map(item => `- ${item.companyName} (${item.ticker})`)
+                : ['- None'];
+              const body = [
+                'The automated roster watcher detected a constituent change that requires curated evidence before the new entrant can be scored.',
+                '',
+                '## Pending entrants',
+                ...entrantLines,
+                '',
+                '## Departed constituents',
+                ...departedLines,
+                '',
+                'The live radar remains available. Pending entrants are shown as unrated, and no leadership score is inferred without official evidence.',
+              ].join('\n');
+              if (existing) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: existing.number,
+                  body,
+                });
+              } else {
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title,
+                  body,
+                  labels: ['data'],
+                }).catch(async error => {
+                  if (error.status !== 422) throw error;
+                  await github.rest.issues.create({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    title,
+                    body,
+                  });
+                });
+              }
+            } else if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: 'All current FTSE 100 constituents now have curated leadership evidence. Closing this onboarding issue automatically.',
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                state: 'closed',
+              });
+            }

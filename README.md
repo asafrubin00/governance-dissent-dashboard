@@ -78,7 +78,7 @@ npm run build
 
 1. Refreshes and verifies the significant-dissent dataset.
 2. Fetches the public FTSE 100 roster snapshot, falling back to the cached snapshot if unavailable.
-3. Joins both manually verified leadership source files and validates exact 100-company roster coverage.
+3. Joins both manually verified leadership source files. A newly detected constituent is published as unrated until official evidence is curated; no score is inferred automatically.
 4. Validates the 100-company profit-warning review and joins approved official warning evidence.
 5. Validates exact 100-company coverage for official active-succession review.
 6. Recalculates role-specific pressure scores without allowing either overlay to change the score.
@@ -88,7 +88,7 @@ npm run build
 10. Rebuilds complete profile coverage, then validates uniqueness, role-name alignment, source URLs, summaries, and local portrait references.
 11. Runs validation before writing the public JSON files.
 
-The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It re-fetches every configured AGM source, refreshes calculations, the constituent roster, and all market series, then checks 100 official issuer pages for new earnings- and succession-related links. New AGM URLs and parser formats still require editorial onboarding. Announcement-monitor matches enter a typed review queue and never alter the radar automatically; Aviva's 14 August Health profit-guidance reduction was promoted in the 15 August evidence roll-forward and the queue is currently clear.
+The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs weekly and can also be triggered manually. It re-fetches every configured AGM source, refreshes calculations, the constituent roster, and all market series, then checks official issuer pages for new earnings- and succession-related links. A separate weekday workflow in `.github/workflows/roster-watch.yml` checks the constituent roster before the full refresh. When evidence onboarding is required, it records the gap in `data/roster_readiness.json` and opens one GitHub issue; the main site remains available with the entrant clearly marked unrated. New AGM URLs and parser formats still require editorial onboarding, and announcement-monitor matches enter a typed review queue that never alters the radar automatically.
 
 Run the monitor independently with `npm run data:monitor`. Its source health and editorial safeguards are explained in [the monitor methodology](docs/announcement-monitor-methodology.md).
 
@@ -107,6 +107,7 @@ data/
   announcement_monitor_snapshot.json # previously seen announcement links
   announcement_review_queue.json  # candidates awaiting editorial review
   ftse100_constituents.json        # generated public roster snapshot
+  roster_readiness.json            # generated entrant/departure onboarding state
   company_metadata.json            # Proxy Voting issuer aliases
   issuer_source_config.json        # direct voting-source seeds
 docs/

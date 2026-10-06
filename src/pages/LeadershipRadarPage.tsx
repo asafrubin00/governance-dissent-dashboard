@@ -310,6 +310,7 @@ export function LeadershipRadarPage({ data, marketData, profilesData }: Leadersh
 
           <div className="radar-footer">
             <span>{data.metadata.rosterSource.name} / {data.metadata.constituentCount} constituents</span>
+            {data.metadata.rosterReadiness.status === 'evidence-pending' ? <span>{data.metadata.rosterReadiness.pendingEntrants.length} entrant verification pending</span> : null}
             <LegalLine />
             <div className="radar-key">
               <button type="button">Abbreviations</button>

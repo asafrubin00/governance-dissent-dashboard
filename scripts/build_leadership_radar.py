@@ -20,6 +20,7 @@ PROFIT_WARNING_PATH = ROOT / "data" / "profit_warning_sources.json"
 PROFIT_WARNING_REVIEW_PATH = ROOT / "data" / "profit_warning_reviews.json"
 SUCCESSION_PATH = ROOT / "data" / "succession_sources.json"
 ROSTER_PATH = ROOT / "data" / "ftse100_constituents.json"
+ROSTER_READINESS_PATH = ROOT / "data" / "roster_readiness.json"
 TRACKER_PATH = ROOT / "public" / "data" / "tracker-data.json"
 OUTPUT_PATH = ROOT / "public" / "data" / "leadership-radar.json"
 ROSTER_URL = "https://en.wikipedia.org/wiki/FTSE_100_Index"
@@ -68,6 +69,63 @@ def load_roster() -> tuple[list[dict[str, str]], str]:
             raise
         print(f"Roster refresh failed; using cached snapshot: {error}")
         return json.loads(ROSTER_PATH.read_text(encoding="utf-8")), "cached-public-snapshot"
+
+
+def build_roster_readiness(
+    roster: list[dict[str, str]],
+    curated: list[dict[str, Any]],
+    previous: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    roster_by_ticker = {row["ticker"]: row for row in roster}
+    curated_by_ticker = {row["ticker"]: row for row in curated}
+    pending_tickers = sorted(set(roster_by_ticker) - set(curated_by_ticker))
+    departed_tickers = sorted(set(curated_by_ticker) - set(roster_by_ticker))
+    previous_detected = {
+        row["ticker"]: row.get("firstDetectedAt")
+        for row in (previous or {}).get("pendingEntrants", [])
+    }
+    now = datetime.now(timezone.utc).isoformat()
+    pending = [
+        {
+            **roster_by_ticker[ticker],
+            "firstDetectedAt": previous_detected.get(ticker) or now,
+            "requiredEvidence": ["CEO appointment and start date", "Chair appointment and start date", "profit-warning review", "succession review", "announcement-monitor source"],
+        }
+        for ticker in pending_tickers
+    ]
+    departed = [
+        {
+            "ticker": ticker,
+            "companyName": curated_by_ticker[ticker]["companyName"],
+            "treatment": "Excluded from the current radar; retained in historical evidence where applicable.",
+        }
+        for ticker in departed_tickers
+    ]
+    comparable = {
+        "status": "ready" if not pending else "evidence-pending",
+        "currentRosterCount": len(roster),
+        "sourceVerifiedCurrentCount": len(set(roster_by_ticker) & set(curated_by_ticker)),
+        "pendingEntrants": pending,
+        "departedEvidence": departed,
+        "policy": "New entrants remain visible but unrated until official leadership evidence and governance reviews are curated. No score is inferred automatically.",
+    }
+    previous_comparable = {
+        key: value for key, value in (previous or {}).items() if key != "lastChangedAt"
+    }
+    return {
+        "lastChangedAt": (previous or {}).get("lastChangedAt", now) if comparable == previous_comparable else now,
+        **comparable,
+    }
+
+
+def write_roster_readiness(report: dict[str, Any]) -> bool:
+    existing = None
+    if ROSTER_READINESS_PATH.exists():
+        existing = json.loads(ROSTER_READINESS_PATH.read_text(encoding="utf-8"))
+    if existing == report:
+        return False
+    ROSTER_READINESS_PATH.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    return True
 
 
 def years_between(start: str, end: str) -> float:
@@ -159,7 +217,7 @@ def voting_evidence_by_company() -> dict[str, dict[str, Any]]:
 
 def profit_warnings_by_company(
     warning_source: dict[str, Any],
-    roster_tickers: set[str],
+    evidence_tickers: set[str],
 ) -> tuple[dict[str, dict[str, Any]], list[str]]:
     errors: list[str] = []
     seen_ids: set[str] = set()
@@ -176,8 +234,8 @@ def profit_warnings_by_company(
         if not event_id or event_id in seen_ids:
             errors.append(f"Missing or duplicate profit-warning event ID: {event_id or '[blank]' }.")
         seen_ids.add(event_id)
-        if ticker not in roster_tickers:
-            errors.append(f"Profit-warning ticker is outside the current roster: {ticker}.")
+        if ticker not in evidence_tickers:
+            errors.append(f"Profit-warning ticker has no curated leadership evidence: {ticker}.")
         if event.get("eventType") not in allowed_types:
             errors.append(f"Unsupported profit-warning event type for {event_id}.")
         if event.get("severity") not in allowed_severities:
@@ -294,11 +352,12 @@ def validate(
         errors.append("Duplicate curated leadership tickers found.")
     roster_tickers = set(tickers)
     curated_tickers = {row["ticker"] for row in curated}
+    warnings: list[str] = []
     if curated_tickers != roster_tickers:
         missing = ", ".join(sorted(roster_tickers - curated_tickers)) or "none"
         departed = ", ".join(sorted(curated_tickers - roster_tickers)) or "none"
-        errors.append(
-            "Leadership evidence does not exactly match the current FTSE 100 roster "
+        warnings.append(
+            "Leadership evidence onboarding is pending for the current FTSE 100 roster "
             f"(missing evidence: {missing}; no longer in roster: {departed})."
         )
     for company in companies:
@@ -313,7 +372,7 @@ def validate(
                 errors.append(f"Non-HTTPS source URL for {company['ticker']} {role_name}.")
             if role.get("roleStartDate") and date.fromisoformat(role["roleStartDate"]) > date.fromisoformat(as_of):
                 errors.append(f"Future role start date for {company['ticker']} {role_name}.")
-    return {"status": "pass" if not errors else "fail", "errors": errors}
+    return {"status": "pass" if not errors else "fail", "errors": errors, "warnings": warnings}
 
 
 def main() -> None:
@@ -325,11 +384,11 @@ def main() -> None:
     succession_source = json.loads(SUCCESSION_PATH.read_text(encoding="utf-8"))
     roster, roster_mode = load_roster()
     dissent = voting_evidence_by_company()
+    curated_by_ticker = {row["ticker"]: row for row in source["companies"]}
     warnings, warning_errors = profit_warnings_by_company(
         warning_source,
-        {row["ticker"] for row in roster},
+        set(curated_by_ticker),
     )
-    curated_by_ticker = {row["ticker"]: row for row in source["companies"]}
     warning_reviews, review_errors = validate_profit_warning_reviews(
         warning_review_source,
         set(curated_by_ticker),
@@ -338,6 +397,11 @@ def main() -> None:
     successions, succession_errors = succession_by_company(succession_source, curated_by_ticker)
     as_of = source["asOfDate"]
     companies = []
+    previous_readiness = None
+    if ROSTER_READINESS_PATH.exists():
+        previous_readiness = json.loads(ROSTER_READINESS_PATH.read_text(encoding="utf-8"))
+    roster_readiness = build_roster_readiness(roster, source["companies"], previous_readiness)
+    write_roster_readiness(roster_readiness)
 
     for constituent in roster:
         curated = curated_by_ticker.get(constituent["ticker"])
@@ -440,15 +504,16 @@ def main() -> None:
                 "mode": roster_mode,
                 "note": "Used only as a reproducible public constituent snapshot; FTSE Russell remains the index authority.",
             },
-            "sourceVerifiedCompanyCount": len(source["companies"]),
+            "sourceVerifiedCompanyCount": roster_readiness["sourceVerifiedCurrentCount"],
             "ratedCompanyCount": sum(
                 1 for company in companies if company["roles"]["ceo"]["rated"] and company["roles"]["chair"]["rated"]
             ),
             "constituentCount": len(roster),
+            "rosterReadiness": roster_readiness,
             "profitWarningCoverage": {
                 "eventCount": len(warning_source["events"]),
                 "companyCount": len(warnings),
-                "reviewedCompanyCount": len(warning_review_source["reviews"]),
+                "reviewedCompanyCount": sum(1 for row in roster if row["ticker"] in warning_reviews),
                 "asOfDate": warning_source["asOfDate"],
                 "lookbackMonths": warning_source["lookbackMonths"],
                 "definition": warning_source["definition"],
@@ -456,7 +521,7 @@ def main() -> None:
             },
             "successionCoverage": {
                 "activeCaseCount": len(succession_source["cases"]),
-                "reviewedCompanyCount": len(succession_source["reviewedTickers"]),
+                "reviewedCompanyCount": sum(1 for row in roster if row["ticker"] in succession_source["reviewedTickers"]),
                 "asOfDate": succession_source["asOfDate"],
                 "definition": succession_source["definition"],
                 "scoreTreatment": "Displayed as a source-verified status and excluded from the pressure score.",
@@ -473,9 +538,9 @@ def main() -> None:
             },
             "limitations": [
                 "This is a research prioritisation score, not a prediction that an individual will leave office.",
-                f"All {len(source['companies'])} companies have source-verified leadership records in methodology {source['methodologyVersion']}; externally managed issuers without a chief executive are marked not applicable rather than scored.",
+                f"{roster_readiness['sourceVerifiedCurrentCount']} of {len(roster)} current constituents have source-verified leadership records in methodology {source['methodologyVersion']}; any newly detected entrant remains visible but unrated until evidence onboarding is complete.",
                 "The dissent uplift uses the narrow 2025 significant-dissent dataset and is not a complete voting-history measure.",
-                f"The profit-warning review covers {len(warning_review_source['reviews'])} of {len(source['companies'])} source-verified companies; a no-event outcome means no qualifying issuer announcement was identified under the stated definition and review window.",
+                f"The profit-warning review covers {sum(1 for row in roster if row['ticker'] in warning_reviews)} of {len(roster)} current constituents; a no-event outcome means no qualifying issuer announcement was identified under the stated definition and review window.",
                 "Succession status reflects official announcements found by the evidence date and may change between refreshes.",
                 "Profit warnings do not yet affect the pressure score; share-price stress, activism, and broader news signals remain excluded.",
             ],

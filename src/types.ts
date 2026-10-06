@@ -207,6 +207,25 @@ export type LeadershipRadarData = {
     sourceVerifiedCompanyCount: number
     ratedCompanyCount: number
     constituentCount: number
+    rosterReadiness: {
+      lastChangedAt: string
+      status: 'ready' | 'evidence-pending'
+      currentRosterCount: number
+      sourceVerifiedCurrentCount: number
+      pendingEntrants: Array<{
+        companyName: string
+        ticker: string
+        sector: string
+        firstDetectedAt: string
+        requiredEvidence: string[]
+      }>
+      departedEvidence: Array<{
+        companyName: string
+        ticker: string
+        treatment: string
+      }>
+      policy: string
+    }
     calibration: {
       methodologyVersion: string
       outcomeCount: number
@@ -253,6 +272,7 @@ export type LeadershipRadarData = {
     validation: {
       status: string
       errors: string[]
+      warnings?: string[]
     }
   }
   companies: LeadershipCompany[]

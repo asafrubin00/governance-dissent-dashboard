@@ -42,7 +42,7 @@ def main() -> None:
         company = existing.get(ticker, {"ticker": ticker, "roles": {}})
         roles = dict(company.get("roles", {}))
         for role_key, radar_role in radar_company.get("roles", {}).items():
-            if radar_role.get("notApplicable"):
+            if radar_role.get("notApplicable") or not radar_role.get("rated"):
                 roles.pop(role_key, None)
                 continue
             if role_key in roles:

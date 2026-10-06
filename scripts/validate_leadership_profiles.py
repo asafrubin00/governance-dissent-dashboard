@@ -53,7 +53,7 @@ def main() -> None:
         expected_roles = {
             role_key
             for role_key, radar_role in radar_company.get("roles", {}).items()
-            if not radar_role.get("notApplicable")
+            if radar_role.get("rated")
         }
         if set(company.get("roles", {})) != expected_roles:
             errors.append(f"Leadership-profile role coverage is incomplete for {ticker}.")
