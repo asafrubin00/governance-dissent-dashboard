@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-09-28T15:08:19.704923+00:00",
+    "generatedAt": "2026-10-06T08:53:48.319731+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -14,8 +14,8 @@
     "ratedCompanyCount": 94,
     "constituentCount": 100,
     "profitWarningCoverage": {
-      "eventCount": 15,
-      "companyCount": 11,
+      "eventCount": 17,
+      "companyCount": 12,
       "reviewedCompanyCount": 100,
       "asOfDate": "2026-08-15",
       "lookbackMonths": 36,
@@ -1000,6 +1000,74 @@
       }
     },
     {
+      "companyName": "Balfour Beatty",
+      "ticker": "BBY",
+      "sector": "Construction & Materials",
+      "roles": {
+        "ceo": {
+          "name": "Philip Hoare",
+          "roleStartDate": "2025-09-08",
+          "sourceUrl": "https://www.balfourbeatty.com/media/mbpdohql/balfour-beatty-annual-general-meeting-2026.pdf",
+          "sourceLabel": "Balfour Beatty 2026 AGM notice",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 0.9,
+          "score": 7.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 7.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": []
+          },
+          "reason": "0.9 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        },
+        "chair": {
+          "name": "Charles Allen, Lord Allen of Kensington",
+          "roleStartDate": "2021-07-20",
+          "sourceUrl": "https://www.balfourbeatty.com/media-centre/latest/chairman-succession/",
+          "sourceLabel": "Balfour Beatty Chair succession announcement",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 5.1,
+          "score": 45.3,
+          "band": "Watch",
+          "components": {
+            "tenurePressure": 45.3,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": []
+          },
+          "reason": "5.1 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        }
+      },
+      "profitWarningEvidence": {
+        "count": 0,
+        "latestDate": null,
+        "events": [],
+        "review": {
+          "ticker": "BBY",
+          "outcome": "reviewed-no-qualifying-event",
+          "sourceUrl": "https://www.balfourbeatty.com/investors/results-reports-and-presentations/",
+          "reviewNote": "Results and trading updates reviewed; no qualifying downward Group earnings revision was identified in the evidence window."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
+      }
+    },
+    {
       "companyName": "Barclays",
       "ticker": "BARC",
       "sector": "Banks",
@@ -1148,74 +1216,6 @@
             "sourceLabel": "Barratt Redrow CEO succession plan"
           }
         ]
-      }
-    },
-    {
-      "companyName": "Beazley",
-      "ticker": "BEZ",
-      "sector": "Insurance",
-      "roles": {
-        "ceo": {
-          "name": "Adrian Cox",
-          "roleStartDate": "2021-04-01",
-          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
-          "sourceLabel": "Beazley Board profile",
-          "datePrecision": "month",
-          "rated": true,
-          "tenureYears": 5.4,
-          "score": 43.2,
-          "band": "Watch",
-          "components": {
-            "tenurePressure": 43.2,
-            "registeredDissentUplift": 0
-          },
-          "dissentEvidence": {
-            "count": 0,
-            "maxManagementDissentPct": null,
-            "scoredCount": 0,
-            "maxScoredManagementDissentPct": null,
-            "records": []
-          },
-          "reason": "5.4 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
-        },
-        "chair": {
-          "name": "Clive Bannister",
-          "roleStartDate": "2023-04-25",
-          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
-          "sourceLabel": "Beazley Board profile",
-          "datePrecision": "day",
-          "rated": true,
-          "tenureYears": 3.3,
-          "score": 29.3,
-          "band": "Watch",
-          "components": {
-            "tenurePressure": 29.3,
-            "registeredDissentUplift": 0
-          },
-          "dissentEvidence": {
-            "count": 0,
-            "maxManagementDissentPct": null,
-            "scoredCount": 0,
-            "maxScoredManagementDissentPct": null,
-            "records": []
-          },
-          "reason": "3.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
-        }
-      },
-      "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": {
-          "ticker": "BEZ",
-          "outcome": "reviewed-no-qualifying-event",
-          "sourceUrl": "https://www.beazley.com/en/investors/results-reports-and-presentations/",
-          "reviewNote": "Results and trading updates reviewed; no qualifying Group earnings event captured."
-        }
-      },
-      "successionEvidence": {
-        "count": 0,
-        "cases": []
       }
     },
     {
@@ -6491,74 +6491,6 @@
       }
     },
     {
-      "companyName": "Schroders",
-      "ticker": "SDR",
-      "sector": "Financial services",
-      "roles": {
-        "ceo": {
-          "name": "Richard Oldfield",
-          "roleStartDate": "2024-11-08",
-          "sourceUrl": "https://www.schroders.com/en/global/individual/people/richard-oldfield/",
-          "sourceLabel": "Schroders CEO profile",
-          "datePrecision": "day",
-          "rated": true,
-          "tenureYears": 1.8,
-          "score": 14.4,
-          "band": "Lower",
-          "components": {
-            "tenurePressure": 14.4,
-            "registeredDissentUplift": 0
-          },
-          "dissentEvidence": {
-            "count": 0,
-            "maxManagementDissentPct": null,
-            "scoredCount": 0,
-            "maxScoredManagementDissentPct": null,
-            "records": []
-          },
-          "reason": "1.8 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
-        },
-        "chair": {
-          "name": "Dame Elizabeth Corley",
-          "roleStartDate": "2022-04-28",
-          "sourceUrl": "https://www.schroders.com/en/global/individual/people/dame-elizabeth-corley/",
-          "sourceLabel": "Schroders Chair profile",
-          "datePrecision": "day",
-          "rated": true,
-          "tenureYears": 4.3,
-          "score": 38.2,
-          "band": "Watch",
-          "components": {
-            "tenurePressure": 38.2,
-            "registeredDissentUplift": 0
-          },
-          "dissentEvidence": {
-            "count": 0,
-            "maxManagementDissentPct": null,
-            "scoredCount": 0,
-            "maxScoredManagementDissentPct": null,
-            "records": []
-          },
-          "reason": "4.3 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
-        }
-      },
-      "profitWarningEvidence": {
-        "count": 0,
-        "latestDate": null,
-        "events": [],
-        "review": {
-          "ticker": "SDR",
-          "outcome": "reviewed-no-qualifying-event",
-          "sourceUrl": "https://www.schroders.com/en/global/individual/media-relations/",
-          "reviewNote": "Results and asset-flow updates reviewed; no explicit Group earnings guidance cut captured."
-        }
-      },
-      "successionEvidence": {
-        "count": 0,
-        "cases": []
-      }
-    },
-    {
       "companyName": "Scottish Mortgage Investment Trust",
       "ticker": "SMT",
       "sector": "Collective investments",
@@ -7819,6 +7751,117 @@
           "outcome": "reviewed-no-qualifying-event",
           "sourceUrl": "https://www.whitbread.co.uk/investors/results-reports-and-presentations/",
           "reviewNote": "Results and trading updates reviewed; reported profit movements did not include a qualifying downward guidance revision."
+        }
+      },
+      "successionEvidence": {
+        "count": 0,
+        "cases": []
+      }
+    },
+    {
+      "companyName": "WPP",
+      "ticker": "WPP",
+      "sector": "Media",
+      "roles": {
+        "ceo": {
+          "name": "Cindy Rose",
+          "roleStartDate": "2025-09-01",
+          "sourceUrl": "https://www.wpp.com/en/news/2025/07/chief-executive-officer-appointment",
+          "sourceLabel": "WPP Chief Executive appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.0,
+          "score": 8.0,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 8.0,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": []
+          },
+          "reason": "1.0 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        },
+        "chair": {
+          "name": "Philip Jansen",
+          "roleStartDate": "2025-01-01",
+          "sourceUrl": "https://www.wpp.com/en/news/2024/07/wpp-appoints-philip-jansen-as-non-executive-chair-of-the-board",
+          "sourceLabel": "WPP Chair appointment",
+          "datePrecision": "day",
+          "rated": true,
+          "tenureYears": 1.6,
+          "score": 14.2,
+          "band": "Lower",
+          "components": {
+            "tenurePressure": 14.2,
+            "registeredDissentUplift": 0
+          },
+          "dissentEvidence": {
+            "count": 0,
+            "maxManagementDissentPct": null,
+            "scoredCount": 0,
+            "maxScoredManagementDissentPct": null,
+            "records": []
+          },
+          "reason": "1.6 years in role; no qualifying management-resolution dissent signal is added in the current tracker window."
+        }
+      },
+      "profitWarningEvidence": {
+        "count": 2,
+        "latestDate": "2025-10-30",
+        "events": [
+          {
+            "id": "wpp-2025-10-30-guidance-cut",
+            "ticker": "WPP",
+            "companyName": "WPP",
+            "announcementDate": "2025-10-30",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2025",
+            "metric": "LFL revenue less pass-through costs growth and headline operating profit margin",
+            "previousGuidance": "Revenue growth -3% to -5%; headline operating profit margin down 50 to 175 basis points year on year",
+            "revisedGuidance": "Revenue growth -5.5% to -6.0%; headline operating profit margin around 13%",
+            "changePct": null,
+            "summary": "WPP reduced its full-year organic revenue outlook again following a sequential deterioration in third-quarter trading.",
+            "drivers": [
+              "Deterioration at WPP Media",
+              "Client assignment losses",
+              "Pressure across major markets and client sectors"
+            ],
+            "sourceUrl": "https://www.wpp.com/en/news/2025/10/third-quarter-trading-update-2025",
+            "sourceLabel": "WPP October 2025 third-quarter trading update"
+          },
+          {
+            "id": "wpp-2025-07-09-guidance-cut",
+            "ticker": "WPP",
+            "companyName": "WPP",
+            "announcementDate": "2025-07-09",
+            "eventType": "guidance-cut",
+            "severity": "material",
+            "affectedPeriod": "FY 2025",
+            "metric": "LFL revenue less pass-through costs growth and headline operating profit margin",
+            "previousGuidance": "Revenue growth flat to -2%; headline operating profit margin around flat year on year",
+            "revisedGuidance": "Revenue growth -3% to -5%; headline operating profit margin down 50 to 175 basis points year on year",
+            "changePct": null,
+            "summary": "WPP reduced its full-year organic revenue and headline operating-profit margin guidance after performance deteriorated during the second quarter.",
+            "drivers": [
+              "Intensifying macroeconomic pressure on client spending",
+              "Weaker net new business",
+              "Lower-than-expected June trading"
+            ],
+            "sourceUrl": "https://www.wpp.com/en/news/2025/07/first-half-2025-trading-update",
+            "sourceLabel": "WPP July 2025 first-half trading update"
+          }
+        ],
+        "review": {
+          "ticker": "WPP",
+          "outcome": "qualifying-event-captured",
+          "sourceUrl": "https://www.wpp.com/en/investors/results-presentations-and-reports",
+          "reviewNote": "The July and October 2025 reductions to full-year organic growth and headline operating-profit margin guidance are captured."
         }
       },
       "successionEvidence": {

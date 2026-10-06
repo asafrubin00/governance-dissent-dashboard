@@ -317,6 +317,48 @@
       ],
       "sourceUrl": "https://www.smith-nephew.com/en/news/2024/10/31/20241031-smithnephew-third-quarter-2024-trading-report",
       "sourceLabel": "Smith & Nephew October 2024 third-quarter trading report"
+    },
+    {
+      "id": "wpp-2025-07-09-guidance-cut",
+      "ticker": "WPP",
+      "companyName": "WPP",
+      "announcementDate": "2025-07-09",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2025",
+      "metric": "LFL revenue less pass-through costs growth and headline operating profit margin",
+      "previousGuidance": "Revenue growth flat to -2%; headline operating profit margin around flat year on year",
+      "revisedGuidance": "Revenue growth -3% to -5%; headline operating profit margin down 50 to 175 basis points year on year",
+      "changePct": null,
+      "summary": "WPP reduced its full-year organic revenue and headline operating-profit margin guidance after performance deteriorated during the second quarter.",
+      "drivers": [
+        "Intensifying macroeconomic pressure on client spending",
+        "Weaker net new business",
+        "Lower-than-expected June trading"
+      ],
+      "sourceUrl": "https://www.wpp.com/en/news/2025/07/first-half-2025-trading-update",
+      "sourceLabel": "WPP July 2025 first-half trading update"
+    },
+    {
+      "id": "wpp-2025-10-30-guidance-cut",
+      "ticker": "WPP",
+      "companyName": "WPP",
+      "announcementDate": "2025-10-30",
+      "eventType": "guidance-cut",
+      "severity": "material",
+      "affectedPeriod": "FY 2025",
+      "metric": "LFL revenue less pass-through costs growth and headline operating profit margin",
+      "previousGuidance": "Revenue growth -3% to -5%; headline operating profit margin down 50 to 175 basis points year on year",
+      "revisedGuidance": "Revenue growth -5.5% to -6.0%; headline operating profit margin around 13%",
+      "changePct": null,
+      "summary": "WPP reduced its full-year organic revenue outlook again following a sequential deterioration in third-quarter trading.",
+      "drivers": [
+        "Deterioration at WPP Media",
+        "Client assignment losses",
+        "Pressure across major markets and client sectors"
+      ],
+      "sourceUrl": "https://www.wpp.com/en/news/2025/10/third-quarter-trading-update-2025",
+      "sourceLabel": "WPP October 2025 third-quarter trading update"
     }
   ]
 }

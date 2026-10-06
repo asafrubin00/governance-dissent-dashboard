@@ -1,6 +1,45 @@
 {
-  "updatedAt": "2026-09-28T15:08:34.769169+00:00",
+  "updatedAt": "2026-10-06T08:54:05.210599+00:00",
   "candidates": [
+    {
+      "id": "ihg-dd5322792f036612",
+      "ticker": "IHG",
+      "companyName": "InterContinental Hotels Group",
+      "title": "PDF 156KB",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/results/2026/q3-trading-update/2026-q3-trading-update-webcast-and-q-and-a.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-06T08:54:05.210599+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "igg-0aaa0f2dea6e1315",
+      "ticker": "IGG",
+      "companyName": "IG Group",
+      "title": "Read more about IG Group Q3 trading update item page",
+      "url": "https://www.iggroup.com/investor-relations/press-releases/2026/q3-trading-update",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-06T08:54:05.210599+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "mtln-f8221cadf98c3c8f",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/4xnf2mjt/5-10-26_metlen_buyback-weekly-transaction-announcement.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-06T08:54:05.210599+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "jd-f418c8bd873b6423",
       "ticker": "JD",

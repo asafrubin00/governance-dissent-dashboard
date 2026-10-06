@@ -461,9 +461,13 @@ def collect_announcement_pages(
     return pages
 
 
-def write_raw_announcement_html(url: str, html: str) -> Path:
+def raw_announcement_path(url: str) -> Path:
     digest = hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
-    target = RAW_ISSUER_DIR / f"{digest}.html"
+    return RAW_ISSUER_DIR / f"{digest}.html"
+
+
+def write_raw_announcement_html(url: str, html: str) -> Path:
+    target = raw_announcement_path(url)
     target.write_text(html)
     return target
 
@@ -1425,21 +1429,27 @@ def enrich_with_official_announcements(
         return None
 
     for page in announcement_pages:
+        used_cached_source = False
         try:
             html = fetch_url(page.url)
         except requests.RequestException as error:
-            audit_rows.append(
-                {
-                    "url": page.url,
-                    "companyName": page.company_name,
-                    "meetingDate": page.meeting_date,
-                    "status": "fetch-failed",
-                    "error": str(error),
-                }
-            )
-            continue
+            raw_path = raw_announcement_path(page.url)
+            if not raw_path.exists():
+                audit_rows.append(
+                    {
+                        "url": page.url,
+                        "companyName": page.company_name,
+                        "meetingDate": page.meeting_date,
+                        "status": "fetch-failed",
+                        "error": str(error),
+                    }
+                )
+                continue
+            html = raw_path.read_text()
+            used_cached_source = True
+        else:
+            raw_path = write_raw_announcement_html(page.url, html)
 
-        raw_path = write_raw_announcement_html(page.url, html)
         official_rows = parse_announcement_tables(html, page.parser_hint)
         if page.source != "ia-linked-announcement":
             validate_official_vote_rows(official_rows, page.url)
@@ -1548,7 +1558,7 @@ def enrich_with_official_announcements(
                 "url": page.url,
                 "companyName": page.company_name,
                 "meetingDate": page.meeting_date,
-                "status": "parsed",
+                "status": "parsed-cached" if used_cached_source else "parsed",
                 "rawHtmlPath": str(raw_path.relative_to(ROOT)),
                 "rowsExtracted": len(official_rows),
                 "rowsMatched": page_matches,
@@ -1701,7 +1711,7 @@ def write_outputs(
     reviewed_meetings = {
         (item["companyName"], item["meetingDate"])
         for item in announcement_audit + document_audit
-        if item.get("status") == "parsed"
+        if item.get("status") in {"parsed", "parsed-cached"}
         and item.get("rowsExtracted", 0) > 0
         and item.get("companyName")
         and item.get("meetingDate")

@@ -65,6 +65,11 @@
     "sector": "Aerospace & defence"
   },
   {
+    "companyName": "Balfour Beatty",
+    "ticker": "BBY",
+    "sector": "Construction & Materials"
+  },
+  {
     "companyName": "Barclays",
     "ticker": "BARC",
     "sector": "Banks"
@@ -73,11 +78,6 @@
     "companyName": "Barratt Redrow",
     "ticker": "BTRW",
     "sector": "Household goods & home construction"
-  },
-  {
-    "companyName": "Beazley",
-    "ticker": "BEZ",
-    "sector": "Insurance"
   },
   {
     "companyName": "BP",
@@ -405,11 +405,6 @@
     "sector": "Food & drug retailing"
   },
   {
-    "companyName": "Schroders",
-    "ticker": "SDR",
-    "sector": "Financial services"
-  },
-  {
     "companyName": "Scottish Mortgage Investment Trust",
     "ticker": "SMT",
     "sector": "Collective investments"
@@ -498,5 +493,10 @@
     "companyName": "Whitbread",
     "ticker": "WTB",
     "sector": "Retail hospitality"
+  },
+  {
+    "companyName": "WPP",
+    "ticker": "WPP",
+    "sector": "Media"
   }
 ]

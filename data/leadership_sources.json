@@ -633,22 +633,24 @@
       }
     },
     {
-      "companyName": "Beazley",
-      "ticker": "BEZ",
-      "trackerAliases": [],
+      "companyName": "Balfour Beatty",
+      "ticker": "BBY",
+      "trackerAliases": [
+        "BALFOUR BEATTY PLC"
+      ],
       "roles": {
         "ceo": {
-          "name": "Adrian Cox",
-          "roleStartDate": "2021-04-01",
-          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
-          "sourceLabel": "Beazley Board profile",
-          "datePrecision": "month"
+          "name": "Philip Hoare",
+          "roleStartDate": "2025-09-08",
+          "sourceUrl": "https://www.balfourbeatty.com/media/mbpdohql/balfour-beatty-annual-general-meeting-2026.pdf",
+          "sourceLabel": "Balfour Beatty 2026 AGM notice",
+          "datePrecision": "day"
         },
         "chair": {
-          "name": "Clive Bannister",
-          "roleStartDate": "2023-04-25",
-          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
-          "sourceLabel": "Beazley Board profile",
+          "name": "Charles Allen, Lord Allen of Kensington",
+          "roleStartDate": "2021-07-20",
+          "sourceUrl": "https://www.balfourbeatty.com/media-centre/latest/chairman-succession/",
+          "sourceLabel": "Balfour Beatty Chair succession announcement",
           "datePrecision": "day"
         }
       }

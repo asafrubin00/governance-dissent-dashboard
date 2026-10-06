@@ -228,6 +228,23 @@
       }
     },
     {
+      "ticker": "BBY",
+      "roles": {
+        "ceo": {
+          "name": "Philip Hoare",
+          "summary": "Philip Hoare has served as Chief Executive of Balfour Beatty since September 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.balfourbeatty.com/media/mbpdohql/balfour-beatty-annual-general-meeting-2026.pdf",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Charles Allen, Lord Allen of Kensington",
+          "summary": "Charles Allen, Lord Allen of Kensington has served as Chair of Balfour Beatty since July 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.balfourbeatty.com/media-centre/latest/chairman-succession/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
       "ticker": "BARC",
       "roles": {
         "ceo": {
@@ -257,23 +274,6 @@
           "name": "Caroline Silver",
           "summary": "Caroline Silver has served as Chair of Barratt Redrow since June 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
           "sourceUrl": "https://www.barrattredrow.co.uk/about-us/leadership/the-board",
-          "portraitPath": null
-        }
-      }
-    },
-    {
-      "ticker": "BEZ",
-      "roles": {
-        "ceo": {
-          "name": "Adrian Cox",
-          "summary": "Adrian Cox has served as Chief Executive of Beazley since April 2021. This concise appointment profile is based on the issuer's official leadership evidence.",
-          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
-          "portraitPath": null
-        },
-        "chair": {
-          "name": "Clive Bannister",
-          "summary": "Clive Bannister has served as Chair of Beazley since April 2023. This concise appointment profile is based on the issuer's official leadership evidence.",
-          "sourceUrl": "https://www.beazley.com/en/who-we-are/board-and-management/",
           "portraitPath": null
         }
       }
@@ -1366,23 +1366,6 @@
       }
     },
     {
-      "ticker": "SDR",
-      "roles": {
-        "ceo": {
-          "name": "Richard Oldfield",
-          "summary": "Richard Oldfield has served as Chief Executive of Schroders since November 2024. This concise appointment profile is based on the issuer's official leadership evidence.",
-          "sourceUrl": "https://www.schroders.com/en/global/individual/people/richard-oldfield/",
-          "portraitPath": null
-        },
-        "chair": {
-          "name": "Dame Elizabeth Corley",
-          "summary": "Dame Elizabeth Corley has served as Chair of Schroders since April 2022. This concise appointment profile is based on the issuer's official leadership evidence.",
-          "sourceUrl": "https://www.schroders.com/en/global/individual/people/dame-elizabeth-corley/",
-          "portraitPath": null
-        }
-      }
-    },
-    {
       "ticker": "SMT",
       "roles": {
         "chair": {
@@ -1672,6 +1655,23 @@
           "name": "Cilla Snowball",
           "summary": "Cilla Snowball has served as Chair of Whitbread since September 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
           "sourceUrl": "https://www.whitbread.co.uk/about-us/management/",
+          "portraitPath": null
+        }
+      }
+    },
+    {
+      "ticker": "WPP",
+      "roles": {
+        "ceo": {
+          "name": "Cindy Rose",
+          "summary": "Cindy Rose has served as Chief Executive of WPP since September 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.wpp.com/en/news/2025/07/chief-executive-officer-appointment",
+          "portraitPath": null
+        },
+        "chair": {
+          "name": "Philip Jansen",
+          "summary": "Philip Jansen has served as Chair of WPP since January 2025. This concise appointment profile is based on the issuer's official leadership evidence.",
+          "sourceUrl": "https://www.wpp.com/en/news/2024/07/wpp-appoints-philip-jansen-as-non-executive-chair-of-the-board",
           "portraitPath": null
         }
       }
