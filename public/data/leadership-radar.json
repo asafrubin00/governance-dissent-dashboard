@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-10-06T09:11:42.150504+00:00",
+    "generatedAt": "2026-10-12T16:36:15.535619+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -71,7 +71,7 @@
       "outcomeCount": 56,
       "completedOutcomeCount": 50,
       "activeOutcomeCount": 6,
-      "alignedCompletedOutcomeCount": 50,
+      "alignedCompletedOutcomeCount": 49,
       "comparisonObservationCount": 188,
       "decision": "retain-current-weights",
       "note": "All 50 completed-transition cases now have complete aligned warning windows. The locked evaluation sample still shows no incremental capture from warning or performance uplifts, so production weights remain unchanged."

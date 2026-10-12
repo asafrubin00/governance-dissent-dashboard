@@ -207,37 +207,25 @@
     "url": "https://www.smiths.com/media/u2dapgp3/2021-agm-results.pdf",
     "companyName": "SMITHS GROUP PLC",
     "meetingDate": "2021-11-17",
-    "status": "parsed",
+    "status": "fetch-failed",
     "documentType": "pdf-results",
-    "rawPdfPath": "data/raw/issuer-documents/f1cbd9a61823.pdf",
-    "rowsExtracted": 22,
-    "rowsMatched": 0,
-    "rowsAdded": 0,
-    "parserHint": "smiths-agm-results"
+    "error": "403 Client Error: Forbidden for url: https://www.smiths.com/media/u2dapgp3/2021-agm-results.pdf"
   },
   {
     "url": "https://www.smiths.com/media/u01lrcj0/2022-agm-results.pdf",
     "companyName": "SMITHS GROUP PLC",
     "meetingDate": "2022-11-16",
-    "status": "parsed",
+    "status": "fetch-failed",
     "documentType": "pdf-results",
-    "rawPdfPath": "data/raw/issuer-documents/cf36e0022ed4.pdf",
-    "rowsExtracted": 21,
-    "rowsMatched": 0,
-    "rowsAdded": 0,
-    "parserHint": "smiths-agm-results"
+    "error": "403 Client Error: Forbidden for url: https://www.smiths.com/media/u01lrcj0/2022-agm-results.pdf"
   },
   {
     "url": "https://www.smiths.com/media/q5sn0zt4/2023-agm-results.pdf",
     "companyName": "SMITHS GROUP PLC",
     "meetingDate": "2023-11-16",
-    "status": "parsed",
+    "status": "fetch-failed",
     "documentType": "pdf-results",
-    "rawPdfPath": "data/raw/issuer-documents/bc3cf72e62c4.pdf",
-    "rowsExtracted": 21,
-    "rowsMatched": 0,
-    "rowsAdded": 0,
-    "parserHint": "smiths-agm-results"
+    "error": "403 Client Error: Forbidden for url: https://www.smiths.com/media/q5sn0zt4/2023-agm-results.pdf"
   },
   {
     "url": "https://www.iggroup.com/~/media/Files/I/IG-Group/documents/investors/shareholder-information/general-meetings/2020/voting-result.pdf",

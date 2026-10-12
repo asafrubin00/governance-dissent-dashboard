@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-10-06T09:11:59.227229+00:00",
+    "generatedAt": "2026-10-12T16:36:42.120281+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "1.2",
     "outcomeCount": 56,
@@ -51,21 +51,21 @@
       "longTenureRatePct": 33.9,
       "priorWarningRatePct": 25.0,
       "priorDissentRatePct": 12.5,
-      "marketCoveragePct": 100.0,
-      "medianRelativePerformancePct": -18.2,
-      "marketStressRatePct": 46.4
+      "marketCoveragePct": 98.2,
+      "medianRelativePerformancePct": -18.1,
+      "marketStressRatePct": 45.5
     },
     "alignedCompletedOutcomes": {
-      "count": 50,
-      "medianTenureYears": 5.8,
-      "medianBaselineScore": 46.0,
-      "medianWarningSensitivityScore": 46.0,
-      "longTenureRatePct": 34.0,
-      "priorWarningRatePct": 24.0,
-      "priorDissentRatePct": 12.0,
+      "count": 49,
+      "medianTenureYears": 5.7,
+      "medianBaselineScore": 45.6,
+      "medianWarningSensitivityScore": 45.6,
+      "longTenureRatePct": 32.7,
+      "priorWarningRatePct": 24.5,
+      "priorDissentRatePct": 12.2,
       "marketCoveragePct": 100.0,
-      "medianRelativePerformancePct": -19.0,
-      "marketStressRatePct": 48.0
+      "medianRelativePerformancePct": -18.3,
+      "marketStressRatePct": 46.9
     },
     "currentComparisons": {
       "count": 188,
@@ -80,14 +80,14 @@
       "marketStressRatePct": 31.7
     },
     "sensitivity": {
-      "eligibleCompletedOutcomeCount": 50,
+      "eligibleCompletedOutcomeCount": 49,
       "baselineTopQuartileThreshold": 58.4,
-      "baselineOutcomeCapturePct": 38.0,
+      "baselineOutcomeCapturePct": 36.7,
       "warningTopQuartileThreshold": 60.0,
-      "warningOutcomeCapturePct": 36.0,
+      "warningOutcomeCapturePct": 34.7,
       "candidateWarningRule": "Exploratory only: 6 points for a material warning or 12 for any severe warning, plus 3 for each repeat event, capped at 18.",
       "combinedTopQuartileThreshold": 61.1,
-      "combinedOutcomeCapturePct": 40.0,
+      "combinedOutcomeCapturePct": 38.8,
       "candidatePerformanceRule": "Exploratory only: 8 points for trailing relative underperformance of at least 20 percentage points and 15 points at 40 percentage points."
     },
     "heldOutValidation": {
@@ -110,7 +110,6 @@
         "cna-ceo-2019-07-30",
         "mks-ceo-2022-03-10",
         "mro-ceo-2023-09-07",
-        "sdr-ceo-2024-04-25",
         "tsco-ceo-2019-10-02",
         "glen-ceo-2020-12-04",
         "pru-ceo-2022-02-10",
@@ -153,9 +152,9 @@
         "tenureWarningsAndPerformance": 61.1
       },
       "trainingCapturePct": {
-        "tenureOnly": 40.9,
-        "tenureAndWarnings": 38.6,
-        "tenureWarningsAndPerformance": 43.2
+        "tenureOnly": 39.5,
+        "tenureAndWarnings": 37.2,
+        "tenureWarningsAndPerformance": 41.9
       },
       "holdoutCapturePct": {
         "tenureOnly": 16.7,
@@ -1061,14 +1060,14 @@
       "baselineScore": 64.8,
       "exploratoryWarningUplift": 0,
       "warningSensitivityScore": 64.8,
-      "marketWindowStart": "2022-04-30",
-      "marketWindowEnd": "2024-03-31",
-      "companyDividendAdjustedReturnPct": -29.9,
-      "benchmarkPriceReturnPct": 7.1,
-      "relativePerformancePct": -36.9,
-      "marketStress": true,
-      "exploratoryPerformanceUplift": 8,
-      "combinedSensitivityScore": 72.8
+      "marketWindowStart": null,
+      "marketWindowEnd": null,
+      "companyDividendAdjustedReturnPct": null,
+      "benchmarkPriceReturnPct": null,
+      "relativePerformancePct": null,
+      "marketStress": false,
+      "exploratoryPerformanceUplift": 0,
+      "combinedSensitivityScore": 64.8
     },
     {
       "id": "tsco-ceo-2019-10-02",
@@ -3681,9 +3680,9 @@
       "warningSensitivityScore": 68.8,
       "marketWindowStart": "2024-08-31",
       "marketWindowEnd": "2026-07-31",
-      "companyDividendAdjustedReturnPct": -1.1,
+      "companyDividendAdjustedReturnPct": -0.4,
       "benchmarkPriceReturnPct": 31.4,
-      "relativePerformancePct": -32.6,
+      "relativePerformancePct": -31.8,
       "marketStress": true,
       "exploratoryPerformanceUplift": 8,
       "combinedSensitivityScore": 76.8
@@ -3712,9 +3711,9 @@
       "warningSensitivityScore": 50.7,
       "marketWindowStart": "2024-08-31",
       "marketWindowEnd": "2026-07-31",
-      "companyDividendAdjustedReturnPct": -1.1,
+      "companyDividendAdjustedReturnPct": -0.4,
       "benchmarkPriceReturnPct": 31.4,
-      "relativePerformancePct": -32.6,
+      "relativePerformancePct": -31.8,
       "marketStress": true,
       "exploratoryPerformanceUplift": 8,
       "combinedSensitivityScore": 58.7
