@@ -1,21 +1,21 @@
 {
   "metadata": {
-    "generatedAt": "2026-10-12T16:36:42.382254+00:00",
+    "generatedAt": "2026-10-19T14:28:37.001102+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 53,
+    "activeSourceCount": 52,
     "reachableSourceCount": 83,
     "unavailableSourceCount": 17,
     "unavailableSourceCountByCategory": {
       "access-blocked": 16,
       "timeout": 1
     },
-    "newCandidateCount": 4,
-    "pendingCandidateCount": 33,
+    "newCandidateCount": 6,
+    "pendingCandidateCount": 39,
     "pendingCandidateCountBySignal": {
-      "earnings": 19,
-      "succession": 15
+      "earnings": 21,
+      "succession": 19
     },
     "validation": {
       "status": "pass",
@@ -82,10 +82,10 @@
     },
     {
       "ticker": "RIO",
-      "status": "active",
-      "matchedLinkCount": 1,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -158,19 +158,19 @@
     {
       "ticker": "KGF",
       "status": "active",
-      "matchedLinkCount": 1,
+      "matchedLinkCount": 2,
       "matchedLinkCountBySignal": {
         "earnings": 1,
-        "succession": 0
+        "succession": 1
       }
     },
     {
       "ticker": "ANTO",
       "status": "active",
-      "matchedLinkCount": 21,
+      "matchedLinkCount": 22,
       "matchedLinkCountBySignal": {
         "earnings": 19,
-        "succession": 2
+        "succession": 3
       }
     },
     {
@@ -284,19 +284,19 @@
     {
       "ticker": "BLND",
       "status": "active",
-      "matchedLinkCount": 12,
+      "matchedLinkCount": 13,
       "matchedLinkCountBySignal": {
-        "earnings": 9,
+        "earnings": 10,
         "succession": 3
       }
     },
     {
       "ticker": "BT.A",
       "status": "active",
-      "matchedLinkCount": 2,
+      "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
         "earnings": 1,
-        "succession": 1
+        "succession": 0
       }
     },
     {
@@ -692,10 +692,10 @@
     {
       "ticker": "ITH",
       "status": "active",
-      "matchedLinkCount": 37,
+      "matchedLinkCount": 38,
       "matchedLinkCountBySignal": {
         "earnings": 33,
-        "succession": 4
+        "succession": 5
       }
     },
     {
@@ -812,19 +812,19 @@
     {
       "ticker": "STAN",
       "status": "active",
-      "matchedLinkCount": 5,
+      "matchedLinkCount": 4,
       "matchedLinkCountBySignal": {
-        "earnings": 5,
+        "earnings": 4,
         "succession": 0
       }
     },
     {
       "ticker": "SDLF",
       "status": "active",
-      "matchedLinkCount": 42,
+      "matchedLinkCount": 43,
       "matchedLinkCountBySignal": {
         "earnings": 7,
-        "succession": 35
+        "succession": 36
       }
     },
     {

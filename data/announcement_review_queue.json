@@ -1,6 +1,84 @@
 {
-  "updatedAt": "2026-10-12T16:36:42.382254+00:00",
+  "updatedAt": "2026-10-19T14:28:37.001102+00:00",
   "candidates": [
+    {
+      "id": "kgf-1e8fc758c5235450",
+      "ticker": "KGF",
+      "companyName": "Kingfisher",
+      "title": "CEO Designate Biography",
+      "url": "https://www.kingfisher.com/media/news/ceo-designate-biography",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-10-19T14:28:37.001102+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "anto-cb2927a953baacba",
+      "ticker": "ANTO",
+      "companyName": "Antofagasta",
+      "title": "Board Changes",
+      "url": "https://www.antofagasta.co.uk/investors/news/2026/board-changes-1",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-10-19T14:28:37.001102+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "blnd-2b6185dbfbb68225",
+      "ticker": "BLND",
+      "companyName": "British Land",
+      "title": "Download",
+      "url": "https://www.britishland.com/media/bmmdkwvu/261015-hy27-trading-update-vf.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-19T14:28:37.001102+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "mtln-93057c5d3c52a7ba",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/avmc0lco/metlen_buyback_weekly_transaction_announcement_-19-10-26.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-19T14:28:37.001102+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ith-b079207ed99450a2",
+      "ticker": "ITH",
+      "companyName": "Ithaca Energy",
+      "title": "16 Oct 2026 Chief Executive Officer Succession",
+      "url": "https://www.ithacaenergy.com/press-releases/chief-executive-officer-succession",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-10-19T14:28:37.001102+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sdlf-aa634f6d7b3f9937",
+      "ticker": "SDLF",
+      "companyName": "Standard Life",
+      "title": "2026 Q4",
+      "url": "https://www.standardlifeplc.com/news-and-views/press-releases/article-page/transform-young-workers-retirement-prospects",
+      "signalTypes": [
+        "succession"
+      ],
+      "detectedAt": "2026-10-19T14:28:37.001102+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "lgen-291f83d45bc55d14",
       "ticker": "LGEN",
