@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generatedAt": "2026-10-19T14:28:36.772236+00:00",
+    "generatedAt": "2026-10-26T14:02:05.718359+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "1.2",
     "outcomeCount": 56,
@@ -3680,9 +3680,9 @@
       "warningSensitivityScore": 68.8,
       "marketWindowStart": "2024-08-31",
       "marketWindowEnd": "2026-07-31",
-      "companyDividendAdjustedReturnPct": -1.1,
+      "companyDividendAdjustedReturnPct": -0.4,
       "benchmarkPriceReturnPct": 31.4,
-      "relativePerformancePct": -32.6,
+      "relativePerformancePct": -31.8,
       "marketStress": true,
       "exploratoryPerformanceUplift": 8,
       "combinedSensitivityScore": 76.8
@@ -3711,9 +3711,9 @@
       "warningSensitivityScore": 50.7,
       "marketWindowStart": "2024-08-31",
       "marketWindowEnd": "2026-07-31",
-      "companyDividendAdjustedReturnPct": -1.1,
+      "companyDividendAdjustedReturnPct": -0.4,
       "benchmarkPriceReturnPct": 31.4,
-      "relativePerformancePct": -32.6,
+      "relativePerformancePct": -31.8,
       "marketStress": true,
       "exploratoryPerformanceUplift": 8,
       "combinedSensitivityScore": 58.7

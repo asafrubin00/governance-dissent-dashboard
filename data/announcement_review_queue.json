@@ -1,6 +1,110 @@
 {
-  "updatedAt": "2026-10-19T14:28:37.001102+00:00",
+  "updatedAt": "2026-10-26T14:02:06.011947+00:00",
   "candidates": [
+    {
+      "id": "lseg-015172e61b40120a",
+      "ticker": "LSEG",
+      "companyName": "London Stock Exchange Group",
+      "title": "View event",
+      "url": "https://www.lseg.com/en/investor-relations/financial-results/trading-update-22-october-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-26T14:02:06.011947+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ihg-557fa18cb75112f3",
+      "ticker": "IHG",
+      "companyName": "InterContinental Hotels Group",
+      "title": "PDF 79KB",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/results/2026/q3-trading-update/stock-exchange-announcement.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-26T14:02:06.011947+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ihg-6ba45b85a886fc60",
+      "ticker": "IHG",
+      "companyName": "InterContinental Hotels Group",
+      "title": "PDF 423KB",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/results/2026/q3-trading-update/supplementary-information.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-26T14:02:06.011947+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "bnzl-886233d330b40209",
+      "ticker": "BNZL",
+      "companyName": "Bunzl",
+      "title": "Read more",
+      "url": "https://www.bunzl.com/newsroom/q3-trading-statement-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-26T14:02:06.011947+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "rel-a7009b3899831af3",
+      "ticker": "REL",
+      "companyName": "RELX",
+      "title": "Trading Update",
+      "url": "https://www.relx.com/media/press-releases/year-2026/trading-update-oct",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-26T14:02:06.011947+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "mtln-a48f79330f85132b",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/4regoeyr/metlen_buyback_weekly_transaction_announcement_-26-10-26.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-26T14:02:06.011947+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sgro-492de7011a73a627",
+      "ticker": "SGRO",
+      "companyName": "SEGRO",
+      "title": "Q3 Trading Update",
+      "url": "https://www.segro.com/investors/financial-results-centre/q3-trading-update",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-26T14:02:06.011947+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "sgro-b5b805b103d416f0",
+      "ticker": "SGRO",
+      "companyName": "SEGRO",
+      "title": "Read more",
+      "url": "https://www.segro.com/media/news/2026/segro-plc-q3-2026-trading-update",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-10-26T14:02:06.011947+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "kgf-1e8fc758c5235450",
       "ticker": "KGF",

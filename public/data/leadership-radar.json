@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "FTSE 100 Leadership Pressure Radar",
-    "generatedAt": "2026-10-19T14:28:18.429049+00:00",
+    "generatedAt": "2026-10-26T14:01:41.984240+00:00",
     "asOfDate": "2026-08-15",
     "methodologyVersion": "0.6",
     "rosterSource": {
@@ -81,7 +81,7 @@
     {
       "companyName": "3i",
       "ticker": "III",
-      "sector": "Financial services",
+      "sector": "GB00B1YW4409",
       "roles": {
         "ceo": {
           "name": "Simon Borrows",
@@ -149,7 +149,7 @@
     {
       "companyName": "Aberdeen Group",
       "ticker": "ABDN",
-      "sector": "Financial Services",
+      "sector": "GB00BF8Q6K64",
       "roles": {
         "ceo": {
           "name": "Jason Windsor",
@@ -217,7 +217,7 @@
     {
       "companyName": "Admiral Group",
       "ticker": "ADM",
-      "sector": "Insurance",
+      "sector": "GB00B02J6398",
       "roles": {
         "ceo": {
           "name": "Milena Mondini de Focatiis",
@@ -285,7 +285,7 @@
     {
       "companyName": "Airtel Africa",
       "ticker": "AAF",
-      "sector": "Telecommunications services",
+      "sector": "GB00BKDRYJ47",
       "roles": {
         "ceo": {
           "name": "Sunil Taldar",
@@ -353,7 +353,7 @@
     {
       "companyName": "Alliance Witan",
       "ticker": "ALW",
-      "sector": "Investment Trusts",
+      "sector": "GB00B11V7W98",
       "roles": {
         "ceo": {
           "status": "not-applicable",
@@ -408,7 +408,7 @@
     {
       "companyName": "Anglo American plc",
       "ticker": "AAL",
-      "sector": "Mining",
+      "sector": "GB00BTK05J60",
       "roles": {
         "ceo": {
           "name": "Duncan Wanblad",
@@ -500,7 +500,7 @@
     {
       "companyName": "Antofagasta plc",
       "ticker": "ANTO",
-      "sector": "Mining",
+      "sector": "GB0000456144",
       "roles": {
         "ceo": {
           "name": "Iv\u00e1n Arriagada",
@@ -568,7 +568,7 @@
     {
       "companyName": "Associated British Foods",
       "ticker": "ABF",
-      "sector": "Food & tobacco",
+      "sector": "GB0006731235",
       "roles": {
         "ceo": {
           "name": "George Weston",
@@ -636,7 +636,7 @@
     {
       "companyName": "AstraZeneca",
       "ticker": "AZN",
-      "sector": "Pharmaceuticals & biotechnology",
+      "sector": "GB0009895292",
       "roles": {
         "ceo": {
           "name": "Pascal Soriot",
@@ -704,7 +704,7 @@
     {
       "companyName": "Autotrader Group",
       "ticker": "AUTO",
-      "sector": "Media",
+      "sector": "GB00BVYVFW23",
       "roles": {
         "ceo": {
           "name": "Nathan Coe",
@@ -772,7 +772,7 @@
     {
       "companyName": "Aviva",
       "ticker": "AV",
-      "sector": "Life insurance",
+      "sector": "GB00BPQY8M80",
       "roles": {
         "ceo": {
           "name": "Dame Amanda Blanc",
@@ -861,7 +861,7 @@
     {
       "companyName": "Babcock International",
       "ticker": "BAB",
-      "sector": "Aerospace & defence",
+      "sector": "GB0009697037",
       "roles": {
         "ceo": {
           "name": "David Lockwood OBE",
@@ -944,7 +944,7 @@
     {
       "companyName": "BAE Systems",
       "ticker": "BA",
-      "sector": "Aerospace & defence",
+      "sector": "GB0002634946",
       "roles": {
         "ceo": {
           "name": "Charles Woodburn",
@@ -1012,7 +1012,7 @@
     {
       "companyName": "Balfour Beatty",
       "ticker": "BBY",
-      "sector": "Construction & Materials",
+      "sector": "GB0000961622",
       "roles": {
         "ceo": {
           "name": "Philip Hoare",
@@ -1080,7 +1080,7 @@
     {
       "companyName": "Barclays",
       "ticker": "BARC",
-      "sector": "Banks",
+      "sector": "GB0031348658",
       "roles": {
         "ceo": {
           "name": "C.S. Venkatakrishnan",
@@ -1148,7 +1148,7 @@
     {
       "companyName": "Barratt Redrow",
       "ticker": "BTRW",
-      "sector": "Household goods & home construction",
+      "sector": "GB0000811801",
       "roles": {
         "ceo": {
           "name": "David Thomas",
@@ -1231,7 +1231,7 @@
     {
       "companyName": "BP",
       "ticker": "BP",
-      "sector": "Oil & gas producers",
+      "sector": "GB0007980591",
       "roles": {
         "ceo": {
           "name": "Murray Auchincloss",
@@ -1389,7 +1389,7 @@
     {
       "companyName": "British American Tobacco",
       "ticker": "BATS",
-      "sector": "Tobacco",
+      "sector": "GB0002875804",
       "roles": {
         "ceo": {
           "name": "Tadeu Marroco",
@@ -1472,7 +1472,7 @@
     {
       "companyName": "British Land",
       "ticker": "BLND",
-      "sector": "Real estate",
+      "sector": "GB0001367019",
       "roles": {
         "ceo": {
           "name": "Simon Carter",
@@ -1555,7 +1555,7 @@
     {
       "companyName": "BT Group",
       "ticker": "BT.A",
-      "sector": "Telecommunications services",
+      "sector": "GB0030913577",
       "roles": {
         "ceo": {
           "name": "Allison Kirkby",
@@ -1623,7 +1623,7 @@
     {
       "companyName": "Bunzl",
       "ticker": "BNZL",
-      "sector": "Support services",
+      "sector": "GB00B0744B38",
       "roles": {
         "ceo": {
           "name": "Frank van Zanten",
@@ -1713,7 +1713,7 @@
     {
       "companyName": "Burberry Group",
       "ticker": "BRBY",
-      "sector": "Personal goods",
+      "sector": "GB0031743007",
       "roles": {
         "ceo": {
           "name": "Joshua Schulman",
@@ -1860,7 +1860,7 @@
     {
       "companyName": "Centrica",
       "ticker": "CNA",
-      "sector": "Multiline utilities",
+      "sector": "GB00B033F229",
       "roles": {
         "ceo": {
           "name": "Chris O'Shea",
@@ -1952,7 +1952,7 @@
     {
       "companyName": "Coca-Cola Europacific Partners",
       "ticker": "CCEP",
-      "sector": "Beverages",
+      "sector": "GB00BDCPN049",
       "roles": {
         "ceo": {
           "name": "Damian Gammell",
@@ -2044,7 +2044,7 @@
     {
       "companyName": "Coca-Cola HBC",
       "ticker": "CCH",
-      "sector": "Beverages",
+      "sector": "CH0198251305",
       "roles": {
         "ceo": {
           "name": "Zoran Bogdanovic",
@@ -2112,7 +2112,7 @@
     {
       "companyName": "Compass Group",
       "ticker": "CPG",
-      "sector": "Support services",
+      "sector": "GB00BD6K4575",
       "roles": {
         "ceo": {
           "name": "Dominic Blakemore",
@@ -2180,7 +2180,7 @@
     {
       "companyName": "Computacenter",
       "ticker": "CCC",
-      "sector": "Software & Computer Services",
+      "sector": "GB00BV9FP302",
       "roles": {
         "ceo": {
           "name": "Mike Norris",
@@ -2294,7 +2294,7 @@
     {
       "companyName": "Convatec",
       "ticker": "CTEC",
-      "sector": "Health care equipment & supplies",
+      "sector": "GB00BD3VFW73",
       "roles": {
         "ceo": {
           "name": "Jonny Mason",
@@ -2408,7 +2408,7 @@
     {
       "companyName": "Croda International",
       "ticker": "CRDA",
-      "sector": "Chemicals",
+      "sector": "GB00BJFFLV09",
       "roles": {
         "ceo": {
           "name": "Steve Foots CBE",
@@ -2498,7 +2498,7 @@
     {
       "companyName": "DCC Energy",
       "ticker": "DCC",
-      "sector": "Support services",
+      "sector": "IE0002424939",
       "roles": {
         "ceo": {
           "name": "Donal Murphy",
@@ -2566,7 +2566,7 @@
     {
       "companyName": "Diageo",
       "ticker": "DGE",
-      "sector": "Beverages",
+      "sector": "GB0002374006",
       "roles": {
         "ceo": {
           "name": "Sir Dave Lewis",
@@ -2656,7 +2656,7 @@
     {
       "companyName": "Diploma",
       "ticker": "DPLM",
-      "sector": "Industrial Support services",
+      "sector": "GB0001826634",
       "roles": {
         "ceo": {
           "name": "Johnny Thomson",
@@ -2724,7 +2724,7 @@
     {
       "companyName": "EasyJet",
       "ticker": "EZJ",
-      "sector": "Travel and Leisure",
+      "sector": "GB00B7KR2P84",
       "roles": {
         "ceo": {
           "name": "Kenton Jarvis",
@@ -2792,7 +2792,7 @@
     {
       "companyName": "Endeavour Mining",
       "ticker": "EDV",
-      "sector": "Mining",
+      "sector": "GB00BL6K5J42",
       "roles": {
         "ceo": {
           "name": "Ian Cockerill",
@@ -2860,7 +2860,7 @@
     {
       "companyName": "Experian",
       "ticker": "EXPN",
-      "sector": "Support services",
+      "sector": "GB00B19NLV48",
       "roles": {
         "ceo": {
           "name": "Brian Cassin",
@@ -2928,7 +2928,7 @@
     {
       "companyName": "F & C Investment Trust",
       "ticker": "FCIT",
-      "sector": "Collective investments",
+      "sector": "GB00BS88V647",
       "roles": {
         "ceo": {
           "status": "not-applicable",
@@ -2983,7 +2983,7 @@
     {
       "companyName": "Fresnillo plc",
       "ticker": "FRES",
-      "sector": "Mining",
+      "sector": "GB00B2QPKJ12",
       "roles": {
         "ceo": {
           "name": "Octavio Alvidrez",
@@ -3051,7 +3051,7 @@
     {
       "companyName": "Games Workshop",
       "ticker": "GAW",
-      "sector": "Leisure Goods",
+      "sector": "GB0003718474",
       "roles": {
         "ceo": {
           "name": "Kevin Rountree",
@@ -3119,7 +3119,7 @@
     {
       "companyName": "Glencore",
       "ticker": "GLEN",
-      "sector": "Mining",
+      "sector": "JE00B4T3BW64",
       "roles": {
         "ceo": {
           "name": "Gary Nagle",
@@ -3187,7 +3187,7 @@
     {
       "companyName": "GSK plc",
       "ticker": "GSK",
-      "sector": "Pharmaceuticals & biotechnology",
+      "sector": "GB00BN7SWP63",
       "roles": {
         "ceo": {
           "name": "Luke Miels",
@@ -3255,7 +3255,7 @@
     {
       "companyName": "Haleon",
       "ticker": "HLN",
-      "sector": "Pharmaceuticals & biotechnology",
+      "sector": "GB00BMX86B70",
       "roles": {
         "ceo": {
           "name": "Brian McNamara",
@@ -3323,7 +3323,7 @@
     {
       "companyName": "Halma plc",
       "ticker": "HLMA",
-      "sector": "Electronic equipment & parts",
+      "sector": "GB0004052071",
       "roles": {
         "ceo": {
           "name": "Marc Ronchetti",
@@ -3391,7 +3391,7 @@
     {
       "companyName": "Hiscox",
       "ticker": "HSX",
-      "sector": "Non-life Insurance",
+      "sector": "BMG4593F1389",
       "roles": {
         "ceo": {
           "name": "Aki Hussain",
@@ -3459,7 +3459,7 @@
     {
       "companyName": "Howdens Joinery",
       "ticker": "HWDN",
-      "sector": "Homebuilding & construction supplies",
+      "sector": "GB0005576813",
       "roles": {
         "ceo": {
           "name": "Andrew Livingston",
@@ -3527,7 +3527,7 @@
     {
       "companyName": "HSBC",
       "ticker": "HSBA",
-      "sector": "Banks",
+      "sector": "GB0005405286",
       "roles": {
         "ceo": {
           "name": "Georges Elhedery",
@@ -3595,7 +3595,7 @@
     {
       "companyName": "ICG",
       "ticker": "ICG",
-      "sector": "Financial services",
+      "sector": "GB00BYT1DJ19",
       "roles": {
         "ceo": {
           "name": "Benoit Durteste",
@@ -3663,7 +3663,7 @@
     {
       "companyName": "IG Group",
       "ticker": "IGG",
-      "sector": "Financial services",
+      "sector": "GB00B06QFB75",
       "roles": {
         "ceo": {
           "name": "Breon Corcoran",
@@ -3731,7 +3731,7 @@
     {
       "companyName": "IHG Hotels & Resorts",
       "ticker": "IHG",
-      "sector": "Travel & leisure",
+      "sector": "GB00BHJYC057",
       "roles": {
         "ceo": {
           "name": "Elie Maalouf",
@@ -3933,7 +3933,7 @@
     {
       "companyName": "IMI",
       "ticker": "IMI",
-      "sector": "Industrial engineering",
+      "sector": "GB00BGLP8L22",
       "roles": {
         "ceo": {
           "name": "Roy Twite",
@@ -4025,7 +4025,7 @@
     {
       "companyName": "Imperial Brands",
       "ticker": "IMB",
-      "sector": "Tobacco",
+      "sector": "GB0004544929",
       "roles": {
         "ceo": {
           "name": "Lukas Paravicini",
@@ -4093,7 +4093,7 @@
     {
       "companyName": "Informa",
       "ticker": "INF",
-      "sector": "Media",
+      "sector": "GB00BMJ6DW54",
       "roles": {
         "ceo": {
           "name": "Stephen Carter",
@@ -4161,7 +4161,7 @@
     {
       "companyName": "International Airlines Group",
       "ticker": "IAG",
-      "sector": "Travel & leisure",
+      "sector": "ES0177542018",
       "roles": {
         "ceo": {
           "name": "Luis Gallego",
@@ -4229,7 +4229,7 @@
     {
       "companyName": "Intertek",
       "ticker": "ITRK",
-      "sector": "Support services",
+      "sector": "GB0031638363",
       "roles": {
         "ceo": {
           "name": "Andre Lacroix",
@@ -4297,7 +4297,7 @@
     {
       "companyName": "Investec",
       "ticker": "INVP",
-      "sector": "Financial Services",
+      "sector": "GB00B17BBQ50",
       "roles": {
         "ceo": {
           "name": "Fani Titi",
@@ -4365,7 +4365,7 @@
     {
       "companyName": "Ithaca Energy",
       "ticker": "ITH",
-      "sector": "Oil & Gas Producers",
+      "sector": "GB00BPJHV584",
       "roles": {
         "ceo": {
           "name": "Luciano Vasques",
@@ -4433,7 +4433,7 @@
     {
       "companyName": "JD Sports",
       "ticker": "JD",
-      "sector": "General retailers",
+      "sector": "GB00BM8Q5M07",
       "roles": {
         "ceo": {
           "name": "Regis Schultz",
@@ -4580,7 +4580,7 @@
     {
       "companyName": "Lion Finance Group",
       "ticker": "BGEO",
-      "sector": "Banking Services",
+      "sector": "GB00BF4HYT85",
       "roles": {
         "ceo": {
           "name": "Archil Gachechiladze",
@@ -4648,7 +4648,7 @@
     {
       "companyName": "Kingfisher plc",
       "ticker": "KGF",
-      "sector": "Retailers",
+      "sector": "GB0033195214",
       "roles": {
         "ceo": {
           "name": "Thierry Garnier",
@@ -4777,7 +4777,7 @@
     {
       "companyName": "Land Securities",
       "ticker": "LAND",
-      "sector": "Real estate investment trusts",
+      "sector": "GB00BYW0PQ60",
       "roles": {
         "ceo": {
           "name": "Mark Allan",
@@ -4845,7 +4845,7 @@
     {
       "companyName": "Legal & General",
       "ticker": "LGEN",
-      "sector": "Life insurance",
+      "sector": "GB0005603997",
       "roles": {
         "ceo": {
           "name": "Antonio Simoes",
@@ -4913,7 +4913,7 @@
     {
       "companyName": "Lloyds Banking Group",
       "ticker": "LLOY",
-      "sector": "Banks",
+      "sector": "GB0008706128",
       "roles": {
         "ceo": {
           "name": "Charlie Nunn",
@@ -4981,7 +4981,7 @@
     {
       "companyName": "LondonMetric Property",
       "ticker": "LMP",
-      "sector": "Real Estate Investment Trusts",
+      "sector": "GB00B4WFW713",
       "roles": {
         "ceo": {
           "name": "Andrew Jones",
@@ -5049,7 +5049,7 @@
     {
       "companyName": "London Stock Exchange Group",
       "ticker": "LSEG",
-      "sector": "Financial services",
+      "sector": "GB00B0SWJX34",
       "roles": {
         "ceo": {
           "name": "David Schwimmer",
@@ -5141,7 +5141,7 @@
     {
       "companyName": "M&G",
       "ticker": "MNG",
-      "sector": "Financial services",
+      "sector": "GB00BKFB1C65",
       "roles": {
         "ceo": {
           "name": "Andrea Rossi",
@@ -5209,7 +5209,7 @@
     {
       "companyName": "Marks & Spencer",
       "ticker": "MKS",
-      "sector": "Food & drug retailing",
+      "sector": "GB0031274896",
       "roles": {
         "ceo": {
           "name": "Stuart Machin",
@@ -5323,7 +5323,7 @@
     {
       "companyName": "Melrose Industries",
       "ticker": "MRO",
-      "sector": "Aerospace & defence",
+      "sector": "GB00BNGDN821",
       "roles": {
         "ceo": {
           "name": "Peter Dilnot",
@@ -5415,7 +5415,7 @@
     {
       "companyName": "Metlen Energy & Metals",
       "ticker": "MTLN",
-      "sector": "Multiline utilities",
+      "sector": "GB00BTQGS779",
       "roles": {
         "ceo": {
           "name": "Christos Gavalas",
@@ -5483,7 +5483,7 @@
     {
       "companyName": "National Grid plc",
       "ticker": "NG",
-      "sector": "Multiline utilities",
+      "sector": "GB00BDR05C01",
       "roles": {
         "ceo": {
           "name": "Zo\u00eb Yujnovich",
@@ -5551,7 +5551,7 @@
     {
       "companyName": "NatWest Group",
       "ticker": "NWG",
-      "sector": "Banks",
+      "sector": "GB00BM8PJY71",
       "roles": {
         "ceo": {
           "name": "Paul Thwaite",
@@ -5619,7 +5619,7 @@
     {
       "companyName": "Next plc",
       "ticker": "NXT",
-      "sector": "General retailers",
+      "sector": "GB0032089863",
       "roles": {
         "ceo": {
           "name": "Lord Wolfson of Aspley Guise",
@@ -5711,7 +5711,7 @@
     {
       "companyName": "Pearson plc",
       "ticker": "PSON",
-      "sector": "Media",
+      "sector": "GB0006776081",
       "roles": {
         "ceo": {
           "name": "Omar Abbosh",
@@ -5779,7 +5779,7 @@
     {
       "companyName": "Pershing Square Holdings",
       "ticker": "PSH",
-      "sector": "Financial services",
+      "sector": "GG00BPFJTF46",
       "roles": {
         "ceo": {
           "status": "not-applicable",
@@ -5834,7 +5834,7 @@
     {
       "companyName": "Polar Capital Technology Trust",
       "ticker": "PCT",
-      "sector": "Investment trusts",
+      "sector": "GB00BR3YV268",
       "roles": {
         "ceo": {
           "status": "not-applicable",
@@ -5889,7 +5889,7 @@
     {
       "companyName": "Prudential plc",
       "ticker": "PRU",
-      "sector": "Life insurance",
+      "sector": "GB0007099541",
       "roles": {
         "ceo": {
           "name": "Anil Wadhwani",
@@ -5957,7 +5957,7 @@
     {
       "companyName": "Reckitt",
       "ticker": "RKT",
-      "sector": "Household goods & home construction",
+      "sector": "GB00BSZBP530",
       "roles": {
         "ceo": {
           "name": "Kris Licht",
@@ -6025,7 +6025,7 @@
     {
       "companyName": "RELX",
       "ticker": "REL",
-      "sector": "Media",
+      "sector": "GB00B2B0DG97",
       "roles": {
         "ceo": {
           "name": "Erik Engstrom",
@@ -6093,7 +6093,7 @@
     {
       "companyName": "Rentokil Initial",
       "ticker": "RTO",
-      "sector": "Support services",
+      "sector": "GB00B082RF11",
       "roles": {
         "ceo": {
           "name": "Mike Duffy",
@@ -6207,7 +6207,7 @@
     {
       "companyName": "Rio Tinto",
       "ticker": "RIO",
-      "sector": "Mining",
+      "sector": "GB0007188757",
       "roles": {
         "ceo": {
           "name": "Simon Trott",
@@ -6299,7 +6299,7 @@
     {
       "companyName": "Rolls-Royce Holdings",
       "ticker": "RR",
-      "sector": "Aerospace & defence",
+      "sector": "GB00B63H8491",
       "roles": {
         "ceo": {
           "name": "Tufan Erginbilgic",
@@ -6367,7 +6367,7 @@
     {
       "companyName": "Sage Group",
       "ticker": "SGE",
-      "sector": "Software & computer services",
+      "sector": "GB00B8C3BL03",
       "roles": {
         "ceo": {
           "name": "Steve Hare",
@@ -6435,7 +6435,7 @@
     {
       "companyName": "Sainsbury's",
       "ticker": "SBRY",
-      "sector": "Food & drug retailing",
+      "sector": "GB00B019KW72",
       "roles": {
         "ceo": {
           "name": "Simon Roberts",
@@ -6503,7 +6503,7 @@
     {
       "companyName": "Scottish Mortgage Investment Trust",
       "ticker": "SMT",
-      "sector": "Collective investments",
+      "sector": "GB00BLDYK618",
       "roles": {
         "ceo": {
           "status": "not-applicable",
@@ -6558,7 +6558,7 @@
     {
       "companyName": "Segro",
       "ticker": "SGRO",
-      "sector": "Real estate investment trusts",
+      "sector": "GB00B5ZN1N88",
       "roles": {
         "ceo": {
           "name": "David Sleath",
@@ -6626,7 +6626,7 @@
     {
       "companyName": "Severn Trent",
       "ticker": "SVT",
-      "sector": "Multiline utilities",
+      "sector": "GB00B1FH8J72",
       "roles": {
         "ceo": {
           "name": "James Jesic",
@@ -6694,7 +6694,7 @@
     {
       "companyName": "Shell plc",
       "ticker": "SHEL",
-      "sector": "Oil & gas producers",
+      "sector": "GB00BP6MXD84",
       "roles": {
         "ceo": {
           "name": "Wael Sawan",
@@ -6786,7 +6786,7 @@
     {
       "companyName": "Smiths Group",
       "ticker": "SMIN",
-      "sector": "General industrials",
+      "sector": "GB00B1WY2338",
       "roles": {
         "ceo": {
           "name": "Roland Carter",
@@ -6854,7 +6854,7 @@
     {
       "companyName": "Smith & Nephew",
       "ticker": "SN",
-      "sector": "Health care equipment & supplies",
+      "sector": "GB0009223206",
       "roles": {
         "ceo": {
           "name": "Deepak Nath",
@@ -6944,7 +6944,7 @@
     {
       "companyName": "Spirax Group",
       "ticker": "SPX",
-      "sector": "Industrial engineering",
+      "sector": "GB00BWFGQN14",
       "roles": {
         "ceo": {
           "name": "Nimesh Patel",
@@ -7012,7 +7012,7 @@
     {
       "companyName": "SSE plc",
       "ticker": "SSE",
-      "sector": "Electrical utilities & independent power producers",
+      "sector": "GB0007908733",
       "roles": {
         "ceo": {
           "name": "Martin Pibworth",
@@ -7080,7 +7080,7 @@
     {
       "companyName": "Standard Chartered",
       "ticker": "STAN",
-      "sector": "Banks",
+      "sector": "GB0004082847",
       "roles": {
         "ceo": {
           "name": "Bill Winters",
@@ -7148,7 +7148,7 @@
     {
       "companyName": "Standard Life",
       "ticker": "SDLF",
-      "sector": "Life insurance",
+      "sector": "GB00BGXQNP29",
       "roles": {
         "ceo": {
           "name": "Andy Briggs",
@@ -7216,7 +7216,7 @@
     {
       "companyName": "St. James's Place",
       "ticker": "STJ",
-      "sector": "Financial services",
+      "sector": "GB0007669376",
       "roles": {
         "ceo": {
           "name": "Mark FitzPatrick",
@@ -7284,7 +7284,7 @@
     {
       "companyName": "Tesco",
       "ticker": "TSCO",
-      "sector": "Food & drug retailing",
+      "sector": "GB00BLGZ9862",
       "roles": {
         "ceo": {
           "name": "Ken Murphy",
@@ -7352,7 +7352,7 @@
     {
       "companyName": "Tritax Big Box REIT",
       "ticker": "BBOX",
-      "sector": "Real Estate Investment Trusts",
+      "sector": "GB00BG49KP99",
       "roles": {
         "ceo": {
           "status": "not-applicable",
@@ -7407,7 +7407,7 @@
     {
       "companyName": "Unilever",
       "ticker": "ULVR",
-      "sector": "Personal goods",
+      "sector": "GB00BVZK7T90",
       "roles": {
         "ceo": {
           "name": "Fernando Fernandez",
@@ -7499,7 +7499,7 @@
     {
       "companyName": "United Utilities",
       "ticker": "UU",
-      "sector": "Multiline utilities",
+      "sector": "GB00B39J2M42",
       "roles": {
         "ceo": {
           "name": "Louise Beardmore",
@@ -7567,7 +7567,7 @@
     {
       "companyName": "Vodafone Group",
       "ticker": "VOD",
-      "sector": "Mobile telecommunications",
+      "sector": "GB00BH4HKS39",
       "roles": {
         "ceo": {
           "name": "Margherita Della Valle",
@@ -7635,7 +7635,7 @@
     {
       "companyName": "Weir",
       "ticker": "WEIR",
-      "sector": "Industrial goods and services",
+      "sector": "GB0009465807",
       "roles": {
         "ceo": {
           "name": "Jon Stanton",
@@ -7703,7 +7703,7 @@
     {
       "companyName": "Whitbread",
       "ticker": "WTB",
-      "sector": "Retail hospitality",
+      "sector": "GB00B1KJJ408",
       "roles": {
         "ceo": {
           "name": "Dominic Paul",
@@ -7771,7 +7771,7 @@
     {
       "companyName": "WPP",
       "ticker": "WPP",
-      "sector": "Media",
+      "sector": "JE00B8KF9B49",
       "roles": {
         "ceo": {
           "name": "Cindy Rose",

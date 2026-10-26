@@ -1,20 +1,22 @@
 {
   "metadata": {
-    "generatedAt": "2026-10-19T14:28:37.001102+00:00",
+    "generatedAt": "2026-10-26T14:02:06.011947+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
     "activeSourceCount": 52,
-    "reachableSourceCount": 83,
-    "unavailableSourceCount": 17,
+    "reachableSourceCount": 80,
+    "unavailableSourceCount": 20,
     "unavailableSourceCountByCategory": {
-      "access-blocked": 16,
+      "access-blocked": 17,
+      "fetch-error": 1,
+      "not-found": 1,
       "timeout": 1
     },
-    "newCandidateCount": 6,
-    "pendingCandidateCount": 39,
+    "newCandidateCount": 8,
+    "pendingCandidateCount": 47,
     "pendingCandidateCountBySignal": {
-      "earnings": 21,
+      "earnings": 29,
       "succession": 19
     },
     "validation": {
@@ -59,9 +61,9 @@
     {
       "ticker": "LSEG",
       "status": "active",
-      "matchedLinkCount": 186,
+      "matchedLinkCount": 187,
       "matchedLinkCountBySignal": {
-        "earnings": 186,
+        "earnings": 187,
         "succession": 0
       }
     },
@@ -74,9 +76,9 @@
     {
       "ticker": "IHG",
       "status": "active",
-      "matchedLinkCount": 13,
+      "matchedLinkCount": 14,
       "matchedLinkCountBySignal": {
-        "earnings": 13,
+        "earnings": 14,
         "succession": 0
       }
     },
@@ -122,9 +124,9 @@
     {
       "ticker": "AAL",
       "status": "active",
-      "matchedLinkCount": 2,
+      "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
-        "earnings": 2,
+        "earnings": 1,
         "succession": 0
       }
     },
@@ -220,12 +222,9 @@
     },
     {
       "ticker": "III",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
-      "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.3i.com/media/news/: 403 Client Error: Forbidden for url: https://www.3i.com/media/news/"
     },
     {
       "ticker": "ABF",
@@ -283,12 +282,9 @@
     },
     {
       "ticker": "BLND",
-      "status": "active",
-      "matchedLinkCount": 13,
-      "matchedLinkCountBySignal": {
-        "earnings": 10,
-        "succession": 3
-      }
+      "status": "unavailable",
+      "failureCategory": "not-found",
+      "error": "https://www.britishland.com/investors/press-releases/: 404 Client Error: Not Found for url: https://www.britishland.com/investors/press-releases/"
     },
     {
       "ticker": "BT.A",
@@ -416,9 +412,9 @@
     {
       "ticker": "REL",
       "status": "active",
-      "matchedLinkCount": 1,
+      "matchedLinkCount": 2,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 2,
         "succession": 0
       }
     },
@@ -733,10 +729,10 @@
     },
     {
       "ticker": "SBRY",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
+      "status": "active",
+      "matchedLinkCount": 1,
       "matchedLinkCountBySignal": {
-        "earnings": 0,
+        "earnings": 1,
         "succession": 0
       }
     },
@@ -761,9 +757,9 @@
     {
       "ticker": "SGRO",
       "status": "active",
-      "matchedLinkCount": 11,
+      "matchedLinkCount": 12,
       "matchedLinkCountBySignal": {
-        "earnings": 11,
+        "earnings": 12,
         "succession": 2
       }
     },
@@ -865,12 +861,9 @@
     },
     {
       "ticker": "WTB",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
-      "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "fetch-error",
+      "error": "https://www.whitbread.co.uk/media/press-releases/: HTTPSConnectionPool(host='www.whitbread.co.uk', port=443): Max retries exceeded with url: /media/press-releases/ (Caused by ResponseError('too many 504 error responses'))"
     }
   ]
 }
