@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 METADATA_PATH = ROOT / "data" / "company_metadata.json"
 SOURCE_CONFIG_PATH = ROOT / "data" / "issuer_source_config.json"
 PROCESSED_DIR = ROOT / "data" / "processed"
+ISSUER_VOTE_CACHE_PATH = PROCESSED_DIR / "issuer_vote_cache.json"
 RAW_ISSUER_DIR = ROOT / "data" / "raw" / "issuer-announcements"
 RAW_DOCUMENT_DIR = ROOT / "data" / "raw" / "issuer-documents"
 PUBLIC_DATA_DIR = ROOT / "public" / "data"
@@ -1401,6 +1402,10 @@ def enrich_with_official_announcements(
     parsed_pages = 0
     extracted_rows = 0
     verified_rows = 0
+    vote_cache = {"sources": {}}
+    if ISSUER_VOTE_CACHE_PATH.exists():
+        vote_cache = json.loads(ISSUER_VOTE_CACHE_PATH.read_text(encoding="utf-8"))
+    cached_sources = vote_cache.setdefault("sources", {})
 
     def fallback_existing(page_company: str, page_date: str, official: dict[str, Any], source_group: str) -> dict[str, Any] | None:
         category_key, _ = classify_resolution(source_group, official["resolutionTitle"])
@@ -1430,11 +1435,19 @@ def enrich_with_official_announcements(
 
     for page in announcement_pages:
         used_cached_source = False
+        raw_path = raw_announcement_path(page.url)
+        cached_rows = cached_sources.get(page.url, {}).get("rows", [])
         try:
-            html = fetch_url(page.url)
+            fresh_html = fetch_url(page.url)
         except requests.RequestException as error:
-            raw_path = raw_announcement_path(page.url)
-            if not raw_path.exists():
+            if cached_rows:
+                official_rows = cached_rows
+                used_cached_source = True
+            elif raw_path.exists():
+                cached_html = raw_path.read_text()
+                official_rows = parse_announcement_tables(cached_html, page.parser_hint)
+                used_cached_source = True
+            else:
                 audit_rows.append(
                     {
                         "url": page.url,
@@ -1445,12 +1458,50 @@ def enrich_with_official_announcements(
                     }
                 )
                 continue
-            html = raw_path.read_text()
-            used_cached_source = True
         else:
-            raw_path = write_raw_announcement_html(page.url, html)
+            fresh_rows = parse_announcement_tables(fresh_html, page.parser_hint)
+            try:
+                if page.source != "ia-linked-announcement":
+                    validate_official_vote_rows(fresh_rows, page.url)
+            except ValueError:
+                if cached_rows:
+                    official_rows = cached_rows
+                    validate_official_vote_rows(official_rows, page.url)
+                    used_cached_source = True
+                elif raw_path.exists():
+                    cached_html = raw_path.read_text()
+                    official_rows = parse_announcement_tables(cached_html, page.parser_hint)
+                    validate_official_vote_rows(official_rows, page.url)
+                    used_cached_source = True
+                else:
+                    raise
+            else:
+                if fresh_rows:
+                    official_rows = fresh_rows
+                elif cached_rows:
+                    official_rows = cached_rows
+                    used_cached_source = True
+                elif raw_path.exists():
+                    cached_html = raw_path.read_text()
+                    raw_cached_rows = parse_announcement_tables(cached_html, page.parser_hint)
+                    if raw_cached_rows:
+                        official_rows = raw_cached_rows
+                        used_cached_source = True
+                    else:
+                        official_rows = fresh_rows
+                else:
+                    official_rows = fresh_rows
 
-        official_rows = parse_announcement_tables(html, page.parser_hint)
+            if not used_cached_source:
+                raw_path = write_raw_announcement_html(page.url, fresh_html)
+                if official_rows and official_rows != cached_rows:
+                    cached_sources[page.url] = {
+                        "companyName": page.company_name,
+                        "meetingDate": page.meeting_date,
+                        "validatedAt": datetime.now(timezone.utc).isoformat(),
+                        "rows": official_rows,
+                    }
+
         if page.source != "ia-linked-announcement":
             validate_official_vote_rows(official_rows, page.url)
         parsed_pages += 1
@@ -1559,13 +1610,14 @@ def enrich_with_official_announcements(
                 "companyName": page.company_name,
                 "meetingDate": page.meeting_date,
                 "status": "parsed-cached" if used_cached_source else "parsed",
-                "rawHtmlPath": str(raw_path.relative_to(ROOT)),
+                **({"rawHtmlPath": str(raw_path.relative_to(ROOT))} if raw_path.exists() else {}),
                 "rowsExtracted": len(official_rows),
                 "rowsMatched": page_matches,
                 "rowsAdded": page_new_records,
             }
         )
 
+    ISSUER_VOTE_CACHE_PATH.write_text(json.dumps(vote_cache, indent=2) + "\n", encoding="utf-8")
     combined = resolutions + issuer_only_records
     combined.sort(key=lambda item: (item["meetingDate"], item["companyName"], item["resolutionTitle"]), reverse=True)
     stats = {

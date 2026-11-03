@@ -1,6 +1,422 @@
 {
-  "updatedAt": "2026-10-26T14:02:06.011947+00:00",
+  "updatedAt": "2026-11-03T08:11:47.930541+00:00",
   "candidates": [
+    {
+      "id": "ihg-f69290fade2776e0",
+      "ticker": "IHG",
+      "companyName": "InterContinental Hotels Group",
+      "title": "Transcript",
+      "url": "https://www.ihgplc.com/~/media/Files/I/Ihg-Plc/results/2026/ihg-q3-2026-trading-update-transcript.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-16ba38a97e585f6f",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Earnings Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2016/2016-CCEP-Half-Yearly-Financial-Report-FINAL.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-19f65c9f61c0cc44",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Earnings Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2016/CCEP-Full-Year-2016-Earnings-Report-3-21-17.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-c905d9e59bd474b9",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2019/CCEP-2019-Half-year-Report-Web-Version.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-f4562033c2d2741d",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2019/CCEP-Q1-2019-Trading-Update-WebsiteFinal.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-dc304ce983ff7e29",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2019/CCEP-Q3-Trading-Update-Website-Final.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-0b86f7a681bae250",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2020/CCEP-Q3-2020-Trading-Update-FY-20-Dividend.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-012fe9e982dde059",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2021/CCEP-2021-Half-year-Report-Web-final.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-d3e444795af4555f",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2021/CCEP-Q1-2021-Trading-Update-Web-Final.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-bb26f16c239e7c09",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2021/CCEP-Q3-2021-Trading-Update-FY21-Dividend-Declaration.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-9e6402a324db781f",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2022/CCEP-Q1-2022-Trading-Update-web-final.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-d1db50c628718e07",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Transcript",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2022/CCEP-Q1-2022-Trading-update-transcript-Q-FIINAL.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-c9fa5c77c06af573",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Transcript",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2023/CCEP-Q1-2023-Trading-update-transcript-with-QA-FINAL.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-cdf358de8049644c",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2023/CCEP-Q1-2023-Trading-update-web-version-FINAL.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-c70520b0bb22c2c5",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2023/CCEP-Q3-2023-Trading-Update-web-version-FINAL.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-eb7c63d03cd6b612",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2024/CCEP-2024-Full-Year-Final-Release-Combined.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-246f913a57fe45a9",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2024/CCEP-Q1-2024-Trading-Update-Final-Web-Version.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-b43b9620dab1648c",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Transcript with Q&A",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2024/CCEP-Q1-2024-Trading-update-script-FINAL-including-QA.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-907a2c1bcfc8fd98",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2025/CCEP-Q1-2025-Trading-Update-Web-version-1st-6K-Final.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-d5c19f52b95cee7f",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2025/CCEP-Q3-Trading-Update-Full.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-7db617851dff534d",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Financial-releases/2026/CCEP-Q1-2026-Trading-Update-Full-version.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-326e51d1643aa4b9",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Transcript",
+      "url": "https://www.cocacolaep.com/assets/Investors/Presentations/2021/CCEP-Combined_Q1_2021_trading_update_investor_event_transcript.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-06417c96f63d26c9",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial Release",
+      "url": "https://www.cocacolaep.com/assets/Investors/Presentations/2022/CCEP-Q3-2022-Trading-update-web-version-FINAL.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-3d0835fe68eabc19",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Transcript with Q&A",
+      "url": "https://www.cocacolaep.com/assets/Investors/Presentations/2024/Q3-2024-Trading-Update-FINAL-script-QA.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-c6c527a7567f201b",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Financial Release",
+      "url": "https://www.cocacolaep.com/assets/Uploads/CCEP-Q326-Trading-Update-Final-Full-Web-version.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccep-2fef69c0c4e1c913",
+      "ticker": "CCEP",
+      "companyName": "Coca-Cola Europacific Partners",
+      "title": "Guidance",
+      "url": "https://www.cocacolaep.com/investors/shareholder-center/guidance",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "ccc-8cd5f85742ce0ecc",
+      "ticker": "CCC",
+      "companyName": "Computacenter",
+      "title": "Computacenter - Q3 Trading Update \u2013 26 October 2026",
+      "url": "https://investors.computacenter.com/news-releases/news-release-details/computacenter-q3-trading-update-26-october-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "hsx-f3793d1b562c3c77",
+      "ticker": "HSX",
+      "companyName": "Hiscox",
+      "title": "Q3 2026 trading statement",
+      "url": "https://www.hiscoxgroup.com/news/press-releases/2026/03-11-26",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "hsx-7325799886e357d7",
+      "ticker": "HSX",
+      "companyName": "Hiscox",
+      "title": "Register for the conference call",
+      "url": "https://www.hiscoxgroup.com/q3-2026-trading-statement-0",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "mtln-35693e50baac80a5",
+      "ticker": "MTLN",
+      "companyName": "Metlen",
+      "title": "FINANCIAL RESULTS H1 2026",
+      "url": "https://www.metlen.com/media/ykypuce3/20261102_metlen_plc_tvr.pdf",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "wpp-491defe348e0145f",
+      "ticker": "WPP",
+      "companyName": "WPP",
+      "title": "Third Quarter 2026 Trading Update",
+      "url": "https://www.wpp.com/en/news/third-quarter-trading-update-2026",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
+    {
+      "id": "stan-6f4a425d823f228f",
+      "ticker": "STAN",
+      "companyName": "Standard Chartered",
+      "title": "Third quarter 2026 results",
+      "url": "https://www.sc.com/en/press-release/q3-2026-financial-results",
+      "signalTypes": [
+        "earnings"
+      ],
+      "detectedAt": "2026-11-03T08:11:47.930541+00:00",
+      "status": "pending",
+      "reviewNote": "Keyword match only; verify the official announcement before adding any analytical evidence."
+    },
     {
       "id": "lseg-015172e61b40120a",
       "ticker": "LSEG",
