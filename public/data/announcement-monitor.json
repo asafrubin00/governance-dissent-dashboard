@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "generatedAt": "2026-11-03T08:11:47.930541+00:00",
+    "generatedAt": "2026-11-03T08:14:32.666036+00:00",
     "mode": "monitor",
     "publicationRule": "Detection creates a typed review candidate only. Nothing is added to warning or succession evidence without source verification.",
     "sourceCount": 100,
-    "activeSourceCount": 59,
-    "reachableSourceCount": 89,
-    "unavailableSourceCount": 11,
+    "activeSourceCount": 51,
+    "reachableSourceCount": 80,
+    "unavailableSourceCount": 20,
     "unavailableSourceCountByCategory": {
-      "access-blocked": 9,
+      "access-blocked": 18,
       "not-found": 1,
       "timeout": 1
     },
-    "newCandidateCount": 32,
+    "newCandidateCount": 0,
     "pendingCandidateCount": 79,
     "pendingCandidateCountBySignal": {
       "earnings": 61,
@@ -53,12 +53,9 @@
     },
     {
       "ticker": "CNA",
-      "status": "active",
-      "matchedLinkCount": 1,
-      "matchedLinkCountBySignal": {
-        "earnings": 1,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.centrica.com/media-centre/news/: 403 Client Error: Forbidden for url: https://www.centrica.com/media-centre/news/"
     },
     {
       "ticker": "LSEG",
@@ -71,12 +68,9 @@
     },
     {
       "ticker": "ULVR",
-      "status": "active",
-      "matchedLinkCount": 1,
-      "matchedLinkCountBySignal": {
-        "earnings": 1,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.unilever.com/news/press-and-media/press-releases/: 403 Client Error: Forbidden for url: https://www.unilever.com/news/press-and-media/press-releases/"
     },
     {
       "ticker": "IHG",
@@ -122,12 +116,9 @@
     },
     {
       "ticker": "CCEP",
-      "status": "active",
-      "matchedLinkCount": 25,
-      "matchedLinkCountBySignal": {
-        "earnings": 25,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://ir.cocacolaep.com/financial-reports-and-results/financial-releases: 403 Client Error: Forbidden for url: https://ir.cocacolaep.com/financial-reports-and-results/financial-releases"
     },
     {
       "ticker": "AAL",
@@ -146,12 +137,9 @@
     },
     {
       "ticker": "CCC",
-      "status": "active",
-      "matchedLinkCount": 3,
-      "matchedLinkCountBySignal": {
-        "earnings": 3,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://investors.computacenter.com/regulatory-news: 403 Client Error: Forbidden for url: https://investors.computacenter.com/regulatory-news"
     },
     {
       "ticker": "IMI",
@@ -233,12 +221,9 @@
     },
     {
       "ticker": "III",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
-      "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.3i.com/media/news/: 403 Client Error: Forbidden for url: https://www.3i.com/media/news/"
     },
     {
       "ticker": "ABF",
@@ -338,10 +323,10 @@
     },
     {
       "ticker": "CPG",
-      "status": "active",
-      "matchedLinkCount": 3,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 3,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -365,12 +350,9 @@
     },
     {
       "ticker": "EZJ",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
-      "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://corporate.easyjet.com/investors/reports-and-presentations/2012/: 403 Client Error: Forbidden for url: https://corporate.easyjet.com/investors/reports-and-presentations/2012/"
     },
     {
       "ticker": "EXPN",
@@ -401,10 +383,10 @@
     },
     {
       "ticker": "HLN",
-      "status": "active",
-      "matchedLinkCount": 1,
+      "status": "reachable-no-matches",
+      "matchedLinkCount": 0,
       "matchedLinkCountBySignal": {
-        "earnings": 1,
+        "earnings": 0,
         "succession": 0
       }
     },
@@ -464,12 +446,9 @@
     },
     {
       "ticker": "ADM",
-      "status": "active",
-      "matchedLinkCount": 1,
-      "matchedLinkCountBySignal": {
-        "earnings": 1,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://admiralgroup.co.uk/media/news-releases-and-media-contacts: 403 Client Error: Forbidden for url: https://admiralgroup.co.uk/media/news-releases-and-media-contacts"
     },
     {
       "ticker": "AAF",
@@ -608,12 +587,9 @@
     },
     {
       "ticker": "INF",
-      "status": "reachable-no-matches",
-      "matchedLinkCount": 0,
-      "matchedLinkCountBySignal": {
-        "earnings": 0,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.informa.com/investors/results-presentations/: 403 Client Error: Forbidden for url: https://www.informa.com/investors/results-presentations/"
     },
     {
       "ticker": "ITRK",
@@ -857,12 +833,9 @@
     },
     {
       "ticker": "BBOX",
-      "status": "active",
-      "matchedLinkCount": 2,
-      "matchedLinkCountBySignal": {
-        "earnings": 2,
-        "succession": 0
-      }
+      "status": "unavailable",
+      "failureCategory": "access-blocked",
+      "error": "https://www.tritaxbigbox.co.uk/news/: 403 Client Error: Forbidden for url: https://www.tritaxbigbox.co.uk/news/"
     },
     {
       "ticker": "UU",
